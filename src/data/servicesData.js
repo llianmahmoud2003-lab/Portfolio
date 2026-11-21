@@ -1,5 +1,5 @@
 // servicesData.js - Professional Services & Real Deliverable Files Package
-export const servicesData = [
+const servicesData = [
   {
     id: "service-software",
     title: "Full-Stack Software & Web Systems Engineering",
@@ -30,7 +30,7 @@ export const servicesData = [
   }
 ];
 
-export const clientDeliverablePack = {
+const clientDeliverablePack = {
   title: "Professional Deliverable Sample Package",
   subtitle: "Real, verified client report files prepared across Excel, Word, PowerPoint, and PDF demonstrating multidisciplinary business delivery capabilities.",
   items: [
@@ -72,3 +72,11 @@ export const clientDeliverablePack = {
     }
   ]
 };
+
+if (typeof window !== 'undefined') {
+  window.servicesData = servicesData;
+  window.clientDeliverablePack = clientDeliverablePack;
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { servicesData, clientDeliverablePack };
+}

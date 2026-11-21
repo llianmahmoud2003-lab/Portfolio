@@ -1,5 +1,5 @@
 // certificationsData.js - All 23 Audited & Verified Certifications
-export const certificationsData = [
+const certificationsData = [
   // Higher Education
   {
     id: "degree-al-aqsa",
@@ -270,3 +270,10 @@ export const certificationsData = [
     icon: "data"
   }
 ];
+
+if (typeof window !== 'undefined') {
+  window.certificationsData = certificationsData;
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = certificationsData;
+}

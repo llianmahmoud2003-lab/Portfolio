@@ -1,5 +1,5 @@
 // projectsData.js - Centralized Data Source for LILIAN ALKHAWALDA Portfolio
-export const projectsData = [
+const projectsData = [
   {
     id: "lilianoura",
     slug: "lilianoura-enterprise-cockpit",
@@ -234,7 +234,7 @@ export const projectsData = [
   }
 ];
 
-export const projectCategories = [
+const projectCategories = [
   "All",
   "Artificial Intelligence",
   "Software Development",
@@ -243,3 +243,11 @@ export const projectCategories = [
   "Business Intelligence",
   "Business Solutions"
 ];
+
+if (typeof window !== 'undefined') {
+  window.projectsData = projectsData;
+  window.projectCategories = projectCategories;
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { projectsData, projectCategories };
+}
