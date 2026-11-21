@@ -53,15 +53,43 @@ const translations = {
     filter_software: "Full-Stack Engineering",
     filter_data: "Data & Business Intelligence",
     filter_network: "Enterprise Infrastructure",
+    filter_figma: "UI/UX & Design Systems",
+    filter_mobile: "Mobile Applications",
+    filter_systems: "Systems Analysis & Engineering",
+    filter_cloud: "Cloud & Infrastructure",
+    filter_security: "Cybersecurity & Networks",
+    
+    // Action Buttons
+    btn_view_demo: "Live Demo",
+    btn_github_repo: "Source Code",
+    btn_figma_design: "Figma Canvas",
+    btn_figma_proto: "Interactive Prototype",
+    btn_case_study: "Case Study & Architecture",
+    btn_download_deliverable: "Download Deliverable",
+    btn_verify_credential: "Verify Online",
+    btn_preview_cert: "Preview Certificate",
+    
     project_cta_review: "Review Full Architecture",
-    project_type_solo: "Individual / Solo",
-    project_type_team: "Collaborative Team Project",
+    project_type_solo: "Individual / Solo Flagship",
+    project_type_team: "Collaborative Team Project (Graduation)",
     modal_problem: "Problem & Strategic Challenge",
     modal_solution: "Engineered Solution & Architecture",
     modal_tech: "Technologies & Frameworks",
     modal_metrics: "Verified Metrics & Outcomes",
     modal_deliverables: "Engineered Deliverables",
     modal_team_context: "Project Ownership & Team Context",
+
+    // Certificate Viewer Modal
+    modal_preview_title: "Verified Credential Preview",
+    modal_preview_close: "Close Preview",
+    modal_open_external: "Verify on Issuer Site",
+    modal_download_asset: "Download Document",
+
+    // Academic Degree
+    academic_degree_badge: "Academic Foundation & Higher Education",
+    academic_degree_title: "Academic Foundation",
+    academic_degree_desc: "The foundational university degree conferring rigorous analytical, technical, and commercial systems competencies.",
+    professional_certifications_title: "Audited Professional Accreditations & International Credentials",
 
     // Deliverables Section
     deliv_subtitle: "Tangible Proof of Work",
@@ -92,47 +120,47 @@ const translations = {
 
     // Certifications Section
     certs_subtitle: "Verified Accreditations & Continuous Mastery",
-    certs_title: "23 Audited Professional Accreditations",
-    certs_lead: "A verified inventory of 13 international Anthropic certifications, 4 TAQAT Academy intensive software tracks, 2 Edraak accreditations, and professional honors.",
+    certs_title: "24 Audited Professional Accreditations",
+    certs_lead: "A verified inventory of 13 international Anthropic certifications with direct Skilljar verification links, 4 TAQAT Academy engineering tracks, Bright Gaza and cloud specializations, cybersecurity defenses, and quantitative analytics.",
 
     // Contact Section
     contact_subtitle: "Initiate Dialogue",
     contact_title: "Ready to Turn Ideas Into Impact?",
-    contact_lead: "Available for full-stack engineering contracts, AI agent integration, business intelligence consulting, and strategic technical leadership.",
-    contact_btn_linkedin: "Connect on LinkedIn",
+    contact_lead: "Available for high-stakes software engineering contracts, AI agent workflow deployments, and executive technology advisory.",
+    contact_btn_linkedin: "Connect via LinkedIn",
     contact_btn_email: "Send Direct Inquiry",
     contact_channels_title: "Direct Channels",
-    contact_channels_desc: "Whether you represent an enterprise engineering department, an institutional venture, or are an ambitious founder building next-generation software, feel free to reach out directly.",
-    contact_email_label: "Direct Email",
-    contact_linkedin_label: "LinkedIn Network",
-    contact_github_label: "GitHub Repository Lab",
-    form_title: "Send a Proposal or Inquiry",
-    form_desc: "Direct message response guaranteed within 24 business hours.",
-    form_name_label: "Your Name / Organization",
-    form_name_ph: "e.g. Sarah Jenkins / Tech Ventures Ltd",
-    form_email_label: "Corporate Email",
+    contact_channels_desc: "Whether you represent an enterprise engineering department, an investment syndicate, or a high-growth startup, direct dialogue is welcomed.",
+    contact_email_label: "Direct Professional Email",
+    contact_linkedin_label: "Professional LinkedIn Network",
+    contact_github_label: "GitHub Engineering Lab",
+    form_title: "Submit Project Brief or Advisory Inquiry",
+    form_desc: "Direct response guaranteed within 24 business hours.",
+    form_name_label: "Full Name / Organization",
+    form_name_ph: "e.g. Alex Morgan / Meridian Holdings",
+    form_email_label: "Corporate Email Address",
     form_email_ph: "name@company.com",
     form_nature_label: "Nature of Engagement",
-    form_opt1: "Full-Stack Engineering Contract",
-    form_opt2: "Autonomous AI & MCP Architecture",
-    form_opt3: "Quantitative Business Intelligence & Reporting",
-    form_opt4: "Strategic Technology Consultation",
-    form_opt5: "Other Executive Inquiries",
-    form_scope_label: "Project Scope & Key Details",
-    form_scope_ph: "Describe your technical objectives, timelines, and requirements...",
-    form_submit_btn: "Submit Formal Inquiry",
-    form_alert_success: "Thank you for reaching out. Your inquiry has been received.",
+    form_opt1: "Full-Stack Enterprise Engineering Contract",
+    form_opt2: "AI Agent & MCP System Architecture",
+    form_opt3: "Data Intelligence & Financial Feasibility Modeling",
+    form_opt4: "Fractional Technical Leadership & Advisory",
+    form_opt5: "Executive Dialogue / Other Venture",
+    form_scope_label: "Project Scope & Context",
+    form_scope_ph: "Provide high-level technical scope, business objectives, timeline expectations, and delivery milestones...",
+    form_submit_btn: "Dispatch Formal Inquiry",
+    form_alert_success: "Thank you for reaching out. Your transmission has been logged.",
 
     // Footer
-    footer_desc: "Contemporary Management & Commercial Information Systems Engineer. Turning complex engineering and business challenges into verifiable, impactful reality.",
+    footer_desc: "Contemporary Management & Commercial Information Systems Engineer bridging software systems, autonomous AI agents, and corporate intelligence to turn complex challenges into verified business value.",
     footer_nav_title: "Navigation",
     footer_competencies_title: "Core Competencies",
-    footer_comp1: "Autonomous AI & MCP Agents",
-    footer_comp2: "Full-Stack React & Next.js",
-    footer_comp3: "Business Intelligence & Profitability",
+    footer_comp1: "Autonomous AI Agents & MCP Systems",
+    footer_comp2: "Enterprise Full-Stack (Next.js & React 19)",
+    footer_comp3: "Gross Margin & Financial Engineering",
     footer_comp4: "Corporate Feasibility & CapEx Valuation",
-    footer_copyright: "© 2026 LILIAN ALKHAWALDA. All rights reserved. IDEAS INTO IMPACT.",
-    footer_badge: "Modern Feminine Luxury • Tech Leadership"
+    footer_copyright: "© 2026 Lilian Alkhawalda. All rights reserved. IDEAS INTO IMPACT.",
+    footer_badge: "Editorial Luxury Design • Executive Standard"
   },
 
   ar: {
@@ -188,6 +216,22 @@ const translations = {
     filter_software: "تطوير الأنظمة والويب",
     filter_data: "تحليل البيانات وذكاء الأعمال",
     filter_network: "البنية التحتية والشبكات",
+    filter_figma: "تصميم الواجهات والأنظمة البصرية (UI/UX)",
+    filter_mobile: "تطبيقات الهواتف الذكية",
+    filter_systems: "تحليل وهندسة النظم",
+    filter_cloud: "الحوسبة السحابية والبنية التحتية",
+    filter_security: "الأمن السيبراني والشبكات",
+    
+    // Action Buttons
+    btn_view_demo: "العرض الحي التجريبي",
+    btn_github_repo: "الكود البرمجي (GitHub)",
+    btn_figma_design: "ملف التصميم (Figma)",
+    btn_figma_proto: "النموذج التفاعلي المباشر",
+    btn_case_study: "دراسة الحالة والمعمارية",
+    btn_download_deliverable: "تحميل المخرج المعتمد",
+    btn_verify_credential: "التحقق المباشر من الاعتماد",
+    btn_preview_cert: "معاينة الوثيقة الرسمية",
+
     project_cta_review: "استعراض تفاصيل المشروع الهندسية",
     project_type_solo: "مشروع فردي / رائد",
     project_type_team: "مشروع تخرج جماعي تعاوني",
@@ -197,6 +241,18 @@ const translations = {
     modal_metrics: "المؤشرات والنتائج المحققة",
     modal_deliverables: "المخرجات والملفات المنجزة",
     modal_team_context: "ملكية المشروع وسياق الفريق",
+
+    // Certificate Viewer Modal
+    modal_preview_title: "معاينة الوثيقة والاعتماد الرسمي",
+    modal_preview_close: "إغلاق المعاينة",
+    modal_open_external: "فتح صفحة التحقق الرسمية",
+    modal_download_asset: "تحميل الوثيقة المعتمدة",
+
+    // Academic Degree
+    academic_degree_badge: "الدرجة الجامعية والأساس الأكاديمي",
+    academic_degree_title: "الأساس الأكاديمي والتعليم العالي",
+    academic_degree_desc: "المؤهل الجامعي التأسيسي الذي يجمع بين هندسة نظم المعلومات والتحليل المالي الكمي وحوكمة البيانات المؤسسية.",
+    professional_certifications_title: "الشهادات المهنية الموثقة والاعتمادات الدولية",
 
     // Deliverables Section
     deliv_subtitle: "براهين ملموسة وقابلة للتحميل",
@@ -227,8 +283,8 @@ const translations = {
 
     // Certifications Section
     certs_subtitle: "الاعتمادات الموثقة والتطوير المستمر",
-    certs_title: "23 شهادة واعتماداً مهنياً موثقاً",
-    certs_lead: "سجل حقيقي موثق يضم 13 شهادة دولية متقدمة من Anthropic، و4 مسارات مكثفة من أكاديمية طاقات، واعتمادين من منصة إدراك، وشهادات مهنية تخصصية.",
+    certs_title: "24 شهادة واعتماداً مهنياً موثقاً",
+    certs_lead: "سجل حقيقي موثق يضم 13 شهادة دولية متقدمة من Anthropic بروابط تحقق مباشرة من Skilljar، و4 مسارات مكثفة من أكاديمية طاقات، واعتمادات برايت غزة والحوسبة السحابية، ودفاعات الأمن السيبراني، ونمذجة ذكاء الأعمال.",
 
     // Contact Section
     contact_subtitle: "بدء التواصل والتعاون المهني",

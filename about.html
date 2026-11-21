@@ -152,15 +152,52 @@
     <div class="container">
       <div class="section-header">
         <div class="section-subtitle" data-i18n="certs_subtitle">Verified Accreditations & Continuous Mastery</div>
-        <h2 class="section-title" data-i18n="certs_title">23 Audited Professional Accreditations</h2>
-        <p class="section-lead" data-i18n="certs_lead">A verified inventory of 13 international Anthropic certifications, 4 TAQAT Academy intensive software tracks, 2 Edraak accreditations, and professional honors.</p>
+        <h2 class="section-title" data-i18n="certs_title">24 Audited Professional Accreditations</h2>
+        <p class="section-lead" data-i18n="certs_lead">A verified inventory of 13 international Anthropic certifications with direct Skilljar verification links, 4 TAQAT Academy engineering tracks, Bright Gaza and cloud specializations, cybersecurity defenses, and quantitative analytics.</p>
       </div>
 
-      <div class="cert-grid" id="aboutCertGrid">
+      <!-- Academic Foundation Hero Showcase -->
+      <div id="aboutAcademicFoundation">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+      <!-- Professional Credentials Subtitle -->
+      <div style="margin: 3.5rem 0 2rem 0; text-align: center;">
+        <h3 style="font-family: var(--font-editorial); font-size: 2rem; color: var(--midnight);" data-i18n="professional_certifications_title">Audited Professional Accreditations & International Credentials</h3>
+      </div>
+
+      <div class="certifications-showcase-grid" id="aboutCertGrid">
         <!-- Rendered via JavaScript -->
       </div>
     </div>
   </section>
+
+  <!-- Modal for Certificate Preview -->
+  <div class="modal-overlay" id="certModal">
+    <div class="modal-content" style="max-width: 900px;">
+      <button class="modal-close-btn" id="certModalCloseBtn">&times;</button>
+      <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 0.8rem; padding-right: 2.5rem;">
+        <div>
+          <span class="badge-category" data-i18n="modal_preview_title">Verified Credential Preview</span>
+          <h3 id="certModalTitle" style="font-family: var(--font-editorial); font-size: 1.7rem; color: var(--midnight); margin-top: 0.4rem; line-height: 1.25;"></h3>
+          <p id="certModalIssuer" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;"></p>
+        </div>
+      </div>
+
+      <div class="cert-modal-viewport" id="certModalViewport">
+        <!-- PDF iframe or Image loaded dynamically -->
+      </div>
+
+      <div class="cert-modal-footer">
+        <div id="certModalActions" style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <!-- Action buttons injected dynamically -->
+        </div>
+        <button class="btn-secondary" id="certModalDismissBtn" style="font-size: 0.82rem; padding: 0.6rem 1.2rem;">
+          <span data-i18n="modal_preview_close">Close Preview</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -204,33 +241,141 @@
   <script src="./src/i18n.js"></script>
   <script>
     function renderAboutCertifications() {
+      const foundationEl = document.getElementById('aboutAcademicFoundation');
       const container = document.getElementById('aboutCertGrid');
       if (!container || typeof certificationsData === 'undefined') return;
 
       const lang = window.i18n ? window.i18n.getLang() : 'en';
       const t = window.i18n ? window.i18n.t : (val => val);
+      const tDict = translations[lang];
 
+      // 1. Render Academic Foundation Hero
+      if (foundationEl && typeof academicDegree !== 'undefined') {
+        foundationEl.innerHTML = `
+          <div class="academic-foundation-hero">
+            <div class="academic-foundation-inner">
+              <div class="academic-seal-icon">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div class="academic-details">
+                <div class="academic-badge-row">
+                  <span class="academic-lead-tag">${t(academicDegree.category, lang)}</span>
+                  <span class="academic-hours-badge">${t(academicDegree.hours, lang)}</span>
+                </div>
+                <h3 class="academic-title">${t(academicDegree.title, lang)}</h3>
+                <div class="academic-institution">${t(academicDegree.issuer, lang)}</div>
+                <p class="academic-narrative">${t(academicDegree.description, lang)}</p>
+              </div>
+              <div class="academic-status-pill">
+                <span class="years">${t(academicDegree.date, lang)}</span>
+                <span class="note">${t(academicDegree.credentialId, lang)}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // 2. Render 24 Professional Certifications
       container.innerHTML = certificationsData.map(c => {
         const title = t(c.title, lang);
         const issuer = t(c.issuer, lang);
-        const date = t(c.date, lang);
+        const cat = t(c.category, lang);
+        const desc = t(c.description, lang);
         const hours = t(c.hours, lang);
         const credId = t(c.credentialId, lang);
 
         return `
-          <div class="cert-card">
-            <div class="cert-provider-badge">${issuer}</div>
-            <h4 class="cert-name">${title}</h4>
-            <div class="cert-meta">
-              <span>${date}</span>
-              <span>&bull;</span>
-              <span>${hours}</span>
+          <div class="cert-card-luxury">
+            <div>
+              <div class="cert-card-top">
+                <span class="cert-category-badge">${cat}</span>
+                <span class="cert-issuer-badge">${issuer}</span>
+              </div>
+              <h4 class="cert-title-luxury">${title}</h4>
+              <p class="cert-desc-luxury">${desc}</p>
             </div>
-            <div class="cert-id">${credId ? `ID: ${credId}` : 'Verified Accreditation'}</div>
+
+            <div>
+              <div class="cert-meta-strip">
+                <span class="cert-cred-id">${credId}</span>
+                <span class="cert-hours-tag">${hours}</span>
+              </div>
+              <div class="cert-actions-strip">
+                ${c.verificationUrl ? `
+                  <a href="${c.verificationUrl}" target="_blank" rel="noopener noreferrer" class="btn-cert-verify" title="${tDict.btn_verify_credential}">
+                    <span>${tDict.btn_verify_credential}</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                ` : ''}
+                ${c.previewFile ? `
+                  <button onclick="openCertModal('${c.id}')" class="btn-cert-preview" title="${tDict.btn_preview_cert}">
+                    <span>${tDict.btn_preview_cert}</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </button>
+                ` : ''}
+              </div>
+            </div>
           </div>
         `;
       }).join('');
     }
+
+    function openCertModal(certId) {
+      const cert = certificationsData.find(c => c.id === certId);
+      if (!cert) return;
+      const lang = window.i18n ? window.i18n.getLang() : 'en';
+      const t = window.i18n ? window.i18n.t : (v => v);
+      const tDict = translations[lang];
+
+      const modal = document.getElementById('certModal');
+      const titleEl = document.getElementById('certModalTitle');
+      const issuerEl = document.getElementById('certModalIssuer');
+      const viewport = document.getElementById('certModalViewport');
+      const actions = document.getElementById('certModalActions');
+
+      titleEl.textContent = t(cert.title, lang);
+      issuerEl.textContent = `${t(cert.issuer, lang)} • ${t(cert.date, lang)} • ${t(cert.credentialId, lang)}`;
+
+      if (cert.previewFile) {
+        if (cert.previewType === 'pdf') {
+          viewport.innerHTML = `<iframe src="${cert.previewFile}#toolbar=0" type="application/pdf"></iframe>`;
+        } else {
+          viewport.innerHTML = `<img src="${cert.previewFile}" alt="${t(cert.title, lang)}">`;
+        }
+      } else {
+        viewport.innerHTML = `<div style="color: var(--champagne); text-align: center; padding: 2rem;">Official Verified Credential Record</div>`;
+      }
+
+      let actionsHtml = '';
+      if (cert.verificationUrl) {
+        actionsHtml += `<a href="${cert.verificationUrl}" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 0.82rem; padding: 0.6rem 1.2rem;">
+          <span>${tDict.modal_open_external}</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>`;
+      }
+      if (cert.previewFile) {
+        actionsHtml += `<a href="${cert.previewFile}" download class="btn-secondary" style="font-size: 0.82rem; padding: 0.6rem 1.2rem;">
+          <span>${tDict.modal_download_asset}</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        </a>`;
+      }
+      actions.innerHTML = actionsHtml;
+
+      modal.classList.add('active');
+    }
+
+    document.getElementById('certModalCloseBtn')?.addEventListener('click', () => {
+      document.getElementById('certModal')?.classList.remove('active');
+    });
+
+    document.getElementById('certModalDismissBtn')?.addEventListener('click', () => {
+      document.getElementById('certModal')?.classList.remove('active');
+    });
+
+    window.addEventListener('click', (e) => {
+      const cModal = document.getElementById('certModal');
+      if (e.target === cModal) cModal.classList.remove('active');
+    });
 
     window.addEventListener('languageChanged', renderAboutCertifications);
     renderAboutCertifications();

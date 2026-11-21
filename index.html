@@ -205,12 +205,14 @@
         <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Disciplines</button>
         <button class="filter-btn" data-filter="Artificial Intelligence" data-i18n="filter_ai">AI & Machine Learning</button>
         <button class="filter-btn" data-filter="Software Development" data-i18n="filter_software">Full-Stack Engineering</button>
+        <button class="filter-btn" data-filter="UI/UX & Product Design" data-i18n="filter_figma">UI/UX & Design Systems</button>
+        <button class="filter-btn" data-filter="Mobile Applications" data-i18n="filter_mobile">Mobile Applications</button>
         <button class="filter-btn" data-filter="Data Analytics" data-i18n="filter_data">Data & Business Intelligence</button>
         <button class="filter-btn" data-filter="Network Engineering" data-i18n="filter_network">Enterprise Infrastructure</button>
       </div>
 
       <!-- Projects Grid -->
-      <div class="projects-grid" id="projectsContainer">
+      <div class="editorial-projects-container" id="projectsContainer">
         <!-- Rendered via JavaScript -->
       </div>
     </div>
@@ -301,11 +303,21 @@
     <div class="container">
       <div class="section-header">
         <div class="section-subtitle" data-i18n="certs_subtitle">Verified Accreditations & Continuous Mastery</div>
-        <h2 class="section-title" data-i18n="certs_title">23 Audited Professional Accreditations</h2>
-        <p class="section-lead" data-i18n="certs_lead">A verified inventory of 13 international Anthropic certifications, 4 TAQAT Academy intensive software tracks, 2 Edraak accreditations, and professional honors.</p>
+        <h2 class="section-title" data-i18n="certs_title">24 Audited Professional Accreditations</h2>
+        <p class="section-lead" data-i18n="certs_lead">A verified inventory of 13 international Anthropic certifications with direct Skilljar verification links, 4 TAQAT Academy engineering tracks, Bright Gaza and cloud specializations, cybersecurity defenses, and quantitative analytics.</p>
       </div>
 
-      <div class="cert-grid" id="certificationsContainer">
+      <!-- Academic Foundation Hero Showcase -->
+      <div id="academicFoundationContainer">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+      <!-- Professional Credentials Subtitle -->
+      <div style="margin: 3.5rem 0 2rem 0; text-align: center;">
+        <h3 style="font-family: var(--font-editorial); font-size: 2rem; color: var(--midnight);" data-i18n="professional_certifications_title">Audited Professional Accreditations & International Credentials</h3>
+      </div>
+
+      <div class="certifications-showcase-grid" id="certificationsContainer">
         <!-- Rendered via JavaScript -->
       </div>
     </div>
@@ -421,6 +433,33 @@
     </div>
   </div>
 
+  <!-- Modal for Certificate Preview -->
+  <div class="modal-overlay" id="certModal">
+    <div class="modal-content" style="max-width: 900px;">
+      <button class="modal-close-btn" id="certModalCloseBtn">&times;</button>
+      <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 0.8rem; padding-right: 2.5rem;">
+        <div>
+          <span class="badge-category" data-i18n="modal_preview_title">Verified Credential Preview</span>
+          <h3 id="certModalTitle" style="font-family: var(--font-editorial); font-size: 1.7rem; color: var(--midnight); margin-top: 0.4rem; line-height: 1.25;"></h3>
+          <p id="certModalIssuer" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;"></p>
+        </div>
+      </div>
+
+      <div class="cert-modal-viewport" id="certModalViewport">
+        <!-- PDF iframe or Image loaded dynamically -->
+      </div>
+
+      <div class="cert-modal-footer">
+        <div id="certModalActions" style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <!-- Action buttons injected dynamically -->
+        </div>
+        <button class="btn-secondary" id="certModalDismissBtn" style="font-size: 0.82rem; padding: 0.6rem 1.2rem;">
+          <span data-i18n="modal_preview_close">Close Preview</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="./src/data/translations.js"></script>
   <script src="./src/data/projectsData.js"></script>
@@ -431,6 +470,50 @@
   <!-- Dynamic Renderers with Localization -->
   <script>
     let activeCategory = 'all';
+
+    function renderActionPills(p, lang) {
+      const tDict = translations[lang];
+      let pills = '';
+      if (!p.links) return pills;
+
+      if (p.links.demo) {
+        pills += `<a href="${p.links.demo}" target="_blank" rel="noopener noreferrer" class="action-pill pill-demo" title="${tDict.btn_view_demo}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          <span>${tDict.btn_view_demo}</span>
+        </a>`;
+      }
+      if (p.links.github) {
+        pills += `<a href="${p.links.github}" target="_blank" rel="noopener noreferrer" class="action-pill pill-github" title="${tDict.btn_github_repo}">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>${tDict.btn_github_repo}</span>
+        </a>`;
+      }
+      if (p.links.figma) {
+        pills += `<a href="${p.links.figma}" target="_blank" rel="noopener noreferrer" class="action-pill pill-figma" title="${tDict.btn_figma_design}">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 24c2.208 0 4-1.792 4-4v-4H8c-2.208 0-4 1.792-4 4s1.792 4 4 4zM4 12c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4zm0-8c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4zm8 0h4c2.208 0 4 1.792 4 4s-1.792 4-4 4h-4V4zm0 8h4c2.208 0 4 1.792 4 4s-1.792 4-4 4c-2.208 0-4-1.792-4-4v-4z"/></svg>
+          <span>${tDict.btn_figma_design}</span>
+        </a>`;
+      }
+      if (p.links.prototype) {
+        pills += `<a href="${p.links.prototype}" target="_blank" rel="noopener noreferrer" class="action-pill pill-proto" title="${tDict.btn_figma_proto}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>${tDict.btn_figma_proto}</span>
+        </a>`;
+      }
+      if (p.links.download) {
+        pills += `<a href="${p.links.download}" download class="action-pill pill-download" title="${tDict.btn_download_deliverable}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          <span>${tDict.btn_download_deliverable}</span>
+        </a>`;
+      }
+      if (p.links.caseStudy) {
+        pills += `<button onclick="openProjectModal('${p.id}')" class="action-pill pill-case" title="${tDict.btn_case_study}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>${tDict.btn_case_study}</span>
+        </button>`;
+      }
+      return pills;
+    }
 
     function renderProjects() {
       const container = document.getElementById('projectsContainer');
@@ -443,81 +526,201 @@
         ? projectsData
         : projectsData.filter(p => p.categories && p.categories.includes(activeCategory));
 
-      container.innerHTML = filtered.map(p => {
+      // Separate hero featured projects vs grid projects
+      const heroProjects = filtered.filter(p => p.heroFeatured === true);
+      const gridProjects = filtered.filter(p => !p.heroFeatured);
+
+      let html = '';
+
+      // Render Hero Milestone Projects
+      heroProjects.forEach(p => {
         const title = t(p.title, lang);
         const shortDesc = t(p.shortDescription, lang);
         const cat = t(p.category, lang);
+        const pType = t(p.projectType, lang);
         const compDate = t(p.completionDate, lang);
-        const isTeam = p.isTeam;
-        const reviewBtnText = translations[lang].project_cta_review;
-        const soloText = translations[lang].project_type_solo;
-        const teamText = translations[lang].project_type_team;
+        const status = t(p.status, lang);
+        const pills = renderActionPills(p, lang);
 
-        return `
-          <div class="project-card">
-            <div class="project-card-header">
+        html += `
+          <div class="editorial-hero-card">
+            <div class="editorial-hero-info">
               <div>
-                <span class="project-badge">${cat}</span>
-                ${isTeam ? `<span class="project-team-tag">${teamText}</span>` : `<span class="project-team-tag" style="background: rgba(232, 160, 181, 0.15); color: #9D526D; border-color: rgba(232, 160, 181, 0.3);">${soloText}</span>`}
+                <div class="editorial-badge-row">
+                  <span class="badge-milestone">${status}</span>
+                  <span class="badge-category">${cat}</span>
+                  <span class="badge-ownership">${pType} &bull; ${compDate}</span>
+                </div>
+                <h3 class="editorial-hero-title">${title}</h3>
+                <p class="editorial-hero-summary">${shortDesc}</p>
+                
+                <div class="project-metrics" style="margin-bottom: 1.2rem;">
+                  ${p.metrics && p.metrics.length > 0 ? p.metrics.slice(0, 3).map(m => `
+                    <div class="metric-item">
+                      <span class="metric-val">${m.value}</span>
+                      <span class="metric-lbl">${t(m.label, lang)}</span>
+                    </div>
+                  `).join('') : ''}
+                </div>
+
+                <div class="tech-stack-pills" style="margin-bottom: 1.2rem;">
+                  ${p.technologies.slice(0, 5).map(tech => `<span class="tech-pill">${tech}</span>`).join('')}
+                  ${p.technologies.length > 5 ? `<span class="tech-pill">+${p.technologies.length - 5}</span>` : ''}
+                </div>
               </div>
-              <span style="font-size: 0.8rem; color: var(--text-muted);">${compDate}</span>
-            </div>
-            
-            <h3 class="project-title">${title}</h3>
-            <p class="project-summary">${shortDesc}</p>
 
-            <div class="project-metrics">
-              ${p.metrics && p.metrics.length > 0 ? p.metrics.slice(0, 2).map(m => `
-                <div class="metric-item">
-                  <span class="metric-val">${m.value}</span>
-                  <span class="metric-lbl">${t(m.label, lang)}</span>
-                </div>
-              `).join('') : `
-                <div class="metric-item">
-                  <span class="metric-val">100%</span>
-                  <span class="metric-lbl">Verified Architecture</span>
-                </div>
-              `}
+              <div class="project-action-pills">
+                ${pills}
+              </div>
             </div>
 
-            <div class="tech-stack-pills">
-              ${p.technologies.slice(0, 4).map(tech => `<span class="tech-pill">${tech}</span>`).join('')}
-              ${p.technologies.length > 4 ? `<span class="tech-pill">+${p.technologies.length - 4}</span>` : ''}
+            <div class="editorial-hero-visual">
+              <img src="${p.thumbnail}" alt="${title}" loading="lazy">
+              <div class="editorial-hero-visual-overlay">
+                <span>${t(p.role, lang)}</span>
+                <span style="font-family: monospace;">${p.completionDate.en}</span>
+              </div>
             </div>
-
-            <button class="project-cta-btn" onclick="openProjectModal('${p.id}')">
-              <span>${reviewBtnText}</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
           </div>
         `;
-      }).join('');
+      });
+
+      // Render Editorial Asymmetric Grid for remaining projects
+      if (gridProjects.length > 0) {
+        html += `<div class="editorial-grid">`;
+        gridProjects.forEach(p => {
+          const title = t(p.title, lang);
+          const shortDesc = t(p.shortDescription, lang);
+          const cat = t(p.category, lang);
+          const pType = t(p.projectType, lang);
+          const compDate = t(p.completionDate, lang);
+          const pills = renderActionPills(p, lang);
+          
+          const isWide = p.id === 'figma-design-system' || p.id === 'retail-sales-intelligence';
+          const colSpan = isWide ? 'col-span-12' : 'col-span-6';
+
+          let galleryHtml = '';
+          if (p.gallery && p.gallery.length > 1) {
+            galleryHtml = `
+              <div class="editorial-gallery-strip">
+                ${p.gallery.slice(0, 4).map(img => `
+                  <div class="editorial-gallery-thumb">
+                    <img src="${img}" alt="Screenshot" loading="lazy">
+                  </div>
+                `).join('')}
+              </div>
+            `;
+          }
+
+          html += `
+            <div class="editorial-card ${colSpan}">
+              <div>
+                <div class="editorial-card-visual">
+                  <img src="${p.thumbnail}" alt="${title}" loading="lazy">
+                </div>
+                ${galleryHtml}
+
+                <div class="editorial-badge-row" style="margin-top: 0.8rem;">
+                  <span class="badge-category">${cat}</span>
+                  <span class="badge-ownership">${pType} &bull; ${compDate}</span>
+                </div>
+
+                <h4 class="editorial-card-title">${title}</h4>
+                <p class="editorial-card-desc">${shortDesc}</p>
+
+                <div class="tech-stack-pills" style="margin-bottom: 0.8rem;">
+                  ${p.technologies.slice(0, 4).map(tech => `<span class="tech-pill">${tech}</span>`).join('')}
+                  ${p.technologies.length > 4 ? `<span class="tech-pill">+${p.technologies.length - 4}</span>` : ''}
+                </div>
+              </div>
+
+              <div class="project-action-pills">
+                ${pills}
+              </div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+      }
+
+      container.innerHTML = html;
     }
 
     function renderCertifications() {
-      const container = document.getElementById('certificationsContainer');
-      if (!container || typeof certificationsData === 'undefined') return;
+      const foundationEl = document.getElementById('academicFoundationContainer');
+      const certsContainer = document.getElementById('certificationsContainer');
+      if (!certsContainer || typeof certificationsData === 'undefined') return;
 
       const lang = window.i18n ? window.i18n.getLang() : 'en';
       const t = window.i18n ? window.i18n.t : (val => val);
+      const tDict = translations[lang];
 
-      container.innerHTML = certificationsData.map(c => {
+      // 1. Render Academic Foundation Hero
+      if (foundationEl && typeof academicDegree !== 'undefined') {
+        foundationEl.innerHTML = `
+          <div class="academic-foundation-hero">
+            <div class="academic-foundation-inner">
+              <div class="academic-seal-icon">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div class="academic-details">
+                <div class="academic-badge-row">
+                  <span class="academic-lead-tag">${t(academicDegree.category, lang)}</span>
+                  <span class="academic-hours-badge">${t(academicDegree.hours, lang)}</span>
+                </div>
+                <h3 class="academic-title">${t(academicDegree.title, lang)}</h3>
+                <div class="academic-institution">${t(academicDegree.issuer, lang)}</div>
+                <p class="academic-narrative">${t(academicDegree.description, lang)}</p>
+              </div>
+              <div class="academic-status-pill">
+                <span class="years">${t(academicDegree.date, lang)}</span>
+                <span class="note">${t(academicDegree.credentialId, lang)}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // 2. Render 24 Professional Certifications
+      certsContainer.innerHTML = certificationsData.map(c => {
         const title = t(c.title, lang);
         const issuer = t(c.issuer, lang);
-        const date = t(c.date, lang);
+        const cat = t(c.category, lang);
+        const desc = t(c.description, lang);
         const hours = t(c.hours, lang);
         const credId = t(c.credentialId, lang);
 
         return `
-          <div class="cert-card">
-            <div class="cert-provider-badge">${issuer}</div>
-            <h4 class="cert-name">${title}</h4>
-            <div class="cert-meta">
-              <span>${date}</span>
-              <span>&bull;</span>
-              <span>${hours}</span>
+          <div class="cert-card-luxury">
+            <div>
+              <div class="cert-card-top">
+                <span class="cert-category-badge">${cat}</span>
+                <span class="cert-issuer-badge">${issuer}</span>
+              </div>
+              <h4 class="cert-title-luxury">${title}</h4>
+              <p class="cert-desc-luxury">${desc}</p>
             </div>
-            <div class="cert-id">${credId ? `ID: ${credId}` : 'Verified Accreditation'}</div>
+
+            <div>
+              <div class="cert-meta-strip">
+                <span class="cert-cred-id">${credId}</span>
+                <span class="cert-hours-tag">${hours}</span>
+              </div>
+              <div class="cert-actions-strip">
+                ${c.verificationUrl ? `
+                  <a href="${c.verificationUrl}" target="_blank" rel="noopener noreferrer" class="btn-cert-verify" title="${tDict.btn_verify_credential}">
+                    <span>${tDict.btn_verify_credential}</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                ` : ''}
+                ${c.previewFile ? `
+                  <button onclick="openCertModal('${c.id}')" class="btn-cert-preview" title="${tDict.btn_preview_cert}">
+                    <span>${tDict.btn_preview_cert}</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </button>
+                ` : ''}
+              </div>
+            </div>
           </div>
         `;
       }).join('');
@@ -551,7 +754,7 @@
       }).join('');
     }
 
-    // Modal Details Renderer
+    // Modal Details Renderer for Projects
     function openProjectModal(id) {
       const p = projectsData.find(item => item.id === id);
       if (!p) return;
@@ -570,6 +773,7 @@
       const sol = t(p.solution, lang);
       const delivs = p.deliverables && p.deliverables[lang] ? p.deliverables[lang] : (p.deliverables['en'] || []);
       const credits = p.teamCredits ? t(p.teamCredits, lang) : null;
+      const pills = renderActionPills(p, lang);
 
       body.innerHTML = `
         <div style="margin-bottom: 1.5rem;">
@@ -580,6 +784,12 @@
           </div>
           <h2 style="font-family: var(--font-editorial); font-size: 2.2rem; color: var(--midnight); margin-bottom: 0.8rem;">${title}</h2>
           <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-body); margin-bottom: 1.5rem;">${fullDesc}</p>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <div class="project-action-pills" style="border-top: none; padding-top: 0; margin-top: 0;">
+            ${pills}
+          </div>
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
@@ -633,14 +843,69 @@
       modal.classList.add('active');
     }
 
+    // Modal Certificate Viewer Renderer
+    function openCertModal(certId) {
+      const cert = certificationsData.find(c => c.id === certId);
+      if (!cert) return;
+      const lang = window.i18n ? window.i18n.getLang() : 'en';
+      const t = window.i18n ? window.i18n.t : (v => v);
+      const tDict = translations[lang];
+
+      const modal = document.getElementById('certModal');
+      const titleEl = document.getElementById('certModalTitle');
+      const issuerEl = document.getElementById('certModalIssuer');
+      const viewport = document.getElementById('certModalViewport');
+      const actions = document.getElementById('certModalActions');
+
+      titleEl.textContent = t(cert.title, lang);
+      issuerEl.textContent = `${t(cert.issuer, lang)} • ${t(cert.date, lang)} • ${t(cert.credentialId, lang)}`;
+
+      if (cert.previewFile) {
+        if (cert.previewType === 'pdf') {
+          viewport.innerHTML = `<iframe src="${cert.previewFile}#toolbar=0" type="application/pdf"></iframe>`;
+        } else {
+          viewport.innerHTML = `<img src="${cert.previewFile}" alt="${t(cert.title, lang)}">`;
+        }
+      } else {
+        viewport.innerHTML = `<div style="color: var(--champagne); text-align: center; padding: 2rem;">Official Verified Credential Record</div>`;
+      }
+
+      let actionsHtml = '';
+      if (cert.verificationUrl) {
+        actionsHtml += `<a href="${cert.verificationUrl}" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 0.82rem; padding: 0.6rem 1.2rem;">
+          <span>${tDict.modal_open_external}</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>`;
+      }
+      if (cert.previewFile) {
+        actionsHtml += `<a href="${cert.previewFile}" download class="btn-secondary" style="font-size: 0.82rem; padding: 0.6rem 1.2rem;">
+          <span>${tDict.modal_download_asset}</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        </a>`;
+      }
+      actions.innerHTML = actionsHtml;
+
+      modal.classList.add('active');
+    }
+
     // Modal Close handlers
     document.getElementById('modalCloseBtn')?.addEventListener('click', () => {
       document.getElementById('projectModal')?.classList.remove('active');
     });
 
+    document.getElementById('certModalCloseBtn')?.addEventListener('click', () => {
+      document.getElementById('certModal')?.classList.remove('active');
+    });
+
+    document.getElementById('certModalDismissBtn')?.addEventListener('click', () => {
+      document.getElementById('certModal')?.classList.remove('active');
+    });
+
     window.addEventListener('click', (e) => {
-      const modal = document.getElementById('projectModal');
-      if (e.target === modal) modal.classList.remove('active');
+      const pModal = document.getElementById('projectModal');
+      const cModal = document.getElementById('certModal');
+      if (e.target === pModal) pModal.classList.remove('active');
+      if (e.target === cModal) cModal.classList.remove('active');
     });
 
     // Filter Buttons

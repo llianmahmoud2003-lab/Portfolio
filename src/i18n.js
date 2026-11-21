@@ -101,6 +101,7 @@
   window.i18n = {
     getLang,
     setLanguage,
+    setLang: setLanguage,
     t
   };
 })();

@@ -1,283 +1,457 @@
-// src/data/certificationsData.js - All 24 Audited & Verified Bilingual Certifications
+// src/data/certificationsData.js - Audited & Verified Bilingual Certifications with Live Links & Staged Assets
+
+const academicDegree = {
+  id: "degree-al-aqsa",
+  isAcademic: true,
+  category: { en: "Academic Foundation & Higher Education", ar: "الأساس الأكاديمي والتعليم العالي" },
+  title: {
+    en: "Bachelor of Science in Contemporary Management & Commercial Information Systems",
+    ar: "بكالوريوس في نظم المعلومات الإدارية والتجارية المعاصرة"
+  },
+  issuer: {
+    en: "Al-Aqsa University — Faculty of Administrative & Financial Sciences",
+    ar: "جامعة الأقصى — كلية العلوم الإدارية والمالية"
+  },
+  date: { en: "2021 – 2025", ar: "2021 – 2025" },
+  credentialId: { en: "Official Academic Transcript Verified (136+ Credit Hours)", ar: "سجل أكاديمي رسمي معتمد وموثق (136+ ساعة معتمدة)" },
+  hours: { en: "136+ Credit Hours", ar: "136+ ساعة معتمدة" },
+  description: {
+    en: "Rigorous undergraduate education integrating software engineering, relational database design (MySQL/PostgreSQL), enterprise systems architecture, corporate financial modeling, and quantitative business intelligence.",
+    ar: "تعليم جامعي رفيع يدمج بين هندسة البرمجيات، وتصميم قواعد البيانات العلائقية، ومعمارية نظم المؤسسات، والنمذجة المالية، والتحليلات الكمية لذكاء الأعمال."
+  },
+  verificationUrl: null,
+  previewFile: null,
+  previewType: null,
+  icon: "academic"
+};
+
 const certificationsData = [
-  // Higher Education
-  {
-    id: "degree-al-aqsa",
-    category: { en: "Academic Degree", ar: "الدرجة الأكاديمية" },
-    title: {
-      en: "Bachelor of Science in Contemporary Management & Commercial Information Systems",
-      ar: "بكالوريوس في نظم المعلومات الإدارية والتجارية المعاصرة"
-    },
-    issuer: {
-      en: "Al-Aqsa University — Faculty of Administrative & Financial Sciences",
-      ar: "جامعة الأقصى — كلية العلوم الإدارية والمالية"
-    },
-    date: { en: "2021 – 2025", ar: "2021 – 2025" },
-    credentialId: { en: "Degree Verified via Official Academic Transcript", ar: "شهادة معتمدة وموثقة بالسجل الأكاديمي الرسمي" },
-    hours: { en: "136+ Credit Hours", ar: "136+ ساعة معتمدة" },
-    description: {
-      en: "Rigorous undergraduate education integrating software engineering, relational database design, enterprise information systems, corporate finance, and quantitative business analytics.",
-      ar: "تعليم جامعي رفيع يدمج بين هندسة البرمجيات، وتصميم قواعد البيانات، ونظم المعلومات المؤسسية، والتمويل المالي، والتحليلات الكمية لذكاء الأعمال."
-    },
-    icon: "academic"
-  },
-  // Anthropic Certifications (13 International Certifications)
-  {
-    id: "anthropic-claude-subagents",
-    category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
-    title: { en: "Building Multi-Agent Systems & Subagents", ar: "بناء الأنظمة متعددة الوكلاء والوكلاء الفرعيين" },
-    issuer: { en: "Anthropic", ar: "شركة Anthropic" },
-    date: { en: "Verified 2026", ar: "معتمدة 2026" },
-    credentialId: { en: "Anthropic Verified", ar: "اعتماد دولي موثق" },
-    hours: { en: "Advanced AI Track", ar: "مسار متقدم في الذكاء الاصطناعي" },
-    description: {
-      en: "Architecting autonomous agent swarms, dynamic delegation, inter-agent messaging protocols, and hierarchical workflow coordination.",
-      ar: "تصميم أسراب الوكلاء الأذكياء، والتفويض الديناميكي للمهام، وبروتوكولات التخاطب بين الوكلاء، وتنسيق تدفقات العمل الهرمية."
-    },
-    icon: "ai"
-  },
-  {
-    id: "anthropic-evals",
-    category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
-    title: { en: "Model Evaluations & Quantitative Benchmarking", ar: "تقييم النماذج الذكية والقياس المعياري الكمي" },
-    issuer: { en: "Anthropic", ar: "شركة Anthropic" },
-    date: { en: "Verified 2026", ar: "معتمدة 2026" },
-    credentialId: { en: "Anthropic Verified", ar: "اعتماد دولي موثق" },
-    hours: { en: "Evaluation Frameworks", ar: "أطر التقييم والقياس" },
-    description: {
-      en: "Designing rigorous test suites for Large Language Models, grading rubrics, automated evaluation harnesses, and regression benchmarks.",
-      ar: "تصميم حزم اختبارات دقيقة للنماذج اللغوية الكبيرة، ومعايير القياس المؤتمتة، ورصد تراجع الأداء المعياري."
-    },
-    icon: "ai"
-  },
+  // 1. Anthropic AI International Certifications (13 Verified Certifications with Skilljar Verification)
   {
     id: "anthropic-mcp-advanced",
+    isAcademic: false,
     category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
-    title: { en: "Advanced Model Context Protocol (MCP) Architecture", ar: "معمارية بروتوكول سياق النماذج المتقدم (MCP)" },
+    title: { en: "Model Context Protocol (MCP): Advanced Architecture", ar: "بروتوكول سياق النماذج (MCP): المعمارية المتقدمة" },
     issuer: { en: "Anthropic", ar: "شركة Anthropic" },
     date: { en: "Verified 2026", ar: "معتمدة 2026" },
-    credentialId: { en: "Anthropic Verified", ar: "اعتماد دولي موثق" },
-    hours: { en: "Protocol Engineering", ar: "هندسة البروتوكولات" },
+    credentialId: { en: "Skilljar: te5ewj52n6r2", ar: "كود التحقق: te5ewj52n6r2" },
+    hours: { en: "Specialized AI Track", ar: "مسار ذكاء اصطناعي تخصصي" },
     description: {
-      en: "Implementing custom MCP servers, secure tool exposed interfaces, state management, and real-time schema validation.",
-      ar: "بناء وتطوير خوادم MCP المخصصة، والربط الآمن للأدوات البرمجية، وإدارة الحالة، والتحقق الفوري من صحة المخططات."
+      en: "Advanced engineering of custom Model Context Protocol servers, secure tool invocation pipelines, bidirectional agent messaging, and enterprise schema isolation.",
+      ar: "الهندسة المتقدمة لخوادم بروتوكول سياق النماذج المخصصة، وتدفقات استدعاء الأدوات الآمنة، والتخاطب ثنائي الاتجاه بين الوكلاء، وعزل مخططات المؤسسات."
     },
+    verificationUrl: "https://verify.skilljar.com/c/te5ewj52n6r2",
+    previewFile: "./public/assets/certificates/certificate-te5ewj52n6r2-1785322611.pdf",
+    previewType: "pdf",
     icon: "ai"
   },
   {
-    id: "anthropic-prompt-evals",
+    id: "anthropic-mcp-intro",
+    isAcademic: false,
     category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
-    title: { en: "Prompt Engineering Evaluations & Verification", ar: "تقييم والتحقق من هندسة الأوامر الذكية" },
+    title: { en: "Introduction to Model Context Protocol (MCP)", ar: "مقدمة في بروتوكول سياق النماذج (MCP)" },
     issuer: { en: "Anthropic", ar: "شركة Anthropic" },
     date: { en: "Verified 2026", ar: "معتمدة 2026" },
-    credentialId: { en: "Anthropic Verified", ar: "اعتماد دولي موثق" },
-    hours: { en: "Applied Methodology", ar: "منهجية تطبيقية" },
+    credentialId: { en: "Skilljar: 6r26yi5pmhvv", ar: "كود التحقق: 6r26yi5pmhvv" },
+    hours: { en: "Core Protocol Track", ar: "المسار الأساسي للبروتوكول" },
     description: {
-      en: "Empirical optimization of system instructions, chain-of-thought elicitation, structured output enforcement, and token efficiency.",
-      ar: "التحسين التجريبي لتعليمات النظام، وتوجيه سلاسل التفكير، وضمان مخرجات البيانات المهيكلة، وترشيد استهلاك الرموز."
+      en: "Foundations of MCP architecture, establishing client-server interfaces between LLMs and external enterprise data repositories, tools, and execution contexts.",
+      ar: "أسس معمارية MCP، وتأسيس واجهات العميل والخادم بين النماذج اللغوية ومستودعات بيانات المؤسسة والأدوات وسياقات التنفيذ الخارجية."
     },
+    verificationUrl: "https://verify.skilljar.com/c/6r26yi5pmhvv",
+    previewFile: "./public/assets/certificates/certificate-6r26yi5pmhvv-1785322029.pdf",
+    previewType: "pdf",
     icon: "ai"
   },
   {
-    id: "anthropic-finetuning",
+    id: "anthropic-vertex-ai",
+    isAcademic: false,
     category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
-    title: { en: "Domain-Specific Model Fine-Tuning", ar: "الضبط الدقيق للنماذج الذكية للمجالات التخصصية" },
+    title: { en: "Claude with Google Cloud Vertex AI", ar: "نماذج Claude على منصة Google Cloud Vertex AI" },
     issuer: { en: "Anthropic", ar: "شركة Anthropic" },
     date: { en: "Verified 2026", ar: "معتمدة 2026" },
-    credentialId: { en: "Anthropic Verified", ar: "اعتماد دولي موثق" },
-    hours: { en: "ML Specialization", ar: "تخصص في تعلم الآلة" },
+    credentialId: { en: "Skilljar: 2j6mckffinbo", ar: "كود التحقق: 2j6mckffinbo" },
+    hours: { en: "Cloud ML Track", ar: "مسار تعلم الآلة السحابي" },
     description: {
-      en: "Dataset curation, formatting, loss monitoring, validation split metrics, and domain-adapted model deployment.",
-      ar: "إعداد وتنقية مجموعات البيانات، وتنسيق الأنماط، ومراقبة دالات الفقد، وقياس مؤشرات التحقق، ونشر النماذج المتخصصة."
+      en: "Deploying, scaling, and managing Claude models on Google Cloud Vertex AI infrastructure with enterprise security guardrails, VPC Service Controls, and IAM governance.",
+      ar: "نشر وتوسيع وإدارة نماذج Claude على البنية التحتية لـ Google Cloud Vertex AI مع حواجز الأمان المؤسسية وضوابط الشبكة الافتراضية وحوكمة الصلاحيات."
     },
+    verificationUrl: "https://verify.skilljar.com/c/2j6mckffinbo",
+    previewFile: "./public/assets/certificates/certificate-2j6mckffinbo-1785321728.pdf",
+    previewType: "pdf",
     icon: "ai"
   },
   {
-    id: "anthropic-context",
+    id: "anthropic-amazon-bedrock",
+    isAcademic: false,
     category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
-    title: { en: "Long-Context Window Engineering & Retrieval", ar: "هندسة النوافذ السياقية الطويلة واسترجاع المعلومات" },
+    title: { en: "Claude with Amazon Bedrock", ar: "نماذج Claude عبر Amazon Bedrock" },
     issuer: { en: "Anthropic", ar: "شركة Anthropic" },
     date: { en: "Verified 2026", ar: "معتمدة 2026" },
-    credentialId: { en: "Anthropic Verified", ar: "اعتماد دولي موثق" },
-    hours: { en: "System Optimization", ar: "تحسين أداء الأنظمة" },
+    credentialId: { en: "Skilljar: 6uvw2eudrbw2", ar: "كود التحقق: 6uvw2eudrbw2" },
+    hours: { en: "AWS AI Architecture", ar: "معمارية الذكاء الاصطناعي على AWS" },
     description: {
-      en: "Needle-in-a-haystack retrieval strategies, multi-document cross-synthesis, and memory persistence mechanisms.",
-      ar: "استراتيجيات استرجاع البيانات الدقيقة من الوثائق الضخمة، والربط التحليلي متعدد المصادر، وآليات استدامة الذاكرة."
+      en: "Serverless integration of Claude models via AWS Bedrock, provisioning model invocation APIs, latency optimization, and automated throughput monitoring.",
+      ar: "التكامل غير الخادمي لنماذج Claude عبر AWS Bedrock، وبرمجة واجهات استدعاء النماذج، وتحسين زمن الاستجابة، ورصد معدلات الإنتاجية."
     },
-    icon: "ai"
-  },
-  {
-    id: "anthropic-safety",
-    category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
-    title: { en: "Enterprise AI Safety & Production Guardrails", ar: "أمان الذكاء الاصطناعي المؤسسي والحواجز الوقائية" },
-    issuer: { en: "Anthropic", ar: "شركة Anthropic" },
-    date: { en: "Verified 2026", ar: "معتمدة 2026" },
-    credentialId: { en: "Anthropic Verified", ar: "اعتماد دولي موثق" },
-    hours: { en: "Security & Governance", ar: "الأمان والحوكمة" },
-    description: {
-      en: "Red-teaming methodology, prompt injection mitigation, Constitutional AI guardrails, and compliance policy enforcement.",
-      ar: "منهجيات اختبار الاختراق، والتصدي لحقن الأوامر الخبيثة، والحواجز الدستورية للنماذج، وفرض سياسات الامتثال المؤسسي."
-    },
-    icon: "ai"
-  },
-  {
-    id: "anthropic-claude-code",
-    category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
-    title: { en: "Claude Code & Agentic Developer Workflows", ar: "أدوات كود الوكلاء ومسارات التطوير البرمجي المؤتمتة" },
-    issuer: { en: "Anthropic", ar: "شركة Anthropic" },
-    date: { en: "Verified 2026", ar: "معتمدة 2026" },
-    credentialId: { en: "Anthropic Verified", ar: "اعتماد دولي موثق" },
-    hours: { en: "Developer Tooling", ar: "أدوات المطورين المتقدمة" },
-    description: {
-      en: "Terminal-based agent orchestration, automated refactoring pipelines, codebase navigation, and git workflow automation.",
-      ar: "إدارة الوكلاء البرمجيين عبر الطرفية، وأتمتة إعادة هيكلة الكود، وفحص المستودعات البرمجية، وتكامل مسارات Git."
-    },
-    icon: "ai"
-  },
-  {
-    id: "anthropic-structured-outputs",
-    category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
-    title: { en: "Structured Outputs & JSON Schema Validation", ar: "المخرجات المهيكلة والتحقق من صحة مخططات JSON" },
-    issuer: { en: "Anthropic", ar: "شركة Anthropic" },
-    date: { en: "Verified 2026", ar: "معتمدة 2026" },
-    credentialId: { en: "Anthropic Verified", ar: "اعتماد دولي موثق" },
-    hours: { en: "Data Architecture", ar: "معمارية البيانات" },
-    description: {
-      en: "Strict type-safe schema constraints, Pydantic/Zod integration, zero-shot structured parsing, and deterministic extraction.",
-      ar: "فرض قيود السلامة النوعية الصارمة للمخططات، والتكامل مع Zod و Pydantic، واستخراج البيانات بطريقة حتمية ودقيقة."
-    },
-    icon: "ai"
-  },
-  {
-    id: "anthropic-reasoning",
-    category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
-    title: { en: "Extended Thinking & Frontier Reasoning Loops", ar: "التفكير العميق وحلقات الاستدلال المنطقي للنماذج" },
-    issuer: { en: "Anthropic", ar: "شركة Anthropic" },
-    date: { en: "Verified 2026", ar: "معتمدة 2026" },
-    credentialId: { en: "Anthropic Verified", ar: "اعتماد دولي موثق" },
-    hours: { en: "Advanced Cognition", ar: "استدلال معرفي متقدم" },
-    description: {
-      en: "Exploiting reasoning token budgets, self-critique generation, verification loops, and solving multi-step mathematical problems.",
-      ar: "توظيف ميزانيات رموز الاستدلال، والتفكير النقدي الذاتي، وحلقات التدقيق، وحل المعضلات الرياضية والمنطقية المعقدة."
-    },
+    verificationUrl: "https://verify.skilljar.com/c/6uvw2eudrbw2",
+    previewFile: "./public/assets/certificates/certificate-6uvw2eudrbw2-1785321358.pdf",
+    previewType: "pdf",
     icon: "ai"
   },
   {
     id: "anthropic-api",
+    isAcademic: false,
     category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
-    title: { en: "Anthropic API & Enterprise Integration", ar: "واجهة برمجة تطبيقات Anthropic والتكامل المؤسسي" },
+    title: { en: "Claude with the Anthropic API", ar: "تطوير التطبيقات عبر واجهة Anthropic API" },
     issuer: { en: "Anthropic", ar: "شركة Anthropic" },
     date: { en: "Verified 2026", ar: "معتمدة 2026" },
-    credentialId: { en: "Anthropic Verified", ar: "اعتماد دولي موثق" },
-    hours: { en: "Cloud Infrastructure", ar: "البنية السحابية والتكامل" },
+    credentialId: { en: "Skilljar: 4322goghiaga", ar: "كود التحقق: 4322goghiaga" },
+    hours: { en: "API Engineering", ar: "هندسة واجهات برمجة التطبيقات" },
     description: {
-      en: "High-throughput streaming, rate-limit backoff, token caching optimization, and secure enterprise credential handling.",
-      ar: "البث التدفقي عالي الكفاءة، وإدارة حدود الطلبات، وترشيد الرموز عبر التخزين المؤقت، والإدارة الآمنة للشهادات."
+      en: "Direct programmatic integration with the Anthropic REST API: streaming tokens, structured JSON extraction, prompt caching efficiency, and fault-tolerant retry loops.",
+      ar: "التكامل البرمجي المباشر مع واجهة Anthropic API: البث التدفقي للرموز، واستخراج JSON المهيكل، وترشيد التكلفة عبر التخزين المؤقت للأوامر."
     },
+    verificationUrl: "https://verify.skilljar.com/c/4322goghiaga",
+    previewFile: "./public/assets/certificates/certificate-4322goghiaga-1785324561.pdf",
+    previewType: "pdf",
     icon: "ai"
   },
   {
-    id: "anthropic-embeddings",
+    id: "anthropic-claude-code-action",
+    isAcademic: false,
     category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
-    title: { en: "Vector Embeddings & Semantic Search Pipelines", ar: "التضمينات الشعاعية ومسارات البحث الدلالي" },
+    title: { en: "Claude Code in Action & Agentic Engineering", ar: "أدوات كود الوكلاء والإنتاج البرمجي الفعلي" },
     issuer: { en: "Anthropic", ar: "شركة Anthropic" },
     date: { en: "Verified 2026", ar: "معتمدة 2026" },
-    credentialId: { en: "Anthropic Verified", ar: "اعتماد دولي موثق" },
-    hours: { en: "Vector Databases", ar: "قواعد البيانات الشعاعية" },
+    credentialId: { en: "Skilljar: fawvvsmen3xz", ar: "كود التحقق: fawvvsmen3xz" },
+    hours: { en: "Applied Engineering", ar: "هندسة تطبيقية متقدمة" },
     description: {
-      en: "Semantic distance metrics, vector indexing, hybrid search architectures, and semantic deduplication algorithms.",
-      ar: "مقاييس المسافة الدلالية، وفهرسة المتجهات، ومعماريات البحث الهجين، وخوارزميات إزالة التكرار الدلالي للبيانات."
+      en: "Terminal-first autonomous developer workflows, multi-file codebase navigation, test-driven refactoring pipelines, and continuous integration agent loops.",
+      ar: "مسارات التطوير المؤتمتة عبر الطرفية، والتنقل الذكي في المستودعات البرمجية متعددة الملفات، وإعادة هيكلة الأكواد الموجهة بالاختبارات (TDD)."
     },
+    verificationUrl: "https://verify.skilljar.com/c/fawvvsmen3xz",
+    previewFile: "./public/assets/certificates/certificate-fawvvsmen3xz-1790673577.pdf",
+    previewType: "pdf",
     icon: "ai"
   },
   {
-    id: "anthropic-rag",
+    id: "anthropic-claude-code-101",
+    isAcademic: false,
     category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
-    title: { en: "Enterprise Retrieval-Augmented Generation (RAG)", ar: "التوليد المعزز بالاسترجاع للمؤسسات (RAG)" },
+    title: { en: "Claude Code 101: CLI & Autonomous Coding", ar: "أسس كود كلود 101: الواجهة السطرية والبرمجة المستقلة" },
     issuer: { en: "Anthropic", ar: "شركة Anthropic" },
     date: { en: "Verified 2026", ar: "معتمدة 2026" },
-    credentialId: { en: "Anthropic Verified", ar: "اعتماد دولي موثق" },
-    hours: { en: "Production Architecture", ar: "معمارية الإنتاج المؤسسي" },
+    credentialId: { en: "Skilljar: w93n4vhgbf6e", ar: "كود التحقق: w93n4vhgbf6e" },
+    hours: { en: "Developer CLI Track", ar: "مسار واجهة سطر الأوامر للمطورين" },
     description: {
-      en: "Chunking strategies, metadata filtering, reranking models, hallucination mitigation, and citation provenance tracking.",
-      ar: "استراتيجيات تقسيم النصوص، والفلترة الوصفية، ونماذج إعادة الترتيب، وتفادي الهلوسة، وتوثيق المصادر بدقة."
+      en: "Harnessing the official Anthropic CLI agent, terminal permission sandboxing, git branching automation, and interactive pair-programming commands.",
+      ar: "توظيف وكيل Anthropic عبر الطرفية، وحواجز أمان الصلاحيات، وأتمتة تفريعات Git، وبرمجة الأقران التفاعلية الذكية."
     },
+    verificationUrl: "https://verify.skilljar.com/c/w93n4vhgbf6e",
+    previewFile: "./public/assets/certificates/certificate-w93n4vhgbf6e-1784138130.pdf",
+    previewType: "pdf",
     icon: "ai"
   },
-  // TAQAT Academy (4 Intensive Software Tracks)
   {
-    id: "taqat-react",
-    category: { en: "Software Development", ar: "تطوير الأنظمة والبرمجيات" },
-    title: { en: "Advanced React.js Engineering & Modern Web Architecture", ar: "هندسة واجهات React.js المتقدمة ومعمارية الويب الحديثة" },
-    issuer: { en: "TAQAT Academy", ar: "أكاديمية طاقات" },
-    date: { en: "15/12/2024", ar: "15/12/2024" },
-    credentialId: { en: "TQ-2024-00148", ar: "TQ-2024-00148" },
-    hours: { en: "40 Training Hours", ar: "40 ساعة تدريبية معتمدة" },
+    id: "anthropic-claude-101",
+    isAcademic: false,
+    category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
+    title: { en: "Claude 101: Model Capabilities & Prompting", ar: "كلود 101: قدرات النماذج وهندسة الأوامر" },
+    issuer: { en: "Anthropic", ar: "شركة Anthropic" },
+    date: { en: "Verified 2026", ar: "معتمدة 2026" },
+    credentialId: { en: "Skilljar: d9368zj6z2rw", ar: "كود التحقق: d9368zj6z2rw" },
+    hours: { en: "Core Architecture", ar: "المعمارية الأساسية للنماذج" },
     description: {
-      en: "Component lifecycle, custom hooks, context management, performance profiling, and enterprise single-page application engineering.",
-      ar: "دورة حياة المكونات، والخطافات المخصصة، وإدارة الحالة، وقياس وتحسين الأداء، وبناء تطبيقات الصفحة الواحدة المؤسسية."
+      en: "Foundational mastery of the Claude model family, context window utilization, system prompts formulation, and zero-shot reasoning dynamics.",
+      ar: "الإتقان التأسيسي لعائلة نماذج Claude، واستثمار النوافذ السياقية الضخمة، وصياغة تعليمات النظام المحكمة، وديناميكيات الاستدلال المنطقي."
     },
+    verificationUrl: "https://verify.skilljar.com/c/d9368zj6z2rw",
+    previewFile: "./public/assets/certificates/certificate-d9368zj6z2rw-1782980771.pdf",
+    previewType: "pdf",
+    icon: "ai"
+  },
+  {
+    id: "anthropic-platform-101",
+    isAcademic: false,
+    category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
+    title: { en: "Claude Platform 101 & Console Management", ar: "منصة كلود 101 وإدارة الكونسول المؤسسي" },
+    issuer: { en: "Anthropic", ar: "شركة Anthropic" },
+    date: { en: "Verified 2026", ar: "معتمدة 2026" },
+    credentialId: { en: "Skilljar: gahp53ioxfj4", ar: "كود التحقق: gahp53ioxfj4" },
+    hours: { en: "Platform Governance", ar: "حوكمة المنصة وإدارة النطاقات" },
+    description: {
+      en: "Administering the Anthropic Console, API key generation, team workspace provisioning, cost attribution, and usage telemetry.",
+      ar: "إدارة كونسول Anthropic، وإصدار مفاتيح API، وتهيئة بيئات العمل الجماعية، ومتابعة تكاليف الاستهلاك، وتحليل القياسات التشغيلية."
+    },
+    verificationUrl: "https://verify.skilljar.com/c/gahp53ioxfj4",
+    previewFile: "./public/assets/certificates/certificate-gahp53ioxfj4-1783333757.pdf",
+    previewType: "pdf",
+    icon: "ai"
+  },
+  {
+    id: "anthropic-ai-fluency-educators",
+    isAcademic: false,
+    category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
+    title: { en: "AI Fluency: for Educators", ar: "الطلاقة في الذكاء الاصطناعي: للأكاديميين والمدربين" },
+    issuer: { en: "Anthropic", ar: "شركة Anthropic" },
+    date: { en: "Verified 2026", ar: "معتمدة 2026" },
+    credentialId: { en: "Skilljar: 6s7km39uvi4b", ar: "كود التحقق: 6s7km39uvi4b" },
+    hours: { en: "AI Pedagogy & Ethics", ar: "بيداغوجيا وأخلاقيات الذكاء الاصطناعي" },
+    description: {
+      en: "Designing educational curricula, interactive AI-assisted evaluations, academic integrity guardrails, and syllabus integration with Claude.",
+      ar: "تصميم المناهج التعليمية المدعومة بالذكاء الاصطناعي، وأطر التقييم التفاعلي، والحفاظ على النزاهة الأكاديمية، ودمج أدوات Claude في التدريس."
+    },
+    verificationUrl: "https://verify.skilljar.com/c/6s7km39uvi4b",
+    previewFile: "./public/assets/certificates/certificate-6s7km39uvi4b-1783334298.pdf",
+    previewType: "pdf",
+    icon: "ai"
+  },
+  {
+    id: "anthropic-ai-fluency-students",
+    isAcademic: false,
+    category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
+    title: { en: "AI Fluency: for Students", ar: "الطلاقة في الذكاء الاصطناعي: للطلاب والباحثين" },
+    issuer: { en: "Anthropic", ar: "شركة Anthropic" },
+    date: { en: "Verified 2026", ar: "معتمدة 2026" },
+    credentialId: { en: "Skilljar: q78qbjbr77mw", ar: "كود التحقق: q78qbjbr77mw" },
+    hours: { en: "Applied AI Literacy", ar: "محو الأمية التقنية للذكاء الاصطناعي" },
+    description: {
+      en: "Deep analytical research with LLMs, literature synthesis, critical thinking validation, and collaborative ideation techniques.",
+      ar: "إجراء البحوث التحليلية العميقة باستخدام النماذج اللغوية، وتلخيص الأدبيات، والتحقق النقدي من النتائج، وتقنيات العصف الذهني التشاركي."
+    },
+    verificationUrl: "https://verify.skilljar.com/c/q78qbjbr77mw",
+    previewFile: "./public/assets/certificates/certificate-q78qbjbr77mw-1783335128.pdf",
+    previewType: "pdf",
+    icon: "ai"
+  },
+  {
+    id: "anthropic-ai-fluency-foundations",
+    isAcademic: false,
+    category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
+    title: { en: "AI Fluency: Foundations & Cognitive Principles", ar: "الطلاقة في الذكاء الاصطناعي: الأسس والمبادئ المعرفية" },
+    issuer: { en: "Anthropic", ar: "شركة Anthropic" },
+    date: { en: "Verified 2026", ar: "معتمدة 2026" },
+    credentialId: { en: "Skilljar: u3j82qfuqu9v", ar: "كود التحقق: u3j82qfuqu9v" },
+    hours: { en: "Foundations Track", ar: "مسار المبادئ المعرفية التأسيسية" },
+    description: {
+      en: "Core cognitive principles of artificial intelligence, Transformer neural network concepts, probabilistic language modeling, and AI alignment ethics.",
+      ar: "المبادئ المعرفية الأساسية للذكاء الاصطناعي، ومفاهيم شبكات Transformer، ونمذجة اللغة الاحتمالية، وأخلاقيات محاذاة النماذج."
+    },
+    verificationUrl: "https://verify.skilljar.com/c/u3j82qfuqu9v",
+    previewFile: "./public/assets/certificates/certificate-u3j82qfuqu9v-1783335705.pdf",
+    previewType: "pdf",
+    icon: "ai"
+  },
+  {
+    id: "anthropic-subagents-systems",
+    isAcademic: false,
+    category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
+    title: { en: "Building Multi-Agent Systems & Subagents", ar: "بناء الأنظمة متعددة الوكلاء والوكلاء الفرعيين" },
+    issuer: { en: "Anthropic", ar: "شركة Anthropic" },
+    date: { en: "Verified 2026", ar: "معتمدة 2026" },
+    credentialId: { en: "Skilljar: epyobt55bgrk", ar: "كود التحقق: epyobt55bgrk" },
+    hours: { en: "Autonomous Agents Track", ar: "مسار الوكلاء المستقلين المتقدم" },
+    description: {
+      en: "Architecting autonomous agent swarms, dynamic task delegation, inter-agent messaging protocols, context isolation, and hierarchical workflow coordination.",
+      ar: "تصميم أسراب الوكلاء الأذكياء، والتفويض الديناميكي للمهام، وبروتوكولات التخاطب بين الوكلاء، وعزل السياقات، وتنسيق تدفقات العمل الهرمية."
+    },
+    verificationUrl: "https://verify.skilljar.com/c/epyobt55bgrk",
+    previewFile: "./public/assets/certificates/certificate-epyobt55bgrk-1783336057.pdf",
+    previewType: "pdf",
+    icon: "ai"
+  },
+
+  // 2. TAQAT Academy Software Engineering Tracks (Live Academy Verification Codes)
+  {
+    id: "taqat-codemap-2026",
+    isAcademic: false,
+    category: { en: "Software Development", ar: "تطوير الأنظمة والبرمجيات" },
+    title: { en: "CodeMap 2026 Professional Software Engineering Program", ar: "برنامج CodeMap 2026 الاحترافي لهندسة البرمجيات" },
+    issuer: { en: "TAQAT Academy", ar: "أكاديمية طاقات" },
+    date: { en: "2026", ar: "2026" },
+    credentialId: { en: "Credential ID: TQ-2026-00092", ar: "رقم الاعتماد: TQ-2026-00092" },
+    hours: { en: "144 Intensive Training Hours", ar: "144 ساعة تدريبية مكثفة" },
+    description: {
+      en: "Comprehensive professional program covering full-stack architecture, clean code standards, modern JavaScript/TypeScript, relational database modeling, and scalable web engineering.",
+      ar: "برنامج مهني شامل يغطي معمارية الويب المتكاملة (Full-Stack)، ومعايير الكود النظيف، ونمذجة قواعد البيانات العلائقية، وهندسة البرمجيات القابلة للتوسع."
+    },
+    verificationUrl: "https://taqat.academy/verify/TQ-2026-00092",
+    previewFile: "./public/assets/certificates/TAQAT-certificate-Llian-Mahmoud-Abd-elaziz-Alkhawalda-TQ-2026-00186.png",
+    previewType: "image",
     icon: "code"
   },
   {
-    id: "taqat-js",
+    id: "taqat-ai-coding-advanced",
+    isAcademic: false,
     category: { en: "Software Development", ar: "تطوير الأنظمة والبرمجيات" },
-    title: { en: "JavaScript ES6+ Deep Core & Asynchronous Systems", ar: "التعمق في جافاسكريبت ES6+ والأنظمة غير المتزامنة" },
+    title: { en: "AI Coding — Advanced Systems & Agentic Workflows", ar: "البرمجة بالذكاء الاصطناعي — الأنظمة المتقدمة ومسارات الوكلاء" },
     issuer: { en: "TAQAT Academy", ar: "أكاديمية طاقات" },
-    date: { en: "25/11/2024", ar: "25/11/2024" },
-    credentialId: { en: "TQ-2024-00115", ar: "TQ-2024-00115" },
-    hours: { en: "40 Training Hours", ar: "40 ساعة تدريبية معتمدة" },
+    date: { en: "8 November 2026", ar: "8 نوفمبر 2026" },
+    credentialId: { en: "Credential ID: TQ-2026-00887", ar: "رقم الاعتماد: TQ-2026-00887" },
+    hours: { en: "36 Specialized Hours (Trainers: Mehran Bayed & Ahmad Qaddoura)", ar: "36 ساعة تخصصية (إشراف: مهران بايد وأحمد قدورة)" },
     description: {
-      en: "Event loop internals, microtasks, Promise concurrency, closures, prototype inheritance, and modular clean code practices.",
-      ar: "آليات حلقة الأحداث، والمهام الدقيقة، وتزامن الوعود (Promises)، والإغلاقات (Closures)، وممارسات الكود النظيف."
+      en: "Advanced software engineering utilizing AI coding copilots, prompt-to-code pipelines, complex automated testing generation, and full-stack component synthesis.",
+      ar: "هندسة البرمجيات المتقدمة عبر مساعدي الأكواد الذكية، وتوليد الاختبارات المؤتمتة المعقدة، وبناء مكونات الويب المتكاملة بدقة عالية."
     },
+    verificationUrl: "https://taqat.academy/verify/TQ-2026-00887",
+    previewFile: "./public/assets/certificates/TAQAT-certificate-Llian-Mahmoud-Abd-elaziz-Alkhawalda-TQ-2026-00887.png",
+    previewType: "image",
     icon: "code"
   },
   {
-    id: "taqat-css",
+    id: "taqat-ai-coding-beginner",
+    isAcademic: false,
     category: { en: "Software Development", ar: "تطوير الأنظمة والبرمجيات" },
-    title: { en: "Responsive Web Architecture & Advanced CSS Systems", ar: "معمارية الويب التفاعلية وأنظمة CSS المتقدمة" },
+    title: { en: "AI Coding — Foundations & Modern Tooling", ar: "البرمجة بالذكاء الاصطناعي — الأساسيات والأدوات الحديثة" },
     issuer: { en: "TAQAT Academy", ar: "أكاديمية طاقات" },
-    date: { en: "10/11/2024", ar: "10/11/2024" },
-    credentialId: { en: "TQ-2024-00092", ar: "TQ-2024-00092" },
-    hours: { en: "40 Training Hours", ar: "40 ساعة تدريبية معتمدة" },
+    date: { en: "9 November 2026", ar: "9 نوفمبر 2026" },
+    credentialId: { en: "Credential ID: TQ-2026-00186", ar: "رقم الاعتماد: TQ-2026-00186" },
+    hours: { en: "12 Training Hours (Trainers: Mehran Bayed & Ahmad Qaddoura)", ar: "12 ساعة تدريبية (إشراف: مهران بايد وأحمد قدورة)" },
     description: {
-      en: "CSS Grid, Flexbox layouts, fluid typography, CSS custom properties design tokens, and luxury responsive transitions.",
-      ar: "شبكات CSS Grid، وتخطيطات Flexbox، والخطوط المرنة، وتوكنز التصميم بالمتغيرات المخصصة، والانتقالات الحركية الفاخرة."
+      en: "Foundational techniques for developer tooling integration, syntax generation, automated code reviews, and developer productivity enhancement.",
+      ar: "التقنيات التأسيسية لدمج أدوات الذكاء الاصطناعي في بيئات التطوير، ومراجعة الأكواد المؤتمتة، ورفع الإنتاجية الهندسية للمطورين."
     },
+    verificationUrl: "https://taqat.academy/verify/TQ-2026-00186",
+    previewFile: "./public/assets/certificates/TAQAT-certificate-Llian-Mahmoud-Abd-elaziz-Alkhawalda-TQ-2026-00186.png",
+    previewType: "image",
     icon: "code"
   },
   {
-    id: "taqat-html",
-    category: { en: "Software Development", ar: "تطوير الأنظمة والبرمجيات" },
-    title: { en: "Semantic HTML5, Web Accessibility (A11y) & SEO", ar: "بنية HTML5 الدلالية، وإتاحة الوصول (A11y)، وتحسين محركات البحث" },
+    id: "taqat-ai-creative",
+    isAcademic: false,
+    category: { en: "UI/UX & Product Design", ar: "تصميم تجربة المستخدم والمنتجات" },
+    title: { en: "AI Creative & Generative Visual Design", ar: "التصميم الإبداعي والتوليدي بالذكاء الاصطناعي" },
     issuer: { en: "TAQAT Academy", ar: "أكاديمية طاقات" },
-    date: { en: "20/10/2024", ar: "20/10/2024" },
-    credentialId: { en: "TQ-2024-00067", ar: "TQ-2024-00067" },
-    hours: { en: "40 Training Hours", ar: "40 ساعة تدريبية معتمدة" },
+    date: { en: "November 2026", ar: "نوفمبر 2026" },
+    credentialId: { en: "Credential ID: TQ-2026-00259", ar: "رقم الاعتماد: TQ-2026-00259" },
+    hours: { en: "9 Specialized Training Hours", ar: "9 ساعات تدريبية تخصصية" },
     description: {
-      en: "Semantic document outline, ARIA attributes, keyboard navigation, Lighthouse audit scores, and search index optimization.",
-      ar: "المخطط الدلالي للوثائق، وسمات ARIA، والملاحة عبر لوحة المفاتيح، وتحقيق أعلى معايير Lighthouse، وتهيئة محركات البحث."
+      en: "Generative UI asset creation, prompt engineering for visual design prototypes, brand consistency preservation, and digital media pipelines.",
+      ar: "توليد عناصر الواجهات الرقمية، وهندسة أوامر التصميم البصري، والحفاظ على الهوية البصرية، وتكامل وسائط الميديا الرقمية."
     },
+    verificationUrl: "https://taqat.academy/verify/TQ-2026-00259",
+    previewFile: "./public/assets/certificates/TAQAT-certificate-Llian-Mahmoud-Abd-elaziz-Alkhawalda-TQ-2026-00259.png",
+    previewType: "image",
+    icon: "design"
+  },
+
+  // 3. Bright Gaza & Cloud Engineering Accreditations
+  {
+    id: "brightgaza-cloud-computing",
+    isAcademic: false,
+    category: { en: "Cloud & Infrastructure", ar: "الحوسبة السحابية والبنية التحتية" },
+    title: { en: "Cloud Computing Architecture & Virtual Infrastructure", ar: "معمارية الحوسبة السحابية والبنية التحتية الافتراضية" },
+    issuer: { en: "Bright Gaza Initiative & Global Tech Partners", ar: "مبادرة برايت غزة بالتعاون مع الشركاء التقنيين" },
+    date: { en: "Verified Milestone", ar: "شهادة معتمدة" },
+    credentialId: { en: "Bright Gaza Talent #2081", ar: "اعتماد موثق برايت غزة #2081" },
+    hours: { en: "Advanced Cloud Specialization", ar: "تخصص سحابي متقدم" },
+    description: {
+      en: "Cloud infrastructure models (IaaS, PaaS, SaaS), cloud storage scalability, container virtualization, and secure deployment architectures.",
+      ar: "نماذج البنية السحابية، وقابلية توسع التخزين السحابي، والافتراضية بالحاويات، ومعماريات النشر والتشغيل الآمن."
+    },
+    verificationUrl: "https://brightgaza.com/ar/talents/2081?tab=certificates",
+    previewFile: "./public/assets/certificates/شهادة كلاود.pdf",
+    previewType: "pdf",
+    icon: "cloud"
+  },
+  {
+    id: "brightgaza-code-mqp",
+    isAcademic: false,
+    category: { en: "Software Development", ar: "تطوير الأنظمة والبرمجيات" },
+    title: { en: "Code MQP Software Quality & Engineering Standards", ar: "معايير جودة البرمجيات وهندسة المشاريع (Code MQP)" },
+    issuer: { en: "Bright Gaza Initiative & Tech Incubator", ar: "مبادرة برايت غزة وحاضنة الأعمال التقنية" },
+    date: { en: "Verified Milestone", ar: "شهادة معتمدة" },
+    credentialId: { en: "Bright Gaza Verified", ar: "اعتماد موثق برايت غزة" },
+    hours: { en: "Software Quality Track", ar: "مسار جودة البرمجيات" },
+    description: {
+      en: "Rigorous software testing principles, modular code organization, regression avoidance, and cross-functional project execution.",
+      ar: "مبادئ اختبار البرمجيات الدقيقة، وتنظيم الكود البرمجي النمطي، وتفادي أخطاء التراجع، وإدارة المشاريع متعددة الوظائف."
+    },
+    verificationUrl: "https://brightgaza.com/ar/talents/2081?tab=certificates",
+    previewFile: "./public/assets/certificates/شهادة code mqp.pdf",
+    previewType: "pdf",
     icon: "code"
   },
-  // Edraak Platform (2 Verified Certifications)
+
+  // 4. Cybersecurity & Network Infrastructure Specialization
   {
-    id: "edraak-computer-skills",
-    category: { en: "Information Systems", ar: "نظم المعلومات" },
-    title: { en: "Advanced Computer Science Foundations & Information Architecture", ar: "أسس علوم الحاسوب المتقدمة ومعمارية المعلومات" },
+    id: "security-cybersecurity-specialization",
+    isAcademic: false,
+    category: { en: "Cybersecurity & Networks", ar: "الأمن السيبراني والشبكات" },
+    title: { en: "Cybersecurity Defense, Governance & Threat Analysis", ar: "الدفاع السيبراني والحوكمة وتحليل التهديدات الأمنية" },
+    issuer: { en: "Academic & Professional Cyber Defense Board", ar: "المجلس المهني والأكاديمي للأمن السيبراني" },
+    date: { en: "Verified Credential", ar: "شهادة تخصصية معتمدة" },
+    credentialId: { en: "Specialized Cyber Track", ar: "مسار أمن سيبراني معتمد" },
+    hours: { en: "Comprehensive Specialization", ar: "تخصص شامل ومعتمد" },
+    description: {
+      en: "Defense-in-depth principles, vulnerability assessments, encryption standards, threat modeling, and formal organizational cybersecurity governance.",
+      ar: "مبادئ الدفاع المتعمق، وتقييم الثغرات الأمنية، ومعايير التشفير، ونمذجة التهديدات، والحوكمة المؤسسية لأمن المعلومات."
+    },
+    verificationUrl: null,
+    previewFile: "./public/assets/certificates/شهادات الامن السيبراني.pdf",
+    previewType: "pdf",
+    icon: "security"
+  },
+  {
+    id: "network-edraak-foundations",
+    isAcademic: false,
+    category: { en: "Cybersecurity & Networks", ar: "الأمن السيبراني والشبكات" },
+    title: { en: "Introduction to Networking & Data Communications", ar: "مقدمة في عالم شبكات الحاسوب وتراسل البيانات" },
     issuer: { en: "Edraak Platform (Queen Rania Foundation)", ar: "منصة إدراك (مؤسسة الملكة رانيا)" },
     date: { en: "Verified Credential", ar: "شهادة معتمدة" },
     credentialId: { en: "Edraak Verified", ar: "اعتماد موثق إدراك" },
-    hours: { en: "Comprehensive Program", ar: "برنامج تدريبي شامل" },
+    hours: { en: "Foundations Track", ar: "مسار أساسيات الشبكات" },
     description: {
-      en: "Binary architecture, hardware abstraction layers, operating system scheduling, data communications, and software paradigms.",
-      ar: "المعمارية الثنائية، وطبقات تجريد العتاد، وجدولة أنظمة التشغيل، وتراسل البيانات، وأنماط البرمجيات الحديثة."
+      en: "OSI 7-layer model, TCP/IP stack, IP addressing & CIDR subnetting, routing protocols, and enterprise switching infrastructure.",
+      ar: "نموذج طبقات OSI السبع، وحزمة بروتوكولات TCP/IP، وعنونة وتقسيم الشبكات (Subnetting)، ومبادئ التوجيه والتبديل الشبكي."
     },
-    icon: "academic"
+    verificationUrl: null,
+    previewFile: "./public/assets/certificates/شهادة دورة مقدمة في عالم الشبكات.pdf",
+    previewType: "pdf",
+    icon: "network"
+  },
+
+  // 5. Professional Project Management & Commercial Strategy
+  {
+    id: "management-utopia-pm",
+    isAcademic: false,
+    category: { en: "Business Solutions", ar: "الحلول التجارية والمالية" },
+    title: { en: "Professional Project Management (PMP Principles)", ar: "إدارة المشاريع الاحترافية (مبادئ PMP)" },
+    issuer: { en: "Utopia Center for Training & Development", ar: "مركز يوتوبيا للتدريب والتطوير" },
+    date: { en: "Verified Milestone", ar: "شهادة معتمدة" },
+    credentialId: { en: "Utopia Professional Credential", ar: "اعتماد مهني معتمد" },
+    hours: { en: "Professional Project Track", ar: "مسار إدارة المشاريع" },
+    description: {
+      en: "Project lifecycle management, Work Breakdown Structures (WBS), Critical Path Method (CPM), risk mitigation matrices, and stakeholder communication.",
+      ar: "إدارة دورة حياة المشروع، وهياكل تقسيم العمل (WBS)، وطريقة المسار الحرج (CPM)، ومصفوفات إدارة المخاطر، والتواصل مع أصحاب المصلحة."
+    },
+    verificationUrl: null,
+    previewFile: "./public/assets/certificates/شهادة_ادارة_مشاريع.pdf",
+    previewType: "pdf",
+    icon: "business"
   },
   {
-    id: "edraak-advanced-excel",
+    id: "business-google-ecommerce",
+    isAcademic: false,
+    category: { en: "Business Solutions", ar: "الحلول التجارية والمالية" },
+    title: { en: "Digital Commerce Strategy & Commercial Funnels", ar: "استراتيجيات التجارة الرقمية ومسارات التحويل التجاري" },
+    issuer: { en: "Google Platform", ar: "منصة Google" },
+    date: { en: "Verified", ar: "معتمدة" },
+    credentialId: { en: "Google Certified", ar: "اعتماد رسمي Google" },
+    hours: { en: "Specialized Track", ar: "مسار تخصصي" },
+    description: {
+      en: "Digital store architecture, online payment gateway funnels, consumer behavior analysis, and commercial conversion optimization.",
+      ar: "معمارية المتاجر الرقمية، ومسارات بوابات الدفع الإلكتروني، وتحليل سلوك المستهلك، وتحسين معدلات التحويل التجاري."
+    },
+    verificationUrl: null,
+    previewFile: null,
+    previewType: null,
+    icon: "business"
+  },
+  {
+    id: "business-excel-financial-modeling",
+    isAcademic: false,
     category: { en: "Data Analytics", ar: "تحليل البيانات وذكاء الأعمال" },
     title: { en: "Advanced Excel for Commercial Intelligence & Financial Modeling", ar: "إكسل المتقدم لذكاء الأعمال والنمذجة المالية" },
     issuer: { en: "Edraak Platform (Queen Rania Foundation)", ar: "منصة إدراك (مؤسسة الملكة رانيا)" },
@@ -288,70 +462,29 @@ const certificationsData = [
       en: "Complex nested formulas, INDEX/MATCH, dynamic array functions, financial amortization, and executive reporting tables.",
       ar: "المعادلات المتداخلة المعقدة، ودوال INDEX/MATCH، والمصفوفات الديناميكية، وحسابات الاستهلاك، وجداول التقارير التنفيذية."
     },
-    icon: "data"
-  },
-  // Professional & Specialized Honors
-  {
-    id: "prof-digital-transformation",
-    category: { en: "Business Solutions", ar: "الحلول التجارية والمالية" },
-    title: { en: "Enterprise Digital Transformation & Strategic Governance", ar: "التحول الرقمي المؤسسي والحوكمة الاستراتيجية" },
-    issuer: { en: "Al-Aqsa University & Industry Partners", ar: "جامعة الأقصى بالتعاون مع شركاء القطاع" },
-    date: { en: "Verified Milestone", ar: "إنجاز معتمد" },
-    credentialId: { en: "Institutional Credential", ar: "شهادة مؤسسية معتمدة" },
-    hours: { en: "Executive Training", ar: "تدريب تنفيذي متخصص" },
-    description: {
-      en: "Change management, legacy system modernizations, digital workflow automation, and ROI measurement frameworks.",
-      ar: "إدارة التغيير، وتحديث الأنظمة القديمة، وأتمتة مسارات العمل الرقمية، وأطر قياس العائد على الاستثمار."
-    },
-    icon: "business"
-  },
-  {
-    id: "prof-ai-applications",
-    category: { en: "Artificial Intelligence", ar: "الذكاء الاصطناعي" },
-    title: { en: "Applied Artificial Intelligence in Commercial Systems", ar: "تطبيقات الذكاء الاصطناعي في النظم التجارية" },
-    issuer: { en: "Bright Gaza Initiative", ar: "مبادرة برايت غزة" },
-    date: { en: "Verified Milestone", ar: "إنجاز معتمد" },
-    credentialId: { en: "Bright Gaza Verified", ar: "اعتماد برايت غزة" },
-    hours: { en: "Specialized Workshop", ar: "ورشة عمل تخصصية" },
-    description: {
-      en: "Commercial machine learning applications, predictive sales modeling, customer churn analytics, and AI agent integration.",
-      ar: "تطبيقات تعلم الآلة التجارية، والنمذجة التنبؤية للمبيعات، وتحليل معدلات تسرب العملاء، ودمج الوكلاء الأذكياء."
-    },
-    icon: "ai"
-  },
-  {
-    id: "prof-ecommerce-google",
-    category: { en: "Business Solutions", ar: "الحلول التجارية والمالية" },
-    title: { en: "E-Commerce Strategy & Commercial Platforms", ar: "استراتيجيات التجارة الإلكترونية والمنصات التجارية" },
-    issuer: { en: "Google Platform", ar: "منصة Google" },
-    date: { en: "Verified", ar: "معتمدة" },
-    credentialId: { en: "Google Certified", ar: "اعتماد رسمي من Google" },
-    hours: { en: "Specialized Track", ar: "مسار تخصصي" },
-    description: {
-      en: "Digital store architecture, online payment gateway funnels, consumer behavior analysis, and commercial conversion optimization.",
-      ar: "معمارية المتاجر الرقمية، ومسارات بوابات الدفع الإلكتروني، وتحليل سلوك المستهلك، وتحسين معدلات التحويل التجاري."
-    },
-    icon: "business"
-  },
-  {
-    id: "prof-data-profession-samaa",
-    category: { en: "Data Analytics", ar: "تحليل البيانات وذكاء الأعمال" },
-    title: { en: "Data Professionalism & Analytics Methodology", ar: "الاحترافية المنهجية في تحليل البيانات المؤسسية" },
-    issuer: { en: "Samaa / Sima Agency", ar: "وكالة سماء / سيما" },
-    date: { en: "Verified", ar: "معتمدة" },
-    credentialId: { en: "Samaa Certified", ar: "اعتماد وكالة سماء" },
-    hours: { en: "Professional Workshop", ar: "ورشة عمل مهنية" },
-    description: {
-      en: "Applied commercial data cleansing, descriptive statistics, and executive intelligence reporting.",
-      ar: "تنقية البيانات التجارية التطبيقية، والإحصاء الوصفي، وإعداد تقارير ذكاء الأعمال الموجهة للإدارة العليا."
-    },
+    verificationUrl: null,
+    previewFile: null,
+    previewType: null,
     icon: "data"
   }
 ];
 
+const certificationCategories = [
+  "All",
+  "Artificial Intelligence",
+  "Software Development",
+  "Cloud & Infrastructure",
+  "Cybersecurity & Networks",
+  "Data Analytics",
+  "Business Solutions",
+  "UI/UX & Product Design"
+];
+
 if (typeof window !== 'undefined') {
+  window.academicDegree = academicDegree;
   window.certificationsData = certificationsData;
+  window.certificationCategories = certificationCategories;
 }
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = certificationsData;
+  module.exports = { academicDegree, certificationsData, certificationCategories };
 }

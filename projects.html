@@ -59,12 +59,14 @@
         <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Disciplines</button>
         <button class="filter-btn" data-filter="Artificial Intelligence" data-i18n="filter_ai">AI & Machine Learning</button>
         <button class="filter-btn" data-filter="Software Development" data-i18n="filter_software">Full-Stack Engineering</button>
+        <button class="filter-btn" data-filter="UI/UX & Product Design" data-i18n="filter_figma">UI/UX & Design Systems</button>
+        <button class="filter-btn" data-filter="Mobile Applications" data-i18n="filter_mobile">Mobile Applications</button>
         <button class="filter-btn" data-filter="Data Analytics" data-i18n="filter_data">Data & Business Intelligence</button>
         <button class="filter-btn" data-filter="Network Engineering" data-i18n="filter_network">Enterprise Infrastructure</button>
       </div>
 
       <!-- Projects Grid -->
-      <div class="projects-grid" id="fullProjectsContainer">
+      <div class="editorial-projects-container" id="fullProjectsContainer">
         <!-- Dynamic Projects Loaded Here -->
       </div>
     </div>
@@ -123,6 +125,50 @@
   <script>
     let activeFilter = 'all';
 
+    function renderActionPills(p, lang) {
+      const tDict = translations[lang];
+      let pills = '';
+      if (!p.links) return pills;
+
+      if (p.links.demo) {
+        pills += `<a href="${p.links.demo}" target="_blank" rel="noopener noreferrer" class="action-pill pill-demo" title="${tDict.btn_view_demo}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          <span>${tDict.btn_view_demo}</span>
+        </a>`;
+      }
+      if (p.links.github) {
+        pills += `<a href="${p.links.github}" target="_blank" rel="noopener noreferrer" class="action-pill pill-github" title="${tDict.btn_github_repo}">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>${tDict.btn_github_repo}</span>
+        </a>`;
+      }
+      if (p.links.figma) {
+        pills += `<a href="${p.links.figma}" target="_blank" rel="noopener noreferrer" class="action-pill pill-figma" title="${tDict.btn_figma_design}">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 24c2.208 0 4-1.792 4-4v-4H8c-2.208 0-4 1.792-4 4s1.792 4 4 4zM4 12c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4zm0-8c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4zm8 0h4c2.208 0 4 1.792 4 4s-1.792 4-4 4h-4V4zm0 8h4c2.208 0 4 1.792 4 4s-1.792 4-4 4c-2.208 0-4-1.792-4-4v-4z"/></svg>
+          <span>${tDict.btn_figma_design}</span>
+        </a>`;
+      }
+      if (p.links.prototype) {
+        pills += `<a href="${p.links.prototype}" target="_blank" rel="noopener noreferrer" class="action-pill pill-proto" title="${tDict.btn_figma_proto}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>${tDict.btn_figma_proto}</span>
+        </a>`;
+      }
+      if (p.links.download) {
+        pills += `<a href="${p.links.download}" download class="action-pill pill-download" title="${tDict.btn_download_deliverable}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          <span>${tDict.btn_download_deliverable}</span>
+        </a>`;
+      }
+      if (p.links.caseStudy) {
+        pills += `<button onclick="openProjectModal('${p.id}')" class="action-pill pill-case" title="${tDict.btn_case_study}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>${tDict.btn_case_study}</span>
+        </button>`;
+      }
+      return pills;
+    }
+
     function renderFullProjects() {
       const container = document.getElementById('fullProjectsContainer');
       if (!container || typeof projectsData === 'undefined') return;
@@ -134,55 +180,121 @@
         ? projectsData 
         : projectsData.filter(p => p.categories && p.categories.includes(activeFilter));
 
-      container.innerHTML = filtered.map(p => {
+      const heroProjects = filtered.filter(p => p.heroFeatured === true);
+      const gridProjects = filtered.filter(p => !p.heroFeatured);
+
+      let html = '';
+
+      heroProjects.forEach(p => {
         const title = t(p.title, lang);
         const shortDesc = t(p.shortDescription, lang);
         const cat = t(p.category, lang);
+        const pType = t(p.projectType, lang);
         const compDate = t(p.completionDate, lang);
-        const isTeam = p.isTeam;
-        const reviewBtnText = translations[lang].project_cta_review;
-        const soloText = translations[lang].project_type_solo;
-        const teamText = translations[lang].project_type_team;
+        const status = t(p.status, lang);
+        const pills = renderActionPills(p, lang);
 
-        return `
-          <div class="project-card">
-            <div class="project-card-header">
+        html += `
+          <div class="editorial-hero-card">
+            <div class="editorial-hero-info">
               <div>
-                <span class="project-badge">${cat}</span>
-                ${isTeam ? `<span class="project-team-tag">${teamText}</span>` : `<span class="project-team-tag" style="background: rgba(232, 160, 181, 0.15); color: #9D526D; border-color: rgba(232, 160, 181, 0.3);">${soloText}</span>`}
+                <div class="editorial-badge-row">
+                  <span class="badge-milestone">${status}</span>
+                  <span class="badge-category">${cat}</span>
+                  <span class="badge-ownership">${pType} &bull; ${compDate}</span>
+                </div>
+                <h3 class="editorial-hero-title">${title}</h3>
+                <p class="editorial-hero-summary">${shortDesc}</p>
+                
+                <div class="project-metrics" style="margin-bottom: 1.2rem;">
+                  ${p.metrics && p.metrics.length > 0 ? p.metrics.slice(0, 3).map(m => `
+                    <div class="metric-item">
+                      <span class="metric-val">${m.value}</span>
+                      <span class="metric-lbl">${t(m.label, lang)}</span>
+                    </div>
+                  `).join('') : ''}
+                </div>
+
+                <div class="tech-stack-pills" style="margin-bottom: 1.2rem;">
+                  ${p.technologies.slice(0, 5).map(tech => `<span class="tech-pill">${tech}</span>`).join('')}
+                  ${p.technologies.length > 5 ? `<span class="tech-pill">+${p.technologies.length - 5}</span>` : ''}
+                </div>
               </div>
-              <span style="font-size: 0.8rem; color: var(--text-muted);">${compDate}</span>
-            </div>
-            
-            <h3 class="project-title">${title}</h3>
-            <p class="project-summary">${shortDesc}</p>
 
-            <div class="project-metrics">
-              ${p.metrics && p.metrics.length > 0 ? p.metrics.slice(0, 2).map(m => `
-                <div class="metric-item">
-                  <span class="metric-val">${m.value}</span>
-                  <span class="metric-lbl">${t(m.label, lang)}</span>
-                </div>
-              `).join('') : `
-                <div class="metric-item">
-                  <span class="metric-val">100%</span>
-                  <span class="metric-lbl">Verified Architecture</span>
-                </div>
-              `}
+              <div class="project-action-pills">
+                ${pills}
+              </div>
             </div>
 
-            <div class="tech-stack-pills">
-              ${p.technologies.slice(0, 4).map(tech => `<span class="tech-pill">${tech}</span>`).join('')}
-              ${p.technologies.length > 4 ? `<span class="tech-pill">+${p.technologies.length - 4}</span>` : ''}
+            <div class="editorial-hero-visual">
+              <img src="${p.thumbnail}" alt="${title}" loading="lazy">
+              <div class="editorial-hero-visual-overlay">
+                <span>${t(p.role, lang)}</span>
+                <span style="font-family: monospace;">${p.completionDate.en}</span>
+              </div>
             </div>
-
-            <button class="project-cta-btn" onclick="openProjectModal('${p.id}')">
-              <span>${reviewBtnText}</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
           </div>
         `;
-      }).join('');
+      });
+
+      if (gridProjects.length > 0) {
+        html += `<div class="editorial-grid">`;
+        gridProjects.forEach(p => {
+          const title = t(p.title, lang);
+          const shortDesc = t(p.shortDescription, lang);
+          const cat = t(p.category, lang);
+          const pType = t(p.projectType, lang);
+          const compDate = t(p.completionDate, lang);
+          const pills = renderActionPills(p, lang);
+          
+          const isWide = p.id === 'figma-design-system' || p.id === 'retail-sales-intelligence';
+          const colSpan = isWide ? 'col-span-12' : 'col-span-6';
+
+          let galleryHtml = '';
+          if (p.gallery && p.gallery.length > 1) {
+            galleryHtml = `
+              <div class="editorial-gallery-strip">
+                ${p.gallery.slice(0, 4).map(img => `
+                  <div class="editorial-gallery-thumb">
+                    <img src="${img}" alt="Screenshot" loading="lazy">
+                  </div>
+                `).join('')}
+              </div>
+            `;
+          }
+
+          html += `
+            <div class="editorial-card ${colSpan}">
+              <div>
+                <div class="editorial-card-visual">
+                  <img src="${p.thumbnail}" alt="${title}" loading="lazy">
+                </div>
+                ${galleryHtml}
+
+                <div class="editorial-badge-row" style="margin-top: 0.8rem;">
+                  <span class="badge-category">${cat}</span>
+                  <span class="badge-ownership">${pType} &bull; ${compDate}</span>
+                </div>
+
+                <h4 class="editorial-card-title">${title}</h4>
+                <p class="editorial-card-desc">${shortDesc}</p>
+
+                <div class="tech-stack-pills" style="margin-bottom: 0.8rem;">
+                  ${p.technologies.slice(0, 4).map(tech => `<span class="tech-pill">${tech}</span>`).join('')}
+                  ${p.technologies.length > 4 ? `<span class="tech-pill">+${p.technologies.length - 4}</span>` : ''}
+                </div>
+              </div>
+
+              <div class="project-action-pills">
+                ${pills}
+              </div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+      }
+
+      container.innerHTML = html;
     }
 
     function openProjectModal(id) {
@@ -203,6 +315,7 @@
       const sol = t(p.solution, lang);
       const delivs = p.deliverables && p.deliverables[lang] ? p.deliverables[lang] : (p.deliverables['en'] || []);
       const credits = p.teamCredits ? t(p.teamCredits, lang) : null;
+      const pills = renderActionPills(p, lang);
 
       body.innerHTML = `
         <div style="margin-bottom: 1.5rem;">
@@ -213,6 +326,12 @@
           </div>
           <h2 style="font-family: var(--font-editorial); font-size: 2.2rem; color: var(--midnight); margin-bottom: 0.8rem;">${title}</h2>
           <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-body); margin-bottom: 1.5rem;">${fullDesc}</p>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <div class="project-action-pills" style="border-top: none; padding-top: 0; margin-top: 0;">
+            ${pills}
+          </div>
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
