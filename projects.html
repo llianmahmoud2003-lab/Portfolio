@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Portfolio | LILIAN ALKHAWALDA — Verified Engineering & Systems Architecture</title>
+  <meta name="description" content="Complete portfolio of engineered software systems, AI copilot agents, quantitative analytics dashboards, and enterprise network architectures by Lilian Alkhawalda.">
+  <link rel="icon" type="image/png" href="./public/assets/logos/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link">
+        <img src="./public/assets/logos/logo-header.png" alt="LILIAN ALKHAWALDA Logo" class="brand-logo-img">
+        <div class="brand-title">
+          <span class="brand-name">LILIAN ALKHAWALDA</span>
+          <span class="brand-tagline-micro">IDEAS INTO IMPACT.</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="projects.html" class="nav-link active">Projects</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="btn-primary">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="section-padding" style="background: var(--soft-ivory); border-bottom: 1px solid var(--border-light); padding-top: 5rem; padding-bottom: 4rem;">
+    <div class="container" style="max-width: 900px; text-align: center;">
+      <div class="hero-tag">Engineered Solutions & Empirical Proof</div>
+      <h1 class="section-title" style="margin-top: 1rem; margin-bottom: 1rem;">Architectural Masterpieces & <span class="text-gradient">Case Studies</span></h1>
+      <p class="section-lead" style="margin: 0 auto; max-width: 760px;">
+        Every system cataloged below has been verified through original source code, live automated test suites, quantitative telemetry, or validated client artifacts.
+      </p>
+    </div>
+  </header>
+
+  <!-- Projects Catalog -->
+  <section class="section-padding" style="background: var(--pure-white);">
+    <div class="container">
+      <!-- Filter Bar -->
+      <div class="filter-bar" id="projectsFilterBar">
+        <button class="filter-btn active" data-filter="all">All Disciplines (7)</button>
+        <button class="filter-btn" data-filter="Artificial Intelligence">AI & Machine Learning</button>
+        <button class="filter-btn" data-filter="Software Development">Full-Stack Engineering</button>
+        <button class="filter-btn" data-filter="Data Analytics">Data & Business Intelligence</button>
+        <button class="filter-btn" data-filter="Network Engineering">Enterprise Infrastructure</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="fullProjectsContainer">
+        <!-- Dynamic Projects Loaded Here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for Project Details -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+      <div id="modalBody">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="./public/assets/logos/logo-header.png" alt="LILIAN ALKHAWALDA" style="height: 48px; filter: brightness(0) invert(1); margin-bottom: 0.8rem;">
+          <h4 style="font-family: var(--font-editorial); font-size: 1.4rem; color: var(--pure-white);">LILIAN ALKHAWALDA</h4>
+          <p>Contemporary Management & Commercial Information Systems Engineer. Turning complex engineering and business challenges into verifiable, impactful reality.</p>
+        </div>
+        <div class="footer-links">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Biography</a></li>
+            <li><a href="projects.html">Engineered Case Studies</a></li>
+            <li><a href="services.html">Client Deliverables</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h5>Core Competencies</h5>
+          <ul>
+            <li><a href="projects.html">Autonomous AI & MCP Agents</a></li>
+            <li><a href="projects.html">Full-Stack React & Next.js</a></li>
+            <li><a href="projects.html">Business Intelligence & Profitability</a></li>
+            <li><a href="projects.html">Corporate Feasibility & CapEx Valuation</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 LILIAN ALKHAWALDA. All rights reserved. IDEAS INTO IMPACT.</span>
+        <span>Modern Feminine Luxury &bull; Tech Leadership</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/data/projectsData.js"></script>
+  <script>
+    let activeFilter = 'all';
+
+    function renderProjects(filter) {
+      const container = document.getElementById('fullProjectsContainer');
+      if (!container || typeof projectsData === 'undefined') return;
+
+      const filtered = filter === 'all' 
+        ? projectsData 
+        : projectsData.filter(p => p.categories && p.categories.includes(filter));
+
+      container.innerHTML = filtered.map(p => `
+        <div class="project-card">
+          <div class="project-card-header">
+            <div>
+              <span class="project-badge">${p.category}</span>
+              ${p.isTeam ? '<span class="project-team-tag">Collaborative Team Project</span>' : '<span class="project-team-tag" style="background: rgba(232, 160, 181, 0.15); color: #9D526D; border-color: rgba(232, 160, 181, 0.3);">Individual / Solo</span>'}
+            </div>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">${p.completionDate}</span>
+          </div>
+          
+          <h3 class="project-title">${p.title}</h3>
+          <p class="project-summary">${p.shortDescription}</p>
+
+          <div class="project-metrics">
+            ${p.metrics && p.metrics.length > 0 ? p.metrics.slice(0, 2).map(m => `
+              <div class="metric-item">
+                <span class="metric-val">${m.value}</span>
+                <span class="metric-lbl">${m.label}</span>
+              </div>
+            `).join('') : `
+              <div class="metric-item">
+                <span class="metric-val">100%</span>
+                <span class="metric-lbl">Verified Architecture</span>
+              </div>
+            `}
+          </div>
+
+          <div class="tech-stack-pills">
+            ${p.technologies.slice(0, 4).map(t => `<span class="tech-pill">${t}</span>`).join('')}
+            ${p.technologies.length > 4 ? `<span class="tech-pill">+${p.technologies.length - 4}</span>` : ''}
+          </div>
+
+          <button class="project-cta-btn" onclick="openProjectModal('${p.id}')">
+            <span>Review Full Architecture</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      `).join('');
+    }
+
+    // Modal Handlers
+    function openProjectModal(id) {
+      const p = projectsData.find(item => item.id === id);
+      if (!p) return;
+
+      const modal = document.getElementById('projectModal');
+      const body = document.getElementById('modalBody');
+
+      body.innerHTML = `
+        <div style="margin-bottom: 1.5rem;">
+          <div style="display: flex; gap: 0.6rem; align-items: center; margin-bottom: 0.8rem; flex-wrap: wrap;">
+            <span class="project-badge">${p.category}</span>
+            <span class="project-team-tag">${p.projectType}</span>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">${p.completionDate}</span>
+          </div>
+          <h2 style="font-family: var(--font-editorial); font-size: 2.2rem; color: var(--midnight); margin-bottom: 0.8rem;">${p.title}</h2>
+          <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-body); margin-bottom: 1.5rem;">${p.fullDescription}</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+          <div style="background: var(--soft-ivory); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--border-light);">
+            <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--berry-rose); margin-bottom: 0.6rem;">Problem & Objective</h4>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-body);">${p.problemStatement || 'Not specified'}</p>
+          </div>
+          <div style="background: var(--soft-ivory); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--border-light);">
+            <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--berry-rose); margin-bottom: 0.6rem;">Engineered Solution</h4>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-body);">${p.solution || 'Not specified'}</p>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.8rem;">
+          <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--midnight); margin-bottom: 0.8rem;">Technologies & Frameworks</h4>
+          <div class="tech-stack-pills">
+            ${p.technologies.map(t => `<span class="tech-pill">${t}</span>`).join('')}
+          </div>
+        </div>
+
+        ${p.metrics && p.metrics.length > 0 ? `
+          <div style="margin-bottom: 1.8rem;">
+            <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--midnight); margin-bottom: 0.8rem;">Verified Metrics & Outcomes</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem;">
+              ${p.metrics.map(m => `
+                <div style="background: var(--pure-white); border: 1px solid var(--border-light); padding: 1rem; border-radius: 8px; text-align: center;">
+                  <div style="font-family: var(--font-editorial); font-size: 1.8rem; font-weight: 700; color: var(--berry-rose);">${m.value}</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">${m.label}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        ${p.deliverables && p.deliverables.length > 0 ? `
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--midnight); margin-bottom: 0.8rem;">Engineered Deliverables</h4>
+            <ul style="padding-left: 1.2rem; font-size: 0.9rem; line-height: 1.7; color: var(--text-body);">
+              ${p.deliverables.map(d => `<li>${d}</li>`).join('')}
+            </ul>
+          </div>
+        ` : ''}
+      `;
+
+      modal.classList.add('active');
+    }
+
+    // Modal Close
+    document.getElementById('modalCloseBtn')?.addEventListener('click', () => {
+      document.getElementById('projectModal')?.classList.remove('active');
+    });
+
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('projectModal');
+      if (e.target === modal) modal.classList.remove('active');
+    });
+
+    // Filter Buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilter = btn.getAttribute('data-filter');
+        renderProjects(activeFilter);
+      });
+    });
+
+    // Initial render
+    renderProjects('all');
+  </script>
+</body>
+</html>
