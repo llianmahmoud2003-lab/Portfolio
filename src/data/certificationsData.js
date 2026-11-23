@@ -5,7 +5,7 @@ const academicDegree = {
   isAcademic: true,
   category: { en: "Academic Foundation & Higher Education", ar: "الأساس الأكاديمي والتعليم العالي" },
   title: {
-    en: "Bachelor of Science in Contemporary Management & Commercial Information Systems",
+    en: "Bachelor's Degree in Contemporary Management Information Systems & Business",
     ar: "خريجة نظم المعلومات الإدارية والتجارية المعاصرة – بكالوريوس – جامعة الأقصى"
   },
   issuer: {
@@ -19,7 +19,7 @@ const academicDegree = {
   },
   hours: { en: "136+ Credit Hours", ar: "136+ ساعة معتمدة" },
   description: {
-    en: "Graduate of Contemporary Management & Commercial Information Systems – Bachelor's Degree – Al-Aqsa University. Rigorous undergraduate foundation integrating software development, relational database systems (MySQL/PostgreSQL), enterprise systems architecture, corporate financial modeling, and quantitative business intelligence.",
+    en: "Bachelor's Graduate in Contemporary Management Information Systems & Business, Al-Aqsa University. Rigorous undergraduate foundation integrating software development, relational database systems (MySQL/PostgreSQL), enterprise systems architecture, corporate financial modeling, and quantitative business intelligence.",
     ar: "خريجة نظم المعلومات الإدارية والتجارية المعاصرة – بكالوريوس – جامعة الأقصى. تعليم جامعي رصين يدمج بين تطوير البرمجيات، وتصميم قواعد البيانات العلائقية، ومعمارية نظم المؤسسات، والنمذجة المالية، والتحليلات الكمية لذكاء الأعمال."
   },
   verificationUrl: null,

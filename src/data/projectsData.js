@@ -190,10 +190,10 @@ const projectsData = [
         }
       },
       {
-        "value": "Grade A+",
+        "value": "Approved Capstone",
         "label": {
           "en": "Academic Defense",
-          "ar": "امتياز مع مرتبة الشرف"
+          "ar": "مشروع تخرج مناقش ومعتمد"
         }
       }
     ],
@@ -608,6 +608,14 @@ const projectsData = [
       "ar": "بروتوتايب تفاعلي وبحث مستخدم موثق"
     },
     "heroFeatured": false,
+    "projectType": {
+      "en": "Independent Product Design & UX Research",
+      "ar": "تصميم منتج رقمي مستقل وبحث تجربة مستخدم"
+    },
+    "role": {
+      "en": "Lead Product Designer & UI/UX Researcher",
+      "ar": "مصممة المنتجات الرقمية الرئيسية وباحثة تجربة المستخدم"
+    },
     "thumbnail": "./public/assets/projects/covers/luxury-salon-management-cover.jpg",
     "gallery": [
       "./public/assets/projects/covers/luxury-salon-management-cover.jpg",
@@ -812,6 +820,14 @@ const projectsData = [
       "ar": "نموذج تفاعلي منشور للاستجابة الإنسانية"
     },
     "heroFeatured": false,
+    "projectType": {
+      "en": "Humanitarian Digital Response Initiative",
+      "ar": "مبادرة استجابة رقمية إنسانية"
+    },
+    "role": {
+      "en": "Geospatial UI Designer & Initiative Lead",
+      "ar": "مصممة واجهات جغرافية وقائدة المبادرة"
+    },
     "thumbnail": "./public/assets/projects/covers/essential_services_map_official_cover.jpg",
     "gallery": [
       "./public/assets/projects/covers/essential_services_map_official_cover.jpg",
@@ -1301,7 +1317,7 @@ const projectsData = [
     },
     "category": {
       "en": "Networking & Infrastructure",
-      "ar": "هندسة وتأمين الشبكات"
+      "ar": "تصميم وتأمين الشبكات المؤسسية"
     },
     "categories": [
       "networking"
