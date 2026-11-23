@@ -36,8 +36,8 @@ const projectsData = [
       "ar": "نوفمبر 2026"
     },
     "role": {
-      "en": "Chief Systems Architect & Lead Engineer",
-      "ar": "كبير مهندسي النظم والمطور الرئيسي"
+      "en": "Chief Systems Architect & Lead Developer",
+      "ar": "قائد تطوير النظم والمطور الرئيسي"
     },
     "shortDescription": {
       "en": "An executive-grade SaaS orchestration cockpit featuring multi-agent AI pipelines, unified business intelligence streams, and resilient decision automation for enterprise scale.",
@@ -402,8 +402,8 @@ const projectsData = [
       "ar": "معرض تصميم متكامل مصنف بدقة إلى ثلاثة مسارات رئيسية: تصاميم تطبيقات الهاتف الذكي (App Designs)، لوحات تحكم الأنظمة المؤسسية (Dashboard Designs)، والاستكشافات المتقدمة لمنظومات التصميم (UI/UX Explorations)."
     },
     "fullDescription": {
-      "en": "A comprehensive digital product design gallery showcasing end-to-end design thinking, interactive prototyping, and component architecture across multiple platforms. This gallery presents 51 verified high-fidelity interfaces divided into: (1) App Designs including the foundational Trainova Mobile App user journeys and Beauty Salon mobile concept, (2) Dashboard Designs featuring the 30+ comprehensive Trainova Web Platform interfaces, Student Academic Records, Retail BI Intelligence, and LILIANOURA Operating Cockpits, and (3) UI/UX Explorations encompassing micro-interactions and dark-mode design systems.",
-      "ar": "معرض تصميم هندسي شامل يعكس دورة حياة تصميم المنتجات الرقمية وهندسة تجربة المستخدم عبر منصات متعددة. يضم المعرض 51 واجهة ولوحة معتمدة مصنفة وفق التالي: (1) تصاميم تطبيقات الهاتف (App Designs) وتتضمن رحلة مستخدم تطبيق Trainova Mobile بالكامل وتصميم صالون التجميل الفاخر، (2) تصاميم لوحات التحكم (Dashboard Designs) وتضم ما يزيد عن 30 واجهة معتمدة لمنصة Trainova Web Dashboard، لوحة درجات الطلاب، لوحات ذكاء أعمال التجزئة، وقمرة قيادة LILIANOURA، و (3) استكشافات تجربة المستخدم (UI/UX Explorations) بما تشمله من أنظمة المكونات القياسية ولوحات النمط الداكن."
+      "en": "A comprehensive digital product design gallery showcasing end-to-end design thinking, interactive prototyping, and component architecture across multiple platforms. This gallery presents 50 verified high-fidelity interfaces divided into: (1) App Designs including the foundational Trainova Mobile App user journeys, (2) Dashboard Designs featuring the 30+ comprehensive Trainova Web Platform interfaces, and (3) Systems & BI Dashboards encompassing LILIANOURA Operating Cockpits, Student Academic Records, and Retail BI Intelligence.",
+      "ar": "معرض تصميم احترافي شامل يعكس دورة حياة تصميم المنتجات الرقمية وتجربة المستخدم عبر منصات متعددة. يضم المعرض 50 واجهة ولوحة معتمدة مصنفة بدقة وفق التالي: (1) تصاميم تطبيقات الهاتف (App Designs) وتتضمن رحلة مستخدم تطبيق Trainova Mobile بالكامل، (2) تصاميم لوحات التحكم (Dashboard Designs) وتضم ما يزيد عن 30 واجهة معتمدة لمنصة Trainova Web Dashboard، و (3) لوحات تحكم النظم وذكاء الأعمال وتضم قمرة قيادة LILIANOURA، لوحة درجات الطلاب، ولوحات ذكاء أعمال التجزئة."
     },
     "problem": {
       "en": "Digital products often suffer from inconsistent visual languages, fragmented component states, and lack of verified interactive prototypes prior to engineering investment.",
@@ -508,8 +508,8 @@ const projectsData = [
       "ar": "2025"
     },
     "role": {
-      "en": "Data Architect & Analytics Engineer",
-      "ar": "مهندسة تحليلات ومعمارية بيانات"
+      "en": "Data Systems & Analytics Specialist",
+      "ar": "أخصائية تحليلات ونظم بيانات"
     },
     "shortDescription": {
       "en": "Advanced BI analytics engine modeling discount elasticity and profit margins using a benchmark commercial retail transaction dataset.",
@@ -608,8 +608,9 @@ const projectsData = [
       "ar": "بروتوتايب تفاعلي وبحث مستخدم موثق"
     },
     "heroFeatured": false,
-    "thumbnail": "./public/assets/projects/salon-management/ui_screen_preview.jpg",
+    "thumbnail": "./public/assets/projects/covers/luxury-salon-management-cover.jpg",
     "gallery": [
+      "./public/assets/projects/covers/luxury-salon-management-cover.jpg",
       "./public/assets/projects/salon-management/ui_screen_preview.jpg",
       "./public/assets/projects/salon-management/screen_welcome.png",
       "./public/assets/projects/salon-management/screen_notifications.png",
@@ -811,8 +812,9 @@ const projectsData = [
       "ar": "نموذج تفاعلي منشور للاستجابة الإنسانية"
     },
     "heroFeatured": false,
-    "thumbnail": "./public/assets/projects/services-map/essential_services_map_cover.png",
+    "thumbnail": "./public/assets/projects/covers/essential_services_map_official_cover.jpg",
     "gallery": [
+      "./public/assets/projects/covers/essential_services_map_official_cover.jpg",
       "./public/assets/projects/services-map/essential_services_map_cover.png",
       "./public/assets/projects/services-map/essential_services_map_full.png"
     ],
@@ -1319,8 +1321,8 @@ const projectsData = [
       "ar": "2024"
     },
     "role": {
-      "en": "Network Infrastructure Engineer",
-      "ar": "مهندسة بنية تحتية وشبكات"
+      "en": "Network & Systems Infrastructure Specialist",
+      "ar": "أخصائية بنية تحتية وشبكات"
     },
     "shortDescription": {
       "en": "A suite of 6 Cisco Packet Tracer network simulation topologies implementing dynamic routing (OSPF, RIP), DNS/DHCP infrastructure, VLAN segmentation, and router security.",

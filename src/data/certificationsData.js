@@ -6,7 +6,7 @@ const academicDegree = {
   category: { en: "Academic Foundation & Higher Education", ar: "الأساس الأكاديمي والتعليم العالي" },
   title: {
     en: "Bachelor of Science in Contemporary Management & Commercial Information Systems",
-    ar: "بكالوريوس في نظم المعلومات الإدارية والتجارية المعاصرة"
+    ar: "خريجة نظم المعلومات الإدارية والتجارية المعاصرة – بكالوريوس – جامعة الأقصى"
   },
   issuer: {
     en: "Al-Aqsa University — Faculty of Administrative & Financial Sciences",
@@ -14,13 +14,13 @@ const academicDegree = {
   },
   date: { en: "2021 – 2025", ar: "2021 – 2025" },
   credentialId: { 
-    en: "GPA: 82% — Very Good (Official Academic Transcript — 136+ Credit Hours)", 
-    ar: "المعدل: 82% — جيد جداً (سجل أكاديمي معتمد — 136+ ساعة معتمدة)" 
+    en: "Bachelor's Degree — Al-Aqsa University", 
+    ar: "درجة البكالوريوس — جامعة الأقصى" 
   },
   hours: { en: "136+ Credit Hours", ar: "136+ ساعة معتمدة" },
   description: {
-    en: "Graduate of Contemporary Management & Commercial Information Systems - Bachelor's Degree - Faculty of Administration and Finance - Al-Aqsa University - GPA: 82% — Very Good. Rigorous undergraduate foundation integrating software engineering, relational database design (MySQL/PostgreSQL), enterprise systems architecture, corporate financial modeling, and quantitative business intelligence.",
-    ar: "خريجة نظم المعلومات الإدارية والتجارية المعاصرة - بكالوريوس - كلية الإدارة والتمويل - جامعة الأقصى - المعدل: 82% — جيد جداً. تعليم جامعي رصين يدمج بين هندسة البرمجيات، وتصميم قواعد البيانات العلائقية، ومعمارية نظم المؤسسات، والنمذجة المالية، والتحليلات الكمية لذكاء الأعمال."
+    en: "Graduate of Contemporary Management & Commercial Information Systems – Bachelor's Degree – Al-Aqsa University. Rigorous undergraduate foundation integrating software development, relational database systems (MySQL/PostgreSQL), enterprise systems architecture, corporate financial modeling, and quantitative business intelligence.",
+    ar: "خريجة نظم المعلومات الإدارية والتجارية المعاصرة – بكالوريوس – جامعة الأقصى. تعليم جامعي رصين يدمج بين تطوير البرمجيات، وتصميم قواعد البيانات العلائقية، ومعمارية نظم المؤسسات، والنمذجة المالية، والتحليلات الكمية لذكاء الأعمال."
   },
   verificationUrl: null,
   previewFile: null,
@@ -29,6 +29,35 @@ const academicDegree = {
 };
 
 const certificationsData = [
+  // 7. Khamsat & Professional Freelancing Certification
+  {
+    id: "khamsat-freelancing-fundamentals",
+    isAcademic: false,
+    category: { en: "Business Solutions", ar: "حلول الأعمال والعمل الحر" },
+    title: { 
+      en: "Freelancing Fundamentals — Khamsat", 
+      ar: "أساسيات العمل الحر — خمسات" 
+    },
+    issuer: { 
+      en: "Khamsat Platform (Hsoub)", 
+      ar: "منصة خمسات (حاسوب)" 
+    },
+    date: { en: "Verified Exam", ar: "اختبار معتمد" },
+    credentialId: { 
+      en: "Khbra Verified: fedaafef-41a1-4171-93c8-d9569b357428", 
+      ar: "معتمد عبر منصة خبرة: fedaafef-41a1-4171-93c8-d9569b357428" 
+    },
+    hours: { en: "Professional Exam", ar: "اختبار مهني معتمد" },
+    description: {
+      en: "Official credential verifying the mastery of freelancing fundamentals, digital service delivery, client communications, and professional project execution on the Khamsat platform.",
+      ar: "شهادة رسمية تثبت اجتياز اختبار أساسيات العمل الحر، وتقديم الخدمات الرقمية باحترافية، وإدارة التواصل مع العملاء، وتنفيذ المشاريع وفق معايير الجودة على منصة خمسات."
+    },
+    verificationUrl: "https://khbra.com/attempts/fedaafef-41a1-4171-93c8-d9569b357428",
+    previewFile: null,
+    previewType: null,
+    icon: "business"
+  },
+
   // 1. Anthropic AI International Certifications (13 Verified Certifications with Skilljar Verification)
   {
     id: "anthropic-mcp-advanced",

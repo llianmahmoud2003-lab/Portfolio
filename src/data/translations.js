@@ -11,11 +11,11 @@ const translations = {
     brand_tagline_micro: "IDEAS INTO IMPACT.",
 
     // Hero Section
-    hero_tag: "Contemporary Information Systems & AI Architecture",
+    hero_tag: "Contemporary Management Information Systems & Applied AI",
     hero_title_first: "LILIAN",
     hero_title_last: "ALKHAWALDA",
     hero_tagline: "IDEAS INTO IMPACT.",
-    hero_desc: "Contemporary Management and Commercial Information Systems Engineer bridging software engineering, generative AI systems, and quantitative business intelligence to architect scalable, resilient enterprise solutions.",
+    hero_desc: "Contemporary Management and Commercial Information Systems Graduate – Bachelor's Degree – Al-Aqsa University; bridging software systems, generative AI workflows, and quantitative business intelligence to architect scalable, high-impact enterprise solutions.",
     hero_cta_projects: "Explore Case Studies",
     hero_cta_deliverables: "Sample Deliverable Pack",
     btn_hire_me: "Hire Me",
@@ -27,9 +27,9 @@ const translations = {
     btn_github: "GitHub Repositories",
     connect_section_title: "Let's Connect & Collaborate",
     connect_section_desc: "Reach out directly for enterprise architecture contracts, technical consulting, or verified freelance engagements.",
-    hero_portrait_quote: "\"Precision is the foundation of luxury engineering.\"",
+    hero_portrait_quote: "\"Precision and consistency are the foundation of premier systems.\"",
     hero_portrait_name: "Lilian Alkhawalda",
-    hero_portrait_role: "Management Information Systems • Al-Aqsa University",
+    hero_portrait_role: "Contemporary MIS Graduate • Al-Aqsa University",
     hero_portrait_badge: "Official Portrait Space • Reserved",
 
     // Executive Video Introduction Section
@@ -157,7 +157,7 @@ const translations = {
 
     // Certifications Section
     certs_subtitle: "Verified Accreditations & Continuous Mastery",
-    certs_title: "24 Audited Professional Accreditations",
+    certs_title: "25 Audited Professional Accreditations",
     certs_lead: "A verified inventory of 13 international Anthropic certifications with direct Skilljar verification links, 4 TAQAT Academy engineering tracks, Bright Gaza and cloud specializations, cybersecurity defenses, and quantitative analytics.",
 
     // Contact Section
@@ -211,11 +211,11 @@ const translations = {
     brand_tagline_micro: "تحويل الأفكار إلى أثر ملموس.",
 
     // Hero Section
-    hero_tag: "هندسة نظم المعلومات المعاصرة والذكاء الاصطناعي",
+    hero_tag: "نظم المعلومات الإدارية والتجارية المعاصرة والذكاء الاصطناعي",
     hero_title_first: "ليليان",
     hero_title_last: "الخوالدة",
     hero_tagline: "تحويل الأفكار إلى أثر ملموس.",
-    hero_desc: "مهندسة نظم معلومات إدارية وتجارية معاصرة؛ أجمع بين هندسة البرمجيات، وأنظمة الذكاء الاصطناعي التوليدي، وذكاء الأعمال الكمي لبناء حلول مؤسسية متقدمة وقابلة للتوسع ومحققة لأعلى عوائد القيمة.",
+    hero_desc: "خريجة نظم المعلومات الإدارية والتجارية المعاصرة – بكالوريوس – جامعة الأقصى؛ أجمع بين تطوير البرمجيات، وأنظمة الذكاء الاصطناعي، وذكاء الأعمال الكمي لبناء حلول مؤسسية متقدمة وقابلة للتوسع ومحققة لأعلى عوائد القيمة.",
     hero_cta_projects: "استعراض المشاريع والحلول",
     hero_cta_deliverables: "حزمة المخرجات ونماذج العمل",
     btn_hire_me: "وظفني / اطلب مشروعاً",
@@ -227,9 +227,9 @@ const translations = {
     btn_github: "مستودعات GitHub",
     connect_section_title: "تواصل معي / Let's Connect",
     connect_section_desc: "تواصل مباشرة لبدء مشاريع هندسة النظم البرمجية، الاستشارات التقنية، أو طلب الخدمات عبر المنصات المعتمدة.",
-    hero_portrait_quote: "«الدقة المتناهية هي جوهر الهندسة الرفيعة.»",
+    hero_portrait_quote: "«الدقة والاتساق هما جوهر النظم الرفيعة.»",
     hero_portrait_name: "ليليان الخوالدة",
-    hero_portrait_role: "نظم المعلومات الإدارية • جامعة الأقصى",
+    hero_portrait_role: "خريجة نظم المعلومات الإدارية والتجارية المعاصرة – بكالوريوس – جامعة الأقصى",
     hero_portrait_badge: "مساحة الصورة الشخصية الرسمية • محجوزة",
 
     // Executive Video Introduction Section
@@ -253,10 +253,10 @@ const translations = {
     video_cta_contact: "تواصل مباشر",
 
     // About Section
-    about_subtitle: "المسار المهني والفلسفة الهندسية",
-    about_title: "هندسة الحلول في نقطة التقاء التقنية بالقيمة التجارية",
-    about_p1: "انطلاقاً من تخصصي الأكاديمي في <strong>نظم المعلومات الإدارية (MIS)</strong> من <strong>جامعة الأقصى</strong>، تقوم فلسفتي الهندسية على التعامل مع التكنولوجيا كأصل استراتيجي يبني التميز التشغيلي، ويصنع الفارق التنافسي، ويحقق عوائد استثمارية واضحة وقابلة للقياس.",
-    about_p2: "تجمع مسيرتي بين مسارين متكاملين: التنفيذ البرمجي والهندسي الصارم (React 19, Next.js, Node.js, Python, PostgreSQL، وهندسة شبكات سيسكو)، والفهم التجاري والمالي المتعمق (دراسات الجدوى الاقتصادية، ونمذجة CapEx و NPV و IRR، وتحسين هوامش الربحية الإجمالية).",
+    about_subtitle: "المسار الأكاديمي والمهني",
+    about_title: "تطوير الحلول في نقطة التقاء التقنية بالقيمة التجارية",
+    about_p1: "خريجة نظم المعلومات الإدارية والتجارية المعاصرة – بكالوريوس – جامعة الأقصى، تقوم فلسفتي المهنية على التعامل مع التكنولوجيا كأصل استراتيجي يبني التميز التشغيلي، ويصنع الفارق التنافسي، ويحقق عوائد استثمارية واضحة وقابلة للقياس.",
+    about_p2: "تجمع مسيرتي بين مسارين متكاملين: التطوير البرمجي والتقني المتين (React 19, Next.js, Node.js, Python, PostgreSQL، وشبكات سيسكو)، والفهم التجاري والمالي المتعمق (دراسات الجدوى الاقتصادية، ونمذجة CapEx و NPV و IRR، وتحسين هوامش الربحية الإجمالية).",
     pillar1_title: "الدقة العلمية والتحقق التجريبي:",
     pillar1_desc: "كل بنية برمجية تخضع لاختبارات مؤتمتة دقيقة، وقيود تكامل البيانات، ومحاكاة أحمال التشغيل الحقيقية قبل الاعتماد والنشر.",
     pillar2_title: "أنظمة الذكاء الاصطناعي المستقل وMCP:",
@@ -323,9 +323,9 @@ const translations = {
     modal_download_asset: "تحميل الوثيقة المعتمدة",
 
     // Academic Degree
-    academic_degree_badge: "الدرجة الجامعية والأساس الأكاديمي",
-    academic_degree_title: "الأساس الأكاديمي والتعليم العالي",
-    academic_degree_desc: "المؤهل الجامعي التأسيسي الذي يجمع بين هندسة نظم المعلومات والتحليل المالي الكمي وحوكمة البيانات المؤسسية.",
+    academic_degree_badge: "المؤهل الأكاديمي المعتمد",
+    academic_degree_title: "خريجة نظم المعلومات الإدارية والتجارية المعاصرة – بكالوريوس – جامعة الأقصى",
+    academic_degree_desc: "المؤهل الجامعي المعتمد: خريجة نظم المعلومات الإدارية والتجارية المعاصرة – بكالوريوس – جامعة الأقصى، يدمج بين حوسبة النظم والتحليل المالي الكمي وحوكمة البيانات المؤسسية.",
     professional_certifications_title: "الشهادات المهنية الموثقة والاعتمادات الدولية",
 
     // Deliverables Section
@@ -357,7 +357,7 @@ const translations = {
 
     // Certifications Section
     certs_subtitle: "الاعتمادات الموثقة والتطوير المستمر",
-    certs_title: "24 شهادة واعتماداً مهنياً موثقاً",
+    certs_title: "25 شهادة واعتماداً مهنياً موثقاً",
     certs_lead: "سجل حقيقي موثق يضم 13 شهادة دولية متقدمة من Anthropic بروابط تحقق مباشرة من Skilljar، و4 مسارات مكثفة من أكاديمية طاقات، واعتمادات برايت غزة والحوسبة السحابية، ودفاعات الأمن السيبراني، ونمذجة ذكاء الأعمال.",
 
     // Contact Section
@@ -389,7 +389,7 @@ const translations = {
     form_alert_success: "شكراً لتواصلك. تم استلام استفسارك وسيتم الرد عليك قريباً.",
 
     // Footer
-    footer_desc: "مهندسة نظم معلومات إدارية وتجارية معاصرة؛ أكرّس الهندسة والذكاء الاصطناعي لتحويل التحديات المعقدة إلى نتائج ملموسة وعوائد موثقة.",
+    footer_desc: "خريجة نظم المعلومات الإدارية والتجارية المعاصرة – بكالوريوس – جامعة الأقصى؛ أكرّس التقنية والذكاء الاصطناعي لتحويل التحديات المعقدة إلى نتائج ملموسة وعوائد موثقة.",
     footer_nav_title: "روابط سريعة",
     footer_competencies_title: "مجالات التخصص الأساسية",
     footer_comp1: "وكلاء الذكاء الاصطناعي وأنظمة MCP",

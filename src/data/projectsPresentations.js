@@ -2934,7 +2934,7 @@ const projectsPresentationsData = {
         "type": "ownership",
         "title": {
           "en": "Engineer Role & Scope",
-          "ar": "دور المهندسة ونطاق العمل الفردي"
+          "ar": "دور لليان الخوالدة ونطاق العمل الفردي"
         },
         "subtitle": {
           "en": "Individual Infrastructure Simulation Portfolio",
@@ -3505,7 +3505,7 @@ const projectsPresentationsData = {
           "ar": [
             "المرشح 1: تسجيل شاشة مركز مدته 10 ثوانٍ يوضح حركة بطاقات الحجز الرئيسية.",
             "المرشح 2: استعراض مدته 11 ثانية لمعرض أعمال المصففين واختيار التاريخ.",
-            "محفوظة كأدلة موثقة أصلية قيد المراجعة والاعتماد النهائي من المهندسة لليان."
+            "محفوظة كأدلة موثقة أصلية قيد المراجعة والاعتماد النهائي من لليان الخوالدة."
           ]
         },
         "visual": "./public/assets/projects/luxury-salon/salon2_frame_1s.jpg"
@@ -3647,6 +3647,105 @@ const projectsPresentationsData = {
       }
     ]
   }
+};
+
+projectsPresentationsData['salon-management-system'] = {
+  "title": {
+    "en": "Luxury Salon Management & Booking System — UI/UX Case Study",
+    "ar": "نظام إدارة وحجز صالون التجميل الفاخر — دراسة حالة تجربة المستخدم"
+  },
+  "slides": [
+    {
+      "tag": { "en": "Project Overview", "ar": "نظرة عامة على المشروع" },
+      "title": { "en": "Luxury Salon Experience & Booking System", "ar": "منظومة حجز وإدارة صالون التجميل الفاخر" },
+      "subtitle": { "en": "High-end visual interface, appointment scheduling, and customer care workflows", "ar": "واجهة رقمية راقية لحجز المواعيد واستعراض باقات العناية المتخصصة" },
+      "points": {
+        "en": [
+          "Crafted as an exclusive digital interface for boutique beauty and hair care salons.",
+          "Focuses on atmospheric elegance, seamless booking flows, and clear service discovery.",
+          "Supported by an authentic user persona study and verified prototype screen recordings."
+        ],
+        "ar": [
+          "واجهة رقمية راقية مصممة خصيصاً لصالونات التجميل والعناية بالشعر الفاخرة.",
+          "تركز على هدوء التجربة البصرية، وسلاسة مسار الحجز واختيار الخدمات ومصففي الشعر.",
+          "مدعومة ببحث ودراسة شخصية المستخدم (User Persona) وتسجيل فيديو تفاعلي حقيقي للبروتوتايب."
+        ]
+      },
+      "visual": "./public/assets/projects/salon-management/ui_screen_preview.jpg"
+    },
+    {
+      "tag": { "en": "User Persona Research", "ar": "بحث شخصية المستخدم" },
+      "title": { "en": "Empirical User Persona Study Report", "ar": "تقرير دراسة شخصيات المستخدمين المعتمد" },
+      "subtitle": { "en": "542 KB comprehensive UX research analyzing client behavior, expectations, and pain points", "ar": "دراسة بحثية توثق سلوك وتطلعات عملاء صالونات التجميل واحتياجاتهم الرقمية" },
+      "points": {
+        "en": [
+          "Analyzed booking friction, appointment anxiety, and clarity of treatment pricing.",
+          "Established user personas prioritizing privacy, scheduling precision, and transparent stylist profiles.",
+          "Full official PDF documentation available for direct download and verification."
+        ],
+        "ar": [
+          "تحليل نقاط الاحتكاك في مسار الحجز، وقلق المواعيد، وشفافية تسعير باقات المعالجة.",
+          "بناء شخصيات مستخدمين تفضل الخصوصية، دقة التوقيت، والاطلاع على خبرات مصففي الشعر.",
+          "تقرير البحث موثق بصيغة PDF (بحجم 542 كيلوبايت) ومتاح للتنزيل المباشر."
+        ]
+      },
+      "visual": "./public/assets/projects/salon-management/screen_welcome.png"
+    },
+    {
+      "tag": { "en": "Interface Design", "ar": "تصميم الواجهات" },
+      "title": { "en": "Fluid Cart, Checkout & Booking Confirmation", "ar": "سلة الخدمات وتأكيد المواعيد وسلاسة الدفع" },
+      "subtitle": { "en": "Streamlined multi-service cart with clear scheduling and reminder integration", "ar": "تجربة مستخدم مريحة لاختيار الخدمات المتعددة وجدولة المواعيد وتلقي التنبيهات" },
+      "points": {
+        "en": [
+          "Minimalist service selection with clear breakdown of durations and pricing.",
+          "Real-time notifications keeping clients updated on appointment approvals.",
+          "Dedicated profile management for reviewing historical visits and stylist notes."
+        ],
+        "ar": [
+          "اختيار سهل ومرن للخدمات مع توضيح مدة كل جلسة والتكلفة المحددة مسبقاً.",
+          "إشعارات لحظية تؤكد اعتماد الحجز وتذكر بالموعد قبل موعد الزيارة.",
+          "إدارة كاملة للملف الشخصي وسجل الزيارات السابقة والملاحظات الخاصة."
+        ]
+      },
+      "visual": "./public/assets/projects/salon-management/screen_cart.png"
+    },
+    {
+      "tag": { "en": "Interactive Prototype", "ar": "النموذج التفاعلي" },
+      "title": { "en": "Verified Video Prototype Demonstration", "ar": "استعراض فيديو النموذج الأولي التفاعلي" },
+      "subtitle": { "en": "Real-time walkthrough of mobile interactions, screen transitions, and booking flow", "ar": "فيديو استعراض حقيقي مسجل من نموذج فيجما يوضح الانتقالات وتدفق الحجز" },
+      "points": {
+        "en": [
+          "Captured directly from the interactive prototype showing responsive touch feedback.",
+          "Fluid easing curves simulating luxury brand tranquility without jarring transitions.",
+          "Official MP4 video (6.1 MB) embedded directly in the project presentation."
+        ],
+        "ar": [
+          "تسجيل فيديو حقيقي مستخرج من النموذج التفاعلي يوضح الاستجابة الحركية.",
+          "منحنيات تسارع ناعمة تمنع الحركات الفجائية وتوفر تجربة استخدام مريحة.",
+          "فيديو النموذج التفاعلي (بحجم 6.1 ميجابايت) مدمج ومتاح للمعاينة المباشرة."
+        ]
+      },
+      "visual": "./public/assets/projects/salon-management/screen_notifications.png"
+    },
+    {
+      "tag": { "en": "Master Canvas", "ar": "لوحة التصميم الشاملة" },
+      "title": { "en": "Complete 4K UI Architecture Canvas", "ar": "لوحة الكانفاس الشاملة بدقة 4K" },
+      "subtitle": { "en": "Full high-fidelity master board mapping every screen, component, and state", "ar": "مخطط التصميم الشامل يجمع كافة شاشات وتدفقات التطبيق بدقة فائقة" },
+      "points": {
+        "en": [
+          "Full master board canvas (2731x4096 resolution) showing all app views in high fidelity.",
+          "Harmonious visual palette using obsidian black, rose pink accents, and ivory contrast.",
+          "Available in the interactive Lightbox for high-resolution inspection without cropping."
+        ],
+        "ar": [
+          "لوحة كانفاس ماستر كاملة بدقة (2731×4096 بكسل) تجمع كافة الواجهات بتفاصيلها الدقيقة.",
+          "تناغم بصري فاخر يدمج الأسود الفاحم مع لمسات الوردي الراقي والشمبانيا الهادئة.",
+          "متاحة في عارض المعرض المكبر (Lightbox) للاستعراض بدقة كاملة دون أي اقتطاع."
+        ]
+      },
+      "visual": "./public/assets/projects/figma-work/figma_asset_14.png"
+    }
+  ]
 };
 
 function getProjectPresentation(projectId) {

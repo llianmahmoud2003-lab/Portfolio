@@ -10,6 +10,7 @@ const projectsImagesConfig = {
     "folder": "public/assets/projects/lilianoura/",
     "cover": "./public/assets/projects/covers/lilianoura-intelligent-platform-cover.png",
     "gallery": [
+      "./public/assets/projects/covers/essential_services_map_official_cover.jpg",
       "./public/assets/projects/lilianoura/lilianoura_global_intelligence.png",
       "./public/assets/projects/lilianoura/lilianoura_cockpit_view.png"
     ],
@@ -187,17 +188,6 @@ const projectsImagesConfig = {
           "category": "Main App Experience",
           "dim": "1125x2436",
           "size": "167.8 KB"
-        }
-      ],
-      "salonApp": [
-        {
-          "file": "figma_asset_14.png",
-          "path": "./public/assets/projects/figma-work/figma_asset_14.png",
-          "title": "لوحة الماستر الكاملة لكانفاس تصميم تطبيق الصالون (Master High-Fidelity UI Flow Board - 4K)",
-          "category": "Master UI Screens Canvas",
-          "dim": "2731x4096",
-          "size": "6,308.8 KB",
-          "note": "تضم كافة شاشات وتدفقات واجهات تطبيق صالون التجميل الفاخر كاملة دون قص أو حجب."
         }
       ]
     },
@@ -475,7 +465,6 @@ const projectsImagesConfig = {
     },
     "gallery": [
       "./public/assets/projects/covers/figma-works-cover.png",
-      "./public/assets/projects/figma-work/figma_asset_14.png",
       "./public/assets/projects/trainova/mobile-ui/splash@2x.png",
       "./public/assets/projects/trainova/mobile-ui/wel4@3x-3.png",
       "./public/assets/projects/trainova/dashboard-ui/Admin Dashboard.png",
@@ -590,16 +579,7 @@ const projectsImagesConfig = {
         "size": "167.8 KB",
         "orientation": "portrait"
       },
-      {
-        "file": "figma_asset_14.png",
-        "path": "./public/assets/projects/figma-work/figma_asset_14.png",
-        "title": "لوحة الماستر الكاملة لكانفاس تصميم تطبيق الصالون (Master High-Fidelity UI Flow Board - 4K)",
-        "category": "Master UI Screens Canvas",
-        "dim": "2731x4096",
-        "size": "6,308.8 KB",
-        "note": "تضم كافة شاشات وتدفقات واجهات تطبيق صالون التجميل الفاخر كاملة دون قص أو حجب.",
-        "orientation": "master"
-      },
+      
       {
         "file": "Admin Dashboard.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Admin Dashboard.png",
@@ -1103,7 +1083,7 @@ const projectsImagesConfig = {
       "ar": "نظام إدارة وحجز صالون التجميل الفاخر — تجربة بصرية وبروتوتايب تفاعلي"
     },
     "folder": "public/assets/projects/salon-management/",
-    "cover": "./public/assets/projects/salon-management/ui_screen_preview.jpg",
+    "cover": "./public/assets/projects/covers/luxury-salon-management-cover.jpg",
     "gallery": [
       "./public/assets/projects/salon-management/ui_screen_preview.jpg",
       "./public/assets/projects/salon-management/screen_welcome.png",
@@ -1169,7 +1149,7 @@ const projectsImagesConfig = {
       "ar": "دليل الخدمات الأساسية في المناطق المتضررة — منصة إنسانية تفاعلية"
     },
     "folder": "public/assets/projects/services-map/",
-    "cover": "./public/assets/projects/services-map/essential_services_map_cover.png",
+    "cover": "./public/assets/projects/covers/essential_services_map_official_cover.jpg",
     "gallery": [
       "./public/assets/projects/services-map/essential_services_map_cover.png",
       "./public/assets/projects/services-map/essential_services_map_full.png"
