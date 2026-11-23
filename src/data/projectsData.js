@@ -1,5 +1,5 @@
 // src/data/projectsData.js - Master Verified Projects Database
-// Filtered and restructured to ensure Trainova is a single unified project and Figma Works is a curated gallery.
+// Updated with verified Salon Management System and Essential Services Map humanitarian platform.
 
 const projectsData = [
   {
@@ -584,6 +584,100 @@ const projectsData = [
     }
   },
   {
+    "id": "salon-management-system",
+    "logo": null,
+    "slug": "luxury-salon-management-system",
+    "title": {
+      "en": "Salon Management System — Visual Experience & Interactive Prototype",
+      "ar": "نظام إدارة وحجز صالون التجميل الفاخر — تجربة بصرية وبروتوتايب تفاعلي"
+    },
+    "category": {
+      "en": "UI/UX & Product Design",
+      "ar": "تصميم واجهة وتجربة المستخدم"
+    },
+    "categories": [
+      "ui-ux"
+    ],
+    "period": "2026",
+    "status": {
+      "en": "Interactive Prototype & Case Study",
+      "ar": "نموذج أولي تفاعلي ودراسة حالة متكاملة"
+    },
+    "publicStatus": {
+      "en": "Verified Prototype & Persona Research",
+      "ar": "بروتوتايب تفاعلي وبحث مستخدم موثق"
+    },
+    "heroFeatured": false,
+    "thumbnail": "./public/assets/projects/salon-management/ui_screen_preview.jpg",
+    "gallery": [
+      "./public/assets/projects/salon-management/ui_screen_preview.jpg",
+      "./public/assets/projects/salon-management/screen_welcome.png",
+      "./public/assets/projects/salon-management/screen_notifications.png",
+      "./public/assets/projects/salon-management/screen_cart.png",
+      "./public/assets/projects/salon-management/screen_profile_preview.jpg",
+      "./public/assets/projects/figma-work/figma_asset_14.png"
+    ],
+    "video": "./public/assets/projects/salon-management/salon_prototype_demo.mp4",
+    "poster": "./public/assets/projects/salon-management/ui_screen_preview.jpg",
+    "personaDoc": "./public/assets/projects/salon-management/salon_persona_report.pdf",
+    "metrics": [
+      {
+        "value": "Figma 4K",
+        "label": {
+          "en": "Master Canvas Resolution",
+          "ar": "لوحة التصميم الكاملة"
+        }
+      },
+      {
+        "value": "60 FPS",
+        "label": {
+          "en": "Micro-Interactions",
+          "ar": "سلاسة الانتقالات الحركية"
+        }
+      },
+      {
+        "value": "Persona",
+        "label": {
+          "en": "UX Research & Empathy",
+          "ar": "دراسة وتحديد شخصية المستخدم"
+        }
+      }
+    ],
+    "shortDescription": {
+      "en": "A refined luxury salon appointment booking and management platform, designed with high-end typography, fluid mobile micro-transitions, and comprehensive persona user research.",
+      "ar": "نظام متكامل وتجربة بصرية راقية لحجز المواعيد وإدارة خدمات صالون التجميل الفاخر، صُمم بعناية ليعكس هوية فارهة مع تدفق تفاعلي سلس وبحث مستخدم موثق."
+    },
+    "fullDescription": {
+      "en": "A comprehensive digital product design and interactive motion prototype engineered to streamline beauty salon workflows and elevate client booking experiences. The project encompasses deep Persona research analyzing client pain points (scheduling delays, booking uncertainty, service customization), an end-to-end mobile user journey, and a high-resolution Master UI Canvas featuring welcome screens, interactive service catalogs, calendar slot booking, real-time notifications, and shopping basket flows.",
+      "ar": "دراسة حالة تصميمية متكاملة ونموذج أولي حركي يهدف إلى رقمنة عمليات صالون التجميل الفاخر وتيسير تجربة حجز الخدمات. يتضمن المشروع دراسة وبحث شخصية المستخدم (Persona) لتحليل التحديات التي تواجه العميلات، وتدفقاً متكاملاً لشاشات الهاتف الذكي بدءاً من شاشات الترحيب واستعراض الباقات والخدمات، ومروراً بالتقويم الزمني للحجز وسلة المشتريات، وصولاً إلى لوحة الكانفاس الماستر الكاملة بدقة 4K."
+    },
+    "problem": {
+      "en": "Traditional salon scheduling suffers from disjointed phone bookings, manual reservation errors, and absence of visual clarity regarding stylist portfolios and customized service packages.",
+      "ar": "تعاني الصالونات التقليدية من تشتت الحجوزات الهاتفية، وأخطاء الجدولة اليدوية، والافتقار إلى وسيلة بصرية أنيقة تستعرض سوابق أعمال خبراء التجميل وتفاصيل الباقات."
+    },
+    "solution": {
+      "en": "Engineered a boutique mobile experience centered on elegance and speed: intuitive service selection, visual stylist matching, transparent price breakdowns, and fluid motion transitions tested through an interactive prototype.",
+      "ar": "هندسة تجربة تطبيق هاتف فاخرة تركز على السلاسة والوضوح: اختيار سهل للخدمات، ومطابقة بصرية مع خبيرات التجميل، وبيان شفاف للتكاليف، وحركات تفاعلية انسيابية مجربة عبر بروتوتايب تفاعلي مسجل بالفيديو."
+    },
+    "technologies": [
+      "Figma UI/UX",
+      "Interactive Prototyping",
+      "Persona User Research",
+      "Luxury Brand Identity",
+      "Mobile Design Systems"
+    ],
+    "links": {
+      "demo": null,
+      "github": null,
+      "figma": null,
+      "caseStudy": true
+    },
+    "teamContext": {
+      "en": "Independent UI/UX Design and motion interactive prototype created by Lilian Alkhawalda.",
+      "ar": "تصميم واجهة وتجربة المستخدم والنموذج الأولي التفاعلي الفردي بواسطة ليليان الخوالدة."
+    }
+  },
+  {
     "id": "flutter-mobile-app",
     "logo": null,
     "slug": "cross-platform-flutter-app",
@@ -689,6 +783,94 @@ const projectsData = [
     "publicStatus": {
       "en": "Mobile Application • Interfaces Documented (No Public Live Demo)",
       "ar": "تطبيق هاتف • الواجهات موثقة بالكامل (لا توجد معاينة عامة حالياً)"
+    }
+  },
+  {
+    "id": "essential-services-map",
+    "logo": null,
+    "slug": "essential-services-map-humanitarian-platform",
+    "title": {
+      "en": "Essential Services Map — Humanitarian Support Platform",
+      "ar": "دليل الخدمات الأساسية في المناطق المتضررة — منصة إنسانية تفاعلية"
+    },
+    "category": {
+      "en": "Humanitarian Tech & Web Systems",
+      "ar": "الأنظمة الإنسانية والويب"
+    },
+    "categories": [
+      "frontend",
+      "humanitarian"
+    ],
+    "period": "2024 – 2025",
+    "status": {
+      "en": "Interactive Crisis Prototype",
+      "ar": "نموذج أولي تفاعلي للاستجابة الإنسانية"
+    },
+    "publicStatus": {
+      "en": "Published Humanitarian Prototype",
+      "ar": "نموذج تفاعلي منشور للاستجابة الإنسانية"
+    },
+    "heroFeatured": false,
+    "thumbnail": "./public/assets/projects/services-map/essential_services_map_cover.png",
+    "gallery": [
+      "./public/assets/projects/services-map/essential_services_map_cover.png",
+      "./public/assets/projects/services-map/essential_services_map_full.png"
+    ],
+    "metrics": [
+      {
+        "value": "Interactive",
+        "label": {
+          "en": "Crisis Resource Navigation",
+          "ar": "خريطة تفاعلية لتحديد الموارد"
+        }
+      },
+      {
+        "value": "3 Sectors",
+        "label": {
+          "en": "Hospitals, Relief, Water",
+          "ar": "مستشفيات، مراكز إغاثة، نقاط مياه"
+        }
+      },
+      {
+        "value": "Humanitarian",
+        "label": {
+          "en": "Community Support Initiative",
+          "ar": "مبادرة دعم مجتمعي أثناء الأزمات"
+        }
+      }
+    ],
+    "shortDescription": {
+      "en": "An empathetic interactive crisis-response platform designed during wartime to help impacted communities navigate vital lifelines including medical clinics, food distribution centers, and clean water points.",
+      "ar": "منصة تفاعلية إنسانية صُممت أثناء فترات الأزمات والحروب لتيسير وصول السكان والمتضررين إلى الخدمات الحيوية الطارئة، مثل المستشفيات والمراكز الإغاثية ونقاط مياه الشرب."
+    },
+    "fullDescription": {
+      "en": "A deeply personal humanitarian initiative developed during crisis conditions (2024–2025) to bridge information gaps in disaster-affected areas. Built as a lightweight, fast-loading interactive web application, it provides instant categorized filtering across medical facilities, humanitarian relief posts, and drinking water sources. Features include instant keyword search, live categorical counters, coordinate-based interactive point mapping, emergency operating hours, and localized directions. Note: Designed and published as an interactive functional prototype demonstrating crisis-response technology; service coordinates and records reflect illustrative validation data.",
+      "ar": "مبادرة إنسانية شخصية نُفذت في ظل ظروف الأزمات والحروب (2024-2025) لسد فجوة الوصول إلى المعلومات الحيوية في المناطق المتأثرة. تم بناء المنصة كتطبيق ويب خفيف وسريع التحميل يتيح التصفية الفورية للخدمات الحيوية المصنفة إلى مستشفيات وعيادات، ومراكز إغاثة ومساعدات، ونقاط توزيع مياه صالحة للشرب. تتضمن المنصة شريط بحث فوري، وخريطة تفاعلية موجهة بنقاط الإحداثيات، وتفاصيل أوقات العمل والسعة الاستيعابية وزر الاتجاهات. ملاحظة: تم تطوير ونشر المشروع كنموذج أولي وظيفي تفاعلي يجسد توظيف التكنولوجيا في الاستجابة الإنسانية؛ وتتضمن البيانات سجلات ونقاط تجريبية لغرض المحاكاة."
+    },
+    "problem": {
+      "en": "During humanitarian crises, disrupted communications and infrastructure collapse make locating operational medical care, food aid, and clean water severely dangerous and time-critical.",
+      "ar": "في أوقات النزاعات والأزمات، يؤدي انهيار البنية التحتية وتشتت المعلومات إلى صعوبة بالغة وخطورة حقيقية في معرفة أماكن المستشفيات الفعالة، ومراكز توزيع الإغاثة، ونقاط المياه النقية."
+    },
+    "solution": {
+      "en": "Designed a fast, accessible web interface prioritizing low-bandwidth resilience, unified categorical filters, clear visual legends, and direct emergency directions designed to assist vulnerable families.",
+      "ar": "تصميم واجهة ويب سريعة وخفيفة تستهلك أدنى حد من حزم البيانات، توفر تصنيفاً واضحاً للخدمات، ومفتاح خريطة ملوناً، وإرشادات واضحة للوصول إلى أقرب نقطة خدمة أساسية."
+    },
+    "technologies": [
+      "Interactive JavaScript",
+      "Spatial Point Mapping",
+      "Responsive Humanitarian UI",
+      "CSS3 Custom Properties",
+      "Emergency Resource Architecture"
+    ],
+    "links": {
+      "demo": "https://llianalkhawalda2003-netizen.github.io/PORTOFLIO/#map",
+      "github": "https://github.com/llianalkhawalda2003-netizen/PORTOFLIO",
+      "figma": null,
+      "caseStudy": true
+    },
+    "teamContext": {
+      "en": "Independent humanitarian project ideated, architected, and deployed by Lilian Alkhawalda.",
+      "ar": "مشروع إنساني فردي صممته وبرمجته ونشرته ليليان الخوالدة."
     }
   },
   {
@@ -1298,10 +1480,10 @@ const projectsData = [
   }
 ];
 
+// Safe universal exposure (browser global + CommonJS export)
 if (typeof window !== 'undefined') {
   window.projectsData = projectsData;
 }
-
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = projectsData;
 }

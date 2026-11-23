@@ -10,14 +10,17 @@ const academicDegree = {
   },
   issuer: {
     en: "Al-Aqsa University — Faculty of Administrative & Financial Sciences",
-    ar: "جامعة الأقصى — كلية العلوم الإدارية والمالية"
+    ar: "جامعة الأقصى — كلية الإدارة والتمويل"
   },
   date: { en: "2021 – 2025", ar: "2021 – 2025" },
-  credentialId: { en: "Official Academic Transcript Verified (136+ Credit Hours)", ar: "سجل أكاديمي رسمي معتمد وموثق (136+ ساعة معتمدة)" },
+  credentialId: { 
+    en: "GPA: 82% — Very Good (Official Academic Transcript — 136+ Credit Hours)", 
+    ar: "المعدل: 82% — جيد جداً (سجل أكاديمي معتمد — 136+ ساعة معتمدة)" 
+  },
   hours: { en: "136+ Credit Hours", ar: "136+ ساعة معتمدة" },
   description: {
-    en: "Rigorous undergraduate education integrating software engineering, relational database design (MySQL/PostgreSQL), enterprise systems architecture, corporate financial modeling, and quantitative business intelligence.",
-    ar: "تعليم جامعي رفيع يدمج بين هندسة البرمجيات، وتصميم قواعد البيانات العلائقية، ومعمارية نظم المؤسسات، والنمذجة المالية، والتحليلات الكمية لذكاء الأعمال."
+    en: "Graduate of Contemporary Management & Commercial Information Systems - Bachelor's Degree - Faculty of Administration and Finance - Al-Aqsa University - GPA: 82% — Very Good. Rigorous undergraduate foundation integrating software engineering, relational database design (MySQL/PostgreSQL), enterprise systems architecture, corporate financial modeling, and quantitative business intelligence.",
+    ar: "خريجة نظم المعلومات الإدارية والتجارية المعاصرة - بكالوريوس - كلية الإدارة والتمويل - جامعة الأقصى - المعدل: 82% — جيد جداً. تعليم جامعي رصين يدمج بين هندسة البرمجيات، وتصميم قواعد البيانات العلائقية، ومعمارية نظم المؤسسات، والنمذجة المالية، والتحليلات الكمية لذكاء الأعمال."
   },
   verificationUrl: null,
   previewFile: null,

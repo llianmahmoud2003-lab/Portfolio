@@ -1,5 +1,5 @@
-// src/data/projectsImages.js - Master Verified Assets & Screenshot Registry
-// Updated with verified Trainova Mobile App UI screens from Desktop and pure UI Master Board for Salon.
+// src/data/projectsImages.js - Audited Image and Screenshot Metadata
+// Configured with portrait/landscape orientations for authentic aspect-ratio preservation.
 
 const projectsImagesConfig = {
   "lilianoura": {
@@ -488,7 +488,8 @@ const projectsImagesConfig = {
         "title": "01. شاشة البداية وعلامة المنظومة (Splash & Brand Identity)",
         "category": "Splash & Identity",
         "dim": "766x1640",
-        "size": "187.5 KB"
+        "size": "187.5 KB",
+        "orientation": "portrait"
       },
       {
         "file": "wel4@2x.png",
@@ -496,7 +497,8 @@ const projectsImagesConfig = {
         "title": "02. شاشة الترحيب واستعراض التطبيق (Welcome & Intro)",
         "category": "Onboarding Flow",
         "dim": "750x1624",
-        "size": "145.5 KB"
+        "size": "145.5 KB",
+        "orientation": "portrait"
       },
       {
         "file": "wel4@2x-1.png",
@@ -504,7 +506,8 @@ const projectsImagesConfig = {
         "title": "03. تهيئة تجربة التدريب الميداني (Onboarding Step 1)",
         "category": "Onboarding Flow",
         "dim": "750x1624",
-        "size": "121.9 KB"
+        "size": "121.9 KB",
+        "orientation": "portrait"
       },
       {
         "file": "wel4@2x-2.png",
@@ -512,7 +515,8 @@ const projectsImagesConfig = {
         "title": "04. مسار متابعة الإنجاز والتقارير (Onboarding Step 2)",
         "category": "Onboarding Flow",
         "dim": "750x1624",
-        "size": "99.8 KB"
+        "size": "99.8 KB",
+        "orientation": "portrait"
       },
       {
         "file": "wel4@2x-6.png",
@@ -520,7 +524,8 @@ const projectsImagesConfig = {
         "title": "05. توثيق الحضور وإثبات التواجد (Onboarding Step 3)",
         "category": "Onboarding Flow",
         "dim": "750x1624",
-        "size": "94.4 KB"
+        "size": "94.4 KB",
+        "orientation": "portrait"
       },
       {
         "file": "wel4-1.png",
@@ -528,7 +533,8 @@ const projectsImagesConfig = {
         "title": "06. تحديد الدور الأكاديمي والوصول (Role Selection)",
         "category": "Authentication & Role",
         "dim": "375x812",
-        "size": "36.9 KB"
+        "size": "36.9 KB",
+        "orientation": "portrait"
       },
       {
         "file": "wel4-23.png",
@@ -536,7 +542,8 @@ const projectsImagesConfig = {
         "title": "07. نموذج تسجيل بيانات الطالب (Registration Phase 1)",
         "category": "Registration",
         "dim": "375x812",
-        "size": "30.7 KB"
+        "size": "30.7 KB",
+        "orientation": "portrait"
       },
       {
         "file": "wel4-35.png",
@@ -544,7 +551,8 @@ const projectsImagesConfig = {
         "title": "08. توثيق الشعبة والقسم الأكاديمي (Registration Phase 2)",
         "category": "Registration",
         "dim": "375x812",
-        "size": "26.6 KB"
+        "size": "26.6 KB",
+        "orientation": "portrait"
       },
       {
         "file": "wel4@3x-3.png",
@@ -552,7 +560,8 @@ const projectsImagesConfig = {
         "title": "09. لوحة تحكم الطالب وتتبع الساعات (Main Student Dashboard @3x)",
         "category": "Main App Experience",
         "dim": "1125x2436",
-        "size": "172.2 KB"
+        "size": "172.2 KB",
+        "orientation": "portrait"
       },
       {
         "file": "wel4@3x-4.png",
@@ -560,7 +569,8 @@ const projectsImagesConfig = {
         "title": "10. دليل وتصفح فرص التدريب الميداني (Training Directory @3x)",
         "category": "Main App Experience",
         "dim": "1125x2436",
-        "size": "72.9 KB"
+        "size": "72.9 KB",
+        "orientation": "portrait"
       },
       {
         "file": "wel4@3x-5.png",
@@ -568,7 +578,8 @@ const projectsImagesConfig = {
         "title": "11. إرسال ومتابعة المهام الأسبوعية (Task Submission @3x)",
         "category": "Main App Experience",
         "dim": "1125x2436",
-        "size": "72.1 KB"
+        "size": "72.1 KB",
+        "orientation": "portrait"
       },
       {
         "file": "wel4@3x-8.png",
@@ -576,7 +587,8 @@ const projectsImagesConfig = {
         "title": "12. الملف الشخصي والتواصل الأكاديمي (Profile & Chat @3x)",
         "category": "Main App Experience",
         "dim": "1125x2436",
-        "size": "167.8 KB"
+        "size": "167.8 KB",
+        "orientation": "portrait"
       },
       {
         "file": "figma_asset_14.png",
@@ -585,273 +597,312 @@ const projectsImagesConfig = {
         "category": "Master UI Screens Canvas",
         "dim": "2731x4096",
         "size": "6,308.8 KB",
-        "note": "تضم كافة شاشات وتدفقات واجهات تطبيق صالون التجميل الفاخر كاملة دون قص أو حجب."
+        "note": "تضم كافة شاشات وتدفقات واجهات تطبيق صالون التجميل الفاخر كاملة دون قص أو حجب.",
+        "orientation": "master"
       },
       {
         "file": "Admin Dashboard.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Admin Dashboard.png",
         "title": "Admin Dashboard",
         "dim": "1440x1024",
-        "size": "171.3 KB"
+        "size": "171.3 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Dashboard training@2x.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Dashboard training@2x.png",
         "title": "Dashboard training@2x",
         "dim": "2880x2048",
-        "size": "362.8 KB"
+        "size": "362.8 KB",
+        "orientation": "landscape"
       },
       {
         "file": "login.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/login.png",
         "title": "login",
         "dim": "1440x1024",
-        "size": "142.4 KB"
+        "size": "142.4 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Opportunities Managmet.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Opportunities Managmet.png",
         "title": "Opportunities Managmet",
         "dim": "1440x1024",
-        "size": "152.0 KB"
+        "size": "152.0 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Rebort Details-1.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Rebort Details-1.png",
         "title": "Rebort Details-1",
         "dim": "1440x1024",
-        "size": "165.2 KB"
+        "size": "165.2 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Rebort Details.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Rebort Details.png",
         "title": "Rebort Details",
         "dim": "1440x1024",
-        "size": "144.1 KB"
+        "size": "144.1 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Reports Management.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Reports Management.png",
         "title": "Reports Management",
         "dim": "1440x1024",
-        "size": "144.1 KB"
+        "size": "144.1 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Student Dashboard@2x.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Student Dashboard@2x.png",
         "title": "Student Dashboard@2x",
         "dim": "2880x2048",
-        "size": "615.5 KB"
+        "size": "615.5 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Student Managment.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Student Managment.png",
         "title": "Student Managment",
         "dim": "1440x1024",
-        "size": "157.4 KB"
+        "size": "157.4 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Student Message.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Student Message.png",
         "title": "Student Message",
         "dim": "1440x1024",
-        "size": "145.2 KB"
+        "size": "145.2 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Student My Intership.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Student My Intership.png",
         "title": "Student My Intership",
         "dim": "1440x1024",
-        "size": "137.5 KB"
+        "size": "137.5 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Student My Report.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Student My Report.png",
         "title": "Student My Report",
         "dim": "1440x1024",
-        "size": "165.5 KB"
+        "size": "165.5 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Student Result-1.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Student Result-1.png",
         "title": "Student Result-1",
         "dim": "1440x1024",
-        "size": "70.7 KB"
+        "size": "70.7 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Student Result.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Student Result.png",
         "title": "Student Result",
         "dim": "1440x1024",
-        "size": "122.3 KB"
+        "size": "122.3 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Supervisor Assigned Students-1.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Supervisor Assigned Students-1.png",
         "title": "Supervisor Assigned Students-1",
         "dim": "1440x1024",
-        "size": "131.3 KB"
+        "size": "131.3 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Supervisor Assigned Students.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Supervisor Assigned Students.png",
         "title": "Supervisor Assigned Students",
         "dim": "1440x1024",
-        "size": "128.5 KB"
+        "size": "128.5 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Supervisor Dashboard.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Supervisor Dashboard.png",
         "title": "Supervisor Dashboard",
         "dim": "1440x1024",
-        "size": "157.1 KB"
+        "size": "157.1 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Supervisor Message.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Supervisor Message.png",
         "title": "Supervisor Message",
         "dim": "1440x1024",
-        "size": "125.5 KB"
+        "size": "125.5 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Supervisor Student Reports.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Supervisor Student Reports.png",
         "title": "Supervisor Student Reports",
         "dim": "1440x1024",
-        "size": "121.3 KB"
+        "size": "121.3 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Supervisors Managment.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Supervisors Managment.png",
         "title": "Supervisors Managment",
         "dim": "1440x1024",
-        "size": "149.6 KB"
+        "size": "149.6 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Training Applicant profile.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Training Applicant profile.png",
         "title": "Training Applicant profile",
         "dim": "1440x1024",
-        "size": "114.6 KB"
+        "size": "114.6 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Training Evaluation-1.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Training Evaluation-1.png",
         "title": "Training Evaluation-1",
         "dim": "1440x1024",
-        "size": "88.6 KB"
+        "size": "88.6 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Training Evaluation-2.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Training Evaluation-2.png",
         "title": "Training Evaluation-2",
         "dim": "1440x1024",
-        "size": "84.8 KB"
+        "size": "84.8 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Training Evaluation.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Training Evaluation.png",
         "title": "Training Evaluation",
         "dim": "1440x1024",
-        "size": "114.4 KB"
+        "size": "114.4 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Training Message.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Training Message.png",
         "title": "Training Message",
         "dim": "1440x1024",
-        "size": "130.1 KB"
+        "size": "130.1 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Training Providers-1.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Training Providers-1.png",
         "title": "Training Providers-1",
         "dim": "1440x1024",
-        "size": "130.5 KB"
+        "size": "130.5 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Training Providers-2.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Training Providers-2.png",
         "title": "Training Providers-2",
         "dim": "1440x1024",
-        "size": "61.0 KB"
+        "size": "61.0 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Training Providers-4.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Training Providers-4.png",
         "title": "Training Providers-4",
         "dim": "1440x1024",
-        "size": "157.2 KB"
+        "size": "157.2 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Training Providers-5.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Training Providers-5.png",
         "title": "Training Providers-5",
         "dim": "1440x1024",
-        "size": "145.4 KB"
+        "size": "145.4 KB",
+        "orientation": "landscape"
       },
       {
         "file": "Training Providers.png",
         "path": "./public/assets/projects/trainova/dashboard-ui/Training Providers.png",
         "title": "Training Providers",
         "dim": "1440x1024",
-        "size": "96.7 KB"
+        "size": "96.7 KB",
+        "orientation": "landscape"
       },
       {
         "file": "student_grades_dashboard.png",
         "path": "./public/assets/projects/student-grades/student_grades_dashboard.png",
         "title": "لوحة متابعة وسجلات درجات الطلبة (Student Grades Dashboard)",
         "dim": "882x492",
-        "size": "118 KB"
+        "size": "118 KB",
+        "orientation": "landscape"
       },
       {
         "file": "dashboard_screenshot.png",
         "path": "./public/assets/projects/retail/dashboard_screenshot.png",
         "title": "لوحة استخبارات المبيعات وهوامش الربحية (Executive BI Margin)",
         "dim": "1549x860",
-        "size": "247 KB"
+        "size": "247 KB",
+        "orientation": "landscape"
       },
       {
         "file": "dashboard_filtered_central.png",
         "path": "./public/assets/projects/retail/dashboard_filtered_central.png",
         "title": "التحليل الإقليمي للقطاع المركزي (Regional BI Drilldown)",
         "dim": "1554x865",
-        "size": "229 KB"
+        "size": "229 KB",
+        "orientation": "landscape"
       },
       {
         "file": "dashboard_filtered_furniture.png",
         "path": "./public/assets/projects/retail/dashboard_filtered_furniture.png",
         "title": "تحليل ربحية قطاعات المنتجات (Category Profitability)",
         "dim": "1548x859",
-        "size": "232 KB"
+        "size": "232 KB",
+        "orientation": "landscape"
       },
       {
         "file": "discount_cliff_analysis.png",
         "path": "./public/assets/projects/retail/discount_cliff_analysis.png",
         "title": "تحليل منحدر الخصومات وتآكل الهوامش (Discount Cliff Analysis)",
         "dim": "1552x862",
-        "size": "211 KB"
+        "size": "211 KB",
+        "orientation": "landscape"
       },
       {
         "file": "sub_category_profitability.png",
         "path": "./public/assets/projects/retail/sub_category_profitability.png",
         "title": "مصفوفة ربحية الفئات الفرعية والمخزون (Sub-Category Profitability)",
         "dim": "1554x863",
-        "size": "241 KB"
+        "size": "241 KB",
+        "orientation": "landscape"
       },
       {
         "file": "lilianoura_cockpit_view.png",
         "path": "./public/assets/projects/lilianoura/lilianoura_cockpit_view.png",
         "title": "قمرة القيادة المؤسسية الذكية (LILIANOURA Operating Cockpit)",
         "dim": "1920x1080",
-        "size": "413 KB"
+        "size": "413 KB",
+        "orientation": "landscape"
       },
       {
         "file": "lilianoura_global_intelligence.png",
         "path": "./public/assets/projects/lilianoura/lilianoura_global_intelligence.png",
         "title": "منظومة اتخاذ القرارات والذكاء الموزع (Global Intelligence)",
         "dim": "1920x1080",
-        "size": "395 KB"
+        "size": "395 KB",
+        "orientation": "landscape"
       }
     ]
   },
@@ -1045,13 +1096,109 @@ const projectsImagesConfig = {
       "en": "No verified UI screenshots currently. Displayed with direct downloads for 6 Cisco Packet Tracer (.pkt) network topology labs.",
       "ar": "لا توجد صور واجهات معتمدة حالياً. يُعرض مع إمكانية التحميل المباشر لـ 6 معامل محاكاة شبكات سيسكو (.pkt)."
     }
+  },
+  "salon-management-system": {
+    "title": {
+      "en": "Salon Management System — Visual Experience & Interactive Prototype",
+      "ar": "نظام إدارة وحجز صالون التجميل الفاخر — تجربة بصرية وبروتوتايب تفاعلي"
+    },
+    "folder": "public/assets/projects/salon-management/",
+    "cover": "./public/assets/projects/salon-management/ui_screen_preview.jpg",
+    "gallery": [
+      "./public/assets/projects/salon-management/ui_screen_preview.jpg",
+      "./public/assets/projects/salon-management/screen_welcome.png",
+      "./public/assets/projects/salon-management/screen_notifications.png",
+      "./public/assets/projects/salon-management/screen_cart.png",
+      "./public/assets/projects/salon-management/screen_profile_preview.jpg",
+      "./public/assets/projects/figma-work/figma_asset_14.png"
+    ],
+    "availableImages": [
+      {
+        "file": "ui_screen_preview.jpg",
+        "path": "./public/assets/projects/salon-management/ui_screen_preview.jpg",
+        "title": "شاشة استعراض الخدمات وباقات العناية",
+        "dim": "375x812",
+        "size": "87 KB",
+        "orientation": "portrait"
+      },
+      {
+        "file": "screen_welcome.png",
+        "path": "./public/assets/projects/salon-management/screen_welcome.png",
+        "title": "شاشة الترحيب وتجربة الدخول",
+        "dim": "375x812",
+        "size": "12 KB",
+        "orientation": "portrait"
+      },
+      {
+        "file": "screen_notifications.png",
+        "path": "./public/assets/projects/salon-management/screen_notifications.png",
+        "title": "شاشة التنبيهات وإشعارات تأكيد الحجز",
+        "dim": "375x812",
+        "size": "49 KB",
+        "orientation": "portrait"
+      },
+      {
+        "file": "screen_cart.png",
+        "path": "./public/assets/projects/salon-management/screen_cart.png",
+        "title": "سلة الخدمات والمشتريات وتفاصيل الدفع",
+        "dim": "375x812",
+        "size": "32 KB",
+        "orientation": "portrait"
+      },
+      {
+        "file": "screen_profile_preview.jpg",
+        "path": "./public/assets/projects/salon-management/screen_profile_preview.jpg",
+        "title": "الملف الشخصي وإدارة المواعيد السابقة",
+        "dim": "375x812",
+        "size": "98 KB",
+        "orientation": "portrait"
+      },
+      {
+        "file": "figma_asset_14.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_14.png",
+        "title": "لوحة كانفاس الماستر الكاملة لتطبيق الصالون (4K Master Board)",
+        "dim": "2731x4096",
+        "size": "6.4 MB",
+        "orientation": "master"
+      }
+    ]
+  },
+  "essential-services-map": {
+    "title": {
+      "en": "Essential Services Map — Humanitarian Support Platform",
+      "ar": "دليل الخدمات الأساسية في المناطق المتضررة — منصة إنسانية تفاعلية"
+    },
+    "folder": "public/assets/projects/services-map/",
+    "cover": "./public/assets/projects/services-map/essential_services_map_cover.png",
+    "gallery": [
+      "./public/assets/projects/services-map/essential_services_map_cover.png",
+      "./public/assets/projects/services-map/essential_services_map_full.png"
+    ],
+    "availableImages": [
+      {
+        "file": "essential_services_map_cover.png",
+        "path": "./public/assets/projects/services-map/essential_services_map_cover.png",
+        "title": "خريطة الخدمات الأساسية — الواجهة التفاعلية",
+        "dim": "1440x810",
+        "size": "389 KB",
+        "orientation": "landscape"
+      },
+      {
+        "file": "essential_services_map_full.png",
+        "path": "./public/assets/projects/services-map/essential_services_map_full.png",
+        "title": "دليل الخدمات الإنسانية — الاستعراض الكامل",
+        "dim": "1440x1600",
+        "size": "454 KB",
+        "orientation": "landscape"
+      }
+    ]
   }
 };
 
+// Safe universal exposure (browser global + CommonJS export)
 if (typeof window !== 'undefined') {
   window.projectsImagesConfig = projectsImagesConfig;
 }
-
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = projectsImagesConfig;
 }

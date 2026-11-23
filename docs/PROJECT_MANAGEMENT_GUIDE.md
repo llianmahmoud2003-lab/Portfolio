@@ -1,169 +1,155 @@
-# دليل إدارة وإضافة المشاريع الجديدة لمعرض أعمال LILIAN ALKHAWALDA
-# Permanent Project Management Guide
+# دليل إدارة وتطوير معرض أعمال المهندسة لليان الخوالدة
+# LILIAN ALKHAWALDA — Comprehensive Project Management & AI Architecture Guide
 
-أهلاً بكِ مهندسة ليليان. صُمم هذا الموقع بمعمارية برمجية مفصولة ومنظمة بالكامل (Decoupled Data Architecture)، بحيث تكون **بيانات المشاريع مفصولة تماماً عن كود التصميم وواجهات الصفحات**.
+أهلاً بكِ مهندسة لليان. تم تصميم وتطوير هذا الموقع بمعمارية برمجية مفصولة ومنظمة بالكامل (**Decoupled Data Architecture**)، بحيث تكون **بيانات المشاريع مفصولة تماماً عن كود التصميم وواجهات الصفحات**.
 
-هذا يعني أنه عند إنجازكِ لأي مشروع مستقبلي جديد، **لن تحتاجي نهائياً لإعادة بناء الموقع أو تعديل أكواد HTML أو CSS المعقدة**؛ بل يكفي إضافة بيانات المشروع في ملف واحد، وسيظهر تلقائياً في:
+هذا يعني أنه عند إنجازكِ لأي مشروع مستقبلي جديد، **لن تحتاجي نهائياً لإعادة بناء الموقع أو تعديل أكواد HTML أو CSS المعقدة**؛ بل يكفي إضافة بيانات المشروع في ملف مركزي واحد، وسيظهر تلقائياً في:
 1. الصفحة الرئيسية (`index.html`).
-2. صفحة المشاريع الكاملة (`projects.html`).
-3. شريط فلاتر التصنيفات حسب مجاله.
-4. نافذة تفاصيل المشروع المتكيفة (Modal Case Study) بكامل ميزاته وصوره وفيديوهاته ومخرجاته.
+2. صفحة المشاريع الشاملة (`projects.html`).
+3. شريط فلاتر التصنيفات التفاعلية.
+4. نافذة تفاصيل المشروع المتكيفة (**Modal Case Study**) بكامل ميزاته وصوره وفيديوهاته ومخرجاته القابلة للتنزيل.
 
 ---
 
-## الخطوات الثلاث البسيطة لإضافة أي مشروع جديد:
+## المشاريع الـ 11 المعتمدة الحالية (The 11 Audited Projects Inventory):
 
-### الخطوة 1: تجهيز مجلد ملفات المشروع (Media & Assets)
-داخل مجلد المشروع في الموقع:  
+1. **LILIANOURA (المشروع الرائد الأول - Premier Flagship #1):**
+   - منصة ذكاء القرار المتكاملة، المعمارية الهندسية، ولوحة تحكم الذكاء الاصطناعي.
+   - غلاف 16:9 بنسبة عرض دقيقة وخلفية `#0A0D14` مع تقنية `object-fit: contain`.
+
+2. **Trainova Capstone (المنظومة الموحدة للمشروع الجامعي):**
+   - النظام التعليمي الموحد لإدارة التدريب الميداني والتقييم الثلاثي.
+   - يدمج منصة الويب (PHP/MySQL) مع واجهات تطبيق الموبايل ودراسة التخرج الكاملة (411 KB PDF).
+
+3. **Figma Works & Design Systems (معرض واجهات فيجما):**
+   - 51 شاشة تصميم موثقة وأصلية (12 شاشة موبايل Portrait، 30 لوحة ويب Landscape، ولوحة Salon Master 4K Canvas، و 8 لوحات BI).
+   - عارض Lightbox تفاعلي يتيح التنقل والتكبير والتحكم بلوحة المفاتيح (Esc / الأسهم).
+
+4. **Retail Sales Intelligence & Corporate BI:**
+   - لوحات معلومات أداء المبيعات وسلاسل التوريد وتحليلات الربحية.
+   - لوحات Power BI ومخططات اتخاذ القرار.
+
+5. **Salon Management System (دراسة حالة متكاملة لنظام إدارة صالون التجميل):**
+   - دراسة حالة مستقلة تتضمن فيديو النموذج التفاعلي الحقيقي (`salon_prototype_demo.mp4`).
+   - تقرير دراسة شخصيات المستخدمين الحقيقي المعتمد (`salon_persona_report.pdf` - 542 KB).
+   - واجهات التصميم الكاملة ولوحة الكانفاس الشاملة بدقة فائقة.
+
+6. **Flutter Mobile Application Architecture:**
+   - تطبيق الهاتف المحمول التجاري متعدد المنصات (Cross-Platform Mobile Engineering).
+
+7. **Essential Services Map (خريطة الخدمات الإنسانية الأساسية):**
+   - نموذج أولي تفاعلي جغرافي لإدارة وتحديد نقاط الخدمات الإنسانية في غزة (2024–2025).
+   - يوثق استجابة نظم المعلومات في أوقات الأزمات وخرائط التوزيع الحيوي.
+
+8. **Student Grades & Academic Performance Tracker:**
+   - منظومة الحوسبة الأكاديمية وحساب المعدلات التراكمية ومنحنيات الأداء.
+
+9. **Al-Najma Feasibility & Market Analytics:**
+   - دراسة الجدوى الاستثمارية والتحليل المالي لمحطة النجمة للوقود.
+
+10. **Economic Feasibility & CapEx Valuation Engine:**
+    - محرك التقييم المالي، التدفقات النقدية المخصومة (DCF)، وفترة الاسترداد ونقطة التعادل.
+
+11. **Enterprise Campus Network Infrastructure:**
+    - معمارية الشبكات المؤسسية، التوجيه والتبديل وحزم الأمان عبر Cisco Packet Tracer (6 ملفات `.pkt` متاحة للتنزيل).
+
+---
+
+## قسم الأعمال المرئية والفوتوشوب (Multimedia & Photoshop Artworks):
+يحتوي الموقع على قسم خاص للأعمال الفنية والرقمية المنجزة ببرنامج Adobe Photoshop، مع روابط استعراض الشاشات وتحميل ملفات العمل الأصلية المفتوحة المصدر:
+1. **لوحة المسجد الأقصى الفنية الرقمية (`al_aqsa_digital_artwork.psd` - 68 MB):**
+   - دمج طبقات فوتوشوب متقدمة وإضاءة سينمائية.
+2. **التكوين البصري للهوية الشخصية (`lilian_personal_branding_composition.psd` - 11 MB):**
+   - بناء التوازن الهندسي والألوان الفاخرة للهوية الاحترافية.
+
+---
+
+## خطوات إضافة مشروع جديد مستقبلياً:
+
+### الخطوة 1: تجهيز مجلد ملفات المشروع (Assets & Media)
+داخل مجلد الموقع:  
 `public/assets/projects/`  
-قومي بإنشاء مجلد جديد باسم المشروع (مثال: `ai-supply-chain`):
+أنشئي مجلداً جديداً بالاسم البرمجي للمشروع (مثال: `ai-decision-engine`):
 ```text
-public/assets/projects/ai-supply-chain/
-├── cover.png                <-- صورة غلاف البطاقة (نسبة 16:9 بدقة 1024×571)
-├── screen1.png              <-- لقطات شاشة الواجهة أو المعمارية
+public/assets/projects/ai-decision-engine/
+├── cover.jpg                 <-- صورة غلاف المشروع (16:9 بدقة 1280×720 على الأقل)
+├── screen1.png               <-- واجهات النظام أو لقطات المعمارية
 ├── screen2.png
-└── docs/                    <-- (اختياري) نماذج إكسل أو ملفات PDF للتحميل
-    └── Project_Report.pdf
+├── demo_video.mp4            <-- (اختياري) فيديو استعراض تفاعلي
+└── docs/                     <-- (اختياري) ملفات توثيقية أو تقارير PDF
+    └── architecture_doc.pdf
 ```
-
----
 
 ### الخطوة 2: إضافة كائن المشروع إلى `src/data/projectsData.js`
 افتحي الملف:  
 `src/data/projectsData.js`  
-وقومي بإضافة كائن المشروع الجديد داخل مصفوفة `projectsData = [ ... ]` مستخدمةً القالب القياسي التالي:
+وأضيفي كائن المشروع الجديد داخل المصفوفة `projectsData`:
 
 ```javascript
   {
-    "id": "ai-supply-chain",
-    "logo": "./public/assets/projects/ai-supply-chain/logo.png",
-    "slug": "ai-supply-chain-optimization",
-    "title": {
-      "en": "Autonomous Supply Chain Optimization & Telemetry Engine",
-      "ar": "منظومة تحسين سلاسل الإمداد المؤسسية وقمرة القياس الذكية"
+    id: "ai-decision-engine",
+    badge: "AI & DECISION ARCHITECTURE",
+    categories: ["ai", "web"],
+    title: {
+      en: "Enterprise AI Decision Engine",
+      ar: "محرك قرارات الذكاء الاصطناعي المؤسسي"
     },
-    "category": {
-      "en": "Artificial Intelligence",
-      "ar": "الذكاء الاصطناعي"
+    subtitle: {
+      en: "Autonomous telemetry & predictive workflow synthesis",
+      ar: "تحليلات البيانات التشغيلية والتوليد التنبؤي لمسارات العمل"
     },
-    "categories": [
-      "ai", "bi"
-    ],
-    "heroFeatured": false, // اجعليه true إذا أردتِ ظهوره كمعلم رئيسي في أعلى الصفحة
-    "thumbnail": "./public/assets/projects/ai-supply-chain/cover.png",
-    "gallery": [
-      "./public/assets/projects/ai-supply-chain/screen1.png",
-      "./public/assets/projects/ai-supply-chain/screen2.png"
-    ],
-    "status": {
-      "en": "Production Ready",
-      "ar": "جاهز للإنتاج"
+    description: {
+      en: "Architected a scalable decision engine leveraging generative AI models and real-time streaming telemetry.",
+      ar: "بناء وتصميم محرك قرارات مؤسسي قابل للتوسع يعتمد على نماذج الذكاء الاصطناعي ومعالجة البيانات المتدفقة لحظياً."
     },
-    "projectType": {
-      "en": "Enterprise Platform",
-      "ar": "نظام مؤسسي متقدم"
-    },
-    "completionDate": {
-      "en": "December 2026",
-      "ar": "ديسمبر 2026"
-    },
-    "role": {
-      "en": "Chief Systems Architect & Lead Engineer",
-      "ar": "كبير مهندسي النظم والمطور الرئيسي"
-    },
-    "shortDescription": {
-      "en": "High-throughput predictive logistics telemetry engine reducing inventory holding costs by 22% using autonomous reinforcement agents.",
-      "ar": "محرك تحليلي تنبؤي متقدم لإدارة الخدمات اللوجستية يخفض تكاليف التخزين بنسبة 22% عبر وكلاء الذكاء الاصطناعي المستقلين."
-    },
-    "fullDescription": {
-      "en": "Detailed engineering breakdown of the microservices topology, database sharding, and real-time Kafka event streams.",
-      "ar": "شرح معماري تفصيلي يوضح تكامل خدمات النظم وقواعد البيانات الموزعة وتدفق الأحداث الفوري لدعم اتخاذ القرار المؤسسي."
-    },
-    "problem": {
-      "en": "Logistics managers lacked unified visibility over warehouse nodes, causing shipment bottlenecks and inventory obsolescence.",
-      "ar": "افتقار الإدارات اللوجستية للرؤية اللحظية لحركة المستودعات، مما تسبب في اختناقات سلاسل التوريد وهدر التخزين."
-    },
-    "solution": {
-      "en": "Engineered an event-driven telemetry dashboard with autonomous stock replenishment algorithms and automated alerting.",
-      "ar": "تطوير لوحة قياس تشغيلية معتمدة على تدفق الأحداث مع خوارزميات التغذية الآلية والتنبيهات الاستباقية."
-    },
-    "technologies": [
-      "Python", "FastAPI", "React", "PostgreSQL", "Docker", "Autonomous Agents"
-    ],
-    "metrics": [
+    coverImage: "./public/assets/projects/ai-decision-engine/cover.jpg",
+    tags: ["Decision Intelligence", "AI Architecture", "FastAPI", "React", "PostgreSQL"],
+    metrics: [
       {
-        "value": "-22%",
-        "label": {
-          "en": "Inventory Cost Reduction",
-          "ar": "خفض تكاليف التخزين"
-        }
+        value: "99.4%",
+        label: { en: "Telemetry Accuracy", ar: "دقة التحليلات" }
       },
       {
-        "value": "99.9%",
-        "label": {
-          "en": "Pipeline Availability",
-          "ar": "جاهزية واستقرار النظام"
-        }
+        value: "<120ms",
+        label: { en: "Inference Latency", ar: "زمن الاستجابة" }
       }
     ],
-    "deliverables": {
-      "en": [
-        "Distributed Microservices Architecture",
-        "Predictive Demand Forecasting Pipeline",
-        "Interactive Executive Operations Cockpit"
-      ],
-      "ar": [
-        "معمارية الخدمات المصغرة الموزعة",
-        "نموذج التنبؤ التلقائي بمعدلات الطلب",
-        "قمرة قيادة العمليات اللوجستية التفاعلية"
-      ]
-    },
-    "documents": [
+    screens: [
       {
-        "title": {
-          "en": "Technical Architecture Whitepaper (PDF)",
-          "ar": "التقرير المعماري والهندسي للمشروع (PDF)"
-        },
-        "fileName": "Supply_Chain_Architecture_Report.pdf",
-        "fileType": "pdf",
-        "size": "1.2 MB",
-        "path": "./public/assets/projects/ai-supply-chain/docs/Supply_Chain_Architecture_Report.pdf"
+        src: "./public/assets/projects/ai-decision-engine/screen1.png",
+        orientation: "landscape",
+        title: { en: "Operational Control Cockpit", ar: "لوحة التحكم التشغيلية" }
       }
     ],
-    "links": {
-      "demo": "https://example.com/demo",  // أو null إذا لم يكن هناك رابط عام
-      "github": "https://github.com/llianmahmoud2003-lab/supply-chain-engine", // أو null
-      "figma": null,
-      "caseStudy": true
+    links: {
+      demo: "https://example.com",
+      github: "https://github.com/llianmahmoud2003-lab/ai-decision-engine",
+      figma: null,
+      caseStudy: true
     }
   }
 ```
 
 ---
 
-### الخطوة 3: الحفظ والنشر
-بمجرد حفظكِ لملف `src/data/projectsData.js`:
-- الموقع سيقرأ المشروع الجديد فوراً.
-- سيظهر كرت المشروع تلقائياً في الصفحة الرئيسية وصفحة المشاريع.
-- النقر على "عرض تفاصيل المشروع" سيفتح نافذة العرض المتكاملة الخاصة به دون كتابة سطر HTML واحد!
-- عند تنفيذ `git commit` و `git push`، سيقوم Vercel ببنائه وتحديثه على الإنترنت خلال 30 ثانية.
+## دليل تعظيم الاستفادة من Gemini Pro (Phase 13 Guide):
 
----
+للاستفادة القصوى من قدرات **Gemini Pro** في كتابة وصياغة وتجهيز دراسات الحالة والمشاريع القادمة:
 
-## تصنيفات المشاريع المعتمدة (`categories`):
-يمكنكِ ربط المشروع بواحد أو أكثر من التصنيفات التالية ليظهر عند نقر الزائر على الفلاتر:
-- `"ai"`: مشاريع الذكاء الاصطناعي وهندسة النظم الذكية (Artificial Intelligence & AI Cockpits).
-- `"bi"`: حلول ذكاء الأعمال والتحليلات الكمية والمالية (Business Intelligence & Analytics).
-- `"web"`: تطبيقات ومنصات الويب المؤسسية (Web Applications).
-- `"mobile"`: تطبيقات الهاتف الذكي (Mobile Applications - Flutter).
-- `"academic"`: الأنظمة الأكاديمية والإدارية (Academic & Administrative Systems).
-- `"network"`: البنية التحتية والشبكات (Cisco Network Infrastructure).
+### 1. إعداد برومبت قياسي لتوليد دراسة حالة (Case Study Prompt Template):
+```text
+بصفتك كبير مهندسي نظم المعلومات ومصممي معمارية البرمجيات، أريد منك إعداد دراسة حالة هندسية لمشروع جديد سأضيفه إلى معرض أعمالي (LILIAN ALKHAWALDA Portfolio).
+المشروع هو: [اسم المشروع ومجاله]
+التقنيات المستخدمة: [قائمة التقنيات]
+أريد المخرجات بصيغة كائن JSON مطابق تماماً لهيكل projectsData.js، متضمناً:
+1. badge و title و subtitle باللغتين العربية والإنجليزية بأسلوب احترافي رفيع.
+2. description يوضح القيمة التشغيلية والاستثمارية وليس الوصف السطحي.
+3. metrics كمية دقيقة قابلة للقياس (مثل زمن الاستجابة، نسبة الدقة، العائد على الاستثمار).
+4. challenges: 3 تحديات هندسية مع الحلول المبتكرة المطبقة.
+5. deliverables: قائمة واضحة بالمخرجات الهندسية المسلمة للعميل.
+```
 
----
-
-## معايير الصور والأغلفة الموصى بها:
-1. **نسبة أبعاد الغلاف:** `16 : 9` (مثال: `1024 × 571` بكسل أو `1280 × 720` بكسل).
-2. **نوع الملف:** `.png` أو `.jpg` بدقة عالية دون ضغط مشوه.
-3. **منطقة الأمان (Safe Margin):** احرصي على أن تكون النصوص في الثلثين الداخليين من الصورة لتظهر ممتازة على شاشات الهواتف دون اقتطاع.
-
-بهذا النظام، يظل موقعكِ قابلاً للنمو والتطوير لعشرات المشاريع القادمة بكل سلاسة واحترافية.
+### 2. معايير الجودة والتدقيق الذاتي (Engineering Rigor):
+- **الابتعاد عن العبارات العامة:** استخدام مصطلحات دقيقة مثل `Relational Schema Normalization (3NF)` بدلاً من `Database Design`.
+- **التركيز على القيمة الاستثمارية (ROI):** ربط الميزات التقنية بعوائد الأعمال، وتخفيض تكلفة العمليات (OpEx).
+- **الاتساق البصري:** التأكد من تطابق نسب الصور (16:9 للأغلفة، و 9:16 للشاشات المحمولة) لضمان عرض خالي من أي تشويه أو اقتصاص.
