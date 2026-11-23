@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>LILIANOURA — Proposed Prototype</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<style>
+:root{--obs:#0A0D14;--gold:#D4AF37;--bg:#F7F8FA;--sf:#FFFFFF;--tx:#0F172A;--tx2:#475569;--ln:#E3E6EB;--gt:#7A5F0B;--ok:#2F7D5B;--wn:#A4580A;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A0D14;--sf:#121826;--tx:#F1F5F9;--tx2:#9AA7BA;--ln:#222C40;--gt:#D4AF37;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0A0D14;--sf:#121826;--tx:#F1F5F9;--tx2:#9AA7BA;--ln:#222C40;--gt:#D4AF37;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{background:var(--bg);color:var(--tx);font:15px/1.5 "IBM Plex Sans",system-ui,sans-serif;display:flex;flex-direction:column}
+[dir=rtl] body,[dir=rtl] button,[dir=rtl] input{font-family:"IBM Plex Sans Arabic","IBM Plex Sans",system-ui,sans-serif}
+button,input{font:inherit;color:inherit}
+.ban{background:var(--obs);color:#E8D9A0;font-size:12.5px;padding:7px 16px;text-align:center;border-bottom:1px solid var(--gold)}
+.app{flex:1;display:flex;min-height:0}
+nav{width:232px;background:var(--obs);color:#CBD2DE;padding:18px 12px;display:flex;flex-direction:column;gap:2px;overflow:auto;flex:none}
+.logo{padding:4px 10px 18px;color:#fff;font-weight:600;letter-spacing:.16em;font-size:17px}
+.logo small{display:block;color:var(--gold);letter-spacing:.08em;font-weight:400;font-size:11px;margin-top:2px}
+nav button{background:none;border:0;color:inherit;text-align:start;padding:10px 12px;border-radius:8px;cursor:pointer;display:flex;gap:10px;align-items:center}
+nav button:hover{background:#151B2A}
+nav button[aria-current=page]{background:#171E30;color:#fff;box-shadow:inset 3px 0 0 var(--gold)}
+[dir=rtl] nav button[aria-current=page]{box-shadow:inset -3px 0 0 var(--gold)}
+nav i{width:7px;height:7px;background:var(--gold);border-radius:2px;opacity:.7;flex:none}
+.sp{flex:1}
+.tg{display:flex;gap:6px;padding:8px 10px}
+.tg button{border:1px solid #2A3348;padding:5px 10px;font-size:12.5px;justify-content:center}
+main{flex:1;overflow:auto;padding:24px clamp(14px,3vw,36px) 40px}
+h1{font-size:24px;font-weight:600;letter-spacing:-.01em}
+.sub{color:var(--tx2);margin:2px 0 20px;max-width:64ch}
+.chip{display:inline-block;font-size:11.5px;padding:2px 8px;border-radius:99px;background:rgba(212,175,55,.16);color:var(--gt);font-weight:500}
+.chip.p{background:transparent;border:1px solid var(--ln);color:var(--tx2)}
+.g{display:grid;gap:14px}
+.k4{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.k2{grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
+.c{background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:16px;min-width:0}
+.c h2{font-size:14.5px;font-weight:600;margin-bottom:10px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.big{font-size:30px;font-weight:600;letter-spacing:-.02em;line-height:1.15}
+.mut{color:var(--tx2);font-size:13px}
+.up{color:var(--ok)}.dn{color:var(--wn)}
+.hero{background:var(--obs);color:#fff;border-color:#2A3348}
+.hero .mut{color:#A7B1C4}.hero .big{color:var(--gold)}
+svg{display:block;width:100%;height:auto}
+.row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-top:1px solid var(--ln);align-items:center}
+.row:first-of-type{border-top:0}
+.bar{height:6px;background:var(--ln);border-radius:9px;overflow:hidden;min-width:70px;flex:1}
+.bar b{display:block;height:100%;background:var(--gold)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-weight:500;color:var(--tx2);text-align:start;padding:8px 6px}
+td{padding:9px 6px;border-top:1px solid var(--ln)}
+.tw{overflow-x:auto}
+.kb{display:grid;grid-template-columns:repeat(4,minmax(200px,1fr));gap:12px;overflow-x:auto}
+.kb .col{background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px}
+.kb .col h3{font-size:13px;font-weight:600;margin:2px 4px 8px}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:8px;padding:10px;margin-bottom:8px;font-size:13.5px}
+.chat{display:flex;flex-direction:column;gap:12px;max-width:760px}
+.msg{padding:12px 14px;border-radius:12px;max-width:92%}
+.u{align-self:flex-end;background:var(--obs);color:#fff}
+.a{background:var(--sf);border:1px solid var(--ln)}
+.a ul{padding-inline-start:18px;margin:6px 0}
+.sg{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
+.sg button,.btn{border:1px solid var(--ln);background:var(--sf);padding:7px 12px;border-radius:99px;cursor:pointer}
+.sg button:hover,.btn:hover{border-color:var(--gold)}
+.btn.pr{background:var(--gold);border-color:var(--gold);color:#0A0D14;font-weight:500;border-radius:8px}
+.apv{margin-top:10px;border:1px dashed var(--gold);border-radius:8px;padding:10px}
+.in{display:flex;gap:8px;margin-top:6px;max-width:760px}
+.in input{flex:1;padding:10px 12px;border:1px solid var(--ln);background:var(--sf);border-radius:8px;min-width:0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (max-width:800px){.app{flex-direction:column}nav{width:100%;flex-direction:row;overflow-x:auto;padding:8px;align-items:center}.logo{padding:0 10px;white-space:nowrap}.logo small,.sp{display:none}nav button{white-space:nowrap;padding:8px 10px}nav button[aria-current=page],[dir=rtl] nav button[aria-current=page]{box-shadow:inset 0 -3px 0 var(--gold)}.tg{padding:0}}
+@media (prefers-reduced-motion:no-preference){main>*{animation:f .25s ease}@keyframes f{from{opacity:.4}}}
+</style></head><body>
+<div class="ban" id="ban"></div>
+<div class="app"><nav id="nav" aria-label="Main"></nav><main id="m" tabindex="-1"></main></div>
+<script>
+let lang='en',scr='cockpit',chat=[],decided=null;
+const L=(e,a)=>lang==='ar'?a:e;
+const NAV=[['cockpit','Executive Cockpit','لوحة القيادة التنفيذية'],['assistant','AI Assistant','المساعد الذكي'],['finance','Finance & Analytics','المالية والتحليلات'],['crm','CRM & Sales','العملاء والمبيعات'],['ops','Projects & Operations','المشاريع والعمليات'],['inv','Inventory','المخزون'],['hr','Human Resources','الموارد البشرية']];
+const D=()=>`<span class="chip">${L('DEMO DATA / ILLUSTRATIVE','بيانات تجريبية / توضيحية')}</span>`;
+const P=()=>`<span class="chip p">${L('PROPOSED','مقترح')}</span>`;
+const mo=['Jan','Feb','Mar','Apr','May','Jun'],moA=['يناير','فبراير','مارس','أبريل','مايو','يونيو'];
+function line(v){const mx=Math.max(...v),mn=Math.min(...v),pts=v.map((x,i)=>[20+i*(560/(v.length-1)),170-(x-mn)/(mx-mn)*140]);
+return `<svg viewBox="0 0 600 200" role="img" aria-label="trend"><path d="M${pts.map(p=>p.join(',')).join('L')}L580,190L20,190Z" fill="#D4AF37" opacity=".13"/><polyline points="${pts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="#D4AF37" stroke-width="2.5" stroke-linejoin="round"/>${pts.map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="3.5" fill="#D4AF37"/>`).join('')}${(lang==='ar'?moA:mo).map((m,i)=>`<text x="${20+i*112}" y="199" font-size="11" fill="#94A3B8" text-anchor="middle">${m}</text>`).join('')}</svg>`}
+function bars(a,b){const mx=Math.max(...a,...b);return `<svg viewBox="0 0 600 210" role="img" aria-label="bars">${a.map((x,i)=>{const h=x/mx*150,h2=b[i]/mx*150,X=30+i*93;return `<rect x="${X}" y="${175-h}" width="30" height="${h}" rx="3" fill="#D4AF37"/><rect x="${X+34}" y="${175-h2}" width="30" height="${h2}" rx="3" fill="#64748B"/><text x="${X+32}" y="196" font-size="11" fill="#94A3B8" text-anchor="middle">${(lang==='ar'?moA:mo)[i]}</text>`}).join('')}</svg>`}
+const kpi=(l,v,d,u,hero)=>`<div class="c ${hero?'hero':''}"><div class="mut">${l}</div><div class="big">${v}</div><div class="${u?'up':'dn'}" style="font-size:13px">${d}</div></div>`;
+const bar=p=>`<div class="bar"><b style="width:${p}%"></b></div>`;
+const S={
+cockpit:()=>`<h1>${L('Executive Cockpit','لوحة القيادة التنفيذية')}</h1><p class="sub">${L('One view of revenue, pipeline, delivery and stock, with the items that need a decision.','نظرة واحدة على الإيرادات والمبيعات والتنفيذ والمخزون، مع ما يحتاج إلى قرار.')} ${D()} ${P()}</p>
+<div class="g k4">${kpi(L('Revenue (6 mo)','الإيرادات (٦ أشهر)'),'$4.82M','+6.4%',1,1)}${kpi(L('Open pipeline','المبيعات المفتوحة'),'$12.4M','+2.1%',1)}${kpi(L('Active projects','المشاريع النشطة'),'23',L('4 at risk','٤ متعثرة'),0)}${kpi(L('Low-stock items','أصناف منخفضة'),'7',L('+2 this week','+٢ هذا الأسبوع'),0)}</div>
+<div class="g k2" style="margin-top:14px"><div class="c"><h2>${L('Revenue trend','اتجاه الإيرادات')}${D()}</h2>${line([610,640,690,720,780,830])}</div>
+<div class="c"><h2>${L('Needs a decision','يحتاج إلى قرار')}${D()}</h2>
+${[[L('3 enterprise deals idle for 14+ days','٣ صفقات كبرى متوقفة منذ ١٤ يوماً+'),'crm'],[L('Project “Northfield” is 9 days behind plan','مشروع «نورثفيلد» متأخر ٩ أيام'),'ops'],[L('7 SKUs below reorder level','٧ أصناف دون حد إعادة الطلب'),'inv']].map(x=>`<div class="row"><span>${x[0]}</span><button class="btn" onclick="go('${x[1]}')">${L('Review','مراجعة')}</button></div>`).join('')}
+<p class="mut" style="margin-top:8px">${L('Ask the assistant for context before deciding.','اسأل المساعد للحصول على السياق قبل القرار.')} <button class="btn" onclick="go('assistant')">${L('Open assistant','فتح المساعد')}</button></p></div></div>`,
+finance:()=>`<h1>${L('Finance & Analytics','المالية والتحليلات')}</h1><p class="sub">${L('Revenue against cost, with the largest movements explained.','الإيرادات مقابل التكاليف، مع شرح أكبر التغيّرات.')} ${D()} ${P()}</p>
+<div class="g k4">${kpi(L('Gross margin','هامش الربح'),'41.2%','+1.3 pt',1,1)}${kpi(L('Operating cost','تكاليف التشغيل'),'$2.84M','+3.8%',0)}${kpi(L('Cash position','السيولة'),'$1.96M','-0.9%',0)}</div>
+<div class="g k2" style="margin-top:14px"><div class="c"><h2>${L('Revenue vs cost','الإيرادات مقابل التكلفة')}${D()}</h2>${bars([610,640,690,720,780,830],[400,420,440,470,480,500])}<p class="mut">${L('Gold: revenue · Grey: cost (thousands)','الذهبي: الإيرادات · الرمادي: التكلفة (بالآلاف)')}</p></div>
+<div class="c"><h2>${L('Largest cost lines','أكبر بنود التكلفة')}${D()}</h2><div class="tw"><table><tr><th>${L('Category','البند')}</th><th>${L('Share','النسبة')}</th><th></th></tr>${[[L('Payroll','الرواتب'),44],[L('Logistics','الخدمات اللوجستية'),23],[L('Software','البرمجيات'),12],[L('Facilities','المرافق'),9]].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}%</td><td style="min-width:90px">${bar(r[1]*2)}</td></tr>`).join('')}</table></div>
+<p class="mut" style="margin-top:10px">${L('Forecasting is PROPOSED and needs a verified data source.','التنبؤ مقترح ويتطلب مصدر بيانات موثّق.')}</p></div></div>`,
+crm:()=>`<h1>${L('CRM & Sales','العملاء والمبيعات')}</h1><p class="sub">${L('Pipeline by stage, with idle deals visible at a glance.','المبيعات حسب المرحلة، مع إبراز الصفقات المتوقفة.')} ${D()} ${P()}</p>
+<div class="kb">${[[L('Lead','محتمل'),[['Atlas Group','$180K',2],['Meridian Co.','$95K',5]]],[L('Qualified','مؤهل'),[['Harbor Foods','$420K',3],['Zenith Labs','$260K',16]]],[L('Proposal','عرض'),[['Orion Retail','$740K',9],['Delta Works','$310K',21]]],[L('Negotiation','تفاوض'),[['Summit Bank','$1.1M',4]]]].map(c=>`<div class="col"><h3>${c[0]} <span class="mut">${c[1].length}</span></h3>${c[1].map(d=>`<div class="card"><b>${d[0]}</b><div class="mut">${d[1]}</div><div style="font-size:12.5px" class="${d[2]>14?'dn':'mut'}">${L('Idle','خامل')} ${d[2]} ${L('days','يوماً')}</div></div>`).join('')}</div>`).join('')}</div>`,
+ops:()=>`<h1>${L('Projects & Operations','المشاريع والعمليات')}</h1><p class="sub">${L('Delivery progress and schedule health in one list.','تقدّم التنفيذ وسلامة الجدول في قائمة واحدة.')} ${D()} ${P()}</p>
+<div class="c">${[['Northfield',L('Behind 9 days','متأخر ٩ أيام'),48,0],['Harbor ERP',L('On track','وفق الخطة'),72,1],['Branch Rollout',L('On track','وفق الخطة'),35,1],['Vendor Audit',L('At risk','معرّض للتعثر'),60,0]].map(p=>`<div class="row"><b style="min-width:120px">${p[0]}</b>${bar(p[2])}<span class="mut" style="min-width:36px">${p[2]}%</span><span class="${p[3]?'up':'dn'}" style="min-width:110px;text-align:end">${p[1]}</span></div>`).join('')}</div>`,
+inv:()=>`<h1>${L('Inventory','المخزون')}</h1><p class="sub">${L('Stock against reorder levels. Purchasing actions are not connected in this prototype.','المخزون مقابل حدود إعادة الطلب. إجراءات الشراء غير مفعّلة في هذا النموذج.')} ${D()} ${P()}</p>
+<div class="c tw"><table><tr><th>SKU</th><th>${L('On hand','المتاح')}</th><th>${L('Reorder at','حد الطلب')}</th><th>${L('Level','المستوى')}</th></tr>${[['LN-2041',38,120],['LN-1187',410,150],['LN-3302',64,90],['LN-0925',280,100],['LN-2718',12,60]].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td style="min-width:120px">${bar(Math.min(100,r[1]/r[2]*50))}${r[1]<r[2]?`<span class="dn" style="font-size:12px">${L('Below level','دون الحد')}</span>`:''}</td></tr>`).join('')}</table></div>`,
+hr:()=>`<h1>${L('Human Resources','الموارد البشرية')}</h1><p class="sub">${L('Headcount and open roles. Role-based access for sensitive HR data is PROPOSED.','عدد الموظفين والوظائف الشاغرة. صلاحيات الوصول للبيانات الحساسة مقترحة.')} ${D()}</p>
+<div class="g k2"><div class="c"><h2>${L('Headcount','عدد الموظفين')}</h2><div class="big">148</div>${[[L('Operations','العمليات'),52],[L('Sales','المبيعات'),31],[L('Finance','المالية'),18],[L('Technology','التقنية'),47]].map(r=>`<div class="row"><span style="min-width:90px">${r[0]}</span>${bar(r[1]*1.9)}<span class="mut">${r[1]}</span></div>`).join('')}</div>
+<div class="c"><h2>${L('Open roles','وظائف شاغرة')}</h2>${[[L('Regional sales lead','قائد مبيعات إقليمي'),21],[L('Finance analyst','محلل مالي'),34],[L('Warehouse supervisor','مشرف مستودع'),12]].map(r=>`<div class="row"><span>${r[0]}</span><span class="mut">${r[1]} ${L('days open','يوماً مفتوحة')}</span></div>`).join('')}</div></div>`,
+assistant:()=>{const q=[['sum',L('Summarize this quarter','لخّص أداء هذا الربع')],['risk',L('Which deals are at risk?','ما الصفقات المعرّضة للخطر؟')],['comp',L('How do we compare with competitors?','كيف نقارن بالمنافسين؟')]];
+return `<h1>${L('AI Assistant','المساعد الذكي')}</h1><p class="sub">${L('Scripted preview of the proposed conversation design. No live AI is connected; production assistant status is not verified.','معاينة نصية لتصميم المحادثة المقترح. لا يوجد ذكاء اصطناعي مباشر، وحالة المساعد في المنتج الفعلي غير موثّقة.')} ${P()} ${D()}</p>
+<div class="sg">${q.map(x=>`<button onclick="ask('${x[0]}','${x[1].replace(/'/g,'’')}')">${x[1]}</button>`).join('')}</div>
+<div class="chat" aria-live="polite">${chat.map(m=>m).join('')||`<div class="mut">${L('Choose a question or type your own.','اختر سؤالاً أو اكتب سؤالك.')}</div>`}</div>
+<form class="in" onsubmit="free(event)"><input id="q" aria-label="${L('Ask a question','اكتب سؤالاً')}" placeholder="${L('Ask about your business…','اسأل عن أعمالك…')}"><button class="btn pr">${L('Send','إرسال')}</button></form>`}};
+const R={
+sum:()=>`<b>${L('Quarter summary','ملخص الربع')}</b> ${D()}<ul><li>${L('Revenue rose 6.4% to $4.82M.','ارتفعت الإيرادات ٦٫٤٪ إلى ٤٫٨٢ مليون دولار.')}</li><li>${L('Operating cost grew faster in logistics than elsewhere.','نمت تكاليف اللوجستيات أسرع من غيرها.')}</li><li>${L('4 projects are at risk.','٤ مشاريع معرّضة للتعثر.')}</li></ul><div class="mut">${L('Source: illustrative figures in this prototype, not company data.','المصدر: أرقام توضيحية في هذا النموذج وليست بيانات شركة.')}</div>`,
+risk:()=>`<b>${L('Deals needing attention','صفقات تحتاج متابعة')}</b> ${D()}<ul><li>Delta Works — $310K, ${L('idle 21 days','خاملة ٢١ يوماً')}</li><li>Zenith Labs — $260K, ${L('idle 16 days','خاملة ١٦ يوماً')}</li></ul><div class="apv" id="apv">${apv()}</div>`,
+comp:()=>`${L('I can’t answer this. No competitor data source is connected, and I won’t estimate it. Connect a verified source, or compare using your own sales and pricing data.','لا أستطيع الإجابة. لا يوجد مصدر بيانات للمنافسين، ولن أقدّر ذلك. اربط مصدراً موثّقاً أو قارن باستخدام بيانات مبيعاتك وأسعارك.')}`};
+function apv(){if(decided)return `<b>${decided==='y'?L('Approval recorded (prototype only)','سُجّلت الموافقة (نموذج فقط)'):L('Declined','تم الرفض')}</b><div class="mut">${L('Nothing was drafted or sent. In production, approved actions would be a separate, reviewed step.','لم يُصَغ أو يُرسل شيء. في المنتج، تكون الإجراءات المعتمدة خطوة منفصلة ومراجَعة.')}</div>`;
+return `<b>${L('Proposed action (needs your approval)','إجراء مقترح (يتطلب موافقتك)')}</b><div class="mut" style="margin:4px 0 8px">${L('Prepare follow-up drafts for these 2 deals for your review. Nothing is sent automatically.','إعداد مسودات متابعة لهاتين الصفقتين لمراجعتك. لا يُرسل شيء تلقائياً.')}</div><button class="btn pr" onclick="dec('y')">${L('Approve','موافقة')}</button> <button class="btn" onclick="dec('n')">${L('Decline','رفض')}</button>`}
+function dec(v){decided=v;const e=document.getElementById('apv');if(e)e.innerHTML=apv()}
+function push(q,k){decided=null;chat.push(`<div class="msg u">${q}</div>`,`<div class="msg a">${R[k]()}</div>`);render()}
+function ask(k,q){push(q,k)}
+function free(e){e.preventDefault();const v=document.getElementById('q').value.trim();if(!v)return;const l=v.toLowerCase();const k=/compet|منافس/.test(l)?'comp':/deal|risk|صفق|خطر/.test(l)?'risk':/summar|quarter|لخ|ربع/.test(l)?'sum':null;
+if(k)return push(v,k);chat.push(`<div class="msg u">${v.replace(/</g,'&lt;')}</div>`,`<div class="msg a">${L('This prototype only previews three scripted answers. A free-form answer would need a verified, connected assistant.','يعرض هذا النموذج ثلاث إجابات مكتوبة مسبقاً فقط. الإجابة الحرة تتطلب مساعداً موثّقاً ومتصلاً.')}</div>`);render()}
+function go(s){scr=s;render();document.getElementById('m').scrollTop=0}
+function render(){document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+document.getElementById('ban').textContent=L('PROPOSED DESIGN PROTOTYPE · DEMO DATA / ILLUSTRATIVE · Not the production product, no live data, no integrations','نموذج تصميم مقترح · بيانات تجريبية / توضيحية · ليس المنتج الفعلي، بلا بيانات حية أو تكاملات');
+document.getElementById('nav').innerHTML=`<div class="logo">LILIANOURA<small>${L('Decision Intelligence','ذكاء القرار')}</small></div>`+NAV.map(n=>`<button onclick="go('${n[0]==='inventory'?'inv':n[0]}')" ${(n[0]===scr)?'aria-current="page"':''}><i></i>${L(n[1],n[2])}</button>`).join('')+`<div class="sp"></div><div class="tg"><button onclick="lang='en';render()" ${lang==='en'?'aria-current="page"':''}>EN</button><button onclick="lang='ar';render()" ${lang==='ar'?'aria-current="page"':''}>العربية</button></div>`;
+document.getElementById('m').innerHTML=S[scr]()}
+NAV[5][0]='inv';render();
+</script></body></html>

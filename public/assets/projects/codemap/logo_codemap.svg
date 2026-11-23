@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="codeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8A0B5"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="24" fill="#171719"/>
+  <rect x="2" y="2" width="116" height="116" rx="22" fill="none" stroke="rgba(232,160,181,0.3)" stroke-width="2"/>
+  <!-- Code Map compass / bracket symbol -->
+  <path d="M40 38 L26 60 L40 82" fill="none" stroke="#E8A0B5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 38 L94 60 L80 82" fill="none" stroke="#E8A0B5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Map pin node -->
+  <circle cx="60" cy="52" r="14" fill="none" stroke="url(#codeGrad)" stroke-width="3"/>
+  <circle cx="60" cy="52" r="5" fill="#E8A0B5"/>
+  <path d="M60 66 L60 84" stroke="url(#codeGrad)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="60" cy="84" r="3" fill="#F8F1ED"/>
+</svg>

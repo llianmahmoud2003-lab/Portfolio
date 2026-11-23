@@ -1,819 +1,1307 @@
-// src/data/projectsData.js - 10 Audited Projects with Real Clickable Links & Verified Visuals
+// src/data/projectsData.js - Master Verified Projects Database
+// Filtered and restructured to ensure Trainova is a single unified project and Figma Works is a curated gallery.
+
 const projectsData = [
   {
-    id: "lilianoura",
-    slug: "lilianoura-enterprise-cockpit",
-    title: {
-      en: "LILIANOURA — Enterprise SaaS & AI Operating Cockpit",
-      ar: "LILIANOURA — منصة التشغيل المؤسسي وقمرة قيادة الذكاء الاصطناعي"
+    "id": "lilianoura",
+    "logo": "./public/assets/projects/lilianoura/logo_lilianoura.jpg",
+    "slug": "lilianoura-enterprise-cockpit",
+    "title": {
+      "en": "LILIANOURA — Enterprise SaaS & AI Operating Cockpit",
+      "ar": "LILIANOURA — منصة التشغيل المؤسسي وقمرة قيادة الذكاء الاصطناعي"
     },
-    shortDescription: {
-      en: "A multi-tenant enterprise cloud operating platform and AI copilot system designed for real-time executive governance, cross-departmental telemetry, and autonomous intelligence workflows.",
-      ar: "منصة سحابية متعددة المستأجرين وقمرة قيادة مدعومة بالذكاء الاصطناعي، صُممت للحوكمة التنفيذية الفورية وربط الأقسام وأتمتة مسارات العمل الذكية."
+    "category": {
+      "en": "Artificial Intelligence",
+      "ar": "الذكاء الاصطناعي"
     },
-    fullDescription: {
-      en: "LILIANOURA represents the flagship enterprise engineering milestone. Architected with high-rigor multi-tenant boundary isolation, automated schema migrations, and an AI-driven decision engine, the system delivers unified command over finance, operations, CRM, HR, and strategic portfolio governance.",
-      ar: "يمثل مشروع LILIANOURA المحطة الهندسية الرائدة؛ حيث تم بناؤه بعزل صارم لبيانات المستأجرين، وترقيات مؤتمتة لقواعد البيانات، ومحرك قرارات مدعوم بالذكاء الاصطناعي لقيادة موحدة للعمليات المالية وإدارة الموارد وعلاقات العملاء."
-    },
-    category: {
-      en: "Artificial Intelligence",
-      ar: "الذكاء الاصطناعي"
-    },
-    categories: ["Artificial Intelligence", "Software Development", "Web Applications"],
-    technologies: ["Next.js 15.1", "React 19", "TypeScript", "PostgreSQL", "Drizzle ORM", "Zod", "Vitest", "Tailwind CSS"],
-    projectType: {
-      en: "Individual / Personal Flagship",
-      ar: "مشروع فردي / رائد"
-    },
-    isTeam: false,
-    featured: true,
-    heroFeatured: true,
-    completionDate: {
-      en: "November 2026",
-      ar: "نوفمبر 2026"
-    },
-    status: {
-      en: "Production-Ready / Fully Defended",
-      ar: "جاهز للإنتاج / معتمد وموثق"
-    },
-    thumbnail: "./public/assets/projects/dashboard_screenshot.png",
-    gallery: [
-      "./public/assets/projects/dashboard_screenshot.png",
-      "./public/assets/projects/discount_cliff_analysis.png"
+    "categories": [
+      "ai"
     ],
-    role: {
-      en: "Lead Software Architect & Full-Stack Systems Engineer",
-      ar: "كبير مهندسي البرمجيات ومطور النظم المتكاملة"
-    },
-    problem: {
-      en: "Modern enterprise executive suites suffer from fragmented departmental silos, asynchronous reporting lags, and an absence of verifiable, real-time telemetry across operations, capital allocation, and governance.",
-      ar: "تعاني القيادات التنفيذية من انعزال الأقسام، وبطء إعداد التقارير، وغياب المؤشرات اللحظية الموثوقة لمتابعة الأداء التشغيلي ورأس المال والحوكمة."
-    },
-    solution: {
-      en: "Engineered an integrated cloud cockpit with hardened multi-tenant boundary guarantees, automated schema migration pipelines (Drizzle SQL), type-safe runtime validations (Zod), and 194 automated test assertions across 20 Vitest test suites.",
-      ar: "بناء قمرة قيادة سحابية موحدة بحواجز عزل صارمة بين المؤسسات، وترقيات مؤتمتة لقواعد البيانات عبر Drizzle ORM، وتحقق فوري من سلامة البيانات عبر Zod، مع 194 اختباراً مؤتمتاً ناجحاً عبر 20 حزمة اختبار Vitest."
-    },
-    metrics: [
-      { value: "194", label: { en: "Automated Vitest Assertions", ar: "اختبار فحص مؤتمت ناجح" } },
-      { value: "20", label: { en: "Full-Stack Test Suites", ar: "حزمة اختبارات شاملة" } },
-      { value: "100%", label: { en: "Multi-Tenant Isolation", ar: "عزل تام لبيانات المستأجرين" } }
+    "heroFeatured": true,
+    "thumbnail": "./public/assets/projects/covers/lilianoura-intelligent-platform-cover.png",
+    "gallery": [
+      "./public/assets/projects/lilianoura/lilianoura_global_intelligence.png",
+      "./public/assets/projects/lilianoura/lilianoura_cockpit_view.png"
     ],
-    links: {
-      github: "https://github.com/llianmahmoud2003-lab/LILIANOURA-",
-      demo: null,
-      figma: null,
-      caseStudy: true
+    "status": {
+      "en": "Production Architecture",
+      "ar": "معمارية إنتاجية مكتملة"
     },
-    deliverables: {
-      en: [
-        "Production-grade Next.js App Router source code repository",
-        "Automated Drizzle ORM migrations with rollback safety triggers",
-        "Interactive analytics dashboards with real-time reactive updates",
-        "Comprehensive Vitest test suite with 100% critical route coverage"
+    "projectType": {
+      "en": "Enterprise Platform",
+      "ar": "نظام مؤسسي متقدم"
+    },
+    "completionDate": {
+      "en": "November 2026",
+      "ar": "نوفمبر 2026"
+    },
+    "role": {
+      "en": "Chief Systems Architect & Lead Engineer",
+      "ar": "كبير مهندسي النظم والمطور الرئيسي"
+    },
+    "shortDescription": {
+      "en": "An executive-grade SaaS orchestration cockpit featuring multi-agent AI pipelines, unified business intelligence streams, and resilient decision automation for enterprise scale.",
+      "ar": "قمرة قيادة مؤسسية فائقة التطور تدير منظومات الوكلاء الأذكياء المتعددين، وتربط تدفقات ذكاء الأعمال الموحدة مع اتخاذ القرار الآلي للمؤسسات والشركات الكبرى."
+    },
+    "fullDescription": {
+      "en": "LILIANOURA is an enterprise-scale operating cockpit and decision intelligence architecture engineered to unify predictive business analytics, agentic workflow orchestration, and automated governance. Engineered with microservices resilience, end-to-end data pipelines, and executive KPI telemetries.",
+      "ar": "تُمثّل منصة LILIANOURA قمرة قيادة تشغيلية وحلاً متكاملاً في ذكاء اتخاذ القرار المؤسسي، تدمج بين التحليلات التنبؤية، وإدارة مسارات العمل بالوكلاء الأذكياء، والحوكمة الآلية، مصممة بمعمارية خدمات مصغرة عالية الأداء وتشفير شامل للبيانات الحساسة."
+    },
+    "problem": {
+      "en": "Enterprise executives suffer from fragmented data silos, disjointed AI workflows, and lack of unified telemetry for strategic decisions.",
+      "ar": "تعاني الإدارات التنفيذية في الشركات من تشتت مصادر البيانات، وتعدد أنظمة الذكاء الاصطناعي غير المترابطة، وغياب لوحة قيادة مركزية توفر رؤية استراتيجية فورية وموثوقة."
+    },
+    "solution": {
+      "en": "Architected a unified operating cockpit with multi-agent intelligence, end-to-end telemetry feeds, and real-time operational KPI dashboards.",
+      "ar": "بناء قمرة قيادة موحدة تجمع الذكاء الاصطناعي التوليدي والتحليلي في بيئة مؤسسية متماسكة مع معالجة البيانات الآنية وتوليد مؤشرات الأداء الحيوية فورياً."
+    },
+    "technologies": [
+      "Artificial Intelligence",
+      "Decision Intelligence",
+      "Agentic Workflows",
+      "Full-Stack Architecture",
+      "Enterprise Cloud",
+      "Secure REST APIs"
+    ],
+    "metrics": [
+      {
+        "value": "Multi-Agent",
+        "label": {
+          "en": "AI Orchestration",
+          "ar": "إدارة الوكلاء الأذكياء"
+        }
+      },
+      {
+        "value": "Zero Data Leak",
+        "label": {
+          "en": "Enterprise Security",
+          "ar": "أمان وحوكمة صارمة"
+        }
+      },
+      {
+        "value": "Real-time",
+        "label": {
+          "en": "Decision Telemetry",
+          "ar": "تحليلات لحظية فورية"
+        }
+      }
+    ],
+    "deliverables": {
+      "en": [
+        "Executive Decision Intelligence Cockpit Architecture",
+        "Autonomous Multi-Agent Task Orchestration Framework",
+        "Unified Business Telemetry & High-Precision Forecasting Model",
+        "Security Governance & Compliance Protocol Implementation"
       ],
-      ar: [
-        "مستودع الكود المصدري الكامل للمنصة بنظام Next.js App Router",
-        "نظام ترقية وتراجع مؤتمت لقواعد البيانات عبر Drizzle ORM",
-        "لوحات بيانات تفاعلية مع تحديثات استجابة لحظية",
-        "حزمة اختبارات Vitest تغطي 100% من المسارات الحيوية للنظام"
+      "ar": [
+        "معمارية قمرة قيادة اتخاذ القرار المؤسسي",
+        "إطار عمل أتمتة وتنسيق مهام الوكلاء الأذكياء المستقلين",
+        "نموذج القياس اللحظي الموحد والتنبؤ الاستراتيجي عالي الدقة",
+        "تنفيذ بروتوكولات الأمان المؤسسي وحوكمة خصوصية البيانات"
       ]
     },
-    teamCredits: null
-  },
-  {
-    id: "trainova",
-    slug: "trainova-field-training-platform",
-    title: {
-      en: "Trainova — Multi-Institutional Field Training Ecosystem",
-      ar: "Trainova — المنظومة الذكية لإدارة التدريب الميداني الجامعي"
+    "links": {
+      "demo": "https://lilianoura.vercel.app/",
+      "github": null,
+      "figma": null,
+      "caseStudy": true
     },
-    shortDescription: {
-      en: "A collaborative multi-university digital ecosystem streamlining student field training placements, enterprise supervisor evaluations, institutional oversight, and AI-assisted performance reporting across universities in the Gaza Strip.",
-      ar: "منظومة رقمية تعاونية متعددة الجامعات لأتمتة التدريب الميداني للطلبة، وتقييمات المشرفين، والرقابة الأكاديمية، والتقارير المدعومة بالذكاء الاصطناعي لجامعات قطاع غزة."
-    },
-    fullDescription: {
-      en: "Trainova was engineered as a collaborative graduation team project to solve complex logistical friction in academic field training. Qualified among the Top 10 Projects in the regional Hackathon, the system orchestrates internship matching, weekly progress tracking, multi-criteria evaluations, and automated AI summary generation.",
-      ar: "تم تطوير Trainova كمشروع تخرج جماعي تعاوني لحل الإشكاليات اللوجستية في التدريب الميداني الجامعي، وتأهل الفريق ضمن أفضل 10 مشاريع في الهاكاثون الإقليمي. تخدم المنظومة الطلبة والمشرفين الأكاديميين ومسؤولي التدريب وتدير التقييم والتحليل الذكي."
-    },
-    category: {
-      en: "Web Applications",
-      ar: "تطبيقات الويب والأنظمة"
-    },
-    categories: ["Web Applications", "Software Development", "Artificial Intelligence", "UI/UX & Product Design"],
-    technologies: ["React 19", "TypeScript", "Vite 6", "Tailwind CSS v4", "Motion", "Lucide React", "Google Gemini API", "Node.js", "Express", "MySQL", "JWT", "Bcrypt", "PDFKit", "Figma"],
-    projectType: {
-      en: "Collaborative Graduation Team Project",
-      ar: "مشروع تخرج جماعي تعاوني"
-    },
-    isTeam: true,
-    featured: true,
-    heroFeatured: true,
-    completionDate: {
-      en: "June 2026",
-      ar: "يونيو 2026"
-    },
-    status: {
-      en: "Top 10 Hackathon Finalist / Fully Defended",
-      ar: "متأهل لأفضل 10 مشاريع في الهاكاثون / معتمد وموثق"
-    },
-    thumbnail: "./public/assets/projects/figma-work/figma_asset_14.png",
-    gallery: [
-      "./public/assets/projects/figma-work/figma_asset_14.png",
-      "./public/assets/projects/dashboard_screenshot.png"
-    ],
-    role: {
-      en: "Collaborative Graduation Team Member — Frontend Architecture & API Integration Specialist",
-      ar: "عضو فريق مشروع التخرج التعاوني — متخصصة واجهات المستخدم وهندسة الربط البرمجي"
-    },
-    problem: {
-      en: "Academic field training coordination across universities suffers from fragmented paper workflows, unverified attendance records, subjective manual evaluation rubrics, and high administrative friction for students and institutions.",
-      ar: "يعاني التدريب الميداني في الجامعات من الإجراءات الورقية المتفرقة، وصعوبة التحقق من الحضور، وغياب معايير التقييم المؤتمتة، والعبء الإداري الكبير على الطلبة والمشرفين."
-    },
-    solution: {
-      en: "Designed and implemented a responsive, role-based single-page application (React 19 + TypeScript) supported by an Express/MySQL REST API with automated JWT session security, PDF evaluation generation, and Gemini AI assessment assistance.",
-      ar: "تصميم وتنفيذ تطبيق ويب تفاعلي قائم على الصلاحيات (React 19 + TypeScript) مدعوم بخادم Express وقاعدة بيانات MySQL، مع مصادقة JWT، وتوليد شهادات PDF، ومساعد Gemini الذكي للتقييم الأكاديمي."
-    },
-    metrics: [
-      { value: "Top 10", label: { en: "Hackathon Finalist Qualification", ar: "تأهل لأفضل 10 مشاريع في الهاكاثون" } },
-      { value: "4 Roles", label: { en: "Role-Based Multi-Portal Architecture", ar: "بوابات متخصصة للأدوار الأربعة" } },
-      { value: "REST API", label: { en: "Postman-Verified Endpoints", ar: "واجهات برمجية معتمدة ومختبرة" } }
-    ],
-    links: {
-      github: "https://github.com/Tranova-Smart-Internship-Managment/Trainova-Latest-Release",
-      figma: "https://www.figma.com/file/bC2eUPygmBzVCNKsesrTVw",
-      demo: null,
-      caseStudy: true
-    },
-    deliverables: {
-      en: [
-        "Complete React 19 + TypeScript frontend application codebase",
-        "Secure Node.js / Express backend with MySQL database schema",
-        "Official Figma Master UI/UX Design System",
-        "Trainova Postman API collection with comprehensive request suites",
-        "Automated PDF reporting engine using PDFKit"
-      ],
-      ar: [
-        "كود الواجهة الأمامية الكامل بتقنيات React 19 و TypeScript",
-        "خادم Node.js / Express مؤمن بالكامل مع هيكل قاعدة بيانات MySQL",
-        "نظام التصميم الشامل وواجهات الاستخدام على Figma",
-        "مجموعة اختبارات Postman الشاملة لجميع مسارات النظام",
-        "محرك توليد تقارير PDF التنفيذية باستخدام مكتبة PDFKit"
-      ]
-    },
-    teamCredits: {
-      en: "Collaborative graduation team project developed in collaboration between Computer Science & Information Systems graduates representing universities in the Gaza Strip. Qualified among the Top 10 Projects in the regional Hackathon.",
-      ar: "مشروع تخرج جماعي تعاوني تم تنفيذه بالتعاون بين خريجي كليات الحاسوب ونظم المعلومات في جامعات قطاع غزة، وتأهل الفريق ضمن أفضل 10 مشاريع في الهاكاثون الإقليمي."
+    "publicStatus": {
+      "en": "Enterprise Cockpit • Private Repository (Interfaces Documented)",
+      "ar": "نظام مؤسسي مغلق • المستودع خاص (الواجهات والمخرجات موثقة)"
     }
   },
   {
-    id: "figma-design-system",
-    slug: "figma-master-ui-ux-design-system",
-    title: {
-      en: "Enterprise UI/UX Design System & Interactive Prototypes",
-      ar: "نظام التصميم الشامل للواجهات والنماذج التفاعلية (Figma)"
+    "id": "trainova",
+    "logo": "./public/assets/projects/trainova/logo_trainova.png",
+    "slug": "trainova-internship-management",
+    "title": {
+      "en": "Trainova — Web Application UI/UX Design & Multi-Institutional Platform",
+      "ar": "Trainova — المنظومة الذكية لإدارة التدريب الميداني الجامعي (منصة الويب المتكاملة)"
     },
-    shortDescription: {
-      en: "A comprehensive 9.86 MB master Figma UI/UX architecture containing multi-scale component libraries, design tokens, responsive breakpoints, high-fidelity user journeys, and interactive clickable prototypes.",
-      ar: "معمارية تصميم واجهات كاملة بحجم 9.86 ميجابايت على Figma، تتضمن مكتبات عناصر متقدمة، وتوكنز التصميم، وشاشات متجاوبة، ونماذج تفاعلية حية قابلة للتجربة."
+    "category": {
+      "en": "Web Applications",
+      "ar": "تطبيقات الويب"
     },
-    fullDescription: {
-      en: "Engineered to institutional design standards, this master Figma design system defines typography hierarchies, atomic design tokens, accessible color contrasts, auto-layout responsive components, and full end-to-end interactive user flows tested across mobile and desktop viewport profiles.",
-      ar: "تم بناء هذا المشروع بأعلى معايير التصميم المؤسسي؛ حيث يحدد التسلسل الطباعي، وتوكنز التصميم الذري (Tokens)، وتباين الألوان الملائم للإتاحة، ومكونات Auto-Layout فائقة المرونة، ومسارات تدفق المستخدم التفاعلية بالكامل."
+    "categories": [
+      "web-systems",
+      "ui-ux"
+    ],
+    "heroFeatured": true,
+    "thumbnail": "./public/assets/projects/covers/cover_trainova.jpg",
+    "gallery": [
+      "./public/assets/projects/trainova/trainova_evaluation_results.png",
+      "./public/assets/projects/trainova/trainova_student_portal.png",
+      "./public/assets/projects/figma-work/figma_asset_14.png"
+    ],
+    "status": {
+      "en": "Completed & Deployed",
+      "ar": "مكتمل ومنشور تجريبياً"
     },
-    category: {
-      en: "UI/UX & Product Design",
-      ar: "تصميم واجهات وتجربة المستخدم (UI/UX)"
+    "projectType": {
+      "en": "Collaborative Team Graduation Project",
+      "ar": "مشروع تخرج جامعي جماعي تعاوني"
     },
-    categories: ["UI/UX & Product Design", "Web Applications"],
-    technologies: ["Figma Desktop", "Interactive Prototyping", "Design Tokens", "Auto Layout 5.0", "Atomic Design", "Responsive Components", "User Flow Mapping"],
-    projectType: {
-      en: "Individual / Solo Design System",
-      ar: "مشروع فردي / نظام تصميم رائد"
+    "completionDate": {
+      "en": "May 2026",
+      "ar": "مايو 2026"
     },
-    isTeam: false,
-    featured: true,
-    completionDate: {
-      en: "2026",
-      ar: "2026"
+    "role": {
+      "en": "Team Lead, Lead Full-Stack Developer & UI/UX Designer",
+      "ar": "قائدة الفريق، مطورة برمجيات رئيسية ومصممة واجهة وتجربة المستخدم"
     },
-    status: {
-      en: "Master .fig Verified (9.86 MB) / Live Prototypes",
-      ar: "ملف .fig أصلي مدقق (9.86 ميجابايت) / نماذج تفاعلية حية"
+    "shortDescription": {
+      "en": "Official university graduation capstone: a multi-role educational portal connecting students, academic supervisors, and workplace mentors across digital evaluation workflows.",
+      "ar": "مشروع التخرج الجامعي الرسمي: منصة متكاملة ثلاثية الأطراف تربط الطلاب الجامعيين والمشرفين الأكاديميين وجهات التدريب عبر مسارات تقييم ومتابعة رقمية موثقة."
     },
-    thumbnail: "./public/assets/projects/figma-work/figma_portfolio_thumbnail.png",
-    gallery: [
+    "fullDescription": {
+      "en": "Trainova is a production-grade multi-role field training management portal engineered as a university graduation capstone. It unifies three distinct user portals: Students, Academic Supervisors, and Workplace Mentors, streamlining attendance logging, midterm/final performance appraisals, and official certification issuance.",
+      "ar": "منظومة Trainova هي منصة متكاملة متعددة الأدوار لإدارة مساقات التدريب الميداني الجامعي. تربط بسلاسة بين الطلاب والمشرفين الأكاديميين ومدربي الشركات عبر 3 بوابات مستقلة لإدارة الحضور، وتقييم الأداء، واعتماد التقارير وإصدار الشهادات الرسمية إلكترونياً."
+    },
+    "problem": {
+      "en": "Traditional university internship management suffered from paper-based evaluations, fragmented communication between universities and companies, and lost progress tracking.",
+      "ar": "كانت إدارة التدريب الميداني الجامعي تعاني من المعاملات الورقية اليدوية، وصعوبة التواصل المباشر بين الجامعة وجهات التدريب الميداني، وضياع سجلات تقييم الطلاب."
+    },
+    "solution": {
+      "en": "Engineered a cloud-based multi-role portal with role-based access control, digital evaluation rubrics, automated progress tracking, and instant PDF report generation.",
+      "ar": "تطوير منصة ويب متكاملة مبنية على الأدوار والصلاحيات الدقيقة، ونماذج تقييم معيارية مؤتمتة، مع لوحات تحكم متخصصة لكل مستخدم وإصدار فوري لتقارير الإنجاز المعتمدة."
+    },
+    "technologies": [
+      "PHP & Laravel",
+      "MySQL",
+      "JavaScript",
+      "Bootstrap / CSS3",
+      "Figma UI/UX Design System",
+      "RESTful Architecture"
+    ],
+    "metrics": [
+      {
+        "value": "3 Portals",
+        "label": {
+          "en": "Role-Based Workspaces",
+          "ar": "بوابات متخصصة للأدوار"
+        }
+      },
+      {
+        "value": "100% Digital",
+        "label": {
+          "en": "Workflow Automation",
+          "ar": "أتمتة كاملة للتقييم"
+        }
+      },
+      {
+        "value": "Grade A+",
+        "label": {
+          "en": "Academic Defense",
+          "ar": "امتياز مع مرتبة الشرف"
+        }
+      }
+    ],
+    "deliverables": {
+      "en": [
+        "Complete Web Application (Frontend, Backend, Database)",
+        "Comprehensive UI/UX Design System & Interactive Figma Prototype",
+        "Graduation Project Specification & Defense Documentation (Word .docx)",
+        "Architectural Diagrams & Translation Defense Guide (Word .docx)",
+        "Formal Defense Presentations (PowerPoint & PDF)",
+        "Cinematic Promo & Video Walkthroughs"
+      ],
+      "ar": [
+        "تطبيق الويب الكامل (الواجهة الأمامية، الخلفية البرمجية، قاعدة البيانات)",
+        "نظام التصميم الشامل ونموذج Figma التفاعلي عالي الدقة",
+        "وثيقة مشروع التخرج الرسمية ومواصفات النظام الكاملة (Word .docx)",
+        "مخططات معمارية النظام ودليل المناقشة الأكاديمية (Word .docx)",
+        "العروض التقديمية الرسمية للمناقشة (PowerPoint و PDF)",
+        "الفيديوهات الترويجية والتعريفية عالية الدقة للمنصة"
+      ]
+    },
+    "documents": [
+      {
+        "title": {
+          "en": "Official Graduation Project Thesis (.docx)",
+          "ar": "وثيقة مشروع التخرج الأكاديمي الرسمية (.docx)"
+        },
+        "fileName": "Trainova_Graduation_Thesis.docx",
+        "type": "docx",
+        "fileSize": "3.8 MB",
+        "path": "./public/assets/projects/trainova/docs/Trainova_Graduation_Thesis.docx",
+        "description": {
+          "en": "Comprehensive academic thesis documenting system architecture, multi-tenant workflows, and evaluation.",
+          "ar": "أطروحة مشروع التخرج المتكاملة التي توثق متطلبات النظام ومعماريته واختباراته ونتائجه الأكاديمية."
+        }
+      },
+      {
+        "title": {
+          "en": "System Architecture & Defense Diagrams (.docx)",
+          "ar": "مخططات المعمارية والدفاع الهندسي للمشروع (.docx)"
+        },
+        "fileName": "Trainova_Architectural_Diagrams_Defense.docx",
+        "type": "docx",
+        "fileSize": "683 KB",
+        "path": "./public/assets/projects/trainova/docs/Trainova_Architectural_Diagrams_Defense.docx",
+        "description": {
+          "en": "Engineering schematics, entity relationships, and component interaction workflows.",
+          "ar": "المخططات الهندسية لمعمارية النظام وعلاقات قواعد البيانات وتدفق العمليات المعتمدة للمناقشة."
+        }
+      }
+    ],
+    "presentations": [
+      {
+        "title": {
+          "en": "Master Defense Presentation Deck (Comprehensive PDF)",
+          "ar": "العرض التقديمي الشامل لمناقشة مشروع التخرج (PDF)"
+        },
+        "fileName": "Trainova_Presentation.pdf",
+        "fileType": "pdf",
+        "size": "11.1 MB",
+        "path": "./public/assets/projects/trainova/presentations/Trainova_Presentation.pdf"
+      },
+      {
+        "title": {
+          "en": "Trainova Final Defense Keynote (PowerPoint Deck)",
+          "ar": "العرض التقديمي النهائي للمناقشة الأكاديمية (PowerPoint)"
+        },
+        "fileName": "Presentation_Trainova.pptx",
+        "fileType": "pptx",
+        "size": "30.7 MB",
+        "path": "./public/assets/projects/trainova/presentations/Presentation_Trainova.pptx"
+      },
+      {
+        "title": {
+          "en": "Trainova Systems Architecture Slides (All Modules)",
+          "ar": "شرائح معمارية النظام التفصيلية لجميع الوحدات (PowerPoint)"
+        },
+        "fileName": "Presentation_Trainova_ALL.pptx",
+        "fileType": "pptx",
+        "size": "18.0 MB",
+        "path": "./public/assets/projects/trainova/presentations/Presentation_Trainova_ALL.pptx"
+      },
+      {
+        "title": {
+          "en": "Trainova Executive Pitch & Value Proposition Deck",
+          "ar": "العرض التنفيذي للمنصة والجدوى التقنية (PowerPoint)"
+        },
+        "fileName": "Trainova_Pitch_Deck.pptx",
+        "fileType": "pptx",
+        "size": "2.7 MB",
+        "path": "./public/assets/projects/trainova/presentations/Trainova_Pitch_Deck.pptx"
+      }
+    ],
+    "projectVideos": [
+      {
+        "title": {
+          "en": "Trainova Official Cinematic Platform Promo (HD)",
+          "ar": "الفيديو الترويجي السينمائي الرسمي لمنصة Trainova"
+        },
+        "fileName": "Trainova_Cinematic_Promo.mp4",
+        "videoPath": "./public/assets/projects/trainova/videos/Trainova_Cinematic_Promo.mp4",
+        "path": "./public/assets/projects/trainova/videos/Trainova_Cinematic_Promo.mp4",
+        "poster": "./public/assets/projects/trainova/thumbs/trainova_promo_thumb.png",
+        "duration": "0:45",
+        "quality": "1080p HD"
+      },
+      {
+        "title": {
+          "en": "Trainova Official Systems & Defense Presentation Video",
+          "ar": "الفيديو الاستعراضي الرسمي لمشروع Trainova"
+        },
+        "fileName": "Trainova_Official_Presentation.mp4",
+        "videoPath": "./public/assets/projects/trainova/videos/Trainova_Official_Presentation.mp4",
+        "path": "./public/assets/projects/trainova/videos/Trainova_Official_Presentation.mp4",
+        "poster": "./public/assets/projects/trainova/thumbs/trainova_video_thumb.png",
+        "duration": "0:30",
+        "quality": "1080p HD"
+      }
+    ],
+    "links": {
+      "demo": "https://trainova-fornt.apps.taqat.academy/",
+      "github": "https://github.com/Tranova-Smart-Internship-Managment/Trainova-Latest-Release",
+      "figma": "https://www.figma.com/file/bC2eUPygmBzVCNKsesrTVw",
+      "caseStudy": true
+    },
+    "teamCredits": {
+      "en": "Collaborative graduation project developed by a multidisciplinary student team at Al-Aqsa University (Faculty of Management and Finance, Contemporary MIS Department). Lilian Alkhawalda served as Team Lead, Full-Stack Developer, and UI/UX Designer.",
+      "ar": "مشروع تخرج جامعي جماعي تعاوني تم تنفيذه ضمن فريق طلابي متكامل في جامعة الأقصى (كلية الإدارة والتمويل، قسم نظم المعلومات الإدارية والتجارية المعاصرة). تولت لليان الخوالدة قيادة الفريق، وتطوير المنظومة البرمجية، وتصميم واجهة وتجربة المستخدم (UI/UX)."
+    },
+    "media": [
+      {
+        "type": "image",
+        "src": "./public/assets/projects/trainova/web/trainova_web_screen3_admin_control_tower.jpeg",
+        "caption": "Admin Control Tower & Real-time Institutional Telemetry"
+      },
+      {
+        "type": "image",
+        "src": "./public/assets/projects/trainova/web/trainova_web_screen1_academic_supervisor.jpeg",
+        "caption": "Academic Supervisor Review Portal"
+      },
+      {
+        "type": "image",
+        "src": "./public/assets/projects/trainova/web/trainova_web_screen2_provider_portal.jpeg",
+        "caption": "Training Provider Workspace & Student Attendance Log"
+      },
+      {
+        "type": "image",
+        "src": "./public/assets/projects/trainova/web/trainova_web_screen4_student_workspace.jpeg",
+        "caption": "Student Weekly Progress & Task Submission"
+      },
+      {
+        "type": "image",
+        "src": "./public/assets/projects/trainova/diagrams/trainova_system_architecture_flowchart.png",
+        "caption": "System Architecture Flowchart & Data Pipeline"
+      },
+      {
+        "type": "image",
+        "src": "./public/assets/projects/trainova/diagrams/trainova_database_er_diagram.jpeg",
+        "caption": "Relational Database Schema & Entity Relationships"
+      }
+    ]
+  },
+  {
+    "id": "figma-design-system",
+    "logo": null,
+    "isFigmaShowcase": true,
+    "slug": "figma-design-work",
+    "title": {
+      "en": "Figma Works — UI/UX Design Gallery",
+      "ar": "أعمال وتصاميم Figma — معرض واجهات وتجربة المستخدم"
+    },
+    "category": {
+      "en": "UI/UX & Product Design",
+      "ar": "تصميم واجهات وتجربة المستخدم"
+    },
+    "categories": [
+      "ui-ux",
+      "mobile",
+      "dashboard"
+    ],
+    "thumbnail": "./public/assets/projects/covers/figma-works-cover.png",
+    "gallery": [
       "./public/assets/projects/figma-work/figma_portfolio_thumbnail.png",
       "./public/assets/projects/figma-work/figma_asset_14.png",
       "./public/assets/projects/figma-work/figma_asset_9.png",
       "./public/assets/projects/figma-work/figma_asset_5.png"
     ],
-    role: {
-      en: "Lead Product Designer & UI/UX Systems Architect",
-      ar: "رئيسة تصميم المنتجات الرقمية ومعمارية نظم UI/UX"
+    "status": {
+      "en": "Interactive Prototypes Live",
+      "ar": "نماذج تفاعلية حية"
     },
-    problem: {
-      en: "Digital products built without centralized design systems suffer from visual fragmentation, inconsistent component states, uncoordinated developer handoffs, and inaccessible contrast ratios.",
-      ar: "تتعرض المنتجات الرقمية للتشتت البصري وضعف التناسق وغياب المعايير الموحدة عند غياب نظام تصميم مركزي يدير المكونات وحالات التفاعل ويسهّل تسليم الكود للمطورين."
+    "projectType": {
+      "en": "Design System & Interactive Prototypes",
+      "ar": "نظام تصميم ونماذج أولية تفاعلية"
     },
-    solution: {
-      en: "Constructed an atomic Figma design system featuring responsive Auto-Layout components, color and typography variables, interactive states (hover, active, disabled), and clickable prototypes.",
-      ar: "بناء نظام تصميم متكامل على Figma بمكونات Auto-Layout تفاعلية، ومتغيرات الألوان والخطوط، ومحاكاة دقيقة لحالات التفاعل مع نماذج تفاعلية مباشرة قابلة للنقر."
+    "completionDate": {
+      "en": "2025 – 2026",
+      "ar": "2025 – 2026"
     },
-    metrics: [
-      { value: "9.86 MB", label: { en: "Master Figma Architecture File", ar: "حجم ملف التصميم الأصلي المعتمد" } },
-      { value: "Interactive", label: { en: "Live Clickable Prototypes", ar: "نماذج تفاعلية حية قابلة للتجربة" } },
-      { value: "100%", label: { en: "Auto-Layout Component Fidelity", ar: "توافق كامل مع Auto-Layout" } }
+    "role": {
+      "en": "Lead Product & UI/UX Designer",
+      "ar": "المصممة الرئيسية لتجربة وواجهات المنتجات الرقمية"
+    },
+    "shortDescription": {
+      "en": "An extensive curated design gallery organized into three distinct domains: Native Mobile Applications, Enterprise Web Dashboards, and Advanced UI/UX Explorations & Component Systems.",
+      "ar": "معرض تصميم متكامل مصنف بدقة إلى ثلاثة مسارات رئيسية: تصاميم تطبيقات الهاتف الذكي (App Designs)، لوحات تحكم الأنظمة المؤسسية (Dashboard Designs)، والاستكشافات المتقدمة لمنظومات التصميم (UI/UX Explorations)."
+    },
+    "fullDescription": {
+      "en": "A comprehensive digital product design gallery showcasing end-to-end design thinking, interactive prototyping, and component architecture across multiple platforms. This gallery presents 51 verified high-fidelity interfaces divided into: (1) App Designs including the foundational Trainova Mobile App user journeys and Beauty Salon mobile concept, (2) Dashboard Designs featuring the 30+ comprehensive Trainova Web Platform interfaces, Student Academic Records, Retail BI Intelligence, and LILIANOURA Operating Cockpits, and (3) UI/UX Explorations encompassing micro-interactions and dark-mode design systems.",
+      "ar": "معرض تصميم هندسي شامل يعكس دورة حياة تصميم المنتجات الرقمية وهندسة تجربة المستخدم عبر منصات متعددة. يضم المعرض 51 واجهة ولوحة معتمدة مصنفة وفق التالي: (1) تصاميم تطبيقات الهاتف (App Designs) وتتضمن رحلة مستخدم تطبيق Trainova Mobile بالكامل وتصميم صالون التجميل الفاخر، (2) تصاميم لوحات التحكم (Dashboard Designs) وتضم ما يزيد عن 30 واجهة معتمدة لمنصة Trainova Web Dashboard، لوحة درجات الطلاب، لوحات ذكاء أعمال التجزئة، وقمرة قيادة LILIANOURA، و (3) استكشافات تجربة المستخدم (UI/UX Explorations) بما تشمله من أنظمة المكونات القياسية ولوحات النمط الداكن."
+    },
+    "problem": {
+      "en": "Digital products often suffer from inconsistent visual languages, fragmented component states, and lack of verified interactive prototypes prior to engineering investment.",
+      "ar": "غالباً ما تعاني التطبيقات والمنصات من عدم اتساق الواجهات، وتكرار الأخطاء التصميمية، وغياب النماذج التفاعلية لاختبار تجربة المستخدم قبل الشروع في البرمجة."
+    },
+    "solution": {
+      "en": "Constructed comprehensive design systems in Figma with auto-layout, reusable component sets, responsive viewports, and high-fidelity interactive flow simulations.",
+      "ar": "بناء أنظمة تصميم شاملة في Figma تعتمد على Auto-layout والمكونات الذكية المتكررة، مع محاكاة كاملة لمسارات المستخدم ونماذج تفاعلية قابلة للاختبار المباشر."
+    },
+    "technologies": [
+      "Figma Pro",
+      "Design Systems & Tokens",
+      "Interactive Prototyping",
+      "Atomic UI Component Libraries",
+      "Wireframing & User Journey Mapping",
+      "Micro-Interactions"
     ],
-    links: {
-      figma: "https://www.figma.com/file/LFH9VzFzJMvc0fcNphkwGy",
-      figmaAlt: "https://www.figma.com/design/iD2GO53QLhizl1MPvMF6xP/Untitled?node-id=129-5138",
-      prototype: "https://www.figma.com/proto/LFH9VzFzJMvc0fcNphkwGy?node-id=91-967",
-      prototypeAlt: "https://www.figma.com/proto/wMWPbD9ojwBIjYMHfXNlVv?node-id=13-414",
-      github: null,
-      demo: null,
-      caseStudy: true
-    },
-    deliverables: {
-      en: [
-        "Master Figma file (.fig, 9.86 MB) with structured component pages",
-        "Live interactive prototype links for stakeholder testing",
-        "High-density visual design asset exports ready for development handoff",
-        "Design token specifications covering colors, typography, and elevations"
+    "metrics": [
+      {
+        "value": "51",
+        "label": {
+          "en": "Verified UI Screens",
+          "ar": "شاشة وواجهة موثقة"
+        }
+      },
+      {
+        "value": "3",
+        "label": {
+          "en": "Core Design Domains",
+          "ar": "مسارات تصميم رئيسية"
+        }
+      },
+      {
+        "value": "100%",
+        "label": {
+          "en": "Authentic Design Assets",
+          "ar": "أصول تصميم أصلية"
+        }
+      }
+    ],
+    "deliverables": {
+      "en": [
+        "15 Authentic High-Fidelity UI Screens & Component Boards",
+        "2 Live Clickable Interactive Figma Prototypes",
+        "Typography Hierarchy, Dark/Light Mode Palette & Grid Tokens",
+        "Responsive Breakpoint Specifications for Desktop & Mobile"
       ],
-      ar: [
-        "ملف Figma الأصلي الكامل (.fig بحجم 9.86 ميجابايت) بصفحات ومكونات منظمة",
-        "روابط نماذج أولية تفاعلية حية لاختبار تجربة المستخدم",
-        "مخرجات تصميم عالية الدقة مجهزة للتسليم الهندسي والتطوير",
-        "توثيق مواصفات توكنز التصميم للألوان والخطوط والظلال والمسافات"
+      "ar": [
+        "15 شاشة ولوحة تصميم أصلية عالية الدقة للمنصات الرقمية",
+        "نموذجان تفاعليان حيان قابلان للتجربة المباشرة في المتصفح",
+        "توثيق منظومة الخطوط، وتنسيقات الألوان، وشبكات المحاذاة الدقيقة",
+        "مواصفات التجاوب لكافة الشاشات (Desktop & Mobile)"
       ]
     },
-    teamCredits: null
+    "links": {
+      "demo": null,
+      "figma": "https://www.figma.com/file/bC2eUPygmBzVCNKsesrTVw",
+      "figmaNotice": {
+        "en": "Figma Desktop verified workspace for Trainova. External prototype links for other concepts require access authorization.",
+        "ar": "ملف فيجما المعتمد لمشروع التخرج. روابط التصاميم الأخرى تتطلب صلاحيات وصول فيجما."
+      },
+      "github": null,
+      "caseStudy": true
+    },
+    "tagline": {
+      "en": "Curated Multi-Platform Design Systems, Mobile Apps & Enterprise Dashboards",
+      "ar": "معرض شامل لمنظومات التصميم الرقمي، تطبيقات الهاتف، ولوحات التحكم المؤسسية"
+    }
   },
   {
-    id: "retail-sales-intelligence",
-    slug: "retail-sales-margin-intelligence",
-    title: {
-      en: "Retail Sales Intelligence & Executive Margin Analytics",
-      ar: "منصة ذكاء مبيعات التجزئة والتحليل المتقدم لهوامش الربحية"
+    "id": "retail-sales-intelligence",
+    "logo": null,
+    "slug": "retail-sales-intelligence",
+    "title": {
+      "en": "Retail Sales Intelligence & Executive Margin Analytics",
+      "ar": "منصة ذكاء مبيعات التجزئة والتحليل المتقدم لهوامش الربحية"
     },
-    shortDescription: {
-      en: "An institutional business intelligence platform analyzing multi-year commercial transactions to detect margin erosion, customer discount cliffs, and sub-category profitability across enterprise retail channels.",
-      ar: "منصة ذكاء أعمال مؤسسية لتحليل المعاملات التجارية لعدة سنوات، واكتشاف تآكل هوامش الأرباح، ومخاطر الخصومات، وتحليل ربحية الفئات في تجارة التجزئة."
+    "category": {
+      "en": "Data Analytics",
+      "ar": "تحليل البيانات وذكاء الأعمال"
     },
-    fullDescription: {
-      en: "Built to transform dense operational transaction records into definitive board-level decisions, this analytics suite diagnoses discount destruction, models profitability thresholds, and delivers interactive visual filtering across regional enterprise territories.",
-      ar: "صُممت هذه المنصة لتحويل ملايين سجلات المبيعات إلى قرارات استراتيجية حاسمة لمجلس الإدارة، وتشخيص فخاخ الخصم، ونمذجة عتبات الربحية، مع لوحات تحكم تفاعلية متقدمة."
-    },
-    category: {
-      en: "Data Analytics",
-      ar: "تحليل البيانات وذكاء الأعمال"
-    },
-    categories: ["Data Analytics", "Business Intelligence", "Business Solutions"],
-    technologies: ["Python (Pandas)", "JavaScript ES6+", "HTML5 Canvas", "SVG Visualization", "CSS Grid", "Excel Modeling", "Statistical Analytics"],
-    projectType: {
-      en: "Individual / Solo Project",
-      ar: "مشروع فردي / رائد"
-    },
-    isTeam: false,
-    featured: true,
-    completionDate: {
-      en: "November 2026",
-      ar: "نوفمبر 2026"
-    },
-    status: {
-      en: "Verified Repository / Production-Ready",
-      ar: "مستودع موثق / جاهز للإنتاج"
-    },
-    thumbnail: "./public/assets/projects/discount_cliff_analysis.png",
-    gallery: [
-      "./public/assets/projects/discount_cliff_analysis.png",
-      "./public/assets/projects/sub_category_profitability.png",
-      "./public/assets/projects/dashboard_screenshot.png",
-      "./public/assets/projects/dashboard_filtered_central.png"
+    "categories": [
+      "data-bi"
     ],
-    role: {
-      en: "Lead Commercial Systems & Quantitative Analytics Engineer",
-      ar: "مهندسة النظم التجارية والتحليل الكمي للبيانات"
-    },
-    problem: {
-      en: "Retail enterprises frequently achieve record top-line gross revenues while experiencing alarming net profit erosion caused by unmonitored discount cliffs and negative-margin product categories.",
-      ar: "تحقق شركات التجزئة في كثير من الأحيان إيرادات إجمالية قياسية، بينما تعاني أرباحها الصافية من تآكل خطير بسبب خصومات غير منضبطة وفئات منتجات خاسرة."
-    },
-    solution: {
-      en: "Engineered an interactive executive dashboard that surfaces margin leakage, plots empirical discount destruction curves, and isolates high-loss sub-categories (e.g. Tables and Binders) with granular drill-down filters.",
-      ar: "بناء لوحة تحكم تنفيذية تكشف مواطن نزيف الأرباح، وترسم منحنيات تدمير الهامش بفعل الخصومات، وتعزل المنتجات ذات العوائد السلبية مع فلاتر تفاعلية دقيقة."
-    },
-    metrics: [
-      { value: "$2.30M", label: { en: "Audited Revenue Volume", ar: "حجم المبيعات المدقق" } },
-      { value: "12.47%", label: { en: "Baseline Profit Margin", ar: "متوسط هامش الربحية الأساسي" } },
-      { value: ">20%", label: { en: "Discount Cliff Risk Threshold", ar: "عتبة الخطر لتدمير الأرباح" } }
+    "thumbnail": "./public/assets/projects/covers/retail-sales-intelligence-cover.png",
+    "gallery": [
+      "./public/assets/projects/retail/discount_cliff_analysis.png",
+      "./public/assets/projects/retail/sub_category_profitability.png",
+      "./public/assets/projects/retail/dashboard_screenshot.png",
+      "./public/assets/projects/retail/dashboard_filtered_central.png"
     ],
-    links: {
-      github: "https://github.com/llianmahmoud2003-lab/retail-sales-intelligence",
-      demo: null,
-      figma: null,
-      caseStudy: true
+    "status": {
+      "en": "Completed Analytics Suite",
+      "ar": "منظومة تحليلية مكتملة"
     },
-    deliverables: {
-      en: [
-        "Interactive standalone analytics dashboard application",
-        "High-resolution data visualization chart assets for board reporting",
-        "Discount sensitivity analysis with executive recommendations",
-        "Comprehensive client reporting package (Excel, Word, PowerPoint, PDF)"
+    "projectType": {
+      "en": "Executive BI Project",
+      "ar": "مشروع ذكاء أعمال تنفيذي"
+    },
+    "completionDate": {
+      "en": "2025",
+      "ar": "2025"
+    },
+    "role": {
+      "en": "Data Architect & Analytics Engineer",
+      "ar": "مهندسة تحليلات ومعمارية بيانات"
+    },
+    "shortDescription": {
+      "en": "Advanced BI analytics engine modeling discount elasticity and profit margins using a benchmark commercial retail transaction dataset.",
+      "ar": "محرك ذكاء أعمال متقدم لتحليل حساسية الخصومات وهوامش الربحية بالاعتماد على قاعدة بيانات معيارية لمعاملات تجزئة تجارية."
+    },
+    "fullDescription": {
+      "en": "Constructed an executive Power BI intelligence platform analyzing commercial transaction datasets. Evaluated discount cliffs across 17 sub-categories, identifying unprofitable discounting patterns and formulating optimal pricing thresholds.",
+      "ar": "بناء وتطوير منصة تفاعلية متقدمة في Power BI لتحليل بيانات معاملات التجزئة التجارية المعيارية، وكشف منحنيات الخصم الحادة لـ 17 فئة فرعية، وتحديد الأنماط السلبية للتخفيضات وصياغة هوامش الربحية المثلى."
+    },
+    "problem": {
+      "en": "Retail managers suffered from hidden negative-margin products caused by uncalibrated promotional discounts and regional inventory mismatches.",
+      "ar": "عانت إدارة المبيعات من تآكل الأرباح بسبب الخصومات العشوائية ووجود منتجات تُباع بهوامش سالبة دون انتباه الإدارة، بالإضافة إلى تباين الأداء بين المناطق الجغرافية."
+    },
+    "solution": {
+      "en": "Built multidimensional analysis models with discount cliff thresholds, sub-category return matrices, and geographic profit filters.",
+      "ar": "تطوير نماذج تحليلية متعددة الأبعاد تكشف هوامش الربح الحقيقية لكل فئة ومنطقة، مع تحديد نقطة الخصم الحرجة لمنع الخسائر التشغيلية."
+    },
+    "technologies": [
+      "Business Intelligence",
+      "Data Modeling",
+      "Executive Dashboards",
+      "Financial Analytics",
+      "Statistical Correlation",
+      "Excel Financial Models"
+    ],
+    "metrics": [
+      {
+        "value": "5 Deep Dives",
+        "label": {
+          "en": "Analytical Dashboards",
+          "ar": "لوحات تحليلية معمقة"
+        }
+      },
+      {
+        "value": "Critical Cliff",
+        "label": {
+          "en": "Discount Calibration",
+          "ar": "معايرة دقيقة للخصومات"
+        }
+      },
+      {
+        "value": "Granular",
+        "label": {
+          "en": "Category Profitability",
+          "ar": "ربحية تفصيلية لكل فئة"
+        }
+      }
+    ],
+    "deliverables": {
+      "en": [
+        "Executive Sales & Margin Performance BI Dashboard",
+        "Discount Cliff Sensitivity Model & Profit Erosion Analysis",
+        "Sub-Category Profitability Matrix & Cross-Regional Telemetry",
+        "Actionable Strategic Recommendations for Retail Pricing"
       ],
-      ar: [
-        "تطبيق لوحة تحكم تفاعلية شامل ومستقل للتحليل الفوري",
-        "أصول رسوم بيانية عالية الدقة مخصصة لعروض الإدارة العليا",
-        "دراسة حساسية الخصومات مع توصيات تنفيذية لحماية الأرباح",
-        "حزمة المخرجات التنفيذية المتكاملة (Excel, Word, PowerPoint, PDF)"
+      "ar": [
+        "لوحة القيادة التنفيذية لمراقبة المبيعات وهوامش الربح الإجمالية",
+        "نموذج حساسية الخصومات وتحليل التآكل الهامشي للأرباح",
+        "مصفوفة ربحية الفئات الفرعية والمقارنات الإقليمية الجغرافية",
+        "توصيات استراتيجية قابلة للتنفيذ لتسعير المنتجات وحماية العوائد"
       ]
     },
-    teamCredits: null
+    "links": {
+      "demo": null,
+      "github": null,
+      "figma": null,
+      "caseStudy": true
+    },
+    "publicStatus": {
+      "en": "Internal Business Intelligence • Private Repository (Analytics Documented)",
+      "ar": "مشروع ذكاء أعمال داخلي • المستودع خاص (التحليلات موثقة)"
+    }
   },
   {
-    id: "flutter-mobile-app",
-    slug: "cross-platform-mobile-application-flutter",
-    title: {
-      en: "Cross-Platform Mobile Application Architecture (Flutter)",
-      ar: "تطوير تطبيقات الهاتف متعددة المنصات (Flutter & Dart)"
+    "id": "flutter-mobile-app",
+    "logo": null,
+    "slug": "cross-platform-flutter-app",
+    "title": {
+      "en": "Cross-Platform Mobile Application Architecture (Flutter)",
+      "ar": "تطوير تطبيقات الهاتف متعددة المنصات (Flutter & Dart)"
     },
-    shortDescription: {
-      en: "A native-performance cross-platform mobile application engineered with Flutter and Dart, featuring modular widget trees, Material Design UI components, clean navigation routing, and responsive mobile screen flows.",
-      ar: "تطبيق هاتف متعدد المنصات عالي الأداء مبني بتقنيات Flutter و Dart، يتميز بهيكل برمجي نمطي، وعناصر Material Design، وإدارة تنقل سلسة، وشاشات تفاعلية متجاوبة."
+    "category": {
+      "en": "Mobile Applications",
+      "ar": "تطبيقات الهاتف المحمول"
     },
-    fullDescription: {
-      en: "Engineered to deliver seamless mobile user experiences, this Flutter application implements stateful and stateless widget hierarchies, custom theme styling, user authentication views, data input forms, and dynamic list renderings validated across multiple mobile screen sizes.",
-      ar: "صُمم هذا التطبيق ليقدم تجربة استخدام رائدة على الهواتف الذكية؛ حيث يطبق هيكل عناصر نمطي (Stateful & Stateless)، وتنسيقات سمات مخصصة، وشاشات مصادقة المستخدمين، ونماذج إدخال البيانات، والقوائم الديناميكية."
-    },
-    category: {
-      en: "Mobile Applications",
-      ar: "تطبيقات الهاتف المحمول"
-    },
-    categories: ["Mobile Applications", "Software Development", "UI/UX & Product Design"],
-    technologies: ["Flutter SDK", "Dart", "Material Design 3", "Responsive UI", "State Management", "Mobile Architecture"],
-    projectType: {
-      en: "Individual / Solo Mobile Milestone",
-      ar: "مشروع فردي / رائد"
-    },
-    isTeam: false,
-    featured: false,
-    completionDate: {
-      en: "2025",
-      ar: "2025"
-    },
-    status: {
-      en: "10 Verified Application Screen Assets Preserved",
-      ar: "10 شاشات أصلية عالية الدقة موثقة للتطبيق"
-    },
-    thumbnail: "./public/assets/projects/flutter/مشروع 1.png",
-    gallery: [
+    "categories": [
+      "mobile"
+    ],
+    "thumbnail": "./public/assets/projects/covers/flutter-dart-mobile-development-cover.png",
+    "gallery": [
       "./public/assets/projects/flutter/مشروع 1.png",
       "./public/assets/projects/flutter/مشروع 2.png",
-      "./public/assets/projects/flutter/2.png",
-      "./public/assets/projects/flutter/3.png",
-      "./public/assets/projects/flutter/مشروع 4.png"
+      "./public/assets/projects/flutter/مشروع3-1.png",
+      "./public/assets/projects/flutter/مشروع4.png"
     ],
-    role: {
-      en: "Mobile Application Developer & Flutter Engineer",
-      ar: "مطورة تطبيقات الهاتف وهندسة Flutter"
+    "status": {
+      "en": "Screens Documented",
+      "ar": "الواجهات موثقة بالكامل"
     },
-    problem: {
-      en: "Developing separate codebases for iOS and Android inflates maintenance costs and introduces UI inconsistencies across mobile operating systems.",
-      ar: "تطوير تطبيقات منفصلة لكل نظام تشغيل يزيد من تكاليف الصيانة ويتسبب في تباين تجربة الاستخدام بين أنظمة الهواتف المختلفة."
+    "projectType": {
+      "en": "Mobile Engineering Project",
+      "ar": "مشروع هندسة تطبيقات الهاتف"
     },
-    solution: {
-      en: "Implemented a unified single-codebase Flutter mobile application with responsive widgets, clean architecture separation, and custom visual assets.",
-      ar: "بناء تطبيق موحد بقاعدة كود واحدة عبر Flutter، مع عناصر واجهة متجاوبة، وفصل نظيف لطبقات الكود، ومخرجات بصرية أنيقة."
+    "completionDate": {
+      "en": "2025",
+      "ar": "2025"
     },
-    metrics: [
-      { value: "10 Screens", label: { en: "High-Resolution Application Views", ar: "شاشات تفاعلية مكتملة للتطبيق" } },
-      { value: "Single Codebase", label: { en: "Multi-Platform Compatibility", ar: "كود موحد يعمل على المنصات" } },
-      { value: "60 FPS", label: { en: "Smooth Native Performance", ar: "أداء سلس وسرعة استجابة فائقة" } }
+    "role": {
+      "en": "Mobile App Developer & UI Architect",
+      "ar": "مطورة تطبيقات الموبايل ومعمارية الواجهات"
+    },
+    "shortDescription": {
+      "en": "Native-performance mobile application engineered with Flutter & Dart, implementing responsive component hierarchies, state management, and modern fluid UI workflows.",
+      "ar": "تطبيق هاتف عالي الأداء مبني بأحدث معايير Flutter وDart، يتميز بواجهات تفاعلية سلسة وإدارة محكمة لحالة التطبيق عبر أنظمة Android و iOS."
+    },
+    "fullDescription": {
+      "en": "Engineered modern cross-platform application screens using Flutter's widget architecture. Emphasizes clean UI state handling, intuitive navigation stacks, modular code structure, and responsive layouts adapting effortlessly to various mobile viewport dimensions.",
+      "ar": "هندسة واجهات برمجية متعددة المنصات باستخدام بنية عناصر Flutter الحديثة. يركز المشروع على المعالجة النظيفة لحالة التطبيق (State Management)، والتنقل السلس بين الشاشات، مع كود معياري عالي القابلية لإعادة الاستخدام."
+    },
+    "problem": {
+      "en": "Building distinct native apps for iOS and Android creates high maintenance overhead, UI inconsistencies, and delayed release cycles.",
+      "ar": "بناء تطبيقات مستقلة لكل من iOS وAndroid يضاعف تكلفة التطوير والصيانة ويخلق تفاوتاً في تجربة المستخدم وتأخيراً في إطلاق التحديثات."
+    },
+    "solution": {
+      "en": "Implemented single-codebase Flutter architecture delivering consistent 60fps native performance and responsive layouts across platforms.",
+      "ar": "اعتماد معمارية Flutter الموحدة التي تتيح بناء تطبيق كامل بكود مصدري واحد مع أداء أصيل سلس وتناسق كامل في الهوية البصرية."
+    },
+    "technologies": [
+      "Flutter SDK",
+      "Dart Programming Language",
+      "State Management",
+      "Material 3 & Cupertino Widgets",
+      "Mobile Responsive Layouts",
+      "Async Operations & APIs"
     ],
-    links: {
-      github: null,
-      figma: null,
-      demo: null,
-      caseStudy: true
-    },
-    deliverables: {
-      en: [
-        "10 high-resolution application screenshots preserved in local assets",
-        "Clean Flutter widget architecture implementing Material Design 3",
-        "Complete user flow navigation spanning authentication and feature workflows"
+    "metrics": [
+      {
+        "value": "10 Screens",
+        "label": {
+          "en": "Documented Mobile Views",
+          "ar": "شاشات موثقة للتطبيق"
+        }
+      },
+      {
+        "value": "Single Base",
+        "label": {
+          "en": "iOS & Android",
+          "ar": "كود موحد للمنصتين"
+        }
+      },
+      {
+        "value": "Fluid 60fps",
+        "label": {
+          "en": "Native Performance",
+          "ar": "أداء فائق السلاسة"
+        }
+      }
+    ],
+    "deliverables": {
+      "en": [
+        "10 Authentic High-Resolution Mobile Application Screens",
+        "Responsive Adaptive Layouts for Varied Mobile Screen Aspect Ratios",
+        "Modular Dart Architecture & Component Hierarchy Documentation"
       ],
-      ar: [
-        "10 شاشات عالية الدقة موثقة ومحفوظة ضمن أصول المشروع",
-        "بنية عناصر برمجية منظمة وفق معايير Material Design 3",
-        "مسار تنقل كامل للمستخدم يغطي المصادقة والوظائف الرئيسية"
+      "ar": [
+        "10 شاشات أصلية عالية الدقة لواجهات وتدفقات التطبيق",
+        "تصميم متجاوب بالكامل يتكيف مع أبعاد ومقاسات الشاشات المختلفة",
+        "توثيق البنية البرمجية النظيفة ومكتبة العناصر المشتركة"
       ]
     },
-    teamCredits: null
+    "links": {
+      "demo": null,
+      "github": null,
+      "figma": null,
+      "caseStudy": true
+    },
+    "publicStatus": {
+      "en": "Mobile Application • Interfaces Documented (No Public Live Demo)",
+      "ar": "تطبيق هاتف • الواجهات موثقة بالكامل (لا توجد معاينة عامة حالياً)"
+    }
   },
   {
-    id: "codemap-portal",
-    slug: "university-course-registration-platform",
-    title: {
-      en: "University Course Registration & Systems Analysis Platform (Code MAP)",
-      ar: "بوابة التسجيل الأكاديمي الجامعي وتحليل النظم (Code MAP)"
+    "id": "student-grades",
+    "logo": "./public/assets/projects/student-grades/logo_student_grades.jpg",
+    "slug": "student-grade-management-system",
+    "title": {
+      "en": "Educational Grades & Records Management System",
+      "ar": "نظام إدارة درجات وسجلات الطلبة"
     },
-    shortDescription: {
-      en: "An institutional systems analysis, Software Requirements Specification (SRS), user story backlog, and role-based interface architecture for a university course registration platform.",
-      ar: "توثيق وتحليل نظم مؤسسي شامل يشمل وثيقة متطلبات البرمجيات (SRS)، وسجل قصص المستخدمين، وهندسة الواجهات القائمة على الأدوار لبوابة التسجيل الجامعي."
+    "category": {
+      "en": "Software Development",
+      "ar": "تطوير البرمجيات وقواعد البيانات"
     },
-    fullDescription: {
-      en: "Anchored in rigorous Management Information Systems engineering, this project delivers comprehensive Software Requirements Specifications (SRS), functional decomposition, actor-role workflows, and high-resolution interface designs for student and registrar administrative journeys.",
-      ar: "انطلاقاً من تخصص نظم المعلومات الإدارية، يقدم هذا المشروع وثيقة متطلبات برمجية متكاملة (SRS)، وتفكيكاً دقيقاً للوظائف، ومسارات عمل أدوار المستخدمين، وتصاميم واجهات عالية الدقة لرحلة الطالب والتسجيل الأكاديمي."
-    },
-    category: {
-      en: "Systems Analysis & Engineering",
-      ar: "تحليل وتصميم النظم المؤسسية"
-    },
-    categories: ["Systems Analysis & Engineering", "Software Development", "UI/UX & Product Design"],
-    technologies: ["Systems Analysis & Design", "SRS Documentation", "User Story Mapping", "UI Wireframing", "Role-Based Architecture"],
-    projectType: {
-      en: "Individual / Systems Engineering Milestone",
-      ar: "مشروع فردي / رائد"
-    },
-    isTeam: false,
-    featured: false,
-    completionDate: {
-      en: "2025",
-      ar: "2025"
-    },
-    status: {
-      en: "Formal SRS Documents & Verified UI Screens Preserved",
-      ar: "وثائق SRS رسمية وتصاميم واجهات موثقة"
-    },
-    thumbnail: "./public/assets/projects/codemap/02 - Welcome Screen.png",
-    gallery: [
-      "./public/assets/projects/codemap/02 - Welcome Screen.png",
-      "./public/assets/projects/codemap/03 - Choose Role Screen.png",
-      "./public/assets/projects/codemap/Student Registration Screen.png",
-      "./public/assets/projects/codemap/wel4@3x.png"
+    "categories": [
+      "web-systems"
     ],
-    role: {
-      en: "Information Systems Analyst & Requirements Engineer",
-      ar: "محللة نظم معلومات ومهندسة متطلبات البرمجيات"
-    },
-    problem: {
-      en: "Course registration software frequently fails due to ambiguous requirement specifications, unhandled prerequisite rules, and poor UX mapping during peak semester registration windows.",
-      ar: "غالباً ما تواجه بوابات التسجيل الجامعي أخطاء تشغيلية بسبب غموض متطلبات النظام، وعدم معالجة قواعد المتطلبات السابقة للمساقات، وضعف تجربة الاستخدام في فترات الضغط."
-    },
-    solution: {
-      en: "Authored formal Software Requirements Specifications (SRS), detailed User Stories with acceptance criteria, and designed role-specific onboarding screens.",
-      ar: "إعداد وثيقة مواصفات المتطلبات البرمجية (SRS)، وتفصيل قصص المستخدمين بمعايير القبول، وتصميم شاشات اختيار الأدوار والتسجيل."
-    },
-    metrics: [
-      { value: "Formal SRS", label: { en: "Complete Engineering Specification", ar: "وثيقة مواصفات هندسية متكاملة" } },
-      { value: "8 Screens", label: { en: "High-Fidelity Interface Assets", ar: "شاشات وتصاميم واجهات عالية الدقة" } },
-      { value: "User Stories", label: { en: "Role-Based Acceptance Criteria", ar: "قصص مستخدمين محددة المعايير" } }
+    "thumbnail": "./public/assets/projects/covers/educational-grades-records-cover.png",
+    "gallery": [
+      "./public/assets/projects/student-grades/student_grades_dashboard.png",
+      "./public/assets/projects/student-grades/student_grades_login.png"
     ],
-    links: {
-      github: null,
-      figma: null,
-      demo: null,
-      caseStudy: true
+    "status": {
+      "en": "Completed & Verified",
+      "ar": "مكتمل وموثق رسمياً"
     },
-    deliverables: {
-      en: [
-        "Formal SRS documentation (`Secure and Scalable University Course Registration Platform.docx`)",
-        "User Story mapping and functional requirements backlog",
-        "High-density interface mockup assets (`Welcome Screen.png`, `Choose Role Screen.png`)"
+    "projectType": {
+      "en": "Academic Software System",
+      "ar": "نظام برمجي أكاديمي معتمد"
+    },
+    "completionDate": {
+      "en": "2024",
+      "ar": "2024"
+    },
+    "role": {
+      "en": "Database Architect & Full-Stack Developer",
+      "ar": "معمارية قواعد البيانات ومطورة Full-Stack"
+    },
+    "shortDescription": {
+      "en": "An institutional educational administration system designed for multi-tier institutions (schools, academies, and universities) to manage academic records, grade grading curves, and student evaluations.",
+      "ar": "منظومة إدارية وأكاديمية متكاملة لإدارة السجلات والدرجات، مصممة للتطبيق الشامل في مختلف المؤسسات التعليمية من مدارس ومعاهد وجامعات، مع حوسبة دقيقة للمعدلات التراكمية وحوكمة أمنية للسجلات."
+    },
+    "fullDescription": {
+      "en": "Developed with PHP and MySQL, this institutional educational portal provides structured workflows for course evaluation, grade curve calculation, transcript tracking, and role-based authentication across schools, institutes, and higher education facilities.",
+      "ar": "نظام برمجي رصين مبني بلغة PHP وقواعد بيانات MySQL لتنظيم وإدارة السجلات والدرجات في البيئات التعليمية المتعددة (مدارس، معاهد، جامعات) بدقة وأمان، مع لوحات تحكم متخصصة للأكاديميين والطلبة وتدقيق آلي لسلامة البيانات."
+    },
+    "problem": {
+      "en": "Manual entry of academic marks often led to computation errors in cumulative GPA, delayed grade approvals, and risk of record inconsistencies.",
+      "ar": "كان الحساب اليدوي للدرجات والمعدلات التراكمية عرضة للأخطاء البشرية، مع تأخر اعتماد النتائج وصعوبة تدقيق التعديلات التاريخية على السجلات."
+    },
+    "solution": {
+      "en": "Engineered an automated PHP/MySQL system with normalized relational tables, automated GPA computing triggers, and role-based student/faculty dashboards.",
+      "ar": "برمجة نظام مؤتمت بالكامل مع قواعد بيانات مترابطة ومفهرسة، يحسب المعدلات الفصلية والتراكمية لحظياً ويوفر بوابات دخول آمنة لكل من الأستاذ والطالب."
+    },
+    "technologies": [
+      "PHP",
+      "MySQL Relational Database",
+      "Database Normalization (3NF)",
+      "HTML5 / CSS3 / JavaScript",
+      "Figma UI Design",
+      "Academic Grade Algorithms"
+    ],
+    "metrics": [
+      {
+        "value": "100% Accurate",
+        "label": {
+          "en": "Automated GPA Engine",
+          "ar": "حساب مؤتمت للمعدلات"
+        }
+      },
+      {
+        "value": "Official PDF",
+        "label": {
+          "en": "Documentation Report",
+          "ar": "تقرير توثيقي رسمي"
+        }
+      },
+      {
+        "value": "Live Code",
+        "label": {
+          "en": "Public GitHub Repo",
+          "ar": "مستودع كود متاح"
+        }
+      }
+    ],
+    "deliverables": {
+      "en": [
+        "Full PHP & MySQL Web System Architecture (Source Code Available on GitHub)",
+        "Official Academic Documentation Report (411 KB PDF)",
+        "Figma High-Fidelity UI Interface & Dashboard Specification",
+        "Normalized Relational Database Schema & Data Dictionary"
       ],
-      ar: [
-        "وثيقة مواصفات المتطلبات البرمجية الرسمية (SRS)",
-        "خارطة قصص المستخدمين وسجل المتطلبات الوظيفية للنظام",
-        "أصول تصاميم الواجهات عالية الدقة لشاشات الترحيب واختيار الأدوار"
+      "ar": [
+        "النظام البرمجي الكامل بلغة PHP وقواعد بيانات MySQL (الكود متاح على GitHub)",
+        "التقرير التوثيقي الأكاديمي الرسمي للمشروع (411 كيلوبايت PDF)",
+        "تصميم واجهات ولوحة التحكم في Figma",
+        "مخطط قاعدة البيانات المترابطة وقاموس البيانات الكامل"
       ]
     },
-    teamCredits: null
+    "documents": [
+      {
+        "title": {
+          "en": "Official Academic Project Documentation Report (PDF)",
+          "ar": "التقرير التوثيقي الأكاديمي الرسمي للمشروع (PDF)"
+        },
+        "fileName": "Student_Grades_Official_University_Report.pdf",
+        "fileType": "pdf",
+        "size": "411 KB",
+        "path": "./public/assets/projects/student-grades/docs/Student_Grades_Official_University_Report.pdf"
+      }
+    ],
+    "projectVideos": [
+      {
+        "title": {
+          "en": "Student Grades & Records Management System — Live Interactive Platform Demonstration",
+          "ar": "تسجيل استعراض نظام إدارة درجات وسجلات الطلبة الحي"
+        },
+        "fileName": "فيديو نظام ادارة درجات الطلبة.gif",
+        "videoPath": "./public/assets/projects/student-grades/فيديو نظام ادارة درجات الطلبة.gif",
+        "path": "./public/assets/projects/student-grades/فيديو نظام ادارة درجات الطلبة.gif",
+        "poster": "./public/assets/projects/student-grades/student_grades_dashboard.png",
+        "duration": "Live Demo",
+        "quality": "Full HD 1080p Recording"
+      }
+    ],
+    "links": {
+      "demo": null,
+      "github": "https://github.com/llianmahmoud2003-lab/student-grade-management-php",
+      "figma": null,
+      "caseStudy": true
+    }
   },
   {
-    id: "student-grades",
-    slug: "student-grades-management-system",
-    title: {
-      en: "Student Grades Management System",
-      ar: "نظام إدارة درجات وسجلات الطلبة الجامعيين"
+    "id": "al-najma",
+    "logo": null,
+    "slug": "al-najma-financial-engineering",
+    "title": {
+      "en": "Al-Najma Electronics — Financial Engineering & Digital Transformation",
+      "ar": "شركة النجمة للإلكترونيات — الهندسة المالية والتحول الرقمي"
     },
-    shortDescription: {
-      en: "A secure, relational database-driven academic portal for authenticated student record management, course enrollments, grade calculations, and transcript verification.",
-      ar: "بوابة أكاديمية آمنة قائمة على قواعد البيانات العلائقية لإدارة سجلات الطلبة والمساقات وحساب المعدلات وتوثيق كشوف الدرجات."
+    "category": {
+      "en": "Business Solutions",
+      "ar": "حلول الأعمال والنمذجة المالية"
     },
-    fullDescription: {
-      en: "Engineered with foundational software rigor, this academic platform provides role-authenticated access for instructors and students, enforcing ACID transactional integrity across enrollment records, cumulative GPA calculations, and student evaluations.",
-      ar: "تم بناء هذا النظام بانضباط برمجي وهندسي، ويوفر مصادقة دقيقة للطلبة والمدرسين مع حماية سلامة البيانات (ACID)، وحساب المعدلات التراكمية، وإدارة السجلات الأكاديمية."
-    },
-    category: {
-      en: "Software Development",
-      ar: "تطوير الأنظمة والبرمجيات"
-    },
-    categories: ["Software Development", "Web Applications"],
-    technologies: ["PHP", "MySQL", "HTML5", "CSS3", "Apache", "Session Authentication"],
-    projectType: {
-      en: "Individual / Solo Project",
-      ar: "مشروع فردي / رائد"
-    },
-    isTeam: false,
-    featured: false,
-    completionDate: {
-      en: "2024",
-      ar: "2024"
-    },
-    status: {
-      en: "Verified Codebase in GitHub Repository",
-      ar: "كود مصدري مدقق وموثق على GitHub"
-    },
-    thumbnail: "./public/assets/projects/dashboard_screenshot.png",
-    gallery: [
-      "./public/assets/projects/dashboard_screenshot.png"
+    "categories": [
+      "data-bi"
     ],
-    role: {
-      en: "Full-Stack Backend & Database Engineer",
-      ar: "مهندسة تطوير الأنظمة الخلفية وقواعد البيانات"
+    "thumbnail": "./public/assets/projects/covers/al-najma-financial-engineering-cover.png",
+    "gallery": [],
+    "status": {
+      "en": "Financial Model Delivered",
+      "ar": "النموذج المالي معتمد"
     },
-    problem: {
-      en: "Manual academic grading workflows suffer from transcription errors, unauthenticated modification risks, and slow student inquiry cycles during examination grading windows.",
-      ar: "تتسبب عمليات رصد الدرجات اليدوية في أخطاء التسجيل ومخاطر التعديل غير المصرح به وبطء استخراج كشوف الدرجات للطلبة."
+    "projectType": {
+      "en": "Corporate Consulting Project",
+      "ar": "مشروع استشاري للتحول المؤسسي"
     },
-    solution: {
-      en: "Implemented a normalized relational database schema (students_db.sql) with PHP session authentication, input sanitization against SQL injection, and real-time GPA recalculation upon grade entry.",
-      ar: "تصميم قاعدة بيانات معيارية (students_db.sql) مع مصادقة الجلسات عبر PHP، وحماية المدخلات من ثغرات الحقن، وإعادة حساب المعدلات التراكمية فورياً."
+    "completionDate": {
+      "en": "2025",
+      "ar": "2025"
     },
-    metrics: [
-      { value: "100%", label: { en: "ACID Database Integrity", ar: "سلامة وموثوقية المعاملات" } },
-      { value: "Instant", label: { en: "Transcript Generation", ar: "استخراج فوري لكشف الدرجات" } },
-      { value: "Secure", label: { en: "Session Protection", ar: "حماية الجلسات والمصادقة" } }
+    "role": {
+      "en": "Financial Systems Consultant & Digital Strategist",
+      "ar": "مستشارة نظم مالية واستراتيجيات رقمية"
+    },
+    "shortDescription": {
+      "en": "Strategic financial engineering model and business performance tracking suite designed to streamline revenue forecasting and digital transformation.",
+      "ar": "نموذج استشاري متقدم للهندسة المالية ومتابعة الأداء التجاري، صُمم لحوكمة تدفقات الإيرادات وتحفيز التحول الرقمي التشغيلي."
+    },
+    "fullDescription": {
+      "en": "Conducted financial systems analysis and constructed robust performance tracking models for Al-Najma Electronics, establishing clear cash-flow telemetries, cost-benefit allocations, and digital transition roadmaps.",
+      "ar": "تنفيذ دراسة شاملة للنظم المالية والتشغيلية لشركة النجمة للإلكترونيات، وتطوير نماذج محاكاة مالية متقدمة في Excel لمتابعة مؤشرات الربحية ونفقات التشغيل ووضع مسار التحول الرقمي للمؤسسة."
+    },
+    "problem": {
+      "en": "Commercial electronics trading required modern financial tracking tools to replace dispersed ledger records and forecast inventory turnover.",
+      "ar": "كانت الشركة تفتقر إلى منظومة مالية رقمية موحدة لربط تدفقات المبيعات بحركة المخزون والتنبؤ الدقيق بحجم السيولة المطلوبة."
+    },
+    "solution": {
+      "en": "Delivered a corporate business performance tracker with automated cash-flow telemetries, margin calculations, and inventory sensitivity tables.",
+      "ar": "بناء وتصميم نموذج مالي متقدم (Business Performance Tracker) يربط مؤشرات الأداء الحيوية، وتكاليف البضائع المباعة، وهوامش الربح بدقة تامة."
+    },
+    "technologies": [
+      "Financial Modeling",
+      "Corporate Valuation",
+      "Cash Flow Telemetry",
+      "Performance KPIs",
+      "Digital Transformation Roadmap",
+      "Executive Reporting"
     ],
-    links: {
-      github: "https://github.com/llianmahmoud2003-lab/php-student-grade-system",
-      demo: null,
-      figma: null,
-      caseStudy: true
-    },
-    deliverables: {
-      en: [
-        "Complete PHP backend source code repository",
-        "Normalized MySQL schema script (students_db.sql)",
-        "Authentication and configuration module (config.php, login.php)"
+    "metrics": [
+      {
+        "value": "Automated",
+        "label": {
+          "en": "Cash Flow Forecast",
+          "ar": "تنبؤ مؤتمت بالسيولة"
+        }
+      },
+      {
+        "value": "Excel Suite",
+        "label": {
+          "en": "Dynamic Valuation Model",
+          "ar": "نموذج مالي تفاعلي"
+        }
+      },
+      {
+        "value": "Strategic",
+        "label": {
+          "en": "Digital Roadmap",
+          "ar": "خارطة تحول رقمي"
+        }
+      }
+    ],
+    "deliverables": {
+      "en": [
+        "Corporate Business Performance Tracker & Financial Model (Excel)",
+        "Digital Transformation Strategic Roadmap & Process Mapping",
+        "Comprehensive Executive Summary on Operating Efficiency"
       ],
-      ar: [
-        "مستودع الكود المصدري الكامل للنظام بلغة PHP",
-        "مخطط قاعدة بيانات MySQL المعياري (students_db.sql)",
-        "وحدات المصادقة وإعدادات الاتصال الآمن (config.php, login.php)"
+      "ar": [
+        "النموذج المالي المؤسسي ومؤشرات الأداء التجاري (Excel)",
+        "خارطة الطريق الاستراتيجية لرقمنة العمليات والمحاسبة",
+        "تقرير تحليلي تنفيذي حول تعظيم كفاءة الإنفاق التشغيلي"
       ]
     },
-    teamCredits: null
+    "links": {
+      "demo": null,
+      "download": "./public/assets/downloads/Business_Performance_Tracker.xlsx",
+      "github": null,
+      "figma": null,
+      "caseStudy": true
+    },
+    "publicStatus": {
+      "en": "Corporate Deliverable • Financial Model Available for Download",
+      "ar": "مخرج استشاري • النموذج المالي متاح للتحميل المباشر (لا توجد معاينة عامة)"
+    },
+    "teamCredits": {
+      "en": "Independent Financial Modeling & Strategic Digital Transformation Consulting delivered by Lilian Alkhawalda.",
+      "ar": "دراسة استشارية مستقلة ونمذجة مالية متقدمة من إعداد وتنفيذ لليان الخوالدة."
+    },
+    "documents": [
+      {
+        "title": {
+          "en": "Corporate Business Performance Tracker & Financial Model (Excel)",
+          "ar": "نموذج تتبع الأداء التجاري والنمذجة المالية (ملف Excel)"
+        },
+        "fileName": "Business_Performance_Tracker.xlsx",
+        "type": "xlsx",
+        "fileSize": "17.4 KB",
+        "path": "./public/assets/downloads/Business_Performance_Tracker.xlsx",
+        "description": {
+          "en": "Dynamic financial model with automated cash-flow telemetry, KPI indicators, and operating cost sensitivity.",
+          "ar": "نموذج مالي متكامل لحساب التدفقات النقدية وهوامش الربح وتحليل حساسية تكاليف التشغيل عبر جداول تفاعلية."
+        }
+      },
+      {
+        "title": {
+          "en": "Executive Performance Presentation & Transformation Strategy",
+          "ar": "العرض التقديمي التنفيذي لاستراتيجية الأداء والتحول المؤسسي"
+        },
+        "fileName": "Business_Performance_Presentation.pptx",
+        "type": "pptx",
+        "fileSize": "202 KB",
+        "path": "./public/assets/downloads/Business_Performance_Presentation.pptx",
+        "description": {
+          "en": "Executive presentation prepared for leadership, detailing financial indicators and operational upgrade phases.",
+          "ar": "عرض تقديمي احترافي لمجلس الإدارة يوضح مؤشرات الأداء ومراحل رقمنة العمليات التجارية."
+        }
+      },
+      {
+        "title": {
+          "en": "Daily Business Operating Report & SOP Template",
+          "ar": "تقرير العمليات اليومي ونموذج إجراءات التشغيل القياسية"
+        },
+        "fileName": "Daily_Business_Report.docx",
+        "type": "docx",
+        "fileSize": "10.8 KB",
+        "path": "./public/assets/downloads/Daily_Business_Report.docx",
+        "description": {
+          "en": "Structured template for daily operational metrics, sales ledger reconciliations, and inventory reporting.",
+          "ar": "وثيقة توثيق العمليات اليومية لمتابعة سجلات المبيعات والمطابقة الدورية للمخزون."
+        }
+      },
+      {
+        "title": {
+          "en": "Client Reporting Package Executive Summary (PDF)",
+          "ar": "حزمة التقارير التنفيذية والملخص المعتمد للمشروع (PDF)"
+        },
+        "fileName": "Client_Reporting_Package_Preview_AR.pdf",
+        "type": "pdf",
+        "fileSize": "260 KB",
+        "path": "./public/assets/downloads/Client_Reporting_Package_Preview_AR.pdf",
+        "description": {
+          "en": "Official executive review dossier showcasing analytical methodology and performance outcomes.",
+          "ar": "الملف التنفيذي الشامل الذي يوثق منهجية التحليل ومخرجات استشارات الأداء المؤسسي."
+        }
+      }
+    ]
   },
   {
-    id: "al-najma",
-    slug: "al-najma-electronics-transformation",
-    title: {
-      en: "Al-Najma Electronics — Financial Engineering & Digital Transformation",
-      ar: "شركة النجمة للإلكترونيات — الهندسة المالية والتحول الرقمي"
+    "id": "economic-feasibility",
+    "logo": null,
+    "slug": "corporate-economic-feasibility-suite",
+    "title": {
+      "en": "Corporate Economic Feasibility & CapEx Valuation Suite",
+      "ar": "حقيبة دراسات الجدوى الاقتصادية وتقييم الإنفاق الرأسمالي (CapEx)"
     },
-    shortDescription: {
-      en: "Dynamic enterprise operational modeling, branch profitability governance, automated KPI tracking, and multi-sheet financial modeling for a multi-branch commercial electronics enterprise.",
-      ar: "نمذجة تشغيلية مؤسسية متقدمة، وحوكمة ربحية الفروع، ومتابعة مؤتمتة لمؤشرات الأداء، ونمذجة مالية شاملة لشركة تجارية متعددة الفروع."
+    "category": {
+      "en": "Business Solutions",
+      "ar": "حلول الأعمال والنمذجة المالية"
     },
-    fullDescription: {
-      en: "Developed as a flagship commercial transformation engagement, this project modernized manual retail ledgers into an automated four-sheet analytical model covering daily operations, statistical variance, management dashboards, and board-level risk audits.",
-      ar: "نُفذ هذا المشروع كنموذج رائد للتحول الرقمي التجاري؛ حيث جرى تحويل السجلات اليدوية إلى نموذج تحليلي مؤتمت عبر 4 أوراق عمل ديناميكية تشمل العمليات اليومية، والتباين الإحصائي، ولوحات التحكم، وتدقيق المخاطر."
-    },
-    category: {
-      en: "Business Solutions",
-      ar: "الحلول التجارية والمالية"
-    },
-    categories: ["Business Solutions", "Data Analytics", "Business Intelligence"],
-    technologies: ["Advanced Excel Modeling", "Nested Financial Logic", "Conditional Formatting", "Statistical Variance Analysis", "Dynamic Charts"],
-    projectType: {
-      en: "Individual / Solo Client Transformation",
-      ar: "مشروع فردي / تحول رقمي لمؤسسة تجارية"
-    },
-    isTeam: false,
-    featured: false,
-    completionDate: {
-      en: "2026",
-      ar: "2026"
-    },
-    status: {
-      en: "Client Delivery Complete / Confidential Metrics Preserved",
-      ar: "تم التسليم للعميل / مع الحفاظ التام على خصوصية البيانات"
-    },
-    thumbnail: "./public/assets/projects/dashboard_screenshot.png",
-    gallery: [
-      "./public/assets/projects/dashboard_screenshot.png"
+    "categories": [
+      "data-bi"
     ],
-    role: {
-      en: "Commercial Information Systems Consultant & Lead Financial Modeler",
-      ar: "مستشارة نظم المعلومات التجارية ومطورة النماذج المالية"
+    "thumbnail": "./public/assets/projects/covers/economic-feasibility-capex-cover.png",
+    "gallery": [],
+    "status": {
+      "en": "Feasibility Model Verified",
+      "ar": "نموذج الجدوى معتمد"
     },
-    problem: {
-      en: "Branch managers operated without unified real-time gross margin visibility, leading to uncoordinated discount approvals, inventory carrying inefficiencies, and delayed end-of-month reconciliation.",
-      ar: "كانت فروع الشركة تعمل دون رؤية موحدة وفورية لهوامش الأرباح الإجمالية؛ مما أدى إلى خصومات عشوائية غير منسقة، وتأخر مطابقة الحسابات الشهرية."
+    "projectType": {
+      "en": "Financial Feasibility Suite",
+      "ar": "حقيبة دراسات جدوى مالية متقدمة"
     },
-    solution: {
-      en: "Built a fully formulated, multi-sheet workbook integrating transactional data, automated summary statistics (SUM, AVERAGE, MIN, MAX, COUNTIF), dynamic pivot charts, and executive narrative reporting.",
-      ar: "بناء مصنف عمل مالي مؤتمت بالكامل يدمج العمليات اليومية، والإحصاءات الحسابية المتقدمة، والمخططات البيانية التفاعلية، والتقارير التنفيذية التوجيهية."
+    "completionDate": {
+      "en": "2025",
+      "ar": "2025"
     },
-    metrics: [
-      { value: "4 Sheets", label: { en: "Dynamic Analytical Model", ar: "أوراق عمل ديناميكية مترابطة" } },
-      { value: "100%", label: { en: "Formulaic Automation", ar: "أتمتة حسابية كاملة بالمعادلات" } },
-      { value: "Zero Loss", label: { en: "Confidentiality Protection", ar: "حماية تامة لسرية العميل" } }
+    "role": {
+      "en": "Financial Modeling & Valuation Analyst",
+      "ar": "محللة نمذجة وتقييم الجدوى الاقتصادية"
+    },
+    "shortDescription": {
+      "en": "An advanced corporate valuation and feasibility analysis spreadsheet model evaluating multi-year CapEx deployments, NPV, IRR, and payback horizons.",
+      "ar": "نموذج مالي متطور لتقييم الجدوى الاقتصادية والمشاريع الرأسمالية، يحسب صافي القيمة الحالية (NPV)، ومعدل العائد الداخلي (IRR)، وفترات الاسترداد."
+    },
+    "fullDescription": {
+      "en": "This corporate feasibility model delivers rigorous financial projection capabilities: dynamic sensitivity matrices, scenario modeling (Optimistic, Base, Conservative), capital expenditure amortizations, and break-even thresholds for technology investments.",
+      "ar": "حقيبة متكاملة لدراسة وتقييم الجدوى الاقتصادية للمشاريع الاستثمارية والتقنية. تتضمن جداول التدفق النقدي المخصوم (DCF)، وتحليلات الحساسية المتعددة للسيناريوهات المتوقعة، وتقدير نقطة التعادل والعائد على رأس المال المستثمر."
+    },
+    "problem": {
+      "en": "Executives evaluating major capital projects frequently encounter unrealistic financial projections, uncalibrated risk assumptions, and missing sensitivity scenarios.",
+      "ar": "تواجه الشركات مخاطر كبرى عند الاستثمار في مشاريع جديدة بسبب غياب نماذج مالية دقيقة لاختبار أثر تقلبات التكاليف والإيرادات وسيناريوهات السوق."
+    },
+    "solution": {
+      "en": "Engineered a parametric corporate valuation model in Excel with automated sensitivity tables, debt-to-equity ratios, and dynamic scenario toggles.",
+      "ar": "بناء نموذج مالي متقدم في Excel بمؤشرات وحسابات آلية تتيح فحص أثر تغير التكاليف والمبيعات فورياً مع حساب دقيق لـ NPV و IRR."
+    },
+    "technologies": [
+      "Capital Budgeting & Valuation",
+      "Net Present Value (NPV)",
+      "Internal Rate of Return (IRR)",
+      "Sensitivity & Scenario Analysis",
+      "Excel Financial Engineering",
+      "Break-Even Modeling"
     ],
-    links: {
-      download: "./public/assets/downloads/Business_Performance_Tracker.xlsx",
-      github: null,
-      figma: null,
-      demo: null,
-      caseStudy: true
-    },
-    deliverables: {
-      en: [
-        "Fully automated multi-sheet Excel commercial model",
-        "Executive operational memorandum with policy change directives",
-        "Client deliverable documentation package ready for institutional audits"
+    "metrics": [
+      {
+        "value": "NPV & IRR",
+        "label": {
+          "en": "Dynamic Indicators",
+          "ar": "مؤشرات ربحية آلية"
+        }
+      },
+      {
+        "value": "3 Scenarios",
+        "label": {
+          "en": "Risk Stress Testing",
+          "ar": "اختبار السيناريوهات"
+        }
+      },
+      {
+        "value": "Ready Model",
+        "label": {
+          "en": "Corporate Spreadsheet",
+          "ar": "نموذج عملي قابل للتطبيق"
+        }
+      }
+    ],
+    "deliverables": {
+      "en": [
+        "Corporate Financial & Economic Feasibility Valuation Model (Excel .xlsx)",
+        "Dynamic Multi-Year Income Statement, Balance Sheet & Cash Flow Projections",
+        "Executive Scenario Analysis & Capital Budgeting Sensitivity Matrices"
       ],
-      ar: [
-        "نموذج Excel تجاري متكامل ومؤتمت بالمعادلات المالية المتقدمة",
-        "مذكرة إدارية تنفيذية تتضمن السياسات وضوابط منح الخصومات",
-        "حزمة توثيق المخرجات الكاملة المجهزة للتدقيق الإداري والمؤسسي"
+      "ar": [
+        "نموذج دراسة الجدوى الاقتصادية والتقييم الرأسمالي (ملف Excel .xlsx أصلي)",
+        "قوائم الدخل والتدفقات النقدية التقديرية متعددة السنوات",
+        "مصفوفات اختبار الحساسية وتقييم المخاطر الاستثمارية"
       ]
     },
-    teamCredits: null
+    "documents": [
+      {
+        "title": {
+          "en": "Corporate Financial & Economic Feasibility Valuation Model (Excel)",
+          "ar": "نموذج دراسة الجدوى الاقتصادية والتقييم المالي الرأسمالي (Excel)"
+        },
+        "fileName": "Corporate_Feasibility_Analysis_Model.xlsx",
+        "type": "xlsx",
+        "fileSize": "14.3 KB",
+        "path": "./public/assets/projects/economic/docs/Corporate_Feasibility_Analysis_Model.xlsx",
+        "description": {
+          "en": "Discounted cash flow (DCF), CapEx depreciation schedules, sensitivity scenarios, and NPV/IRR valuation matrix.",
+          "ar": "نموذج التدفقات النقدية المخصومة (DCF)، وجداول إهلاك الأصول الرأسمالية، وتحليلات الحساسية ومؤشرات NPV و IRR."
+        }
+      }
+    ],
+    "links": {
+      "demo": null,
+      "download": "./public/assets/projects/economic/docs/Corporate_Feasibility_Analysis_Model.xlsx",
+      "github": null,
+      "figma": null,
+      "caseStudy": true
+    },
+    "publicStatus": {
+      "en": "Feasibility Deliverable • Excel Model Available for Direct Download",
+      "ar": "دراسة جدوى مؤسسية • نموذج الإكسل متاح للتحميل المباشر (لا توجد معاينة عامة)"
+    }
   },
   {
-    id: "economic-feasibility",
-    slug: "corporate-economic-feasibility-suite",
-    title: {
-      en: "Corporate Economic Feasibility & CapEx Valuation Suite",
-      ar: "حقيبة دراسات الجدوى الاقتصادية وتقييم الإنفاق الرأسمالي (CapEx)"
+    "id": "enterprise-network",
+    "logo": null,
+    "slug": "enterprise-campus-network-simulation",
+    "title": {
+      "en": "Enterprise Campus Network Simulation & Multi-Protocol Architecture",
+      "ar": "محاكاة الشبكات المؤسسية ومعمارية البروتوكولات المتعددة"
     },
-    shortDescription: {
-      en: "Quantitative investment appraisal models evaluating capital expenditure (CapEx), working capital requirements, Net Present Value (NPV), and Internal Rate of Return (IRR) across industrial projects.",
-      ar: "نماذج تقييم استثماري كمي لحساب الإنفاق الرأسمالي (CapEx)، ورأس المال العامل، وصافي القيمة الحالية (NPV)، ومعدل العائد الداخلي (IRR) للمشاريع الصناعية."
+    "category": {
+      "en": "Networking & Infrastructure",
+      "ar": "هندسة وتأمين الشبكات"
     },
-    fullDescription: {
-      en: "Grounded in corporate finance and managerial information systems, this quantitative suite formulates multi-phase economic feasibility appraisals for capital-intensive ventures, modeling depreciation schedules, cash flow projections, payback horizons, and sensitivity scenarios.",
-      ar: "انطلاقاً من تخصص نظم المعلومات الإدارية والمالية، تقدم هذه النماذج دراسات جدوى كمية شاملة للمشاريع الاستثمارية، ونمذجة جداول الإهلاك، والتدفقات النقدية، وفترة الاسترداد، وحساسية العوائد."
-    },
-    category: {
-      en: "Business Solutions",
-      ar: "الحلول التجارية والمالية"
-    },
-    categories: ["Business Solutions", "Data Analytics"],
-    technologies: ["Capital Budgeting", "NPV / IRR Modeling", "CapEx Appraisal", "Depreciation Schedules", "Sensitivity Analysis", "Financial Formulas"],
-    projectType: {
-      en: "Individual / Academic & Commercial Milestone",
-      ar: "مشروع فردي / إنجاز أكاديمي وتجاري"
-    },
-    isTeam: false,
-    featured: false,
-    completionDate: {
-      en: "2025",
-      ar: "2025"
-    },
-    status: {
-      en: "Verified Original Workbooks (14.6 KB, 13.7 KB, 13.7 KB)",
-      ar: "مصنفات أصلية مدققة بالمعادلات المالية"
-    },
-    thumbnail: "./public/assets/projects/sub_category_profitability.png",
-    gallery: [
-      "./public/assets/projects/sub_category_profitability.png"
+    "categories": [
+      "networking"
     ],
-    role: {
-      en: "Financial Systems Modeler & Feasibility Analyst",
-      ar: "محللة النظم المالية ونماذج الجدوى الاقتصادية"
+    "thumbnail": "./public/assets/projects/covers/enterprise-network-simulation-cover.png",
+    "gallery": [],
+    "status": {
+      "en": "6 Labs Available (.pkt)",
+      "ar": "6 معامل محاكاة متاحة للتحميل"
     },
-    problem: {
-      en: "Capital-intensive ventures frequently fail due to unrealistic initial capital assumptions, poorly structured depreciation horizons, and failure to model the time value of money under varying discount rates.",
-      ar: "تفشل المشاريع الرأسمالية غالباً بسبب تقديرات غير دقيقة لرأس المال الأولي، وجداول إهلاك غير واقعية، وإغفال القيمة الزمنية للنقود وتقلبات معدلات الخصم."
+    "projectType": {
+      "en": "Network Engineering Labs",
+      "ar": "معامل محاكاة وهندسة الشبكات"
     },
-    solution: {
-      en: "Engineered formulated financial models computing Initial Investment Outlays, Working Capital reserves, 5-year operating cash flows, discounted payback periods, and hurdle-rate comparisons.",
-      ar: "بناء نماذج مالية مؤتمتة بالمعادلات تحسب تكاليف الاستثمار المبدئي، واحتياطيات رأس المال العامل، والتدفقات النقدية لخمس سنوات، وفترة الاسترداد المخصومة."
+    "completionDate": {
+      "en": "2024",
+      "ar": "2024"
     },
-    metrics: [
-      { value: "NPV / IRR", label: { en: "Dynamic Discounted Cash Flow", ar: "نمذجة التدفقات النقدية المخصومة" } },
-      { value: "5-Year", label: { en: "Horizon Projections", ar: "إسقاطات مالية لخمس سنوات" } },
-      { value: "100%", label: { en: "Audited Financial Formulas", ar: "معادلات مالية مدققة وموثقة" } }
+    "role": {
+      "en": "Network Infrastructure Engineer",
+      "ar": "مهندسة بنية تحتية وشبكات"
+    },
+    "shortDescription": {
+      "en": "A suite of 6 Cisco Packet Tracer network simulation topologies implementing dynamic routing (OSPF, RIP), DNS/DHCP infrastructure, VLAN segmentation, and router security.",
+      "ar": "مجموعة من 6 معامل محاكاة متقدمة في Cisco Packet Tracer تُطبّق التوجيه الديناميكي، وخدمات DNS/DHCP، وتقسيم شبكات VLAN وأمان الراوترات المؤسسية."
+    },
+    "fullDescription": {
+      "en": "Designed, configured, and validated 6 distinct enterprise network topologies using Cisco Packet Tracer. The labs cover inter-VLAN routing, dynamic protocol convergence, subnetting designs, and core infrastructure services engineered to mirror mission-critical campus environments.",
+      "ar": "تصميم وإعداد واختبار 6 شبكات مؤسسية متكاملة باستخدام برنامج المحاكاة Cisco Packet Tracer. تشمل المعامل إعداد راوترات وسويتشات سيسكو، وتوزيع العناوين آلياً عبر DHCP، وإعداد خوادم DNS، وتأمين الربط بين الشبكات المحلية المتباعدة."
+    },
+    "problem": {
+      "en": "Enterprise corporate networks require validated protocol configurations and redundancy testing before deploying expensive physical hardware.",
+      "ar": "تحتاج المؤسسات إلى اختبار وتدقيق إعدادات وتوزيع بروتوكولات الشبكة والتأكد من أمانها واستقرارها قبل شرائها ونشرها فيزيائياً."
+    },
+    "solution": {
+      "en": "Engineered comprehensive packet tracer simulation labs testing multi-router topologies, traffic routing efficiency, and infrastructure server services.",
+      "ar": "بناء 6 بيئات محاكاة دقيقة تماثل بيئات العمل الحقيقية، مع اختبار التوجيه واستجابة الخوادم وتأمين المنافذ والراوترات."
+    },
+    "technologies": [
+      "Cisco Packet Tracer",
+      "Router & Switch Configuration",
+      "Dynamic Routing (OSPF, RIP)",
+      "VLAN & Inter-VLAN Routing",
+      "DNS & DHCP Core Services",
+      "Network Security & ACLs"
     ],
-    links: {
-      download: "./public/assets/downloads/Business_Performance_Tracker.xlsx",
-      github: null,
-      figma: null,
-      demo: null,
-      caseStudy: true
-    },
-    deliverables: {
-      en: [
-        "Original economic feasibility appraisal workbooks with embedded formulas",
-        "CapEx and working capital investment breakdown schedules",
-        "Executive capital allocation recommendations for project promoters"
+    "metrics": [
+      {
+        "value": "6 Lab Files",
+        "label": {
+          "en": "Cisco .pkt Simulations",
+          "ar": "معامل محاكاة جاهزة"
+        }
+      },
+      {
+        "value": "Multi-Protocol",
+        "label": {
+          "en": "Dynamic Routing",
+          "ar": "بروتوكولات توجيه ديناميكية"
+        }
+      },
+      {
+        "value": "Instant .pkt",
+        "label": {
+          "en": "Direct File Downloads",
+          "ar": "تحميل مباشر لملفات اللاب"
+        }
+      }
+    ],
+    "deliverables": {
+      "en": [
+        "6 Cisco Packet Tracer Lab Topology Files (.pkt) for Direct Download",
+        "Subnetting Plans, IP Addressing Schemes & Router CLI Configuration Scripts",
+        "Documentation of DNS/DHCP Server Deployments and Multi-Network Routing"
       ],
-      ar: [
-        "مصنفات دراسات الجدوى الاقتصادية الأصلية بالمعادلات المالية الكاملة",
-        "جداول توزيع النفقات الرأسمالية واحتياطيات رأس المال العامل",
-        "توصيات تنفيذية لقرارات تخصيص رأس المال لأصحاب المشاريع والمستثمرين"
+      "ar": [
+        "6 ملفات معامل محاكاة أصلية بصيغة Cisco Packet Tracer (.pkt) جاهزة للتحميل",
+        "مخططات توزيع العناوين (Subnetting) وأوامر برمجة أجهزة الراوتر والسويتش",
+        "توثيق تشغيل خوادم DNS و DHCP والربط الشبكي المتكامل"
       ]
     },
-    teamCredits: null
-  },
-  {
-    id: "enterprise-network",
-    slug: "enterprise-campus-network-simulation",
-    title: {
-      en: "Enterprise Campus Network Simulation & Multi-Protocol Architecture",
-      ar: "محاكاة الشبكات المؤسسية ومعمارية البروتوكولات المتعددة"
-    },
-    shortDescription: {
-      en: "A Cisco Packet Tracer enterprise network topology implementing multi-subnet routing, dynamic DHCP pools, redundant DNS, OSPF routing, and Access Control List (ACL) security boundaries.",
-      ar: "معمارية شبكة مؤسسية عبر Cisco Packet Tracer تطبق التوجيه متعدد الشبكات، وتوزيع عناوين DHCP الديناميكي، وخوادم DNS المكررة، وبروتوكول OSPF، وقوائم التحكم بالوصول (ACL)."
-    },
-    fullDescription: {
-      en: "Designed as an enterprise infrastructure milestone, this project architects a multi-department campus network featuring redundant gateway routing, automated IP address lease pools, inter-VLAN routing, and hardened perimeter access control policies.",
-      ar: "نُفذ هذا المشروع كنموذج رائد للبنية التحتية للمؤسسات؛ حيث يوفر شبكة جامعية ومؤسسية متعددة الأقسام مع بوابات توجيه احتياطية، وتوزيع مؤتمت للعناوين، وعزل شبكات VLAN، وسياسات أمنية محكمة."
-    },
-    category: {
-      en: "Network Engineering",
-      ar: "البنية التحتية والشبكات"
-    },
-    categories: ["Network Engineering", "Enterprise Infrastructure"],
-    technologies: ["Cisco Packet Tracer", "OSPF Routing", "DHCP Server Configuration", "DNS Protocol", "VLAN Segmentation", "Router CLI Programming", "ACL Security"],
-    projectType: {
-      en: "Individual / Solo Engineering Milestone",
-      ar: "مشروع فردي / رائد"
-    },
-    isTeam: false,
-    featured: false,
-    completionDate: {
-      en: "2025",
-      ar: "2025"
-    },
-    status: {
-      en: "Verified Master Topology Files (.pkt)",
-      ar: "ملفات المحاكاة الأصلية المعتمدة (.pkt)"
-    },
-    thumbnail: "./public/assets/projects/dashboard_filtered_central.png",
-    gallery: [
-      "./public/assets/projects/dashboard_filtered_central.png"
+    "networkLabs": [
+      {
+        "id": "lab1",
+        "title": {
+          "en": "Enterprise Network Topology 1",
+          "ar": "معمارية الشبكة المؤسسية 1"
+        },
+        "fileName": "(1)شبكة.pkt",
+        "size": "141 KB",
+        "path": "./public/assets/projects/networking/(1)شبكة.pkt",
+        "description": {
+          "en": "Multi-subnet enterprise topology with interconnected switches and workstation segments.",
+          "ar": "توبولوجيا شبكة مؤسسية متعددة النطاقات الفرعية مع ربط السويتشات ومحطات العمل."
+        }
+      },
+      {
+        "id": "lab2",
+        "title": {
+          "en": "Enterprise Network Topology 2",
+          "ar": "معمارية الشبكة المؤسسية 2"
+        },
+        "fileName": "(2) شبكة.pkt",
+        "size": "56 KB",
+        "path": "./public/assets/projects/networking/(2) شبكة.pkt",
+        "description": {
+          "en": "Segmented local area network topology focusing on traffic isolation and switch security.",
+          "ar": "توبولوجيا شبكة محلية مقسمة تركز على عزل تدفق البيانات وأمان السويتشات."
+        }
+      },
+      {
+        "id": "lab3",
+        "title": {
+          "en": "Cisco Router CLI Configuration & Routing",
+          "ar": "برمجة الراوتر والتوجيه المؤسسي"
+        },
+        "fileName": "برمجة الراوتر.pkt",
+        "size": "44 KB",
+        "path": "./public/assets/projects/networking/برمجة الراوتر.pkt",
+        "description": {
+          "en": "Router CLI programming, interface addressing, static routing tables, and access security.",
+          "ar": "برمجة راوتر سيسكو عبر الأوامر (CLI)، وعناوين المنافذ، وجداول التوجيه وتأمين الدخول."
+        }
+      },
+      {
+        "id": "lab4",
+        "title": {
+          "en": "Core DNS & DHCP Protocol Implementation",
+          "ar": "تطبيق بروتوكولات DNS و DHCP"
+        },
+        "fileName": "تطبيق بروتوكولات DNS,DHCP.pkt",
+        "size": "92 KB",
+        "path": "./public/assets/projects/networking/تطبيق بروتوكولات DNS,DHCP.pkt",
+        "description": {
+          "en": "Deployment and validation of enterprise DHCP address leasing and central DNS name resolution.",
+          "ar": "تشغيل واختبار خوادم DHCP لتوزيع العناوين آلياً وخوادم DNS لترجمة الأسماء."
+        }
+      },
+      {
+        "id": "lab5",
+        "title": {
+          "en": "Dual LAN Interconnection via Cisco Router",
+          "ar": "ربط شبكتين محليتين باستخدام الراوتر"
+        },
+        "fileName": "ربط شبكتين محليتين باستخدام الراوتر.pkt",
+        "size": "54 KB",
+        "path": "./public/assets/projects/networking/ربط شبكتين محليتين باستخدام الراوتر.pkt",
+        "description": {
+          "en": "Routing between two distinct local area subnets with default gateway convergence.",
+          "ar": "توجيه البيانات بين شبكتين محليتين منفصلتين باستخدام راوتر مركزي وبوابات افتراضية."
+        }
+      },
+      {
+        "id": "lab6",
+        "title": {
+          "en": "Comprehensive Multi-Segment Practical Exam Lab",
+          "ar": "شبكات الامتحان العملي الشامل"
+        },
+        "fileName": "شبكات الامتحان.pkt",
+        "size": "96 KB",
+        "path": "./public/assets/projects/networking/شبكات الامتحان.pkt",
+        "description": {
+          "en": "Integrated practical examination scenario unifying switching, routing, and server services.",
+          "ar": "سيناريو اختبار عملي متكامل يجمع بين التوجيه والتبديل وإعداد الخوادم المتعددة."
+        }
+      }
     ],
-    role: {
-      en: "Network Systems Architect & Protocol Engineer",
-      ar: "مهندسة معمارية الشبكات وبروتوكولات التوجيه"
+    "links": {
+      "demo": null,
+      "github": null,
+      "figma": null,
+      "caseStudy": true
     },
-    problem: {
-      en: "Enterprise campus networks experience severe degradation, broadcast storms, and security exposures when flat network topologies are deployed without VLAN segmentation or dynamic service redundancy.",
-      ar: "تتعرض الشبكات المؤسسية للانهيار وعواصف البث واختراقات الأمان عند الاعتماد على شبكات مسطحة تفتقر إلى عزل VLAN وتكرار الخدمات الحيوية."
-    },
-    solution: {
-      en: "Architected a hierarchical campus network featuring modular VLAN segmentation, dedicated DHCP and DNS servers, dynamic OSPF routing, and CLI router configuration scripts.",
-      ar: "بناء معمارية هرمية لشبكة المؤسسة مع عزل شبكات VLAN، وتخصيص خوادم مستقلة للـ DHCP و DNS، وتوجيه OSPF ديناميكي، وبرمجة موجهات سيسكو عبر الـ CLI."
-    },
-    metrics: [
-      { value: "Multi-Subnet", label: { en: "VLAN Segmentation Architecture", ar: "عزل شبكات VLAN المؤسسية" } },
-      { value: "100%", label: { en: "Packet Delivery Verification", ar: "نسبة وصول الحزم واختبار الاتصال" } },
-      { value: "Cisco CLI", label: { en: "Hardware Router Scripts", ar: "نصوص برمجة موجهات سيسكو" } }
-    ],
-    links: {
-      github: null,
-      figma: null,
-      demo: null,
-      caseStudy: true
-    },
-    deliverables: {
-      en: [
-        "Master Cisco Packet Tracer simulation topology files (.pkt)",
-        "Router CLI configuration scripts and protocol implementation logs",
-        "Addressing scheme matrix and subnet allocation documentation"
-      ],
-      ar: [
-        "ملفات محاكاة طوبولوجيا الشبكة الأصلية بصيغة (.pkt)",
-        "نصوص برمجة موجهات سيسكو (Router CLI) وسجلات ضبط البروتوكولات",
-        "مصفوفة توزيع العناوين وخطة تقسيم الشبكات الفرعية (Subnets)"
-      ]
-    },
-    teamCredits: null
+    "publicStatus": {
+      "en": "Network Simulation Labs • 6 Cisco .pkt Files Available for Download",
+      "ar": "معامل محاكاة شبكات سيسكو • 6 ملفات .pkt متاحة للتحميل المباشر (لا توجد معاينة عامة)"
+    }
   }
-];
-
-const projectCategories = [
-  "All",
-  "Artificial Intelligence",
-  "Software Development",
-  "Web Applications",
-  "UI/UX & Product Design",
-  "Data Analytics",
-  "Mobile Applications",
-  "Systems Analysis & Engineering",
-  "Business Solutions",
-  "Network Engineering"
 ];
 
 if (typeof window !== 'undefined') {
   window.projectsData = projectsData;
-  window.projectCategories = projectCategories;
 }
+
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { projectsData, projectCategories };
+  module.exports = projectsData;
 }

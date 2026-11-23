@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1440">
+<title>Trainova – My Result</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--sidebar-bg:#0F172A;--sidebar-w:250px;--header-h:76px;--accent:#6366F1;--accent2:#22D3EE;--surface:#FFFFFF;--bg:#F8FAFC;--text-primary:#0F172A;--text-muted:#94A3B8;--text-sidebar:#CBD5E1;--border:#E2E8F0;--danger:#EF4444;--success:#10B981;--warning:#F59E0B}
+  body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text-primary);min-height:100vh;display:flex}
+  .sidebar{width:var(--sidebar-w);min-height:100vh;background:var(--sidebar-bg);display:flex;flex-direction:column;position:fixed;top:0;left:0;z-index:100}
+  .sidebar-logo{padding:32px 36px 26px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .sidebar-logo span{font-size:26px;font-weight:800;color:#fff}
+  .sidebar-logo span em{font-style:normal;color:var(--accent2)}
+  .sbadge{display:inline-block;font-size:9px;font-weight:700;background:rgba(99,102,241,.3);color:#a5b4fc;padding:2px 8px;border-radius:10px;margin-top:4px;letter-spacing:.5px;text-transform:uppercase}
+  .snl{font-size:10px;font-weight:600;color:#475569;letter-spacing:1.2px;text-transform:uppercase;padding:20px 26px 8px}
+  .nav-item{display:flex;align-items:center;gap:12px;padding:11px 26px;color:var(--text-sidebar);font-size:14px;font-weight:500;cursor:pointer;transition:all .18s;position:relative;text-decoration:none}
+  .nav-item:hover{background:rgba(255,255,255,.05);color:#fff}
+  .nav-item.active{background:rgba(99,102,241,.18);color:#fff}
+  .nav-item.active::before{content:'';position:absolute;left:0;top:6px;bottom:6px;width:3px;background:var(--accent);border-radius:0 3px 3px 0}
+  .ni{width:17px;height:17px;opacity:.75;flex-shrink:0}
+  .nav-item.active .ni{opacity:1}
+  .nbadge{margin-left:auto;background:var(--danger);color:#fff;font-size:10px;font-weight:700;padding:2px 6px;border-radius:10px}
+  .sf{margin-top:auto;padding:18px 26px;border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:10px}
+  .avsm{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#6366F1,#22D3EE);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff;flex-shrink:0}
+  .main{margin-left:var(--sidebar-w);flex:1;display:flex;flex-direction:column;min-height:100vh}
+  .header{position:sticky;top:0;z-index:50;height:var(--header-h);background:var(--surface);border-bottom:1px solid var(--border);box-shadow:0 2px 10px rgba(0,0,0,.05);display:flex;align-items:center;justify-content:space-between;padding:0 36px}
+  .header-left h1{font-size:21px;font-weight:700}
+  .header-left p{font-size:12px;color:var(--text-muted);margin-top:1px}
+  .header-right{display:flex;align-items:center;gap:12px}
+  .icon-btn{width:40px;height:40px;border-radius:10px;border:1.5px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-muted);position:relative}
+  .ndot{position:absolute;top:8px;right:8px;width:7px;height:7px;background:var(--danger);border-radius:50%;border:1.5px solid #fff}
+  .hav{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#6366F1,#22D3EE);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;cursor:pointer}
+  .page{flex:1;padding:32px 48px 48px;max-width:860px;margin:0 auto;width:100%}
+
+  /* HERO GRADE CARD */
+  .grade-hero{background:linear-gradient(135deg,#0F172A 0%,#1E293B 50%,#312E81 100%);border-radius:24px;padding:40px;margin-bottom:24px;text-align:center;position:relative;overflow:hidden}
+  .grade-hero::before{content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:300px;height:300px;background:rgba(99,102,241,.12);border-radius:50%}
+  .grade-hero::after{content:'';position:absolute;bottom:-40px;right:60px;width:160px;height:160px;background:rgba(34,211,238,.08);border-radius:50%}
+  .gh-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(16,185,129,.15);color:#34D399;font-size:12.5px;font-weight:600;padding:6px 16px;border-radius:20px;border:1px solid rgba(16,185,129,.2);margin-bottom:20px;position:relative;z-index:1}
+  .grade-circle{width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.06);border:4px solid rgba(99,102,241,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 20px;position:relative;z-index:1;box-shadow:0 0 40px rgba(99,102,241,.2)}
+  .grade-pct{font-size:48px;font-weight:800;background:linear-gradient(135deg,#fff,#a5b4fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+  .grade-label{font-size:13px;color:#94A3B8;margin-top:4px}
+  .grade-letter{display:inline-block;font-size:24px;font-weight:800;background:linear-gradient(135deg,#6366F1,#22D3EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px;position:relative;z-index:1}
+  .grade-title{font-size:16px;font-weight:700;color:#fff;margin-bottom:4px;position:relative;z-index:1}
+  .grade-sub{font-size:13px;color:#64748B;position:relative;z-index:1}
+
+  /* EVAL CARDS */
+  .eval-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:24px}
+  .eval-card{background:var(--surface);border-radius:18px;padding:22px;box-shadow:0 1px 4px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.04);border:1px solid rgba(226,232,240,.6);text-align:center;position:relative;overflow:hidden;transition:transform .2s}
+  .eval-card:hover{transform:translateY(-2px)}
+  .eval-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;border-radius:0 0 18px 18px}
+  .eval-card:nth-child(1)::after{background:linear-gradient(90deg,#6366F1,#818CF8)}
+  .eval-card:nth-child(2)::after{background:linear-gradient(90deg,#10B981,#34D399)}
+  .eval-card:nth-child(3)::after{background:linear-gradient(90deg,#22D3EE,#67E8F9)}
+  .eval-icon{font-size:28px;margin-bottom:10px}
+  .eval-name{font-size:12px;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+  .eval-score{font-size:36px;font-weight:800;letter-spacing:-1px;line-height:1;margin-bottom:4px}
+  .eval-card:nth-child(1) .eval-score{color:#6366F1}
+  .eval-card:nth-child(2) .eval-score{color:#10B981}
+  .eval-card:nth-child(3) .eval-score{color:#22D3EE}
+  .eval-bar-wrap{height:5px;background:#F1F5F9;border-radius:4px;overflow:hidden;margin-top:10px}
+  .eval-bar{height:100%;border-radius:4px}
+
+  /* BREAKDOWN */
+  .breakdown-card{background:var(--surface);border-radius:20px;padding:24px;box-shadow:0 1px 4px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.04);border:1px solid rgba(226,232,240,.6);margin-bottom:20px}
+  .bc-title{font-size:15px;font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+  .bc-dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  .breakdown-row{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+  .breakdown-row:last-child{margin-bottom:0}
+  .br-label{font-size:13px;font-weight:500;color:var(--text-primary);width:160px;flex-shrink:0}
+  .br-track{flex:1;height:8px;background:#F1F5F9;border-radius:6px;overflow:hidden}
+  .br-fill{height:100%;border-radius:6px}
+  .br-score{font-size:13px;font-weight:700;color:var(--text-primary);width:42px;text-align:right;flex-shrink:0}
+  .br-badge{font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;flex-shrink:0}
+  .bb-ex{background:rgba(16,185,129,.1);color:#059669}
+  .bb-vg{background:rgba(99,102,241,.1);color:#6366F1}
+  .bb-gd{background:rgba(34,211,238,.1);color:#0891B2}
+
+  /* COMMENTS */
+  .comments-card{background:var(--surface);border-radius:20px;padding:24px;box-shadow:0 1px 4px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.04);border:1px solid rgba(226,232,240,.6);margin-bottom:24px}
+  .comment-item{display:flex;gap:14px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+  .comment-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+  .comment-av{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0}
+  .comment-from{font-size:12.5px;font-weight:700;color:var(--text-primary);margin-bottom:3px}
+  .comment-role{font-size:11px;color:var(--text-muted);margin-bottom:6px}
+  .comment-text{font-size:13px;color:#475569;line-height:1.6;background:#F8FAFC;border-radius:12px;padding:12px 14px;border:1px solid var(--border)}
+
+  /* DOWNLOAD */
+  .dl-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:48px;background:linear-gradient(135deg,var(--accent),#818CF8);border:none;border-radius:14px;font-family:'Poppins',sans-serif;font-size:14px;font-weight:600;color:#fff;cursor:pointer;box-shadow:0 4px 14px rgba(99,102,241,.35);transition:all .2s}
+  .dl-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(99,102,241,.45)}
+
+  svg{display:block}
+</style>
+</head>
+<body>
+<aside class="sidebar">
+  <div class="sidebar-logo"><span>Train<em>ova</em></span><div class="sbadge">Student Portal</div></div>
+  <div class="snl">Navigation</div>
+  <a class="nav-item" href="#"><svg class="ni" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Dashboard</a>
+  <a class="nav-item" href="#"><svg class="ni" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>My Internship</a>
+  <a class="nav-item" href="#"><svg class="ni" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>My Reports</a>
+  <a class="nav-item" href="#"><svg class="ni" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Submit Report<span class="nbadge">New</span></a>
+  <a class="nav-item" href="#"><svg class="ni" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Messages<span class="nbadge">2</span></a>
+  <a class="nav-item active" href="#"><svg class="ni" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>My Result</a>
+  <div class="snl">Account</div>
+  <a class="nav-item" href="#"><svg class="ni" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>Settings</a>
+  <div class="sf"><div class="avsm">L</div><div style="flex:1;overflow:hidden"><div style="font-size:13px;font-weight:600;color:#fff">Layan Alkhawalda</div><div style="font-size:11px;color:#64748B">MIS · ID: 2021034</div></div></div>
+</aside>
+<main class="main">
+  <header class="header">
+    <div class="header-left"><h1>My Final Result</h1><p>Your internship evaluation and final grade</p></div>
+    <div class="header-right"><button class="icon-btn"><svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="ndot"></span></button><div class="hav">L</div></div>
+  </header>
+  <div class="page">
+
+    <!-- Hero Grade -->
+    <div class="grade-hero">
+      <div class="gh-badge"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Internship Completed</div>
+      <div class="grade-circle">
+        <div class="grade-pct">92%</div>
+        <div class="grade-label">Final Grade</div>
+      </div>
+      <div class="grade-letter">A</div>
+      <div class="grade-title">Excellent Performance</div>
+      <div class="grade-sub">Gaza Tech · UI/UX Intern · Jun 1 – Jul 26, 2026</div>
+    </div>
+
+    <!-- Eval Cards -->
+    <div class="eval-grid">
+      <div class="eval-card">
+        <div class="eval-icon">🏢</div>
+        <div class="eval-name">Provider Evaluation</div>
+        <div class="eval-score">90%</div>
+        <div style="font-size:12px;color:var(--text-muted)">by Gaza Tech</div>
+        <div class="eval-bar-wrap"><div class="eval-bar" style="width:90%;background:linear-gradient(90deg,#6366F1,#818CF8)"></div></div>
+      </div>
+      <div class="eval-card">
+        <div class="eval-icon">👨‍🏫</div>
+        <div class="eval-name">Supervisor Evaluation</div>
+        <div class="eval-score">95%</div>
+        <div style="font-size:12px;color:var(--text-muted)">by Dr. Ahmad</div>
+        <div class="eval-bar-wrap"><div class="eval-bar" style="width:95%;background:linear-gradient(90deg,#10B981,#34D399)"></div></div>
+      </div>
+      <div class="eval-card">
+        <div class="eval-icon">📅</div>
+        <div class="eval-name">Attendance</div>
+        <div class="eval-score">100%</div>
+        <div style="font-size:12px;color:var(--text-muted)">8 of 8 weeks</div>
+        <div class="eval-bar-wrap"><div class="eval-bar" style="width:100%;background:linear-gradient(90deg,#22D3EE,#67E8F9)"></div></div>
+      </div>
+    </div>
+
+    <!-- Score Breakdown -->
+    <div class="breakdown-card">
+      <div class="bc-title"><div class="bc-dot"></div>Score Breakdown</div>
+      <div class="breakdown-row">
+        <div class="br-label">Weekly Reports</div>
+        <div class="br-track"><div class="br-fill" style="width:88%;background:linear-gradient(90deg,#6366F1,#818CF8)"></div></div>
+        <div class="br-score">88%</div>
+        <span class="br-badge bb-vg">Very Good</span>
+      </div>
+      <div class="breakdown-row">
+        <div class="br-label">Technical Skills</div>
+        <div class="br-track"><div class="br-fill" style="width:95%;background:linear-gradient(90deg,#10B981,#34D399)"></div></div>
+        <div class="br-score">95%</div>
+        <span class="br-badge bb-ex">Excellent</span>
+      </div>
+      <div class="breakdown-row">
+        <div class="br-label">Communication</div>
+        <div class="br-track"><div class="br-fill" style="width:90%;background:linear-gradient(90deg,#22D3EE,#67E8F9)"></div></div>
+        <div class="br-score">90%</div>
+        <span class="br-badge bb-ex">Excellent</span>
+      </div>
+      <div class="breakdown-row">
+        <div class="br-label">Professionalism</div>
+        <div class="br-track"><div class="br-fill" style="width:92%;background:linear-gradient(90deg,#F59E0B,#FCD34D)"></div></div>
+        <div class="br-score">92%</div>
+        <span class="br-badge bb-ex">Excellent</span>
+      </div>
+      <div class="breakdown-row">
+        <div class="br-label">Attendance</div>
+        <div class="br-track"><div class="br-fill" style="width:100%;background:linear-gradient(90deg,#8B5CF6,#A78BFA)"></div></div>
+        <div class="br-score">100%</div>
+        <span class="br-badge bb-ex">Perfect</span>
+      </div>
+    </div>
+
+    <!-- Comments -->
+    <div class="comments-card">
+      <div class="bc-title"><div class="bc-dot" style="background:#10B981"></div>Evaluator Comments</div>
+      <div class="comment-item">
+        <div class="comment-av" style="background:linear-gradient(135deg,#10B981,#34D399)">A</div>
+        <div>
+          <div class="comment-from">Dr. Ahmad Nour</div>
+          <div class="comment-role">University Supervisor</div>
+          <div class="comment-text">Excellent work during the internship. Layan demonstrated outstanding dedication and professionalism throughout all 8 weeks. Keep improving your technical skills and you'll go far! 🌟</div>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-av" style="background:linear-gradient(135deg,#6366F1,#818CF8)">G</div>
+        <div>
+          <div class="comment-from">Gaza Tech HR</div>
+          <div class="comment-role">Training Provider</div>
+          <div class="comment-text">Layan was a pleasure to work with. She delivered high quality UI/UX designs and showed great initiative. We would love to have her back for future opportunities!</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download Certificate -->
+    <button class="dl-btn">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Completion Certificate (PDF)
+    </button>
+
+  </div>
+</main>
+</body>
+</html>

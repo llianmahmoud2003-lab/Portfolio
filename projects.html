@@ -7,6 +7,58 @@
   <meta name="description" content="Complete portfolio of engineered software systems, AI copilot agents, quantitative analytics dashboards, and enterprise network architectures by Lilian Alkhawalda.">
   <link rel="icon" type="image/png" href="./public/assets/logos/favicon.png">
   <link rel="stylesheet" href="style.css">
+
+  <meta name="keywords" content="Lilian Alkhawalda, Llian Alkhawalda, Lilian Mahmoud Alkhawalda, لليان الخوالدة, ليليان الخوالدة, لليان محمود الخوالدة, Trainova, LILIANOURA, Software Architecture, UI/UX Design, Business Intelligence">
+  <meta name="author" content="Lilian Alkhawalda">
+  
+  <!-- Open Graph / Social Sharing Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lilian Alkhawalda Official Portfolio">
+  <meta property="og:title" content="LILIAN ALKHAWALDA — Personal Brand & Professional Portfolio | لليان الخوالدة">
+  <meta property="og:description" content="Official portfolio of Lilian Alkhawalda — Contemporary Management & Commercial Information Systems Engineer specializing in Software Architecture, AI Systems, and Business Intelligence.">
+  <meta property="og:image" content="./public/assets/portraits-evaluation/hero_standing_illuminated_la.jpg">
+
+  <!-- Structured Data JSON-LD for Google Search Discovery -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://lilian-alkhawalda.me/#person",
+        "name": "Lilian Alkhawalda",
+        "alternateName": [
+          "Llian Alkhawalda",
+          "Lilian Mahmoud Alkhawalda",
+          "لليان الخوالدة",
+          "ليليان الخوالدة",
+          "لليان محمود الخوالدة"
+        ],
+        "jobTitle": "Contemporary Management & Commercial Information Systems Engineer",
+        "knowsAbout": [
+          "Enterprise Software Architecture",
+          "UI/UX Design Systems",
+          "Artificial Intelligence & Agent Workflows",
+          "Business Intelligence & Data Analytics",
+          "CapEx Feasibility Modeling"
+        ],
+        "url": "https://lilian-alkhawalda.me",
+        "image": "https://lilian-alkhawalda.me/public/assets/portraits-evaluation/hero_standing_illuminated_la.jpg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://lilian-alkhawalda.me/#website",
+        "url": "https://lilian-alkhawalda.me",
+        "name": "Lilian Alkhawalda Portfolio | معرض أعمال لليان الخوالدة",
+        "publisher": {
+          "@id": "https://lilian-alkhawalda.me/#person"
+        },
+        "inLanguage": ["en", "ar"]
+      }
+    ]
+  }
+  </script>
+
 </head>
 <body>
 
@@ -27,7 +79,7 @@
           <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
           <li><a href="projects.html" class="nav-link active" data-i18n="nav_projects">Projects</a></li>
           <li><a href="services.html" class="nav-link" data-i18n="nav_services">Services & Deliverables</a></li>
-          <li><a href="contact.html" class="btn-primary" data-i18n="nav_contact">Get in Touch</a></li>
+          <li><a href="contact.html" class="btn-primary btn-hire-me" style="background: linear-gradient(135deg, var(--rose-pink) 0%, var(--berry-rose) 100%); color: #fff; font-weight: 700; padding: 0.5rem 1.25rem; border-radius: 20px; box-shadow: 0 4px 15px rgba(232, 160, 181, 0.35); text-decoration: none;" data-i18n="nav_hire_me">Hire Me</a></li>
         </ul>
 
         <!-- Language Switcher EN | AR -->
@@ -57,12 +109,12 @@
       <!-- Filter Bar -->
       <div class="filter-bar" id="projectsFilterBar">
         <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Disciplines</button>
-        <button class="filter-btn" data-filter="Artificial Intelligence" data-i18n="filter_ai">AI & Machine Learning</button>
-        <button class="filter-btn" data-filter="Software Development" data-i18n="filter_software">Full-Stack Engineering</button>
-        <button class="filter-btn" data-filter="UI/UX & Product Design" data-i18n="filter_figma">UI/UX & Design Systems</button>
-        <button class="filter-btn" data-filter="Mobile Applications" data-i18n="filter_mobile">Mobile Applications</button>
-        <button class="filter-btn" data-filter="Data Analytics" data-i18n="filter_data">Data & Business Intelligence</button>
-        <button class="filter-btn" data-filter="Network Engineering" data-i18n="filter_network">Enterprise Infrastructure</button>
+        <button class="filter-btn" data-filter="ai" data-i18n="filter_ai">AI & Machine Learning</button>
+        <button class="filter-btn" data-filter="web-systems" data-i18n="filter_web_systems">Systems & Web Development</button>
+        <button class="filter-btn" data-filter="ui-ux" data-i18n="filter_ui_ux">UI/UX & Visual Systems</button>
+        <button class="filter-btn" data-filter="mobile" data-i18n="filter_mobile">Mobile Applications</button>
+        <button class="filter-btn" data-filter="data-bi" data-i18n="filter_data_bi">Data & Business Intelligence</button>
+        <button class="filter-btn" data-filter="networking" data-i18n="filter_networking">Networking & Infrastructure</button>
       </div>
 
       <!-- Projects Grid -->
@@ -82,7 +134,65 @@
     </div>
   </div>
 
+  <!-- Modal for Video Screening -->
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-content" style="max-width: 960px; padding: 1.5rem; background: #0c0c0e; border: 1px solid var(--border-light);">
+      <button class="modal-close-btn" id="videoModalCloseBtn" style="background: rgba(255,255,255,0.1); color: #fff;">&times;</button>
+      <div style="margin-bottom: 1rem; padding-right: 2rem;">
+        <h3 id="videoModalTitle" style="font-family: var(--font-heading); font-size: 1.25rem; color: #fff;"></h3>
+      </div>
+      <div style="position: relative; width: 100%; border-radius: 8px; overflow: hidden; background: #000; text-align: center;">
+        <video id="modalVideoPlayer" controls playsinline style="width: 100%; max-height: 72vh; display: block;"></video>
+        <img id="modalGifPlayer" style="width: 100%; max-height: 72vh; display: none; object-fit: contain; margin: 0 auto;" alt="Live Platform Demonstration">
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
+  
+  <!-- Modal for Presentation Deck (10 Projects Case Studies & Gamma Ready) -->
+  <div class="presentation-modal-overlay" id="presentationModal">
+    <div class="presentation-modal-container">
+      <div class="presentation-header">
+        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <h3 class="presentation-deck-title" id="presModalTitle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <span id="presModalDeckName">Project Presentation</span>
+          </h3>
+          <span class="presentation-slide-counter" id="presSlideCounter">Slide 1 / 12</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <button class="presentation-btn-gamma" id="presHeaderGammaBtn" onclick="exportCurrentGammaMarkdown()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <span id="presGammaBtnText">تصدير لمنصة Gamma</span>
+          </button>
+          <button class="modal-close-btn" id="presentationModalCloseBtn" style="position: static; transform: none; width: 34px; height: 34px; line-height: 1;" title="Close">&times;</button>
+        </div>
+      </div>
+
+      <div class="presentation-viewport" id="presViewport">
+        <!-- Dynamic slide injected here -->
+      </div>
+
+      <div class="presentation-footer">
+        <div class="presentation-nav-controls">
+          <button class="presentation-btn-nav" id="presPrevBtn" onclick="prevPresentationSlide()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            <span id="presPrevText">السابق</span>
+          </button>
+          <div class="presentation-dots" id="presDots"></div>
+          <button class="presentation-btn-nav" id="presNextBtn" onclick="nextPresentationSlide()">
+            <span id="presNextText">التالي</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+        <div style="font-size: 0.8rem; color: #94a3b8; display: flex; align-items: center; gap: 0.5rem;">
+          <span>&larr; &rarr; للتنقل بين الشرائح | Esc للإغلاق</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -110,6 +220,15 @@
             <li><a href="projects.html" data-i18n="footer_comp4">Corporate Feasibility & CapEx Valuation</a></li>
           </ul>
         </div>
+        <div class="footer-links">
+          <h5 style="color: var(--rose-pink);">Professional Channels</h5>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/llian-alkhawalda-060b6543b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">LinkedIn Official</a></li>
+            <li><a href="https://github.com/llianmahmoud2003-lab" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
+            <li><a href="https://khamsat.com/user/llian_kh" target="_blank" rel="noopener noreferrer">Khamsat Verified</a></li>
+            <li><a href="https://mostaql.com/u/LlianMIS_Pro" target="_blank" rel="noopener noreferrer">Mostaql Verified</a></li>
+          </ul>
+        </div>
       </div>
 
       <div class="footer-bottom">
@@ -120,52 +239,85 @@
   </footer>
 
   <script src="./src/data/translations.js"></script>
+  <script src="./src/data/projectsImages.js"></script>
   <script src="./src/data/projectsData.js"></script>
+  <script src="./src/data/projectsPresentations.js"></script>
   <script src="./src/i18n.js"></script>
   <script>
     let activeFilter = 'all';
 
     function renderActionPills(p, lang) {
-      const tDict = translations[lang];
+      const tDict = translations[lang] || translations.en;
+      const t = window.i18n ? window.i18n.t : (v => (typeof v === 'object' && v ? v[lang] || v.en : v));
       let pills = '';
       if (!p.links) return pills;
 
+      // 1. Live Demo (only if real URL provided)
       if (p.links.demo) {
         pills += `<a href="${p.links.demo}" target="_blank" rel="noopener noreferrer" class="action-pill pill-demo" title="${tDict.btn_view_demo}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
           <span>${tDict.btn_view_demo}</span>
         </a>`;
       }
+
+      // 2. GitHub (only if public repository)
       if (p.links.github) {
         pills += `<a href="${p.links.github}" target="_blank" rel="noopener noreferrer" class="action-pill pill-github" title="${tDict.btn_github_repo}">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           <span>${tDict.btn_github_repo}</span>
         </a>`;
       }
+
+      // 3. Figma Design File
       if (p.links.figma) {
         pills += `<a href="${p.links.figma}" target="_blank" rel="noopener noreferrer" class="action-pill pill-figma" title="${tDict.btn_figma_design}">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 24c2.208 0 4-1.792 4-4v-4H8c-2.208 0-4 1.792-4 4s1.792 4 4 4zM4 12c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4zm0-8c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4zm8 0h4c2.208 0 4 1.792 4 4s-1.792 4-4 4h-4V4zm0 8h4c2.208 0 4 1.792 4 4s-1.792 4-4 4c-2.208 0-4-1.792-4-4v-4z"/></svg>
           <span>${tDict.btn_figma_design}</span>
         </a>`;
       }
+
+      // 4. Figma Interactive Prototype
       if (p.links.prototype) {
         pills += `<a href="${p.links.prototype}" target="_blank" rel="noopener noreferrer" class="action-pill pill-proto" title="${tDict.btn_figma_proto}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           <span>${tDict.btn_figma_proto}</span>
         </a>`;
       }
+
+      // 5. Download Deliverable (Excel / PDF / Packet Tracer)
       if (p.links.download) {
-        pills += `<a href="${p.links.download}" download class="action-pill pill-download" title="${tDict.btn_download_deliverable}">
+        let downloadLabel = tDict.btn_download_deliverable || (lang === 'ar' ? 'تحميل المخرج' : 'Download Deliverable');
+        if (p.id === 'al-najma') {
+          downloadLabel = (lang === 'ar' ? 'تحميل ملف Excel' : 'Download Excel Model');
+        } else if (p.id === 'economic-feasibility') {
+          downloadLabel = (lang === 'ar' ? 'تحميل نموذج الجدوى (Excel)' : 'Download Feasibility Model (Excel)');
+        }
+        pills += `<a href="${p.links.download}" download class="action-pill pill-download" title="${downloadLabel}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-          <span>${tDict.btn_download_deliverable}</span>
+          <span>${downloadLabel}</span>
         </a>`;
       }
-      if (p.links.caseStudy) {
-        pills += `<button onclick="openProjectModal('${p.id}')" class="action-pill pill-case" title="${tDict.btn_case_study}">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          <span>${tDict.btn_case_study}</span>
-        </button>`;
+
+      // 6. Prominent Project Details / Case Study Button (Always Available)
+      // Presentation Deck (Gamma-Ready Case Study)
+      pills += `<button onclick="openPresentationModal('${p.id}')" class="action-pill pill-presentation" title="${tDict.btn_preview_presentation || 'العرض التقديمي'}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <span>${tDict.btn_preview_presentation || 'العرض التقديمي'}</span>
+      </button>`;
+
+      pills += `<button onclick="openProjectModal('${p.id}')" class="action-pill pill-case" title="${tDict.btn_view_full_details || 'Open Project Details'}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span>${tDict.btn_view_full_details || 'Open Project Details'}</span>
+      </button>`;
+
+      // 7. Clear Status Note if No Public Demo/GitHub
+      if (!p.links.demo && !p.links.github && p.publicStatus) {
+        pills += `<span class="action-pill pill-private-status" title="${t(p.publicStatus, lang)}">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>${t(p.publicStatus, lang)}</span>
+        </span>`;
       }
+
       return pills;
     }
 
@@ -174,7 +326,8 @@
       if (!container || typeof projectsData === 'undefined') return;
 
       const lang = window.i18n ? window.i18n.getLang() : 'en';
-      const t = window.i18n ? window.i18n.t : (val => val);
+      const t = window.i18n ? window.i18n.t : (val => (typeof val === 'object' && val ? val[lang] || val.en : val));
+      const tDict = translations[lang] || translations.en;
 
       const filtered = activeFilter === 'all' 
         ? projectsData 
@@ -193,6 +346,45 @@
         const compDate = t(p.completionDate, lang);
         const status = t(p.status, lang);
         const pills = renderActionPills(p, lang);
+        const coverImg = (typeof getProjectCover === 'function') ? getProjectCover(p.id) : (p.thumbnail || null);
+
+        const isLilianoura = (p.id === 'lilianoura');
+        const isTrainova = (p.id === 'trainova');
+        const customVisualClass = isLilianoura ? 'visual-lilianoura' : (isTrainova ? 'visual-trainova' : '');
+        const heroAction = isLilianoura 
+          ? "window.open('https://lilianoura.vercel.app/', '_blank', 'noopener,noreferrer')" 
+          : "openProjectModal('" + p.id + "')";
+        const heroActionTitle = isLilianoura 
+          ? ((tDict.btn_view_demo || 'View Live Project') + ' • https://lilianoura.vercel.app/') 
+          : tDict.btn_view_full_details;
+
+        let visualHtml = '';
+        if (coverImg) {
+          visualHtml = `
+            <div class="editorial-hero-visual ${customVisualClass} clickable-visual" onclick="${heroAction}" title="${heroActionTitle}">
+              <img src="${coverImg}" alt="${title}" loading="lazy">
+              <div class="editorial-hero-visual-overlay">
+                <span>${t(p.role, lang)}</span>
+                <span style="font-family: monospace;">${p.completionDate.en}</span>
+              </div>
+            </div>
+          `;
+        } else {
+          visualHtml = `
+            <div class="editorial-hero-visual editorial-empty-visual-plate clickable-visual" onclick="${heroAction}" title="${heroActionTitle}">
+              <div class="empty-visual-emblem">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <div class="empty-visual-text">
+                <div class="empty-visual-title">${title}</div>
+                <div class="empty-visual-badge">${p.documents && p.documents.length ? tDict.badge_documents_ready : (p.networkLabs && p.networkLabs.length ? tDict.badge_labs_ready : tDict.badge_deliverable_ready)}</div>
+              </div>
+              <div class="empty-visual-action">
+                <span class="btn-visual-details">${tDict.btn_view_full_details} <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </div>
+          `;
+        }
 
         html += `
           <div class="editorial-hero-card">
@@ -203,7 +395,11 @@
                   <span class="badge-category">${cat}</span>
                   <span class="badge-ownership">${pType} &bull; ${compDate}</span>
                 </div>
-                <h3 class="editorial-hero-title">${title}</h3>
+                <div class="project-title-container">
+                  ${p.logo ? '<div class="project-authentic-logo"><img src="' + p.logo + '" alt="' + title + ' Logo" loading="lazy"></div>' : ''}
+                  ${p.isFigmaShowcase ? '<span class="tool-badge-figma"><svg width="14" height="14" viewBox="0 0 38 57" fill="none"><path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/><path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/><path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/><path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/><path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/></svg> ' + (translations[lang].figma_tool_badge || 'Figma Design Tool') + '</span>' : ''}
+                  <h3 class="editorial-hero-title clickable-title" onclick="${heroAction}" title="${heroActionTitle}">${title}</h3>
+                </div>
                 <p class="editorial-hero-summary">${shortDesc}</p>
                 
                 <div class="project-metrics" style="margin-bottom: 1.2rem;">
@@ -226,13 +422,7 @@
               </div>
             </div>
 
-            <div class="editorial-hero-visual">
-              <img src="${p.thumbnail}" alt="${title}" loading="lazy">
-              <div class="editorial-hero-visual-overlay">
-                <span>${t(p.role, lang)}</span>
-                <span style="font-family: monospace;">${p.completionDate.en}</span>
-              </div>
-            </div>
+            ${visualHtml}
           </div>
         `;
       });
@@ -246,43 +436,86 @@
           const pType = t(p.projectType, lang);
           const compDate = t(p.completionDate, lang);
           const pills = renderActionPills(p, lang);
+          const coverImg = (typeof getProjectCover === 'function') ? getProjectCover(p.id) : (p.thumbnail || null);
+          const currentGallery = (typeof getProjectGallery === 'function') ? getProjectGallery(p.id) : (p.gallery || []);
           
           const isWide = p.id === 'figma-design-system' || p.id === 'retail-sales-intelligence';
           const colSpan = isWide ? 'col-span-12' : 'col-span-6';
 
+          const isLilianoura = (p.id === 'lilianoura');
+          const isAlNajma = (p.id === 'al-najma');
+          const isEducationalGrades = (p.id === 'student-grades');
+          const isRetailSales = (p.id === 'retail-sales-intelligence');
+          const isFigmaWorks = (p.id === 'figma-design-system');
+          const isFlutterApp = (p.id === 'flutter-mobile-app');
+          const isEconomicFeasibility = (p.id === 'economic-feasibility');
+          const isEnterpriseNetwork = (p.id === 'enterprise-network');
+          const customGridVisualClass = isAlNajma ? 'visual-al-najma' : (isEducationalGrades ? 'visual-educational-grades' : (isRetailSales ? 'visual-retail-sales' : (isFigmaWorks ? 'visual-figma-works' : (isFlutterApp ? 'visual-flutter-app' : (isEconomicFeasibility ? 'visual-economic-feasibility' : (isEnterpriseNetwork ? 'visual-enterprise-network' : (isLilianoura ? 'visual-lilianoura' : '')))))));
+          const gridAction = isLilianoura 
+            ? "window.open('https://lilianoura.vercel.app/', '_blank', 'noopener,noreferrer')" 
+            : "openProjectModal('" + p.id + "')";
+          const gridActionTitle = isLilianoura 
+            ? ((tDict.btn_view_demo || 'View Live Project') + ' • https://lilianoura.vercel.app/') 
+            : tDict.btn_view_full_details;
+
           let galleryHtml = '';
-          if (p.gallery && p.gallery.length > 1) {
+          if (currentGallery && currentGallery.length > 1) {
             galleryHtml = `
               <div class="editorial-gallery-strip">
-                ${p.gallery.slice(0, 4).map(img => `
-                  <div class="editorial-gallery-thumb">
-                    <img src="${img}" alt="Screenshot" loading="lazy">
+                ${currentGallery.slice(0, 4).map(img => `
+                  <div class="editorial-gallery-thumb" onclick="openProjectModal('${p.id}')">
+                    <img src="${img}" alt="${title}" loading="lazy">
                   </div>
                 `).join('')}
               </div>
             `;
           }
 
+          let gridVisual = '';
+          if (coverImg) {
+            gridVisual = `
+              <div class="editorial-grid-visual ${customGridVisualClass} clickable-visual" onclick="${gridAction}" title="${gridActionTitle}">
+                <img src="${coverImg}" alt="${title}" loading="lazy">
+              </div>
+            `;
+          } else {
+            gridVisual = `
+              <div class="editorial-grid-visual editorial-empty-visual-plate clickable-visual" onclick="openProjectModal('${p.id}')" title="${tDict.btn_view_full_details}">
+                <div class="empty-visual-emblem">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </div>
+                <div class="empty-visual-text">
+                  <div class="empty-visual-title" style="font-size: 1.15rem;">${title}</div>
+                  <div class="empty-visual-badge">${p.documents && p.documents.length ? tDict.badge_documents_ready : (p.networkLabs && p.networkLabs.length ? tDict.badge_labs_ready : tDict.badge_deliverable_ready)}</div>
+                </div>
+                <div class="empty-visual-action">
+                  <span class="btn-visual-details" style="font-size: 0.75rem; padding: 4px 10px;">${tDict.btn_view_full_details}</span>
+                </div>
+              </div>
+            `;
+          }
+
           html += `
             <div class="editorial-card ${colSpan}">
-              <div>
-                <div class="editorial-card-visual">
-                  <img src="${p.thumbnail}" alt="${title}" loading="lazy">
-                </div>
-                ${galleryHtml}
+              ${gridVisual}
+              ${galleryHtml}
 
-                <div class="editorial-badge-row" style="margin-top: 0.8rem;">
-                  <span class="badge-category">${cat}</span>
-                  <span class="badge-ownership">${pType} &bull; ${compDate}</span>
-                </div>
+              <div class="editorial-badge-row" style="margin-top: 1.2rem;">
+                <span class="badge-category">${cat}</span>
+                <span class="badge-ownership">${pType} &bull; ${compDate}</span>
+              </div>
 
-                <h4 class="editorial-card-title">${title}</h4>
-                <p class="editorial-card-desc">${shortDesc}</p>
+              <div class="project-title-container">
+                ${p.logo ? '<div class="project-authentic-logo"><img src="' + p.logo + '" alt="' + title + ' Logo" loading="lazy"></div>' : ''}
+                ${p.isFigmaShowcase ? '<span class="tool-badge-figma"><svg width="14" height="14" viewBox="0 0 38 57" fill="none"><path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/><path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/><path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/><path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/><path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/></svg> ' + (translations[lang].figma_tool_badge || 'Figma Design Tool') + '</span>' : ''}
+                <h4 class="editorial-card-title clickable-title" onclick="${gridAction}" title="${gridActionTitle}">${title}</h4>
+              </div>
 
-                <div class="tech-stack-pills" style="margin-bottom: 0.8rem;">
-                  ${p.technologies.slice(0, 4).map(tech => `<span class="tech-pill">${tech}</span>`).join('')}
-                  ${p.technologies.length > 4 ? `<span class="tech-pill">+${p.technologies.length - 4}</span>` : ''}
-                </div>
+              <p class="editorial-card-desc">${shortDesc}</p>
+
+              <div class="tech-stack-pills" style="margin-bottom: 1.2rem;">
+                ${p.technologies.slice(0, 4).map(tech => `<span class="tech-pill">${tech}</span>`).join('')}
+                ${p.technologies.length > 4 ? `<span class="tech-pill">+${p.technologies.length - 4}</span>` : ''}
               </div>
 
               <div class="project-action-pills">
@@ -297,93 +530,385 @@
       container.innerHTML = html;
     }
 
-    function openProjectModal(id) {
+    `function openProjectModal(id) {
       const p = projectsData.find(item => item.id === id);
       if (!p) return;
 
       const lang = window.i18n ? window.i18n.getLang() : 'en';
-      const t = window.i18n ? window.i18n.t : (val => val);
+      const t = window.i18n ? window.i18n.t : (val => (typeof val === 'object' && val ? val[lang] || val.en : val));
       const modal = document.getElementById('projectModal');
       const body = document.getElementById('modalBody');
 
-      const title = t(p.title, lang);
-      const fullDesc = t(p.fullDescription, lang);
-      const cat = t(p.category, lang);
-      const pType = t(p.projectType, lang);
-      const compDate = t(p.completionDate, lang);
-      const prob = t(p.problem, lang);
-      const sol = t(p.solution, lang);
-      const delivs = p.deliverables && p.deliverables[lang] ? p.deliverables[lang] : (p.deliverables['en'] || []);
-      const credits = p.teamCredits ? t(p.teamCredits, lang) : null;
+      const title = t(p.title);
+      const fullDesc = t(p.fullDescription);
+      const cat = t(p.category);
+      const pType = t(p.projectType);
+      const compDate = t(p.completionDate);
+      const prob = t(p.problem);
+      const sol = t(p.solution);
+      const delivs = p.deliverables && p.deliverables[lang] ? p.deliverables[lang] : (p.deliverables ? p.deliverables['en'] : []);
+      const credits = p.teamCredits ? t(p.teamCredits) : null;
       const pills = renderActionPills(p, lang);
+      const tDict = translations[lang] || translations.en;
 
-      body.innerHTML = `
+      body.innerHTML = \`
         <div style="margin-bottom: 1.5rem;">
           <div style="display: flex; gap: 0.6rem; align-items: center; margin-bottom: 0.8rem; flex-wrap: wrap;">
-            <span class="project-badge">${cat}</span>
-            <span class="project-team-tag">${pType}</span>
-            <span style="font-size: 0.85rem; color: var(--text-muted);">${compDate}</span>
+            <span class="project-badge">\${cat}</span>
+            <span class="project-team-tag">\${pType}</span>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">\${compDate}</span>
           </div>
-          <h2 style="font-family: var(--font-editorial); font-size: 2.2rem; color: var(--midnight); margin-bottom: 0.8rem;">${title}</h2>
-          <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-body); margin-bottom: 1.5rem;">${fullDesc}</p>
+          <h2 style="font-family: var(--font-editorial); font-size: 2.2rem; color: var(--midnight); margin-bottom: 0.8rem;">\${title}</h2>
+          <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-body); margin-bottom: 1.5rem;">\${fullDesc}</p>
         </div>
 
         <div style="margin-bottom: 1.5rem;">
           <div class="project-action-pills" style="border-top: none; padding-top: 0; margin-top: 0;">
-            ${pills}
+            \${pills}
           </div>
         </div>
 
+        <!-- Presentation & Case Study Banner -->
+        <div class="modal-presentation-banner" style="margin-bottom: 2rem; padding: 1.25rem 1.5rem; background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(10, 25, 47, 0.6) 100%); border: 1px solid rgba(212, 175, 55, 0.35); border-radius: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h4 style="font-size: 1.05rem; font-weight: 700; color: #d4af37; margin: 0 0 0.3rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <span>\${tDict.modal_presentations_title || (lang === 'ar' ? 'العرض التقديمي الشامل لدراسة الحالة' : 'Comprehensive Case Study Deck')}</span>
+            </h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">\${tDict.modal_presentations_desc || (lang === 'ar' ? 'عرض تفاعلي متكامل يغطي المعمارية والنتائج والتنفيذ — جاهز للتصدير لمنصة Gamma AI.' : 'Comprehensive interactive deck covering problem, architecture, metrics, and execution — ready for Gamma AI export.')}</p>
+          </div>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <button onclick="openPresentationModal('\${p.id}')" class="btn-primary" style="font-size: 0.85rem; padding: 0.55rem 1.15rem; display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>\${tDict.btn_preview_presentation || (lang === 'ar' ? 'معاينة العرض التفاعلي' : 'Preview Deck')}</span>
+            </button>
+            <button onclick="exportGammaMarkdown('\${p.id}')" class="btn-secondary" style="font-size: 0.85rem; padding: 0.55rem 1.15rem; display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              <span>\${tDict.btn_download_gamma || (lang === 'ar' ? 'تصدير لمنصة Gamma' : 'Export Gamma')}</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Authentic Video Experience Section -->
+        \${p.video ? \`
+          <div style="margin-bottom: 2rem;">
+            <div style="margin-bottom: 0.8rem;">
+              <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--midnight); margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span>\${lang === 'ar' ? 'فيديو ومعاينة التجربة التفاعلية المباشرة' : 'Authentic Video & Motion Experience'}</span>
+              </h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">\${lang === 'ar' ? 'معاينة فيديو حقيقية مسجلة من بيئة العمل والتجربة التفاعلية للمشروع.' : 'Authentic motion capture and user interaction demo.'}</p>
+            </div>
+            <div style="background: #000; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--border-light);">
+              <video controls preload="metadata" poster="\${p.poster || ''}" style="width: 100%; max-height: 480px; display: block; object-fit: contain;">
+                <source src="\${p.video}" type="video/mp4">
+                \${lang === 'ar' ? 'متصفحك لا يدعم تشغيل الفيديو.' : 'Your browser does not support the video tag.'}
+              </video>
+            </div>
+          </div>
+        \` : ''}
+
+        <!-- Authentic Screenshot Gallery Grid -->
+        \${(typeof projectsImagesConfig !== 'undefined' && projectsImagesConfig[p.id] && projectsImagesConfig[p.id].availableImages && projectsImagesConfig[p.id].availableImages.length > 0) ? \`
+          <div style="margin-bottom: 2rem;">
+            ${p.id === 'figma-design-system' ? `
+              <!-- Dedicated Figma Works Categorization Filter Bar -->
+              <div style="margin-bottom: 1.5rem; padding: 1.25rem 1.5rem; background: linear-gradient(135deg, rgba(242, 78, 30, 0.08) 0%, rgba(162, 89, 255, 0.05) 100%); border: 1px solid rgba(242, 78, 30, 0.3); border-radius: 14px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; flex-wrap: wrap; gap: 0.5rem;">
+                  <h4 style="font-size: 1.05rem; font-weight: 700; color: #e05624; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                    <svg width="20" height="20" viewBox="0 0 38 57" fill="none"><path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/><path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/><path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/><path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/><path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/></svg>
+                    <span>${lang === 'ar' ? 'أقسام وتصنيفات معرض Figma Works المعتمدة' : 'Curated Figma Works UI/UX Categories'}</span>
+                  </h4>
+                  <span style="font-size: 0.8rem; font-weight: 700; color: #e05624; background: rgba(242,78,30,0.12); padding: 0.25rem 0.75rem; border-radius: 20px;">51 ${lang === 'ar' ? 'واجهة موثقة' : 'Verified Screens'}</span>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;" id="figmaCategoryTabs">
+                  <button type="button" onclick="filterFigmaModalCategory('all', this)" class="btn-figma-filter active" style="padding: 0.5rem 1.1rem; border-radius: 8px; border: 1px solid #e05624; background: #e05624; color: #fff; font-size: 0.85rem; font-weight: 600; cursor: pointer;">${lang === 'ar' ? 'عرض الكل (51)' : 'All Works (51)'}</button>
+                  <button type="button" onclick="filterFigmaModalCategory('trainova-mobile', this)" class="btn-figma-filter" style="padding: 0.5rem 1.1rem; border-radius: 8px; border: 1px solid var(--border-light); background: rgba(255,255,255,0.05); color: var(--text-body); font-size: 0.85rem; font-weight: 600; cursor: pointer;">📱 ${lang === 'ar' ? '1. Trainova Mobile App (12)' : '1. Trainova Mobile (12)'}</button>
+                  <button type="button" onclick="filterFigmaModalCategory('trainova-dashboard', this)" class="btn-figma-filter" style="padding: 0.5rem 1.1rem; border-radius: 8px; border: 1px solid var(--border-light); background: rgba(255,255,255,0.05); color: var(--text-body); font-size: 0.85rem; font-weight: 600; cursor: pointer;">📊 ${lang === 'ar' ? '2. Trainova Web Dashboard (30)' : '2. Trainova Web (30)'}</button>
+                  <button type="button" onclick="filterFigmaModalCategory('salon', this)" class="btn-figma-filter" style="padding: 0.5rem 1.1rem; border-radius: 8px; border: 1px solid var(--border-light); background: rgba(255,255,255,0.05); color: var(--text-body); font-size: 0.85rem; font-weight: 600; cursor: pointer;">✨ ${lang === 'ar' ? '3. Salon Management UI (1)' : '3. Salon UI Master (1)'}</button>
+                  <button type="button" onclick="filterFigmaModalCategory('systems-bi', this)" class="btn-figma-filter" style="padding: 0.5rem 1.1rem; border-radius: 8px; border: 1px solid var(--border-light); background: rgba(255,255,255,0.05); color: var(--text-body); font-size: 0.85rem; font-weight: 600; cursor: pointer;">📈 ${lang === 'ar' ? '4. BI & Systems Dashboards (8)' : '4. BI & Systems (8)'}</button>
+                </div>
+              </div>
+            ` : ''}
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; flex-wrap: wrap; gap: 0.5rem;">
+              <div>
+                <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--midnight); margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                  <span>\${lang === 'ar' ? 'معرض لقطات الشاشة الأصلية المعتمدة' : 'Authentic Screenshot Gallery'}</span>
+                </h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.2rem 0 0 0;">\${lang === 'ar' ? 'انقر على أي صورة لتكبيرها واستعراضها بجودة فائقة في المعرض التفاعلي.' : 'Click any screenshot to expand and inspect high-resolution details in the interactive lightbox.'}</p>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; background: var(--soft-ivory); padding: 0.25rem 0.6rem; border-radius: 12px; border: 1px solid var(--border-light);">\${projectsImagesConfig[p.id].availableImages.length} \${lang === 'ar' ? 'لقطات' : 'Screens'}</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem;">
+              \${projectsImagesConfig[p.id].availableImages.map((img, idx) => \`
+                <div class="gallery-thumb-card" data-img-path="\${img.path || img.url || ''}" data-img-title="\${img.title || ''}" onclick="openLightbox('\${p.id}', \${idx})" style="cursor: pointer; position: relative; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-light); background: #fdfbf7; aspect-ratio: 16/10; transition: transform 0.2s, box-shadow 0.2s;">
+                  <img src="\${img.path || img.url}" alt="\${img.title || 'Screenshot ' + (idx + 1)}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+                  <div class="gallery-thumb-overlay" style="position: absolute; inset: 0; background: rgba(23, 23, 25, 0.45); opacity: 0; transition: opacity 0.2s; display: flex; align-items: center; justify-content: center; color: #fff;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  </div>
+                  \${img.title ? \`
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(10,13,20,0.85)); padding: 0.35rem 0.5rem; font-size: 0.72rem; color: #fff; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">
+                      \${img.title}
+                    </div>
+                  \` : ''}
+                </div>
+              \`).join('')}
+            </div>
+          </div>
+        \` : ''}
+
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
           <div style="background: var(--soft-ivory); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--border-light);">
-            <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--berry-rose); margin-bottom: 0.6rem;">${translations[lang].modal_problem}</h4>
-            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-body);">${prob}</p>
+            <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--berry-rose); margin-bottom: 0.6rem;">\${tDict.modal_problem}</h4>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-body);">\${prob}</p>
           </div>
           <div style="background: var(--soft-ivory); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--border-light);">
-            <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--berry-rose); margin-bottom: 0.6rem;">${translations[lang].modal_solution}</h4>
-            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-body);">${sol}</p>
+            <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--berry-rose); margin-bottom: 0.6rem;">\${tDict.modal_solution}</h4>
+            <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-body);">\${sol}</p>
           </div>
         </div>
 
         <div style="margin-bottom: 1.8rem;">
-          <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--midnight); margin-bottom: 0.8rem;">${translations[lang].modal_tech}</h4>
+          <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--midnight); margin-bottom: 0.8rem;">\${tDict.modal_tech}</h4>
           <div class="tech-stack-pills">
-            ${p.technologies.map(tech => `<span class="tech-pill">${tech}</span>`).join('')}
+            \${p.technologies.map(tech => \`<span class="tech-pill">\${tech}</span>\`).join('')}
           </div>
         </div>
 
-        ${p.metrics && p.metrics.length > 0 ? `
+        \${p.metrics && p.metrics.length > 0 ? \`
           <div style="margin-bottom: 1.8rem;">
-            <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--midnight); margin-bottom: 0.8rem;">${translations[lang].modal_metrics}</h4>
+            <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--midnight); margin-bottom: 0.8rem;">\${tDict.modal_metrics}</h4>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem;">
-              ${p.metrics.map(m => `
+              \${p.metrics.map(m => \`
                 <div style="background: var(--pure-white); border: 1px solid var(--border-light); padding: 1rem; border-radius: 8px; text-align: center;">
-                  <div style="font-family: var(--font-editorial); font-size: 1.8rem; font-weight: 700; color: var(--berry-rose);">${m.value}</div>
-                  <div style="font-size: 0.8rem; color: var(--text-muted);">${t(m.label, lang)}</div>
+                  <div style="font-family: var(--font-editorial); font-size: 1.8rem; font-weight: 700; color: var(--berry-rose);">\${m.value}</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">\${t(m.label)}</div>
                 </div>
-              `).join('')}
+              \`).join('')}
             </div>
           </div>
-        ` : ''}
+        \` : ''}
 
-        ${delivs && delivs.length > 0 ? `
+        \${delivs && delivs.length > 0 ? \`
           <div style="margin-bottom: 1.5rem;">
-            <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--midnight); margin-bottom: 0.8rem;">${translations[lang].modal_deliverables}</h4>
+            <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--midnight); margin-bottom: 0.8rem;">\${tDict.modal_deliverables}</h4>
             <ul style="padding-left: 1.2rem; font-size: 0.9rem; line-height: 1.7; color: var(--text-body);">
-              ${delivs.map(d => `<li>${d}</li>`).join('')}
+              \${delivs.map(d => \`<li>\${d}</li>\`).join('')}
             </ul>
           </div>
-        ` : ''}
+        \` : ''}
 
-        ${credits ? `
-          <div style="background: rgba(232, 160, 181, 0.1); border-left: 3px solid var(--berry-rose); padding: 1rem; border-radius: 6px; font-size: 0.85rem; color: var(--midnight); margin-top: 1rem;">
-            <strong>${translations[lang].modal_team_context}:</strong> ${credits}
+        \${p.projectVideos && p.projectVideos.length > 0 ? \`
+          <div style="margin-bottom: 2rem;">
+            <div style="margin-bottom: 0.8rem;">
+              <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--midnight); margin-bottom: 0.3rem;">\${tDict.modal_videos_title || 'Project Videos'}</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">\${tDict.modal_videos_desc || 'Verified video walkthroughs and presentations.'}</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem;">
+              \${p.projectVideos.map(vid => \`
+                <div class="project-video-card">
+                  <div class="project-video-preview" onclick="playMediaVideo('\${vid.videoPath}', '\${t(vid.title)}')">
+                    <img src="\${vid.poster}" alt="\${t(vid.title)}" loading="lazy">
+                    <div class="video-play-overlay">
+                      <div class="video-play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="video-meta-tag">
+                      <span><i class="far fa-clock"></i> \${vid.duration}</span>
+                      <span>\${vid.resolution}</span>
+                    </div>
+                  </div>
+                  <div style="padding: 1rem;">
+                    <h5 style="font-size: 0.95rem; font-weight: 600; color: var(--midnight); margin-bottom: 0.4rem;">\${t(vid.title)}</h5>
+                    <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.8rem;">\${t(vid.description)}</p>
+                    <button class="btn-video-play" onclick="playMediaVideo('\${vid.videoPath}', '\${t(vid.title)}')">
+                      <i class="fas fa-play"></i> \${tDict.ai_play_video || 'Play Video'}
+                    </button>
+                  </div>
+                </div>
+              \`).join('')}
+            </div>
           </div>
-        ` : ''}
-      `;
+        \` : ''}
+
+        \${p.presentations && p.presentations.length > 0 ? \`
+          <div style="margin-bottom: 2rem;">
+            <div style="margin-bottom: 0.8rem;">
+              <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--midnight); margin-bottom: 0.3rem;">\${tDict.modal_presentations_title || 'Original Slides & Presentations'}</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">\${tDict.modal_presentations_desc || 'Original slide decks, architectural analyses, and defense materials.'}</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+              \${p.presentations.map(pres => \`
+                <div class="presentation-item-card">
+                  <div class="presentation-icon \${pres.type === 'pdf' ? 'pdf-icon' : 'pptx-icon'}">
+                    \${pres.type === 'pdf' ? \`
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    \` : \`
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M7 8h4a2 2 0 0 1 0 4H7z"/></svg>
+                    \`}
+                  </div>
+                  <div class="presentation-details">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.3rem; flex-wrap: wrap;">
+                      <h5 style="font-size: 0.92rem; font-weight: 600; color: var(--midnight);">\${t(pres.title)}</h5>
+                      <span class="presentation-badge">\${pres.type.toUpperCase()} &bull; \${pres.slides} \${lang === 'ar' ? 'شريحة' : 'Slides'}</span>
+                    </div>
+                    <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.8rem;">\${t(pres.description)}</p>
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                      <span style="font-size: 0.75rem; color: var(--text-muted); font-family: monospace;">\${pres.fileSize}</span>
+                      <a href="\${pres.path}" target="_blank" download class="btn-presentation-download">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        <span>\${lang === 'ar' ? 'فتح / تحميل العرض' : 'Open / Download Deck'}</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              \`).join('')}
+            </div>
+          </div>
+        \` : ''}
+
+        \${p.documents && p.documents.length ? \`
+          <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light);">
+            <div style="margin-bottom: 1rem;">
+              <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--midnight); margin-bottom: 0.3rem;">\${tDict.modal_documents_title || 'Verified Engineering Reports, Theses & Specifications'}</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">\${tDict.modal_documents_desc || 'Official academic documentation, graduation thesis, and analytical models prepared for defense.'}</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+              \${p.documents.map(doc => {
+                const docType = (doc.type || doc.fileType || 'pdf').toLowerCase();
+                const docTitle = t(doc.title || doc.name);
+                const docPath = doc.path || doc.url;
+                const docSize = doc.fileSize || doc.size;
+                const docDesc = doc.description ? t(doc.description) : '';
+                return \`
+                  <div class="presentation-item-card">
+                    <div class="presentation-icon \${docType === 'docx' ? 'docx-icon' : (docType === 'xlsx' ? 'xlsx-icon' : (docType === 'pptx' ? 'pptx-icon' : 'pdf-icon'))}">
+                      \${docType === 'docx' ? \`
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><path d="M10 9H8"/></svg>
+                      \` : (docType === 'xlsx' ? \`
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/><line x1="12" y1="9" x2="12" y2="21"/></svg>
+                      \` : (docType === 'pptx' ? \`
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M7 8h4a2 2 0 0 1 0 4H7z"/></svg>
+                      \` : \`
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                      \`))}
+                    </div>
+                    <div class="presentation-details">
+                      <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.3rem; flex-wrap: wrap;">
+                        <h5 style="font-size: 0.92rem; font-weight: 600; color: var(--midnight);">\${docTitle}</h5>
+                        <span class="presentation-badge">\${docType.toUpperCase()} &bull; \${docSize}</span>
+                      </div>
+                      \${docDesc ? \`<p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.8rem;">\${docDesc}</p>\` : ''}
+                      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                        <span style="font-size: 0.75rem; color: var(--text-muted); font-family: monospace;">\${doc.fileName || ''}</span>
+                        <a href="\${docPath}" target="_blank" download class="btn-presentation-download">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                          <span>\${docType === 'xlsx' ? (lang === 'ar' ? 'تحميل ملف Excel' : 'Download Excel Model') : (tDict.btn_download_doc || 'Download Document')}</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                \`;
+              }).join('')}
+            </div>
+          </div>
+        \` : ''}
+
+        \${p.networkLabs && p.networkLabs.length ? \`
+          <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light);">
+            <div style="margin-bottom: 1rem;">
+              <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--midnight); margin-bottom: 0.3rem;">\${tDict.modal_networking_title || 'Verified Cisco Packet Tracer Network Topologies (.pkt)'}</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">\${tDict.modal_networking_desc || 'Authentic lab architectures designed, configured, and tested in Cisco Packet Tracer.'}</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+              \${p.networkLabs.map(lab => \`
+                <div class="network-item-card">
+                  <div class="network-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/><line x1="12" y1="10" x2="12" y2="14"/></svg>
+                  </div>
+                  <div class="network-details">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.3rem; flex-wrap: wrap;">
+                      <h5 style="font-size: 0.92rem; font-weight: 600; color: var(--midnight);">\${t(lab.title)}</h5>
+                      <span class="network-badge">CISCO PKT • \${lab.size}</span>
+                    </div>
+                    <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.8rem;">\${t(lab.description)}</p>
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                      <span style="font-size: 0.75rem; color: var(--text-muted); font-family: monospace;">\${lab.fileName}</span>
+                      <a href="\${lab.path}" download="\${lab.fileName}" class="btn-network-download">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        <span>\${tDict.btn_download_pkt || 'Download .pkt Lab'}</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              \`).join('')}
+            </div>
+          </div>
+        \` : ''}
+
+        \${credits ? \`
+          <div style="background: rgba(232, 160, 181, 0.1); border-left: 3px solid var(--berry-rose); padding: 1rem; border-radius: 6px; font-size: 0.85rem; color: var(--midnight); margin-top: 1rem;">
+            <strong>\${tDict.modal_team_context || 'Project Ownership & Collaboration'}:</strong> \${credits}
+          </div>
+        \` : ''}
+      \`;
 
       modal.classList.add('active');
+    }`
+
+    function playMediaVideo(src, title) {
+      const modal = document.getElementById('videoModal');
+      const player = document.getElementById('modalVideoPlayer');
+      const gifPlayer = document.getElementById('modalGifPlayer');
+      const titleEl = document.getElementById('videoModalTitle');
+      if (!modal) return;
+      if (titleEl) titleEl.textContent = title || '';
+      
+      const isGif = src && src.toLowerCase().endsWith('.gif');
+      if (isGif) {
+        if (player) {
+          player.pause();
+          player.style.display = 'none';
+          player.removeAttribute('src');
+        }
+        if (gifPlayer) {
+          gifPlayer.src = src;
+          gifPlayer.style.display = 'block';
+        }
+      } else {
+        if (gifPlayer) {
+          gifPlayer.style.display = 'none';
+          gifPlayer.removeAttribute('src');
+        }
+        if (player) {
+          player.style.display = 'block';
+          player.src = src;
+          player.play().catch(() => {});
+        }
+      }
+      modal.classList.add('active');
     }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const player = document.getElementById('modalVideoPlayer');
+      const gifPlayer = document.getElementById('modalGifPlayer');
+      if (player) {
+        player.pause();
+        player.removeAttribute('src');
+        player.load();
+      }
+      if (gifPlayer) {
+        gifPlayer.removeAttribute('src');
+      }
+      if (modal) modal.classList.remove('active');
+    }
+
+    document.getElementById('videoModalCloseBtn')?.addEventListener('click', closeVideoModal);
+    window.addEventListener('click', (e) => {
+      const modal = document.getElementById('videoModal');
+      if (e.target === modal) closeVideoModal();
+    });
 
     document.getElementById('modalCloseBtn')?.addEventListener('click', () => {
       document.getElementById('projectModal')?.classList.remove('active');
@@ -405,6 +930,340 @@
 
     window.addEventListener('languageChanged', renderFullProjects);
     renderFullProjects();
+  
+    // Presentation Deck & Gamma Export Controller (10 Projects)
+    let currentPresProjectId = null;
+    let currentPresSlideIndex = 0;
+
+    function openPresentationModal(projectId, slideIndex = 0) {
+      if (typeof projectsPresentationsData === 'undefined') {
+        console.error('projectsPresentationsData not loaded');
+        return;
+      }
+      const deck = projectsPresentationsData[projectId];
+      if (!deck) {
+        console.warn('Presentation deck not found for project:', projectId);
+        return;
+      }
+      currentPresProjectId = projectId;
+      currentPresSlideIndex = slideIndex;
+      
+      const modal = document.getElementById('presentationModal');
+      if (!modal) return;
+      if (projectId === 'lilianoura') {
+        modal.classList.add('presentation-lilianoura');
+      } else {
+        modal.classList.remove('presentation-lilianoura');
+      }
+      modal.classList.add('active');
+      renderCurrentPresentationSlide();
+    }
+
+    function closePresentationModal() {
+      const modal = document.getElementById('presentationModal');
+      if (modal) modal.classList.remove('active');
+    }
+
+    function renderCurrentPresentationSlide() {
+      if (typeof projectsPresentationsData === 'undefined') return;
+      const deck = projectsPresentationsData[currentPresProjectId];
+      if (!deck || !deck.slides || !deck.slides.length) return;
+      const lang = (window.i18n && window.i18n.currentLang) ? window.i18n.currentLang : (localStorage.getItem('lang') || 'ar');
+      const tDict = (translations && translations[lang]) ? translations[lang] : translations.ar;
+      
+      const totalSlides = deck.slides.length;
+      if (currentPresSlideIndex < 0) currentPresSlideIndex = 0;
+      if (currentPresSlideIndex >= totalSlides) currentPresSlideIndex = totalSlides - 1;
+
+      const slide = deck.slides[currentPresSlideIndex];
+      
+      const deckTitle = typeof deck.title === 'object' ? (deck.title[lang] || deck.title.en) : deck.title;
+      const titleEl = document.getElementById('presModalDeckName');
+      const counterEl = document.getElementById('presSlideCounter');
+      const gammaBtnText = document.getElementById('presGammaBtnText');
+      const prevText = document.getElementById('presPrevText');
+      const nextText = document.getElementById('presNextText');
+
+      if (titleEl) titleEl.textContent = deckTitle;
+      if (counterEl) counterEl.textContent = (lang === 'ar' ? 'شريحة' : 'Slide') + ' ' + (currentPresSlideIndex + 1) + ' / ' + totalSlides;
+      if (gammaBtnText) gammaBtnText.textContent = tDict.btn_download_gamma || (lang === 'ar' ? 'تصدير لمنصة Gamma' : 'Export for Gamma');
+      if (prevText) prevText.textContent = lang === 'ar' ? 'السابق' : 'Previous';
+      if (nextText) nextText.textContent = lang === 'ar' ? 'التالي' : 'Next';
+
+      const prevBtn = document.getElementById('presPrevBtn');
+      const nextBtn = document.getElementById('presNextBtn');
+      if (prevBtn) prevBtn.disabled = (currentPresSlideIndex === 0);
+      if (nextBtn) nextBtn.disabled = (currentPresSlideIndex === totalSlides - 1);
+
+      const dotsEl = document.getElementById('presDots');
+      if (dotsEl) {
+        let dotsHtml = '';
+        for (let i = 0; i < totalSlides; i++) {
+          dotsHtml += '<div class="presentation-dot ' + (i === currentPresSlideIndex ? 'active' : '') + '" onclick="goToPresentationSlide(' + i + ')" title="' + (lang === 'ar' ? 'شريحة' : 'Slide') + ' ' + (i + 1) + '"></div>';
+        }
+        dotsEl.innerHTML = dotsHtml;
+      }
+
+      const sTag = (typeof slide.tag === 'object') ? (slide.tag[lang] || slide.tag.en) : slide.tag;
+      const sTitle = (typeof slide.title === 'object') ? (slide.title[lang] || slide.title.en) : slide.title;
+      const sSub = (typeof slide.subtitle === 'object') ? (slide.subtitle[lang] || slide.subtitle.en) : slide.subtitle;
+      const points = (typeof slide.points === 'object' && slide.points[lang]) ? slide.points[lang] : (Array.isArray(slide.points) ? slide.points : []);
+      
+      const hasVisual = !!slide.visual;
+      const viewport = document.getElementById('presViewport');
+      
+      let pointsHtml = '';
+      points.forEach(pt => {
+        pointsHtml += '<li>' + pt + '</li>';
+      });
+
+      let visualHtml = '';
+      if (hasVisual) {
+        visualHtml = '<div class="presentation-slide-visual-box"><img src="' + slide.visual + '" alt="' + sTitle + '" loading="lazy" onerror="this.parentElement.style.display=\'none\'"></div>';
+      }
+
+      if (viewport) {
+        viewport.innerHTML = '<div>' +
+          '<span class="presentation-slide-tag">' + sTag + '</span>' +
+          '<h2 class="presentation-slide-title">' + sTitle + '</h2>' +
+          (sSub ? '<p class="presentation-slide-subtitle">' + sSub + '</p>' : '') +
+          '</div>' +
+          '<div class="presentation-slide-body ' + (hasVisual ? 'has-visual' : '') + '">' +
+          '<div><ul class="presentation-points-list">' + pointsHtml + '</ul></div>' +
+          visualHtml +
+          '</div>';
+      }
+    }
+
+    function prevPresentationSlide() {
+      if (currentPresSlideIndex > 0) {
+        currentPresSlideIndex--;
+        renderCurrentPresentationSlide();
+      }
+    }
+
+    function nextPresentationSlide() {
+      if (typeof projectsPresentationsData === 'undefined') return;
+      const deck = projectsPresentationsData[currentPresProjectId];
+      if (deck && currentPresSlideIndex < deck.slides.length - 1) {
+        currentPresSlideIndex++;
+        renderCurrentPresentationSlide();
+      }
+    }
+
+    function goToPresentationSlide(idx) {
+      currentPresSlideIndex = idx;
+      renderCurrentPresentationSlide();
+    }
+
+    function exportCurrentGammaMarkdown() {
+      if (currentPresProjectId) {
+        exportGammaMarkdown(currentPresProjectId);
+      }
+    }
+
+    function exportGammaMarkdown(projectId) {
+      if (typeof projectsPresentationsData === 'undefined') return;
+      const deck = projectsPresentationsData[projectId];
+      if (!deck) return;
+      const lang = (window.i18n && window.i18n.currentLang) ? window.i18n.currentLang : (localStorage.getItem('lang') || 'ar');
+      
+      let md = '';
+      const dTitle = typeof deck.title === 'object' ? (deck.title[lang] || deck.title.en) : deck.title;
+      md += '# ' + dTitle + '\n\n';
+      md += '> Presentation Deck for Gamma AI | Portfolio of LILIAN ALKHAWALDA\n\n';
+      md += '---\n\n';
+
+      deck.slides.forEach((s, idx) => {
+        const sTag = typeof s.tag === 'object' ? (s.tag[lang] || s.tag.en) : s.tag;
+        const sTitle = typeof s.title === 'object' ? (s.title[lang] || s.title.en) : s.title;
+        const sSub = typeof s.subtitle === 'object' ? (s.subtitle[lang] || s.subtitle.en) : s.subtitle;
+        const pts = (typeof s.points === 'object' && s.points[lang]) ? s.points[lang] : (Array.isArray(s.points) ? s.points : []);
+
+        md += '## Slide ' + (idx + 1) + ': ' + sTitle + '\n';
+        if (sTag) md += '**Category:** ' + sTag + '\n\n';
+        if (sSub) md += '*' + sSub + '*\n\n';
+        pts.forEach(p => {
+          md += '- ' + p + '\n';
+        });
+        if (s.visual) {
+          md += '\n![Slide Visual](' + s.visual + ')\n';
+        }
+        md += '\n---\n\n';
+      });
+
+      const blob = new Blob([md], { type: 'text/markdown;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = projectId + '-gamma-presentation.md';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+      const msg = lang === 'ar'
+        ? 'تم تصدير ملف العرض التقديمي بتنسيق Gamma Markdown! يمكنك الآن استيراده مباشرة في منصة Gamma (gamma.app) لإنشاء العرض التقديمي بالذكاء الاصطناعي بنقرة واحدة.'
+        : 'Gamma Markdown presentation deck exported! You can now import it directly into Gamma (gamma.app) to generate an AI presentation.';
+      alert(msg);
+    }
+
+    document.getElementById('presentationModalCloseBtn')?.addEventListener('click', closePresentationModal);
+    document.getElementById('presentationModal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'presentationModal') closePresentationModal();
+    });
+    window.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('presentationModal');
+      if (!modal || !modal.classList.contains('active')) return;
+      if (e.key === 'ArrowRight') {
+        const isRtl = document.documentElement.dir === 'rtl';
+        if (isRtl) prevPresentationSlide(); else nextPresentationSlide();
+      } else if (e.key === 'ArrowLeft') {
+        const isRtl = document.documentElement.dir === 'rtl';
+        if (isRtl) nextPresentationSlide(); else prevPresentationSlide();
+      } else if (e.key === 'Escape') {
+        closePresentationModal();
+      }
+    });
+
+  
+    function resetFilterToAll() {
+      const filterBtns = document.querySelectorAll('.filter-pill, .filter-btn');
+      filterBtns.forEach(b => {
+        if (b.getAttribute('data-filter') === 'all') {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+      activeFilter = "all"; renderFullProjects();
+    }
+    window.resetFilterToAll = resetFilterToAll;
+
+  
+    // --- Interactive Lightbox Gallery Controller ---
+    let currentLightboxImages = [];
+    let currentLightboxIndex = 0;
+
+    
+    function filterFigmaModalCategory(category, btn) {
+      document.querySelectorAll('#figmaCategoryTabs .btn-figma-filter').forEach(b => {
+        b.style.background = 'rgba(255,255,255,0.05)';
+        b.style.color = 'var(--text-body)';
+        b.style.borderColor = 'var(--border-light)';
+      });
+      if (btn) {
+        btn.style.background = '#e05624';
+        btn.style.color = '#fff';
+        btn.style.borderColor = '#e05624';
+      }
+      
+      const cards = document.querySelectorAll('#projectModal .gallery-thumb-card');
+      cards.forEach(card => {
+        const path = (card.getAttribute('data-img-path') || '').toLowerCase();
+        
+        let match = false;
+        if (category === 'all') {
+          match = true;
+        } else if (category === 'trainova-mobile') {
+          match = path.includes('/mobile-ui/') || path.includes('/trainova/mobile/');
+        } else if (category === 'trainova-dashboard') {
+          match = path.includes('/dashboard-ui/');
+        } else if (category === 'salon') {
+          match = path.includes('figma_asset_14') || path.includes('luxury-salon');
+        } else if (category === 'systems-bi') {
+          match = path.includes('/student-grades/') || path.includes('/retail/') || path.includes('/lilianoura/');
+        }
+        
+        card.style.display = match ? 'block' : 'none';
+      });
+    }
+
+    function openLightbox(projectId, index) {
+      const cfg = (typeof projectsImagesConfig !== 'undefined') ? projectsImagesConfig[projectId] : null;
+      if (!cfg || !cfg.availableImages || !cfg.availableImages.length) return;
+
+      currentLightboxImages = cfg.availableImages;
+      currentLightboxIndex = (index >= 0 && index < currentLightboxImages.length) ? index : 0;
+      updateLightboxContent();
+
+      const box = document.getElementById('imageLightbox');
+      if (box) {
+        box.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function updateLightboxContent() {
+      if (!currentLightboxImages.length) return;
+      const item = currentLightboxImages[currentLightboxIndex];
+      const imgEl = document.getElementById('lightboxImg');
+      const capEl = document.getElementById('lightboxCaption');
+      const cntEl = document.getElementById('lightboxCounter');
+
+      if (imgEl) imgEl.src = item.path || item.url || item;
+      if (capEl) capEl.textContent = item.title || item.caption || item.file || '';
+      if (cntEl) cntEl.textContent = (currentLightboxIndex + 1) + ' / ' + currentLightboxImages.length;
+    }
+
+    function closeLightbox() {
+      const box = document.getElementById('imageLightbox');
+      if (box) {
+        box.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    }
+
+    function prevLightbox() {
+      if (!currentLightboxImages.length) return;
+      currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxImages.length) % currentLightboxImages.length;
+      updateLightboxContent();
+    }
+
+    function nextLightbox() {
+      if (!currentLightboxImages.length) return;
+      currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxImages.length;
+      updateLightboxContent();
+    }
+
+    document.addEventListener('keydown', function(e) {
+      const box = document.getElementById('imageLightbox');
+      if (box && box.style.display === 'flex') {
+        if (e.key === 'Escape') closeLightbox();
+        else if (e.key === 'ArrowLeft') {
+          if (document.documentElement.dir === 'rtl') nextLightbox();
+          else prevLightbox();
+        } else if (e.key === 'ArrowRight') {
+          if (document.documentElement.dir === 'rtl') prevLightbox();
+          else nextLightbox();
+        }
+      }
+    });
+
   </script>
+
+  <!-- Interactive Lightbox Viewer -->
+  <div id="imageLightbox" class="lightbox-modal" style="display: none;" role="dialog" aria-modal="true">
+    <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <button class="lightbox-nav-btn lightbox-prev-btn" onclick="prevLightbox()" aria-label="Previous">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="lightbox-image-wrapper">
+        <img id="lightboxImg" src="" alt="Expanded View">
+        <div class="lightbox-caption-bar">
+          <span id="lightboxCaption"></span>
+          <span id="lightboxCounter" class="lightbox-counter"></span>
+        </div>
+      </div>
+      <button class="lightbox-nav-btn lightbox-next-btn" onclick="nextLightbox()" aria-label="Next">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+
 </body>
 </html>

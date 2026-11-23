@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1440">
+<title>Trainova – Submit Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --sidebar-bg:#0F172A;--sidebar-w:250px;--header-h:76px;
+    --accent:#6366F1;--accent2:#22D3EE;--surface:#FFFFFF;
+    --bg:#F8FAFC;--text-primary:#0F172A;--text-muted:#94A3B8;
+    --text-sidebar:#CBD5E1;--border:#E2E8F0;
+    --danger:#EF4444;--success:#10B981;--warning:#F59E0B;
+  }
+  body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text-primary);min-height:100vh;display:flex}
+
+  /* ── SIDEBAR ── */
+  .sidebar{width:var(--sidebar-w);min-height:100vh;background:var(--sidebar-bg);display:flex;flex-direction:column;position:fixed;top:0;left:0;z-index:100}
+  .sidebar-logo{padding:32px 36px 26px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .sidebar-logo span{font-size:26px;font-weight:800;color:#fff}
+  .sidebar-logo span em{font-style:normal;color:var(--accent2)}
+  .sidebar-badge{display:inline-block;font-size:9px;font-weight:700;background:rgba(99,102,241,.3);color:#a5b4fc;padding:2px 8px;border-radius:10px;margin-top:4px;letter-spacing:.5px;text-transform:uppercase}
+  .snl{font-size:10px;font-weight:600;color:#475569;letter-spacing:1.2px;text-transform:uppercase;padding:20px 26px 8px}
+  .nav-item{display:flex;align-items:center;gap:12px;padding:11px 26px;color:var(--text-sidebar);font-size:14px;font-weight:500;cursor:pointer;transition:all .18s;position:relative;text-decoration:none}
+  .nav-item:hover{background:rgba(255,255,255,.05);color:#fff}
+  .nav-item.active{background:rgba(99,102,241,.18);color:#fff}
+  .nav-item.active::before{content:'';position:absolute;left:0;top:6px;bottom:6px;width:3px;background:var(--accent);border-radius:0 3px 3px 0}
+  .ni{width:17px;height:17px;opacity:.75;flex-shrink:0}
+  .nav-item.active .ni{opacity:1}
+  .nbadge{margin-left:auto;background:var(--danger);color:#fff;font-size:10px;font-weight:700;padding:2px 6px;border-radius:10px}
+  .sf{margin-top:auto;padding:18px 26px;border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:10px;cursor:pointer}
+  .sf:hover{background:rgba(255,255,255,.04)}
+  .avsm{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#6366F1,#22D3EE);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff;flex-shrink:0}
+
+  /* ── MAIN ── */
+  .main{margin-left:var(--sidebar-w);flex:1;display:flex;flex-direction:column;min-height:100vh}
+  .header{position:sticky;top:0;z-index:50;height:var(--header-h);background:var(--surface);border-bottom:1px solid var(--border);box-shadow:0 2px 10px rgba(0,0,0,.05);display:flex;align-items:center;justify-content:space-between;padding:0 36px}
+  .header-left h1{font-size:21px;font-weight:700}
+  .header-left p{font-size:12px;color:var(--text-muted);margin-top:1px}
+  .header-right{display:flex;align-items:center;gap:12px}
+  .icon-btn{width:40px;height:40px;border-radius:10px;border:1.5px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-muted);position:relative;transition:all .18s}
+  .icon-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .ndot{position:absolute;top:8px;right:8px;width:7px;height:7px;background:var(--danger);border-radius:50%;border:1.5px solid #fff}
+  .hav{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#6366F1,#22D3EE);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:#fff;cursor:pointer}
+
+  /* ── PAGE ── */
+  .page{flex:1;padding:32px 48px 48px;display:flex;gap:24px;align-items:flex-start}
+
+  /* ── FORM CARD ── */
+  .form-card{flex:1;background:var(--surface);border-radius:22px;box-shadow:0 2px 8px rgba(0,0,0,.06),0 8px 32px rgba(0,0,0,.05);border:1px solid rgba(226,232,240,.6);overflow:hidden}
+
+  .form-header{background:linear-gradient(135deg,#0F172A,#1E293B 60%,#1e1b4b);padding:24px 32px;display:flex;align-items:center;justify-content:space-between}
+  .fh-left{}
+  .fh-title{font-size:17px;font-weight:700;color:#fff;margin-bottom:3px}
+  .fh-sub{font-size:12.5px;color:#64748B}
+  .week-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(99,102,241,.25);color:#a5b4fc;font-size:12px;font-weight:700;padding:6px 14px;border-radius:20px;border:1px solid rgba(99,102,241,.3)}
+
+  .form-body{padding:28px 32px}
+
+  /* two col row */
+  .row-2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px}
+  .row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-bottom:20px}
+
+  /* form group */
+  .fg{display:flex;flex-direction:column;gap:7px;margin-bottom:20px}
+  .fg:last-of-type{margin-bottom:0}
+  .fg-label{font-size:12.5px;font-weight:600;color:var(--text-primary);display:flex;align-items:center;gap:6px}
+  .fg-label .req{color:var(--danger);font-size:13px}
+  .fg-hint{font-size:11.5px;color:var(--text-muted)}
+
+  /* inputs */
+  .inp{width:100%;height:46px;padding:0 16px;background:#FAFBFD;border:1.5px solid var(--border);border-radius:11px;font-family:'Poppins',sans-serif;font-size:13.5px;color:var(--text-primary);outline:none;transition:border-color .2s,background .2s;appearance:none}
+  .inp:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px rgba(99,102,241,.08)}
+  .inp::placeholder{color:var(--text-muted)}
+
+  /* select */
+  .sel{width:100%;height:46px;padding:0 40px 0 16px;background:#FAFBFD;border:1.5px solid var(--border);border-radius:11px;font-family:'Poppins',sans-serif;font-size:13.5px;color:var(--text-primary);outline:none;transition:border-color .2s;appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+  .sel:focus{border-color:var(--accent);background-color:#fff;box-shadow:0 0 0 3px rgba(99,102,241,.08)}
+
+  /* textarea */
+  .ta{width:100%;padding:14px 16px;background:#FAFBFD;border:1.5px solid var(--border);border-radius:11px;font-family:'Poppins',sans-serif;font-size:13.5px;color:var(--text-primary);outline:none;resize:vertical;transition:border-color .2s,background .2s;line-height:1.6}
+  .ta:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px rgba(99,102,241,.08)}
+  .ta::placeholder{color:var(--text-muted)}
+  .char-count{font-size:11px;color:var(--text-muted);text-align:right;margin-top:4px}
+
+  /* hours input with icon */
+  .inp-icon-wrap{position:relative}
+  .inp-icon-wrap .inp{padding-left:44px}
+  .inp-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--text-muted);pointer-events:none}
+
+  /* file upload */
+  .file-drop{border:2px dashed #CBD5E1;border-radius:14px;padding:32px 24px;text-align:center;cursor:pointer;transition:all .2s;background:#FAFBFD;position:relative}
+  .file-drop:hover{border-color:var(--accent);background:rgba(99,102,241,.03)}
+  .file-drop input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+  .file-icon{width:48px;height:48px;border-radius:14px;background:rgba(99,102,241,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:20px}
+  .file-title{font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:4px}
+  .file-title span{color:var(--accent)}
+  .file-sub{font-size:12px;color:var(--text-muted)}
+  .file-types{display:flex;gap:6px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+  .file-type-tag{font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;background:#F1F5F9;color:#475569}
+
+  /* uploaded files preview */
+  .uploaded-files{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+  .uf-item{display:flex;align-items:center;gap:10px;background:#F8FAFC;border:1px solid var(--border);border-radius:10px;padding:10px 14px}
+  .uf-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+  .uf-pdf{background:rgba(239,68,68,.1)}
+  .uf-img{background:rgba(99,102,241,.1)}
+  .uf-name{flex:1;font-size:12.5px;font-weight:600;color:var(--text-primary)}
+  .uf-size{font-size:11.5px;color:var(--text-muted)}
+  .uf-del{width:26px;height:26px;border-radius:7px;background:none;border:none;cursor:pointer;color:var(--text-muted);display:flex;align-items:center;justify-content:center;transition:all .18s}
+  .uf-del:hover{background:rgba(239,68,68,.1);color:var(--danger)}
+
+  /* divider */
+  .divider{height:1px;background:var(--border);margin:24px 0}
+
+  /* form footer */
+  .form-footer{padding:20px 32px 24px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:#FAFBFD}
+  .footer-note{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted)}
+  .footer-btns{display:flex;align-items:center;gap:10px}
+  .btn-draft{height:44px;padding:0 22px;background:var(--surface);border:1.5px solid var(--border);border-radius:11px;font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:600;color:var(--text-muted);cursor:pointer;transition:all .18s}
+  .btn-draft:hover{border-color:var(--accent);color:var(--accent)}
+  .btn-submit{height:44px;padding:0 28px;background:linear-gradient(135deg,var(--accent),#818CF8);border:none;border-radius:11px;font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:600;color:#fff;cursor:pointer;box-shadow:0 4px 14px rgba(99,102,241,.35);transition:all .18s;display:flex;align-items:center;gap:8px}
+  .btn-submit:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(99,102,241,.45)}
+
+  /* ── SIDE PANEL ── */
+  .side-panel{width:300px;flex-shrink:0;display:flex;flex-direction:column;gap:16px}
+
+  .tip-card{background:var(--surface);border-radius:18px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.04);border:1px solid rgba(226,232,240,.6)}
+  .tip-title{font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:12px;display:flex;align-items:center;gap:7px}
+  .tip-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:10px;font-size:12.5px;color:#475569;line-height:1.5}
+  .tip-item:last-child{margin-bottom:0}
+  .tip-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:5px}
+
+  .progress-card{background:linear-gradient(135deg,rgba(99,102,241,.06),rgba(34,211,238,.04));border-radius:18px;padding:20px;border:1.5px solid rgba(99,102,241,.12)}
+  .pc-title{font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:14px;display:flex;align-items:center;gap:7px}
+  .pc-stat{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+  .pc-stat-label{font-size:12.5px;color:var(--text-muted)}
+  .pc-stat-val{font-size:13px;font-weight:700;color:var(--text-primary)}
+  .pc-bar-wrap{height:6px;background:#E2E8F0;border-radius:6px;overflow:hidden;margin-top:6px;margin-bottom:14px}
+  .pc-bar{height:100%;border-radius:6px;background:linear-gradient(90deg,#6366F1,#22D3EE)}
+  .pc-weeks{display:flex;gap:5px}
+  .pcw{flex:1;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700}
+  .pcw.done{background:var(--accent);color:#fff}
+  .pcw.cur{background:rgba(99,102,241,.15);color:var(--accent);border:1.5px solid var(--accent)}
+  .pcw.todo{background:#F1F5F9;color:var(--text-muted)}
+
+  .info-card{background:rgba(245,158,11,.06);border:1.5px solid rgba(245,158,11,.2);border-radius:14px;padding:16px}
+  .ic-title{font-size:12.5px;font-weight:700;color:#92400E;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+  .ic-body{font-size:12px;color:#78350F;line-height:1.6}
+
+  svg{display:block}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <span>Train<em>ova</em></span>
+    <div class="sidebar-badge">Student Portal</div>
+  </div>
+  <div class="snl">Navigation</div>
+  <a class="nav-item" href="#">
+    <svg class="ni" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+    Dashboard
+  </a>
+  <a class="nav-item" href="#">
+    <svg class="ni" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+    My Internship
+  </a>
+  <a class="nav-item" href="#">
+    <svg class="ni" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+    My Reports
+  </a>
+  <a class="nav-item active" href="#">
+    <svg class="ni" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+    Submit Report
+    <span class="nbadge">New</span>
+  </a>
+  <a class="nav-item" href="#">
+    <svg class="ni" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    Messages
+    <span class="nbadge">2</span>
+  </a>
+  <a class="nav-item" href="#">
+    <svg class="ni" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    My Result
+  </a>
+  <div class="snl">Account</div>
+  <a class="nav-item" href="#">
+    <svg class="ni" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+    Settings
+  </a>
+  <div class="sf">
+    <div class="avsm">L</div>
+    <div style="flex:1;overflow:hidden">
+      <div style="font-size:13px;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Layan Alkhawalda</div>
+      <div style="font-size:11px;color:#64748B">MIS · ID: 2021034</div>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+  <header class="header">
+    <div class="header-left">
+      <h1>Submit Weekly Report</h1>
+      <p>Submit your weekly internship progress.</p>
+    </div>
+    <div class="header-right">
+      <button class="icon-btn">
+        <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span class="ndot"></span>
+      </button>
+      <div class="hav">L</div>
+    </div>
+  </header>
+
+  <div class="page">
+
+    <!-- ── FORM CARD ── -->
+    <div class="form-card">
+      <!-- Form Header -->
+      <div class="form-header">
+        <div class="fh-left">
+          <div class="fh-title">Weekly Report Form</div>
+          <div class="fh-sub">Gaza Tech · UI/UX Intern</div>
+        </div>
+        <div class="week-badge">
+          <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Week 6 Due
+        </div>
+      </div>
+
+      <!-- Form Body -->
+      <div class="form-body">
+
+        <!-- Row 1: Week + Date -->
+        <div class="row-2">
+          <div class="fg">
+            <label class="fg-label">Report Week <span class="req">*</span></label>
+            <select class="sel">
+              <option value="" disabled selected>Select Week ▼</option>
+              <option>Week 1 — Jun 1–7</option>
+              <option>Week 2 — Jun 8–14</option>
+              <option>Week 3 — Jun 15–21</option>
+              <option>Week 4 — Jun 22–28</option>
+              <option>Week 5 — Jun 29–Jul 5</option>
+              <option selected>Week 6 — Jul 6–12</option>
+              <option>Week 7 — Jul 13–19</option>
+              <option>Week 8 — Jul 20–26</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label class="fg-label">Report Date <span class="req">*</span></label>
+            <div class="inp-icon-wrap">
+              <span class="inp-icon">
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </span>
+              <input class="inp" type="text" value="15 / 07 / 2026" placeholder="DD / MM / YYYY">
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Hours + Type -->
+        <div class="row-3">
+          <div class="fg">
+            <label class="fg-label">Training Hours <span class="req">*</span></label>
+            <div class="inp-icon-wrap">
+              <span class="inp-icon">
+                <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </span>
+              <input class="inp" type="number" value="20" min="1" max="40" placeholder="0">
+            </div>
+            <span class="fg-hint">Min 15 hrs/week required</span>
+          </div>
+          <div class="fg">
+            <label class="fg-label">Work Type</label>
+            <select class="sel">
+              <option>On-site</option>
+              <option>Remote</option>
+              <option>Hybrid</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label class="fg-label">Overall Rating</label>
+            <select class="sel">
+              <option>⭐⭐⭐⭐⭐ Excellent</option>
+              <option selected>⭐⭐⭐⭐ Good</option>
+              <option>⭐⭐⭐ Average</option>
+              <option>⭐⭐ Below Average</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Completed Tasks -->
+        <div class="fg">
+          <label class="fg-label">Completed Tasks <span class="req">*</span></label>
+          <textarea class="ta" rows="5" placeholder="Describe the tasks you completed this week...">• Designed dashboard screens for the student portal
+• Created the students management page layout
+• Improved UI components consistency across pages
+• Conducted user research session with 3 participants
+• Presented progress to team lead for feedback</textarea>
+          <div class="char-count">312 / 1000 characters</div>
+        </div>
+
+        <!-- Challenges -->
+        <div class="fg">
+          <label class="fg-label">Challenges Faced</label>
+          <textarea class="ta" rows="3" placeholder="Describe any challenges or blockers you faced...">Need more feedback on the dashboard layout before finalizing the components. Also had some difficulty aligning the design system with the existing codebase.</textarea>
+          <div class="char-count">198 / 500 characters</div>
+        </div>
+
+        <!-- Next Week Plan -->
+        <div class="fg">
+          <label class="fg-label">Plan for Next Week</label>
+          <textarea class="ta" rows="3" placeholder="What do you plan to work on next week?">• Finalize the student portal prototype
+• Start working on the mobile responsive layout
+• Prepare mid-internship presentation slides</textarea>
+          <div class="char-count">152 / 500 characters</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- File Upload -->
+        <div class="fg">
+          <label class="fg-label">Attach Supporting Files</label>
+          <div class="file-drop">
+            <input type="file" multiple accept=".pdf,.docx,.jpg,.png">
+            <div class="file-icon">📎</div>
+            <div class="file-title"><span>Click to upload</span> or drag & drop</div>
+            <div class="file-sub">Attach screenshots, documents, or evidence of your work</div>
+            <div class="file-types">
+              <span class="file-type-tag">PDF</span>
+              <span class="file-type-tag">DOCX</span>
+              <span class="file-type-tag">JPG</span>
+              <span class="file-type-tag">PNG</span>
+              <span class="file-type-tag">Max 20 MB</span>
+            </div>
+          </div>
+
+          <!-- Uploaded Files Preview -->
+          <div class="uploaded-files">
+            <div class="uf-item">
+              <div class="uf-icon uf-pdf">📄</div>
+              <div style="flex:1">
+                <div class="uf-name">Week6_Report_Draft.pdf</div>
+                <div class="uf-size">2.4 MB · PDF</div>
+              </div>
+              <button class="uf-del">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </button>
+            </div>
+            <div class="uf-item">
+              <div class="uf-icon uf-img">🖼️</div>
+              <div style="flex:1">
+                <div class="uf-name">dashboard_screenshot.png</div>
+                <div class="uf-size">1.1 MB · PNG</div>
+              </div>
+              <button class="uf-del">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /form-body -->
+
+      <!-- Form Footer -->
+      <div class="form-footer">
+        <div class="footer-note">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#94A3B8" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Reports can only be edited before supervisor review.
+        </div>
+        <div class="footer-btns">
+          <button class="btn-draft">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display:inline;margin-right:6px"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            Save Draft
+          </button>
+          <button class="btn-submit">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Submit Report
+          </button>
+        </div>
+      </div>
+    </div><!-- /form-card -->
+
+    <!-- ── SIDE PANEL ── -->
+    <div class="side-panel">
+
+      <!-- Progress Card -->
+      <div class="progress-card">
+        <div class="pc-title">
+          <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--accent)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Submission Progress
+        </div>
+        <div class="pc-stat">
+          <span class="pc-stat-label">Reports Submitted</span>
+          <span class="pc-stat-val">5 / 8</span>
+        </div>
+        <div class="pc-bar-wrap">
+          <div class="pc-bar" style="width:62.5%"></div>
+        </div>
+        <div class="pc-weeks">
+          <div class="pcw done">W1</div>
+          <div class="pcw done">W2</div>
+          <div class="pcw done">W3</div>
+          <div class="pcw done">W4</div>
+          <div class="pcw done">W5</div>
+          <div class="pcw cur">W6</div>
+          <div class="pcw todo">W7</div>
+          <div class="pcw todo">W8</div>
+        </div>
+      </div>
+
+      <!-- Tips Card -->
+      <div class="tip-card">
+        <div class="tip-title">
+          <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="#F59E0B" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Submission Tips
+        </div>
+        <div class="tip-item"><div class="tip-dot"></div>Be specific about tasks — avoid vague descriptions</div>
+        <div class="tip-item"><div class="tip-dot"></div>Attach screenshots or files to support your report</div>
+        <div class="tip-item"><div class="tip-dot"></div>Mention hours accurately — minimum 15 hrs/week</div>
+        <div class="tip-item"><div class="tip-dot"></div>Submit before end of each week (Sunday midnight)</div>
+        <div class="tip-item"><div class="tip-dot"></div>You can save as draft and submit later</div>
+      </div>
+
+      <!-- Warning Card -->
+      <div class="info-card">
+        <div class="ic-title">
+          ⚠️ Deadline Reminder
+        </div>
+        <div class="ic-body">Week 6 report deadline is <strong>July 13, 2026</strong>. Submit before Sunday to avoid a late penalty.</div>
+      </div>
+
+      <!-- Supervisor Card -->
+      <div class="tip-card">
+        <div class="tip-title">
+          <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="#10B981" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Your Supervisor
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#10B981,#34D399);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff;flex-shrink:0">A</div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--text-primary)">Dr. Ahmad Nour</div>
+            <div style="font-size:11.5px;color:var(--text-muted)">MIS Department</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--text-muted);display:flex;align-items:center;gap:5px">
+          <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          ahmad@university.com
+        </div>
+      </div>
+
+    </div><!-- /side-panel -->
+
+  </div><!-- /page -->
+</main>
+</body>
+</html>

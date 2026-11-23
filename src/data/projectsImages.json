@@ -1,0 +1,441 @@
+{
+  "lilianoura": {
+    "title": {
+      "en": "LILIANOURA — Enterprise SaaS & AI Operating Cockpit",
+      "ar": "LILIANOURA — منصة التشغيل المؤسسي وقمرة قيادة الذكاء الاصطناعي"
+    },
+    "folder": "public/assets/projects/lilianoura/",
+    "cover": "./public/assets/projects/covers/lilianoura-intelligent-platform-cover.png",
+    "gallery": [
+      "./public/assets/projects/lilianoura/lilianoura_global_intelligence.png",
+      "./public/assets/projects/lilianoura/lilianoura_cockpit_view.png"
+    ],
+    "availableImages": [
+      {
+        "file": "lilianoura_global_intelligence.png",
+        "path": "./public/assets/projects/lilianoura/lilianoura_global_intelligence.png",
+        "title": "Global Intelligence Architecture & Orchestration Platform",
+        "size": "1,816 KB"
+      },
+      {
+        "file": "lilianoura_cockpit_view.png",
+        "path": "./public/assets/projects/lilianoura/lilianoura_cockpit_view.png",
+        "title": "Executive Decision Intelligence Cockpit View",
+        "size": "72 KB"
+      }
+    ]
+  },
+  "trainova": {
+    "title": {
+      "en": "Trainova — Web Application UI/UX Design & Multi-Institutional Platform",
+      "ar": "Trainova — تصميم واجهة وتجربة منصة الويب المؤسسية لإدارة التدريب"
+    },
+    "folder": "public/assets/projects/trainova/",
+    "cover": "./public/assets/projects/covers/cover_trainova.png",
+    "gallery": [
+      "./public/assets/projects/trainova/web/trainova_web_screen3_admin_control_tower.jpeg",
+      "./public/assets/projects/trainova/web/trainova_web_screen1_academic_supervisor.jpeg",
+      "./public/assets/projects/trainova/web/trainova_web_screen2_provider_portal.jpeg",
+      "./public/assets/projects/trainova/web/trainova_web_screen4_student_workspace.jpeg",
+      "./public/assets/projects/trainova/diagrams/trainova_system_architecture_flowchart.png",
+      "./public/assets/projects/trainova/diagrams/trainova_database_er_diagram.jpeg",
+      "./public/assets/projects/trainova/trainova_evaluation_results.png"
+    ],
+    "availableImages": [
+      {
+        "file": "trainova_web_screen3_admin_control_tower.jpeg",
+        "path": "./public/assets/projects/trainova/web/trainova_web_screen3_admin_control_tower.jpeg",
+        "title": "Admin Control Tower & Real-time Metrics",
+        "size": "202 KB"
+      },
+      {
+        "file": "trainova_web_screen1_academic_supervisor.jpeg",
+        "path": "./public/assets/projects/trainova/web/trainova_web_screen1_academic_supervisor.jpeg",
+        "title": "Academic Supervisor Review Portal",
+        "size": "80 KB"
+      },
+      {
+        "file": "trainova_web_screen2_provider_portal.jpeg",
+        "path": "./public/assets/projects/trainova/web/trainova_web_screen2_provider_portal.jpeg",
+        "title": "Training Provider Workspace & Student Attendance",
+        "size": "182 KB"
+      },
+      {
+        "file": "trainova_web_screen4_student_workspace.jpeg",
+        "path": "./public/assets/projects/trainova/web/trainova_web_screen4_student_workspace.jpeg",
+        "title": "Student Weekly Progress & Task Submission",
+        "size": "173 KB"
+      },
+      {
+        "file": "trainova_system_architecture_flowchart.png",
+        "path": "./public/assets/projects/trainova/diagrams/trainova_system_architecture_flowchart.png",
+        "title": "Complete System Architecture & Data Flowchart",
+        "size": "803 KB"
+      },
+      {
+        "file": "trainova_database_er_diagram.jpeg",
+        "path": "./public/assets/projects/trainova/diagrams/trainova_database_er_diagram.jpeg",
+        "title": "Relational Database Schema & Entity Relationships",
+        "size": "182 KB"
+      }
+    ]
+  },
+  "figma-design-system": {
+    "title": {
+      "en": "Figma Design Work",
+      "ar": "أعمال وتصاميم Figma"
+    },
+    "folder": "public/assets/projects/figma-work/",
+    "cover": "./public/assets/projects/covers/cover_figma_work.png",
+    "gallery": [
+      "./public/assets/projects/figma-work/figma_portfolio_thumbnail.png",
+      "./public/assets/projects/figma-work/figma_asset_14.png",
+      "./public/assets/projects/figma-work/figma_asset_9.png",
+      "./public/assets/projects/figma-work/figma_asset_5.png"
+    ],
+    "availableImages": [
+      {
+        "file": "figma_portfolio_thumbnail.png",
+        "path": "./public/assets/projects/figma-work/figma_portfolio_thumbnail.png",
+        "title": "Figma Portfolio Design Showcase",
+        "size": "58 KB"
+      },
+      {
+        "file": "figma_asset_14.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_14.png",
+        "title": "Comprehensive High-Fidelity UI System Overview",
+        "size": "6,309 KB"
+      },
+      {
+        "file": "figma_asset_9.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_9.png",
+        "title": "Dashboard Metric Widgets & Dark Mode Palette",
+        "size": "203 KB"
+      },
+      {
+        "file": "figma_asset_5.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_5.png",
+        "title": "Design Components, Button States & Form Inputs",
+        "size": "155 KB"
+      },
+      {
+        "file": "figma_asset_1.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_1.png",
+        "title": "Screen Layout 01",
+        "size": "161 KB"
+      },
+      {
+        "file": "figma_asset_2.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_2.png",
+        "title": "Screen Layout 02",
+        "size": "109 KB"
+      },
+      {
+        "file": "figma_asset_3.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_3.png",
+        "title": "Screen Layout 03",
+        "size": "142 KB"
+      },
+      {
+        "file": "figma_asset_4.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_4.png",
+        "title": "Screen Layout 04",
+        "size": "102 KB"
+      },
+      {
+        "file": "figma_asset_6.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_6.png",
+        "title": "Screen Layout 06",
+        "size": "110 KB"
+      },
+      {
+        "file": "figma_asset_7.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_7.png",
+        "title": "Screen Layout 07",
+        "size": "146 KB"
+      },
+      {
+        "file": "figma_asset_8.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_8.png",
+        "title": "Screen Layout 08",
+        "size": "105 KB"
+      },
+      {
+        "file": "figma_asset_10.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_10.png",
+        "title": "Screen Layout 10",
+        "size": "102 KB"
+      },
+      {
+        "file": "figma_asset_11.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_11.png",
+        "title": "Screen Layout 11",
+        "size": "111 KB"
+      },
+      {
+        "file": "figma_asset_12.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_12.png",
+        "title": "Screen Layout 12",
+        "size": "153 KB"
+      },
+      {
+        "file": "figma_asset_13.png",
+        "path": "./public/assets/projects/figma-work/figma_asset_13.png",
+        "title": "Screen Layout 13",
+        "size": "101 KB"
+      }
+    ]
+  },
+  "retail-sales-intelligence": {
+    "title": {
+      "en": "Retail Sales Intelligence & Executive Margin Analytics",
+      "ar": "منصة ذكاء مبيعات التجزئة والتحليل المتقدم لهوامش الربحية"
+    },
+    "folder": "public/assets/projects/retail/",
+    "cover": "./public/assets/projects/covers/cover_retail_sales.png",
+    "gallery": [
+      "./public/assets/projects/retail/discount_cliff_analysis.png",
+      "./public/assets/projects/retail/sub_category_profitability.png",
+      "./public/assets/projects/retail/dashboard_screenshot.png",
+      "./public/assets/projects/retail/dashboard_filtered_central.png"
+    ],
+    "availableImages": [
+      {
+        "file": "discount_cliff_analysis.png",
+        "path": "./public/assets/projects/retail/discount_cliff_analysis.png",
+        "title": "Discount Cliff Sensitivity Analysis Chart",
+        "size": "249 KB"
+      },
+      {
+        "file": "sub_category_profitability.png",
+        "path": "./public/assets/projects/retail/sub_category_profitability.png",
+        "title": "Sub-Category Profitability & Return Matrices",
+        "size": "289 KB"
+      },
+      {
+        "file": "dashboard_screenshot.png",
+        "path": "./public/assets/projects/retail/dashboard_screenshot.png",
+        "title": "Executive Sales & Profit Margins Dashboard",
+        "size": "182 KB"
+      },
+      {
+        "file": "dashboard_filtered_central.png",
+        "path": "./public/assets/projects/retail/dashboard_filtered_central.png",
+        "title": "Central Region Filtered Telemetry",
+        "size": "159 KB"
+      },
+      {
+        "file": "dashboard_filtered_furniture.png",
+        "path": "./public/assets/projects/retail/dashboard_filtered_furniture.png",
+        "title": "Furniture Category Granular Deep Dive",
+        "size": "174 KB"
+      }
+    ]
+  },
+  "flutter-mobile-app": {
+    "title": {
+      "en": "Cross-Platform Mobile Application Architecture (Flutter)",
+      "ar": "تطوير تطبيقات الهاتف متعددة المنصات (Flutter & Dart)"
+    },
+    "folder": "public/assets/projects/flutter/",
+    "cover": "./public/assets/projects/covers/cover_flutter_app.png",
+    "gallery": [
+      "./public/assets/projects/flutter/مشروع 1.png",
+      "./public/assets/projects/flutter/مشروع 2.png",
+      "./public/assets/projects/flutter/مشروع3-1.png",
+      "./public/assets/projects/flutter/مشروع4.png"
+    ],
+    "availableImages": [
+      {
+        "file": "مشروع 1.png",
+        "path": "./public/assets/projects/flutter/مشروع 1.png",
+        "title": "Mobile Screen 01 - Main Navigation & Flow",
+        "size": "969 KB"
+      },
+      {
+        "file": "مشروع 2.png",
+        "path": "./public/assets/projects/flutter/مشروع 2.png",
+        "title": "Mobile Screen 02 - Dashboard & Interactive Cards",
+        "size": "678 KB"
+      },
+      {
+        "file": "مشروع3-1.png",
+        "path": "./public/assets/projects/flutter/مشروع3-1.png",
+        "title": "Mobile Screen 03 - Profile & Settings Flow",
+        "size": "197 KB"
+      },
+      {
+        "file": "مشروع 3-2.png",
+        "path": "./public/assets/projects/flutter/مشروع 3-2.png",
+        "title": "Mobile Screen 04 - Transaction Records",
+        "size": "145 KB"
+      },
+      {
+        "file": "مشروع 3-3.png",
+        "path": "./public/assets/projects/flutter/مشروع 3-3.png",
+        "title": "Mobile Screen 05 - Form Verification Screen",
+        "size": "134 KB"
+      },
+      {
+        "file": "مشروع4.png",
+        "path": "./public/assets/projects/flutter/مشروع4.png",
+        "title": "Mobile Screen 06 - State Management & Lists",
+        "size": "423 KB"
+      },
+      {
+        "file": "مشروع 5.png",
+        "path": "./public/assets/projects/flutter/مشروع 5.png",
+        "title": "Mobile Screen 07 - Detail Dialogue & Bottom Sheet",
+        "size": "94 KB"
+      },
+      {
+        "file": "2.png",
+        "path": "./public/assets/projects/flutter/2.png",
+        "title": "Mobile Screen 08 - Alternate Responsive Layout",
+        "size": "108 KB"
+      },
+      {
+        "file": "3.png",
+        "path": "./public/assets/projects/flutter/3.png",
+        "title": "Mobile Screen 09 - Additional View",
+        "size": "102 KB"
+      },
+      {
+        "file": "مشروع2.png",
+        "path": "./public/assets/projects/flutter/مشروع2.png",
+        "title": "Mobile Screen 10 - High-Res Capture",
+        "size": "583 KB"
+      }
+    ]
+  },
+  "student-grades": {
+    "title": {
+      "en": "Educational Grades & Records Management System",
+      "ar": "نظام إدارة درجات وسجلات الطلبة"
+    },
+    "folder": "public/assets/projects/student-grades/",
+    "cover": "./public/assets/projects/covers/cover_student_grades.png",
+    "gallery": [
+      "./public/assets/projects/student-grades/student_grades_dashboard.png",
+      "./public/assets/projects/student-grades/student_grades_login.png"
+    ],
+    "availableImages": [
+      {
+        "file": "student_grades_dashboard.png",
+        "path": "./public/assets/projects/student-grades/student_grades_dashboard.png",
+        "title": "Live Academic Grade Matrix & Student Roster Dashboard",
+        "size": "117 KB"
+      },
+      {
+        "file": "student_grades_login.png",
+        "path": "./public/assets/projects/student-grades/student_grades_login.png",
+        "title": "Role-Based Academic Authentication Gateway",
+        "size": "359 KB"
+      }
+    ]
+  },
+  "al-najma": {
+    "title": {
+      "en": "Al-Najma Electronics — Financial Engineering & Digital Transformation",
+      "ar": "شركة النجمة للإلكترونيات — الهندسة المالية والتحول الرقمي"
+    },
+    "folder": "public/assets/projects/al-najma/",
+    "cover": "./public/assets/projects/covers/cover_al_najma.png",
+    "gallery": [],
+    "availableImages": [],
+    "notice": {
+      "en": "No verified UI screenshots currently. Displayed as an executive corporate card with financial models & documentation.",
+      "ar": "لا توجد صور واجهات معتمدة حالياً. يُعرض كبطاقة مؤسسية أنيقة تتضمن النماذج المالية والوثائق التحليلية."
+    }
+  },
+  "economic-feasibility": {
+    "title": {
+      "en": "Corporate Economic Feasibility & CapEx Valuation Suite",
+      "ar": "حقيبة دراسات الجدوى الاقتصادية وتقييم الإنفاق الرأسمالي (CapEx)"
+    },
+    "folder": "public/assets/projects/economic/",
+    "cover": "./public/assets/projects/covers/economic-feasibility-capex-cover.png",
+    "gallery": [],
+    "availableImages": [],
+    "notice": {
+      "en": "No verified UI screenshots currently. Displayed as an executive corporate card with Excel valuation models.",
+      "ar": "لا توجد صور واجهات معتمدة حالياً. يُعرض كبطاقة مؤسسية أنيقة مع نموذج إكسل المالي المباشر للتحميل."
+    }
+  },
+  "enterprise-network": {
+    "title": {
+      "en": "Enterprise Campus Network Simulation & Multi-Protocol Architecture",
+      "ar": "محاكاة الشبكات المؤسسية ومعمارية البروتوكولات المتعددة"
+    },
+    "folder": "public/assets/projects/networking/",
+    "cover": "./public/assets/projects/covers/enterprise-network-simulation-cover.png",
+    "gallery": [],
+    "availableImages": [],
+    "notice": {
+      "en": "No verified UI screenshots currently. Displayed with direct downloads for 6 Cisco Packet Tracer (.pkt) network topology labs.",
+      "ar": "لا توجد صور واجهات معتمدة حالياً. يُعرض مع إمكانية التحميل المباشر لـ 6 معامل محاكاة شبكات سيسكو (.pkt)."
+    }
+  },
+  "trainova-mobile": {
+    "title": {
+      "en": "Trainova — Initial Mobile App UI Design",
+      "ar": "Trainova — التصميم الأولي لواجهة تطبيق الهاتف المحمول"
+    },
+    "folder": "public/assets/projects/trainova/mobile/",
+    "cover": "./public/assets/projects/covers/cover_trainova_mobile.png",
+    "gallery": [
+      "./public/assets/projects/trainova/mobile/trainova_mobile_welcome_screen.png",
+      "./public/assets/projects/trainova/mobile/trainova_mobile_choose_role.png",
+      "./public/assets/projects/trainova/mobile/trainova_mobile_student_registration.png",
+      "./public/assets/projects/trainova/mobile/trainova_mobile_welcome_overview.png",
+      "./public/assets/projects/trainova/mobile/trainova_mobile_splash_screen.png"
+    ],
+    "availableImages": [
+      "trainova_mobile_welcome_screen.png",
+      "trainova_mobile_choose_role.png",
+      "trainova_mobile_student_registration.png",
+      "trainova_mobile_welcome_overview.png",
+      "trainova_mobile_splash_screen.png"
+    ]
+  },
+  "luxury-hair-salon": {
+    "title": {
+      "en": "Luxury Hair Salon — Visual Experience & UI Transition",
+      "ar": "صالون التجميل الفاخر — التجربة البصرية والحركات التفاعلية"
+    },
+    "folder": "public/assets/projects/luxury-salon/",
+    "cover": "./public/assets/projects/covers/cover_luxury_salon.png",
+    "gallery": [
+      "./public/assets/projects/luxury-salon/salon_frame_3s.jpg",
+      "./public/assets/projects/luxury-salon/salon_frame_6s.jpg",
+      "./public/assets/projects/luxury-salon/salon2_frame_1s.jpg",
+      "./public/assets/projects/luxury-salon/salon2_frame_3s.jpg"
+    ],
+    "availableImages": [
+      {
+        "file": "salon_frame_3s.jpg",
+        "path": "./public/assets/projects/luxury-salon/salon_frame_3s.jpg",
+        "title": "Salon Interactive Experience - Service Showcase Motion",
+        "size": "215 KB"
+      },
+      {
+        "file": "salon_frame_6s.jpg",
+        "path": "./public/assets/projects/luxury-salon/salon_frame_6s.jpg",
+        "title": "Salon Luxury Visual Aesthetics & Layout Framing",
+        "size": "240 KB"
+      },
+      {
+        "file": "salon2_frame_1s.jpg",
+        "path": "./public/assets/projects/luxury-salon/salon2_frame_1s.jpg",
+        "title": "Salon Dynamic Booking Transition & Micro-Interactions",
+        "size": "198 KB"
+      },
+      {
+        "file": "salon2_frame_3s.jpg",
+        "path": "./public/assets/projects/luxury-salon/salon2_frame_3s.jpg",
+        "title": "Salon High-Fidelity UI Presentation",
+        "size": "210 KB"
+      }
+    ]
+  }
+}

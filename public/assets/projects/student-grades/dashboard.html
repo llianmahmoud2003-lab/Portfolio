@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - نظام إدارة الدرجات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-graduation-cap"></i> نظام إدارة الدرجات</h1>
+                <div class="user-info">
+                    <span><i class="fas fa-user"></i> ليليان الخوالدة (مدير النظام)</span>
+                    <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a>
+                </div>
+            </div>
+            <nav>
+                <a href="#" class="active"><i class="fas fa-home"></i> الرئيسية</a>
+                <a href="#"><i class="fas fa-user-graduate"></i> إدارة الطلاب</a>
+                <a href="#"><i class="fas fa-book"></i> إدارة المواد</a>
+                <a href="#"><i class="fas fa-chart-bar"></i> إدارة الدرجات</a>
+            </nav>
+        </header>
+
+        <div class="main-content">
+            <div class="welcome-section">
+                <h2>مرحباً ليليان!</h2>
+                <p>هنا يمكنك إدارة درجات الطلاب بكفاءة وسهولة. استخدم القائمة أعلاه للوصول إلى الأقسام المختلفة.</p>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>عدد الطلاب</h3>
+                        <p>148</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>عدد المواد</h3>
+                        <p>16</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>متوسط الدرجات</h3>
+                        <p>84.6%</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>أعلى درجة</h3>
+                        <p>99</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recent-activities">
+                <h3><i class="fas fa-history"></i> أحدث الدرجات المسجلة في النظام</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>اسم الطالب</th>
+                                <th>المادة</th>
+                                <th>الدرجة</th>
+                                <th>الفصل الدراسي</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>أحمد محمد الكردي</td>
+                                <td>نظم المعلومات الإدارية</td>
+                                <td><span class="grade">94</span></td>
+                                <td>الفصل الأول 2025/2026</td>
+                            </tr>
+                            <tr>
+                                <td>سارة خالد رضوان</td>
+                                <td>تحليل وتصميم النظم</td>
+                                <td><span class="grade">98</span></td>
+                                <td>الفصل الأول 2025/2026</td>
+                            </tr>
+                            <tr>
+                                <td>يوسف محمود عبد الله</td>
+                                <td>قواعد البيانات المتقدمة</td>
+                                <td><span class="grade">89</span></td>
+                                <td>الفصل الأول 2025/2026</td>
+                            </tr>
+                            <tr>
+                                <td>مريم إبراهيم حسن</td>
+                                <td>التجارة الإلكترونية</td>
+                                <td><span class="grade">92</span></td>
+                                <td>الفصل الأول 2025/2026</td>
+                            </tr>
+                            <tr>
+                                <td>عمر سليمان المصري</td>
+                                <td>شبكات الحاسوب والاتصالات</td>
+                                <td><span class="grade">86</span></td>
+                                <td>الفصل الأول 2025/2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

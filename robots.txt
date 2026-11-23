@@ -1,0 +1,7 @@
+# robots.txt for Lilian Alkhawalda Official Portfolio
+User-agent: *
+Allow: /
+Disallow: /scratch/
+Disallow: /chrome-test-profile/
+
+Sitemap: https://lilian-alkhawalda.me/sitemap.xml
