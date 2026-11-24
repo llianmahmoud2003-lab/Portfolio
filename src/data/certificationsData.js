@@ -58,7 +58,7 @@ const certificationsData = [
     icon: "business"
   },
 
-  // 1. Anthropic AI International Certifications (13 Verified Certifications with Skilljar Verification)
+  // 1. Anthropic Academy & Claude Educational Programs (Verified Skilljar Certifications)
   {
     id: "anthropic-mcp-advanced",
     isAcademic: false,

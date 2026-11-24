@@ -37,7 +37,7 @@ const translations = {
     hero_portrait_quote: "\"Precision is the foundation of sustainable systems excellence.\"",
     hero_portrait_name: "Lilian Alkhawalda",
     hero_portrait_role: "Bachelor's Graduate in Contemporary MIS & Business • Al-Aqsa University",
-    hero_portrait_badge: "Official Portrait Space • Reserved",
+    hero_portrait_badge: "",
 
     // Executive Video Introduction Section
     video_subtitle: "Executive Video Introduction",
@@ -67,7 +67,7 @@ const translations = {
     pillar1_title: "Scientific Rigor & Empirical Verification:",
     pillar1_desc: "Every architecture is verified against empirical unit tests, database constraints, and real-world system loads before release.",
     pillar2_title: "Autonomous AI & MCP Systems:",
-    pillar2_desc: "Certified in 13 Anthropic specialized disciplines, designing enterprise-grade agent loops, model context protocol tools, and production prompt safety.",
+    pillar2_desc: "Completed 19 Anthropic Certificates through Anthropic Academy and Claude educational programs, covering agent loops, Model Context Protocol (MCP) tooling, and production prompt safety.",
     pillar3_title: "Commercial Acumen & Data Governance:",
     pillar3_desc: "Transforming raw transactional records into executive-grade automated dashboards and feasibility models that guide multi-million-dollar decisions.",
 
@@ -164,8 +164,8 @@ const translations = {
 
     // Certifications Section
     certs_subtitle: "Verified Accreditations & Continuous Mastery",
-    certs_title: "25 Audited Professional Accreditations",
-    certs_lead: "A verified inventory of 13 international Anthropic certifications with direct Skilljar verification links, 4 TAQAT Academy software tracks, Bright Gaza and cloud specializations, cybersecurity defenses, and quantitative analytics.",
+    certs_title: "Audited Professional Accreditations & Verified Credentials",
+    certs_lead: "A verified inventory highlighting 19 Anthropic Certificates from Anthropic Academy and Claude educational programs, alongside software engineering tracks from TAQAT Academy, Bright Gaza specializations, cybersecurity defenses, networking, and quantitative analytics.",
 
     // Contact Section
     contact_subtitle: "Initiate Dialogue",
@@ -244,7 +244,7 @@ const translations = {
     hero_portrait_quote: "«الدقة هي أساس التميز في بناء النظم المستدامة.»",
     hero_portrait_name: "ليليان الخوالدة",
     hero_portrait_role: "خريجة نظم المعلومات الإدارية والتجارية المعاصرة – بكالوريوس – جامعة الأقصى",
-    hero_portrait_badge: "مساحة الصورة الشخصية الرسمية • محجوزة",
+    hero_portrait_badge: "",
 
     // Executive Video Introduction Section
     video_subtitle: "الفيديو التعريفي الرسمي",
@@ -274,7 +274,7 @@ const translations = {
     pillar1_title: "الدقة العلمية والتحقق التجريبي:",
     pillar1_desc: "كل بنية برمجية تخضع لاختبارات مؤتمتة دقيقة، وقيود تكامل البيانات، ومحاكاة أحمال التشغيل الحقيقية قبل الاعتماد والنشر.",
     pillar2_title: "أنظمة الذكاء الاصطناعي المستقل وMCP:",
-    pillar2_desc: "حاصلة على 13 اعتماداً دولياً متخصصاً من Anthropic في تصميم وكلاء الذكاء الاصطناعي، وبروتوكول سياق النماذج (MCP)، وهندسة الأوامر الآمنة للمؤسسات.",
+    pillar2_desc: "أكملت 19 شهادة من Anthropic عبر Anthropic Academy وبرامج Claude التعليمية في بناء وكلاء الذكاء الاصطناعي، وأدوات بروتوكول سياق النماذج (MCP)، وهندسة الأوامر للإنتاج.",
     pillar3_title: "الحنكة التجارية وحوكمة البيانات:",
     pillar3_desc: "تحويل البيانات والمعاملات الخام إلى لوحات تحكم تنفيذية مؤتمتة ونماذج جدوى تدعم كبرى القرارات الاستراتيجية والاستثمارية.",
 
@@ -371,8 +371,8 @@ const translations = {
 
     // Certifications Section
     certs_subtitle: "الاعتمادات الموثقة والتطوير المستمر",
-    certs_title: "25 شهادة واعتماداً مهنياً موثقاً",
-    certs_lead: "سجل حقيقي موثق يضم 13 شهادة دولية متقدمة من Anthropic بروابط تحقق مباشرة من Skilljar، و4 مسارات مكثفة من أكاديمية طاقات، واعتمادات برايت غزة والحوسبة السحابية، ودفاعات الأمن السيبراني، ونمذجة ذكاء الأعمال.",
+    certs_title: "الشهادات والاعتمادات المهنية الموثقة",
+    certs_lead: "سجل موثق يبرز 19 شهادة من Anthropic عبر Anthropic Academy وبرامج Claude التعليمية، إلى جانب مسارات هندسة البرمجيات من أكاديمية طاقات، واعتمادات برايت غزة، ودفاعات الأمن السيبراني، والشبكات، ونمذجة ذكاء الأعمال.",
 
     // Contact Section
     contact_subtitle: "بدء التواصل والتعاون المهني",
