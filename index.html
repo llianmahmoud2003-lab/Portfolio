@@ -130,17 +130,14 @@
         </div>
       </a>
 
-      <div style="display: flex; align-items: center; gap: 1.5rem;">
+      <div class="nav-actions">
         <ul class="nav-links">
           <li><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
           <li><a href="#video-intro" class="nav-link" data-i18n="video_subtitle">Video Intro</a></li>
           <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a></li>
-          <li><a href="#ai-creative" class="nav-link" data-i18n="nav_ai_creative">AI Creative</a></li>
           <li><a href="#services" class="nav-link" data-i18n="nav_services">Services & Deliverables</a></li>
           <li><a href="#certifications" class="nav-link" data-i18n="nav_certifications">Certifications</a></li>
-          <li><a href="excel-data-analytics.html" class="nav-link" data-i18n="nav_excel_service">Excel Analytics</a></li>
-          <li><a href="card.html" class="nav-link" data-i18n="nav_digital_card" style="color: var(--berry-rose); font-weight: 600;">Digital Card</a></li>
-          <li><a href="#contact" class="btn-primary btn-hire-me" style="background: linear-gradient(135deg, var(--rose-pink) 0%, var(--berry-rose) 100%); color: #fff; font-weight: 700; padding: 0.5rem 1.25rem; border-radius: 20px; box-shadow: 0 4px 15px rgba(232, 160, 181, 0.35); text-decoration: none;" data-i18n="nav_hire_me">Hire Me</a></li>
+          <li><a href="#contact" class="btn-nav-hire" data-i18n="nav_hire_me">Hire Me</a></li>
         </ul>
 
         <!-- Language Switcher EN | AR -->
@@ -1010,8 +1007,7 @@
           const coverImg = (typeof getProjectCover === 'function') ? getProjectCover(p.id) : (p.thumbnail || null);
           const currentGallery = (typeof getProjectGallery === 'function') ? getProjectGallery(p.id) : (p.gallery || []);
           
-          const isWide = p.id === 'figma-design-system' || p.id === 'retail-sales-intelligence';
-          const colSpan = isWide ? 'col-span-12' : 'col-span-6';
+          const colSpan = 'col-span-6';
 
           const isLilianoura = (p.id === 'lilianoura');
           const isAlNajma = (p.id === 'al-najma');
