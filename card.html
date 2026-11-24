@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LILIAN ALKHAWALDA | Professional Digital Business Card</title>
+  <meta name="description" content="بطاقة التعريف المهنية الرقمية الموحدة — ليليان الخوالدة LILIAN ALKHAWALDA | خريجة نظم المعلومات الإدارية والتجارية المعاصرة، متخصصة في تحليل بيانات الأعمال وهندسة النظم.">
+  <link rel="canonical" href="https://lilian-alkhawalda-portfolio.vercel.app/card.html">
+  <link rel="icon" type="image/png" href="./public/assets/logos/favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="LILIAN ALKHAWALDA | Professional Digital Business Card">
+  <meta property="og:description" content="البطاقة الرقمية الرسمية: جميع الروابط المهنية، منصات العمل الحر، ومعرض الأعمال المعتمد.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://lilian-alkhawalda-portfolio.vercel.app/card.html">
+  <meta property="og:image" content="https://lilian-alkhawalda-portfolio.vercel.app/public/assets/images/lilian-portrait.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-rose-gold: #B76E79;
+      --color-champagne: #E8D5C4;
+      --color-warm-ivory: #FAF8F5;
+      --color-deep-charcoal: #252329;
+      --color-dusty-rose: #C9A1A5;
+      --color-white: #FFFFFF;
+      --color-border: rgba(183, 110, 121, 0.22);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Tajawal', 'Plus Jakarta Sans', system-ui, sans-serif;
+      --shadow-luxury: 0 25px 60px -15px rgba(37, 35, 41, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-warm-ivory);
+      background-image: radial-gradient(circle at 50% 0%, #FFF5EF 0%, var(--color-warm-ivory) 100%);
+      color: var(--color-deep-charcoal);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem 0.8rem;
+      direction: rtl;
+    }
+
+    .card-wrapper {
+      width: 100%;
+      max-width: 430px;
+      margin: 0 auto;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 24px;
+      box-shadow: var(--shadow-luxury);
+      overflow: hidden;
+      position: relative;
+    }
+    @media (max-width: 480px) {
+      body { padding: 1rem 0.5rem !important; }
+      .card-body { padding: 1rem 1rem 1.8rem !important; }
+      .profile-name { font-size: 1.45rem !important; }
+      .degree-pill { font-size: 0.75rem !important; padding: 0.4rem 0.75rem !important; }
+      .card-link-item { padding: 0.8rem 0.9rem !important; font-size: 0.86rem !important; }
+      .bottom-cta-grid { gap: 0.5rem !important; }
+    }
+
+    /* Top Decorative Banner */
+    .card-banner {
+      height: 110px;
+      background: linear-gradient(135deg, #252329 0%, #3A3540 50%, var(--color-rose-gold) 100%);
+      position: relative;
+    }
+
+    .banner-watermark {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.35);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* Profile Avatar */
+    .avatar-container {
+      position: relative;
+      margin-top: -65px;
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+
+    .avatar-frame {
+      width: 124px;
+      height: 124px;
+      border-radius: 50%;
+      border: 4px solid var(--color-white);
+      box-shadow: 0 10px 25px rgba(37, 35, 41, 0.12);
+      object-fit: cover;
+      background: var(--color-warm-ivory);
+    }
+
+    .online-badge {
+      position: absolute;
+      bottom: 6px;
+      right: 50%;
+      transform: translateX(45px);
+      background: #2E7D32;
+      color: #FFF;
+      font-size: 0.65rem;
+      padding: 0.15rem 0.6rem;
+      border-radius: 20px;
+      border: 2px solid var(--color-white);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* Identity Info */
+    .card-body {
+      padding: 1.2rem 1.8rem 2.2rem;
+      text-align: center;
+    }
+
+    .profile-name {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--color-deep-charcoal);
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.5px;
+    }
+
+    .profile-name-en {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      color: var(--color-rose-gold);
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.8rem;
+    }
+
+    .degree-pill {
+      background: #F8F3EE;
+      border: 1px solid var(--color-champagne);
+      color: var(--color-deep-charcoal);
+      padding: 0.45rem 1rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+      display: inline-block;
+    }
+
+    .profile-bio {
+      font-size: 0.88rem;
+      color: #636069;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      padding: 0 0.5rem;
+    }
+
+    /* Skills Chips */
+    .skills-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .skill-chip {
+      background: var(--color-warm-ivory);
+      border: 1px solid rgba(183, 110, 121, 0.25);
+      color: var(--color-deep-charcoal);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+    }
+
+    /* Action Links List */
+    .links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .card-link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.95rem 1.2rem;
+      background: var(--color-warm-ivory);
+      border: 1px solid var(--color-border);
+      border-radius: 14px;
+      color: var(--color-deep-charcoal);
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-link-item:hover {
+      background: #FFF;
+      border-color: var(--color-rose-gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(183, 110, 121, 0.15);
+    }
+
+    .link-left {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .link-icon-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      background: #FFF;
+      border: 1px solid #EFEAE5;
+      color: var(--color-rose-gold);
+    }
+
+    .link-arrow {
+      color: var(--color-dusty-rose);
+      font-size: 0.9rem;
+      transition: transform 0.2s ease;
+    }
+
+    .card-link-item:hover .link-arrow {
+      transform: translateX(-4px);
+      color: var(--color-rose-gold);
+    }
+
+    /* Featured Link highlight */
+    .link-featured {
+      background: linear-gradient(135deg, var(--color-rose-gold) 0%, #A25C66 100%);
+      color: #FFF;
+      border-color: var(--color-rose-gold);
+      box-shadow: 0 6px 18px rgba(183, 110, 121, 0.25);
+    }
+
+    .link-featured:hover {
+      background: linear-gradient(135deg, #a25c66 0%, #8c4b54 100%);
+      color: #FFF;
+    }
+
+    .link-featured .link-icon-box {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: transparent;
+      color: #FFF;
+    }
+
+    .link-featured .link-arrow {
+      color: #FFF;
+    }
+
+    /* Primary Action Buttons */
+    .bottom-cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-action-primary {
+      padding: 0.85rem 1rem;
+      background: var(--color-deep-charcoal);
+      color: #FFF;
+      border-radius: 12px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-action-primary:hover {
+      background: #3A3540;
+      transform: translateY(-2px);
+    }
+
+    .btn-action-qr {
+      padding: 0.85rem 1rem;
+      background: #FFF;
+      color: var(--color-deep-charcoal);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-action-qr:hover {
+      border-color: var(--color-rose-gold);
+      color: var(--color-rose-gold);
+      background: var(--color-warm-ivory);
+    }
+
+    /* QR Modal */
+    .qr-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(37, 35, 41, 0.7);
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .qr-modal.active {
+      display: flex;
+    }
+
+    .qr-modal-box {
+      background: #FFF;
+      border-radius: 24px;
+      padding: 2.2rem;
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+      position: relative;
+    }
+
+    .qr-close-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: #F0ECE7;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-deep-charcoal);
+    }
+
+    .qr-img-wrap {
+      background: #FAF8F5;
+      padding: 1.2rem;
+      border-radius: 16px;
+      border: 1px solid #EFE8E1;
+      margin: 1.2rem 0;
+      display: inline-block;
+    }
+
+    .qr-img-wrap img, .qr-img-wrap canvas {
+      width: 200px;
+      height: 200px;
+      display: block;
+    }
+
+    .qr-caption {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--color-deep-charcoal);
+      margin-bottom: 0.3rem;
+    }
+
+    .qr-sub {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+    }
+
+    /* Footer Note */
+    .card-footer {
+      font-size: 0.75rem;
+      color: #9C98A2;
+      border-top: 1px solid #F5EFEB;
+      padding-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-wrapper">
+    <!-- Header Banner -->
+    <div class="card-banner">
+      <span class="banner-watermark">LILIAN ALKHAWALDA</span>
+    </div>
+
+    <!-- Avatar -->
+    <div class="avatar-container">
+      <img src="./public/assets/images/lilian-portrait.jpg" alt="LILIAN ALKHAWALDA" class="avatar-frame">
+      <span class="online-badge">متاح للتعاقد</span>
+    </div>
+
+    <!-- Body Content -->
+    <div class="card-body">
+      <h1 class="profile-name">ليليان الخوالدة</h1>
+      <div class="profile-name-en">LILIAN ALKHAWALDA</div>
+
+      <div class="degree-pill">
+        خريجة نظم المعلومات الإدارية والتجارية المعاصرة<br>
+        <span style="font-size: 0.72rem; color: var(--color-rose-gold); font-weight: 600;">Bachelor's Graduate in Contemporary MIS & Business – Al-Aqsa University</span>
+      </div>
+
+      <p class="profile-bio">
+        أجمع بين تطوير النظم البرمجية، تحليل بيانات الأعمال في Excel، وبناء وكلاء الذكاء الاصطناعي لتحويل التحديات المعقدة إلى قيمة أعمال محققة.
+      </p>
+
+      <!-- Skills Chips -->
+      <div class="skills-row">
+        <span class="skill-chip">📊 Business Analytics</span>
+        <span class="skill-chip">📑 Excel Reporting</span>
+        <span class="skill-chip">⚙️ MIS Architecture</span>
+        <span class="skill-chip">🤖 AI Agents & MCP</span>
+        <span class="skill-chip">📈 Feasibility Modeling</span>
+      </div>
+
+      <!-- Action Links -->
+      <div class="links-list">
+        <!-- 1. Portfolio -->
+        <a href="index.html" class="card-link-item link-featured">
+          <div class="link-left">
+            <div class="link-icon-box">🌐</div>
+            <div>
+              <div>معرض الأعمال الشامل</div>
+              <div style="font-size: 0.72rem; opacity: 0.9; font-weight: normal;">Official Verified Portfolio</div>
+            </div>
+          </div>
+          <span class="link-arrow">←</span>
+        </a>
+
+        <!-- 2. Excel Service -->
+        <a href="excel-data-analytics.html" class="card-link-item" style="border-color: var(--color-rose-gold);">
+          <div class="link-left">
+            <div class="link-icon-box" style="color: #2E7D32;">📊</div>
+            <div>
+              <div>خدمة تحليل بيانات Excel والتقارير</div>
+              <div style="font-size: 0.72rem; color: var(--color-text-muted); font-weight: normal;">Business Data Analytics & Reporting</div>
+            </div>
+          </div>
+          <span class="link-arrow">←</span>
+        </a>
+
+        <!-- 3. LinkedIn -->
+        <a href="https://www.linkedin.com/in/llian-alkhawalda-060b6543b/" target="_blank" rel="noopener noreferrer" class="card-link-item">
+          <div class="link-left">
+            <div class="link-icon-box" style="color: #0A66C2;">💼</div>
+            <div>
+              <div>الملف المهني على LinkedIn</div>
+              <div style="font-size: 0.72rem; color: var(--color-text-muted); font-weight: normal;">Connect on LinkedIn</div>
+            </div>
+          </div>
+          <span class="link-arrow">←</span>
+        </a>
+
+        <!-- 4. GitHub -->
+        <a href="https://github.com/llianmahmoud2003-lab" target="_blank" rel="noopener noreferrer" class="card-link-item">
+          <div class="link-left">
+            <div class="link-icon-box" style="color: #24292E;">💻</div>
+            <div>
+              <div>مختبر برمجيات GitHub</div>
+              <div style="font-size: 0.72rem; color: var(--color-text-muted); font-weight: normal;">Repositories & Code Lab</div>
+            </div>
+          </div>
+          <span class="link-arrow">←</span>
+        </a>
+
+        <!-- 5. Khamsat -->
+        <a href="https://khamsat.com/user/llian_kh" target="_blank" rel="noopener noreferrer" class="card-link-item">
+          <div class="link-left">
+            <div class="link-icon-box" style="color: #E88D14;">🤝</div>
+            <div>
+              <div>حساب منصة خمسات المعتمد</div>
+              <div style="font-size: 0.72rem; color: var(--color-text-muted); font-weight: normal;">Khamsat Verified Account</div>
+            </div>
+          </div>
+          <span class="link-arrow">←</span>
+        </a>
+
+        <!-- 6. Mostaql -->
+        <a href="https://mostaql.com/u/LlianMIS_Pro" target="_blank" rel="noopener noreferrer" class="card-link-item">
+          <div class="link-left">
+            <div class="link-icon-box" style="color: #0077C5;">🚀</div>
+            <div>
+              <div>حساب منصة مستقل المهني</div>
+              <div style="font-size: 0.72rem; color: var(--color-text-muted); font-weight: normal;">Mostaql Freelance Profile</div>
+            </div>
+          </div>
+          <span class="link-arrow">←</span>
+        </a>
+
+        <!-- 7. Email -->
+        <a href="mailto:llianalkhawalda2003@gmail.com" class="card-link-item">
+          <div class="link-left">
+            <div class="link-icon-box" style="color: #C5221F;">✉️</div>
+            <div>
+              <div>مراسلة بريدية مباشرة</div>
+              <div style="font-size: 0.72rem; color: var(--color-text-muted); font-weight: normal;">llianalkhawalda2003@gmail.com</div>
+            </div>
+          </div>
+          <span class="link-arrow">←</span>
+        </a>
+      </div>
+
+      <!-- Quick Action Buttons: Save Contact & Show QR -->
+      <div class="bottom-cta-grid">
+        <button id="saveContactBtn" class="btn-action-primary">
+          <span>📲</span> حفظ جهة الاتصال
+        </button>
+        <button id="openQrBtn" class="btn-action-qr">
+          <span>📷</span> مسح الـ QR
+        </button>
+      </div>
+
+      <!-- Card Footer -->
+      <div class="card-footer">
+        LILIAN ALKHAWALDA &bull; Official Digital Card &bull; 2026
+      </div>
+    </div>
+  </div>
+
+  <!-- QR Code Modal -->
+  <div class="qr-modal" id="qrModal">
+    <div class="qr-modal-box">
+      <button class="qr-close-btn" id="closeQrBtn">&times;</button>
+      <div class="qr-caption">Scan to Explore My Professional Profile</div>
+      <div class="qr-sub">امسح الرمز بكاميرا الهاتف للوصول للبطاقة الرقمية</div>
+      <div class="qr-img-wrap">
+        <img id="qrImageTag" src="./public/assets/images/qr_code.png" alt="Scan to Explore My Professional Profile">
+      </div>
+      <div style="font-size: 0.75rem; color: #8A8590;">
+        https://lilian-alkhawalda-portfolio.vercel.app/card.html
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // QR Modal Controls
+    const qrModal = document.getElementById('qrModal');
+    document.getElementById('openQrBtn').addEventListener('click', () => {
+      qrModal.classList.add('active');
+    });
+    document.getElementById('closeQrBtn').addEventListener('click', () => {
+      qrModal.classList.remove('active');
+    });
+    qrModal.addEventListener('click', (e) => {
+      if (e.target === qrModal) qrModal.classList.remove('active');
+    });
+
+    // Save Contact as vCard (.vcf)
+    document.getElementById('saveContactBtn').addEventListener('click', () => {
+      const vcard = 
+`BEGIN:VCARD
+VERSION:3.0
+N:الخوالدة;ليليان;;;
+FN:ليليان الخوالدة | Lilian Alkhawalda
+ORG:LILIAN ALKHAWALDA Professional Services
+TITLE:Bachelor's Graduate in Contemporary MIS & Business - Al-Aqsa University
+EMAIL;TYPE=INTERNET,PREF:llianalkhawalda2003@gmail.com
+URL;TYPE=WORK:https://lilian-alkhawalda-portfolio.vercel.app
+URL;TYPE=CARD:https://lilian-alkhawalda-portfolio.vercel.app/card.html
+NOTE:Business Data Analytics, Excel Modeling, MIS Architecture, AI Agents.
+END:VCARD`;
+
+      const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'Lilian_Alkhawalda.vcf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
+</body>
+</html>
