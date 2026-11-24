@@ -3,5 +3,10 @@ User-agent: *
 Allow: /
 Disallow: /scratch/
 Disallow: /chrome-test-profile/
+Disallow: /*_verification.html
+Disallow: /*_preview.html
+Disallow: /*_manager.html
+Disallow: /*_side_by_side.html
+Disallow: /*.bak
 
-Sitemap: https://lilian-alkhawalda.me/sitemap.xml
+Sitemap: https://lilian-alkhawalda-portfolio.vercel.app/sitemap.xml

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دليل الخدمات الأساسية في المناطق المتضررة — منصة إنسانية تفاعلية | ليليان الخوالدة LILIAN ALKHAWALDA</title>
+  <meta name="description" content="منصة تفاعلية إنسانية صُممت أثناء فترات الأزمات والحروب لتيسير وصول السكان والمتضررين إلى الخدمات الحيوية الطارئة، مثل المستشفيات والمراكز الإغاثية ونقاط مياه الشرب.">
+  <link rel="canonical" href="https://lilian-alkhawalda-portfolio.vercel.app/projects/essential-services-map.html">
+  <meta name="author" content="Lilian Alkhawalda (لليان الخوالدة)">
+  <meta name="keywords" content="دليل الخدمات الأساسية في المناطق المتضررة — منصة إنسانية تفاعلية, Essential Services Map — Humanitarian Support Platform, لليان الخوالدة, ليليان الخوالدة, Lilian Alkhawalda, Llian Alkhawalda, الأنظمة الإنسانية والويب, ذكاء الأعمال, جامعة الأقصى">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="LILIAN ALKHAWALDA | Official Portfolio">
+  <meta property="og:title" content="دليل الخدمات الأساسية في المناطق المتضررة — منصة إنسانية تفاعلية | LILIAN ALKHAWALDA">
+  <meta property="og:description" content="منصة تفاعلية إنسانية صُممت أثناء فترات الأزمات والحروب لتيسير وصول السكان والمتضررين إلى الخدمات الحيوية الطارئة، مثل المستشفيات والمراكز الإغاثية ونقاط مياه الشرب.">
+  <meta property="og:url" content="https://lilian-alkhawalda-portfolio.vercel.app/projects/essential-services-map.html">
+  <meta property="og:image" content="https://lilian-alkhawalda-portfolio.vercel.app/public/assets/projects/covers/essential_services_map_official_cover.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Essential Services Map — Humanitarian Support Platform | LILIAN ALKHAWALDA">
+  <meta name="twitter:description" content="An empathetic interactive crisis-response platform designed during wartime to help impacted communities navigate vital lifelines including medical clinics, food distribution centers, and clean water points.">
+  <meta name="twitter:image" content="https://lilian-alkhawalda-portfolio.vercel.app/public/assets/projects/covers/essential_services_map_official_cover.jpg">
+
+  <link rel="icon" type="image/png" href="../public/assets/logos/favicon.png">
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --rose-gold: #B76E79;
+      --deep-charcoal: #1C1A20;
+      --card-bg: #FFFFFF;
+      --text-muted: #5A5860;
+      --border-soft: rgba(183, 110, 121, 0.18);
+    }
+    body {
+      background: #FAF8F5;
+      font-family: 'Tajawal', 'Plus Jakarta Sans', system-ui, sans-serif;
+      color: #252329;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+    .project-hero {
+      padding: 6rem 1.5rem 3rem;
+      background: radial-gradient(circle at top right, rgba(232, 213, 196, 0.35), transparent 70%), #FAF8F5;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .breadcrumb {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumb a {
+      color: var(--rose-gold);
+      text-decoration: none;
+    }
+    .project-badge {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      background: rgba(183, 110, 121, 0.12);
+      color: #934651;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+    .project-title-ar {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1C1A20;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .project-title-en {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      color: var(--rose-gold);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      direction: ltr;
+      text-align: right;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: #FFFFFF;
+      border-radius: 16px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 10px 25px -10px rgba(0,0,0,0.04);
+    }
+    .meta-item-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .meta-item-value {
+      font-size: 0.95rem;
+      color: #1C1A20;
+      font-weight: 700;
+      margin-top: 0.25rem;
+    }
+    .media-showcase {
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .media-showcase img {
+      width: 100%;
+      max-width: 980px;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px -15px rgba(28, 26, 32, 0.15);
+      border: 1px solid rgba(183, 110, 121, 0.25);
+    }
+    .content-section {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 12px 30px -12px rgba(0,0,0,0.03);
+    }
+    .section-heading {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1C1A20;
+      margin-bottom: 1.25rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    .section-heading::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--rose-gold);
+      border-radius: 2px;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .feature-list li {
+      position: relative;
+      padding-right: 1.75rem;
+      margin-bottom: 1rem;
+      font-size: 0.98rem;
+    }
+    .feature-list li::before {
+      content: '✓';
+      position: absolute;
+      right: 0;
+      color: var(--rose-gold);
+      font-weight: 800;
+    }
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+    .tag-chip {
+      padding: 0.4rem 0.9rem;
+      background: #FAF8F5;
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #333;
+    }
+    .nav-project-links {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 3rem 0;
+      flex-wrap: wrap;
+    }
+    .nav-btn {
+      flex: 1;
+      min-width: 260px;
+      padding: 1.2rem 1.5rem;
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      text-decoration: none;
+      color: #1C1A20;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+    .nav-btn:hover {
+      border-color: var(--rose-gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(183, 110, 121, 0.12);
+    }
+    .nav-btn-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .nav-btn-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-top: 0.25rem;
+      color: var(--rose-gold);
+    }
+    .btn-action-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      background: linear-gradient(135deg, #B76E79 0%, #934651 100%);
+      color: #FFFFFF !important;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 8px 20px rgba(183, 110, 121, 0.28);
+      transition: transform 0.2s ease;
+    }
+    .btn-action-primary:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+
+  <!-- Structured Data JSON-LD for CreativeWork / SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Essential Services Map — Humanitarian Support Platform",
+    "alternateName": "دليل الخدمات الأساسية في المناطق المتضررة — منصة إنسانية تفاعلية",
+    "headline": "دليل الخدمات الأساسية في المناطق المتضررة — منصة إنسانية تفاعلية",
+    "description": "An empathetic interactive crisis-response platform designed during wartime to help impacted communities navigate vital lifelines including medical clinics, food distribution centers, and clean water points.",
+    "applicationCategory": "Humanitarian Tech & Web Systems",
+    "operatingSystem": "Web, Cloud, Cross-Platform",
+    "author": {
+      "@type": "Person",
+      "@id": "https://lilian-alkhawalda-portfolio.vercel.app/#person",
+      "name": "Lilian Alkhawalda",
+      "jobTitle": "Contemporary Management Information Systems Specialist",
+      "url": "https://lilian-alkhawalda-portfolio.vercel.app/"
+    },
+    "url": "https://lilian-alkhawalda-portfolio.vercel.app/projects/essential-services-map.html",
+    "image": "https://lilian-alkhawalda-portfolio.vercel.app/public/assets/projects/covers/essential_services_map_official_cover.jpg"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" style="background: rgba(250, 248, 245, 0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-soft); position: sticky; top: 0; z-index: 1000;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 1rem;">
+      <a href="../index.html" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+        <img src="../public/assets/logos/logo-header.png" alt="LILIAN ALKHAWALDA" style="height: 38px;">
+        <span style="font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 700; color: #1C1A20; letter-spacing: 0.5px;">LILIAN ALKHAWALDA</span>
+      </a>
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <a href="../projects.html" style="color: #1C1A20; text-decoration: none; font-size: 0.9rem; font-weight: 600;">معرض المشاريع</a>
+        <a href="../card.html" style="color: var(--rose-gold); text-decoration: none; font-size: 0.9rem; font-weight: 600;">البطاقة الرقمية</a>
+        <a href="../contact.html" style="padding: 0.45rem 1.1rem; background: #B76E79; color: #fff; border-radius: 18px; text-decoration: none; font-size: 0.82rem; font-weight: 700;">تواصل معي</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Hero -->
+  <header class="project-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">الرئيسية</a> &gt; <a href="../projects.html">المشاريع</a> &gt; <span>دليل الخدمات الأساسية في المناطق المتضررة </span>
+      </div>
+      <span class="project-badge">الأنظمة الإنسانية والويب</span>
+      <h1 class="project-title-ar">دليل الخدمات الأساسية في المناطق المتضررة — منصة إنسانية تفاعلية</h1>
+      <div class="project-title-en">Essential Services Map — Humanitarian Support Platform</div>
+
+      <div class="meta-grid">
+        <div>
+          <div class="meta-item-label">دور العمل والمساهمة</div>
+          <div class="meta-item-value">مصممة واجهات جغرافية وقائدة المبادرة</div>
+        </div>
+        <div>
+          <div class="meta-item-label">تاريخ الإنجاز</div>
+          <div class="meta-item-value">مكتمل ومعتمد</div>
+        </div>
+        <div>
+          <div class="meta-item-label">حالة المشروع</div>
+          <div class="meta-item-value">نموذج أولي تفاعلي للاستجابة الإنسانية</div>
+        </div>
+        <div>
+          <div class="meta-item-label">المؤهل المنفذ</div>
+          <div class="meta-item-value">بكالوريوس نظم المعلومات الإدارية – جامعة الأقصى</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container" style="padding-top: 2rem;">
+    <!-- Media Showcase -->
+    <div class="media-showcase">
+      <img src="../public/assets/projects/covers/essential_services_map_official_cover.jpg" alt="دليل الخدمات الأساسية في المناطق المتضررة — منصة إنسانية تفاعلية — الغلاف المعتمد">
+    </div>
+
+    <!-- Overview -->
+    <section class="content-section">
+      <h2 class="section-heading">نظرة عامة على المشروع</h2>
+      <p style="font-size: 1.05rem; color: #333;">مبادرة إنسانية شخصية نُفذت في ظل ظروف الأزمات والحروب (2024-2025) لسد فجوة الوصول إلى المعلومات الحيوية في المناطق المتأثرة. تم بناء المنصة كتطبيق ويب خفيف وسريع التحميل يتيح التصفية الفورية للخدمات الحيوية المصنفة إلى مستشفيات وعيادات، ومراكز إغاثة ومساعدات، ونقاط توزيع مياه صالحة للشرب. تتضمن المنصة شريط بحث فوري، وخريطة تفاعلية موجهة بنقاط الإحداثيات، وتفاصيل أوقات العمل والسعة الاستيعابية وزر الاتجاهات. ملاحظة: تم تطوير ونشر المشروع كنموذج أولي وظيفي تفاعلي يجسد توظيف التكنولوجيا في الاستجابة الإنسانية؛ وتتضمن البيانات سجلات ونقاط تجريبية لغرض المحاكاة.</p>
+      
+      
+    </section>
+
+    <!-- Problem & Solution -->
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+      <section class="content-section" style="margin-bottom: 0;">
+        <h2 class="section-heading">التحدي الإداري والتقني</h2>
+        <p style="font-size: 0.96rem; color: #444;">في أوقات النزاعات والأزمات، يؤدي انهيار البنية التحتية وتشتت المعلومات إلى صعوبة بالغة وخطورة حقيقية في معرفة أماكن المستشفيات الفعالة، ومراكز توزيع الإغاثة، ونقاط المياه النقية.</p>
+      </section>
+      <section class="content-section" style="margin-bottom: 0;">
+        <h2 class="section-heading">الحل وهندسة النظم</h2>
+        <p style="font-size: 0.96rem; color: #444;">تصميم واجهة ويب سريعة وخفيفة تستهلك أدنى حد من حزم البيانات، توفر تصنيفاً واضحاً للخدمات، ومفتاح خريطة ملوناً، وإرشادات واضحة للوصول إلى أقرب نقطة خدمة أساسية.</p>
+      </section>
+    </div>
+    
+
+    <!-- Features -->
+    
+
+    <!-- Tech Stack -->
+    
+
+    <!-- Navigation between projects -->
+    <nav class="nav-project-links" aria-label="تنقل بين المشاريع">
+      <a href="./student-grades-management.html" class="nav-btn" style="text-align: right;">
+        <span class="nav-btn-sub">← المشروع السابق</span>
+        <span class="nav-btn-title">نظام إدارة درجات وسجلات الطلبة</span>
+      </a>
+      <a href="../projects.html" class="nav-btn" style="text-align: center; justify-content: center;">
+        <span class="nav-btn-sub">دليل الأعمال</span>
+        <span class="nav-btn-title" style="color: #1C1A20;">العودة لكافة المشاريع</span>
+      </a>
+      <a href="./lilianoura.html" class="nav-btn" style="text-align: left;">
+        <span class="nav-btn-sub">المشروع التالي →</span>
+        <span class="nav-btn-title">LILIANOURA </span>
+      </a>
+    </nav>
+  </main>
+
+  <!-- Footer -->
+  <footer style="background: #1C1A20; color: #FAF8F5; padding: 3rem 1.5rem; margin-top: 4rem; text-align: center;">
+    <div class="container">
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: #E8D5C4;">LILIAN ALKHAWALDA</div>
+      <p style="font-size: 0.88rem; color: #B3B0B8; margin-top: 0.5rem;">متخصصة نظم المعلومات الإدارية والتجارية المعاصرة – جامعة الأقصى</p>
+      
+      <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap;">
+        <a href="https://www.linkedin.com/in/llian-alkhawalda-060b6543b/" target="_blank" rel="noopener noreferrer" style="color: #FAF8F5; text-decoration: none; font-size: 0.85rem;">LinkedIn</a>
+        <a href="https://github.com/llianmahmoud2003-lab" target="_blank" rel="noopener noreferrer" style="color: #FAF8F5; text-decoration: none; font-size: 0.85rem;">GitHub</a>
+        <a href="https://mostaql.com/u/LlianMIS_Pro" target="_blank" rel="noopener noreferrer" style="color: #FAF8F5; text-decoration: none; font-size: 0.85rem;">Mostaql</a>
+        <a href="https://khamsat.com/user/llian_k" target="_blank" rel="noopener noreferrer" style="color: #FAF8F5; text-decoration: none; font-size: 0.85rem;">Khamsat</a>
+        <a href="../card.html" style="color: var(--rose-gold); text-decoration: none; font-size: 0.85rem;">Digital Card</a>
+      </div>
+
+      <div style="font-size: 0.78rem; color: #7A7880; margin-top: 2rem;">
+        © 2026 Lilian Alkhawalda. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

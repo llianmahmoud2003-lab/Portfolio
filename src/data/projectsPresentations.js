@@ -2692,13 +2692,13 @@ const projectsPresentationsData = {
         },
         "points": {
           "en": [
-            "Network Engineer: Lilian Alkhawalda (Infrastructure & Security Engineer)",
+            "Network Specialist: Lilian Alkhawalda (Infrastructure & Security Specialist)",
             "Scope: 6 Documented Cisco Packet Tracer Labs (.pkt) ready for direct download",
             "Protocols: Dynamic Routing (OSPF/RIP), VLAN Segmentation, Inter-VLAN, DHCP, DNS",
             "Classification: Networking & Infrastructure"
           ],
           "ar": [
-            "مهندسة البنية التحتية والشبكات: ليليان الخوالدة.",
+            "متخصصة البنية التحتية والشبكات: ليليان الخوالدة.",
             "النطاق: 6 معامل محاكاة شبكات سيسكو أصلية (.pkt) جاهزة للتحميل المباشر.",
             "البروتوكولات: التوجيه الديناميكي (OSPF, RIP)، عزل شبكات VLAN، خوادم DHCP وDNS.",
             "التصنيف: هندسة وتأمين الشبكات والبنية التحتية المؤسسية."
@@ -2933,7 +2933,7 @@ const projectsPresentationsData = {
         "number": 11,
         "type": "ownership",
         "title": {
-          "en": "Engineer Role & Scope",
+          "en": "Specialist Role & Scope",
           "ar": "دور لليان الخوالدة ونطاق العمل الفردي"
         },
         "subtitle": {
@@ -3239,7 +3239,7 @@ const projectsPresentationsData = {
         },
         "title": {
           "en": "Lilian Alkhawalda's Lead Design Ownership",
-          "ar": "ملكية التصميم القيادية للمهندسة لليان الخوالدة"
+          "ar": "ملكية التصميم القيادية للمتخصصة لليان الخوالدة"
         },
         "subtitle": {
           "en": "Complete end-to-end ownership of the initial mobile UX architecture and visual design",
@@ -3571,7 +3571,7 @@ const projectsPresentationsData = {
         },
         "title": {
           "en": "Creative Direction by Lilian Alkhawalda",
-          "ar": "الرؤية والتصميم الإبداعي للمهندسة لليان الخوالدة"
+          "ar": "الرؤية والتصميم الإبداعي للمتخصصة لليان الخوالدة"
         },
         "subtitle": {
           "en": "Demonstrating design versatility across enterprise SaaS and luxury lifestyle verticals",
@@ -3584,7 +3584,7 @@ const projectsPresentationsData = {
             "Every pixel, easing curve, and spacing token was personally crafted and tested."
           ],
           "ar": [
-            "يبرز الذائقة البصرية الرفيعة للمهندسة لليان وقدرتها على تصميم المنتجات الفاخرة.",
+            "يبرز الذائقة البصرية الرفيعة للمتخصصة لليان وقدرتها على تصميم المنتجات الفاخرة.",
             "الجمع بين انضباط هندسة النظم وحس الفخامة المتطور المطلوب للعلامات التجارية الكبرى.",
             "كل بكسل ومنحنى حركي ومسافة فراغية تم ضبطها واختبارها شخصياً."
           ]
